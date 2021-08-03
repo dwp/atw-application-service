@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/3-alpha-accessibility/consolidated-accessibility-tab">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Order Access to Work guidance in an audio CD format
+          </h1>
+        </legend>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <p>We can post Access to Work guidance to you in an audio CD format. You need to provide your name and
+        address.</p>
+
+      <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What is your name?
+          </h2>
+        </legend>
+        <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What is your address?
+          </h2>
+        </legend>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            County
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+      </fieldset>
+
+      <div class="govuk-!-padding-bottom-7"></div>
+
+      <a href="/3-alpha-accessibility/audio-cd-confirmation">
+      <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+      </a>
+
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        For blind or partially sighted users
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <p>You can get help or apply by phone using our Access to Work helpline.</p>
+        <p>Telephone: 0800 121 7579</p>
+        <p>Monday to Friday, 9am to 5pm</p>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
