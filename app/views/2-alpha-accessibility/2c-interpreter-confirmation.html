@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Order received</h1>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>
+        We will will contact you to arrange an appointment with an in-person interpreter. This could take several weeks.
+      </p>
+
+      <h2 class="govuk-heading-m">If you need help</h2>
+
+      <p class="govuk-body">If you'd like to contact us, you can do so in the following ways:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>telephone: 0800 121 7479</li>
+        <li>textphone: 0800 121 7479</li>
+        <li><a href="#">Relay UK</a> service, if you cannot hear or speak on the phone: 18001 then 0800 121 7479</li>
+        <li><a href="#">video relay service</a> for BSL users (find out <a href="#">how to use the service</a>)</li>
+        <li>email: <a href="#">dwponline.helpdesk@dwp.gov.uk</a></li>
+      </ul>
+
+      <p>These services are available from Monday to Friday, 9am to 5pm.</p>
+
+      <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p>
+
+      <p><a href="/2-alpha-accessibility/2b-apply">Return to Access to Work</a></p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Support
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <p>You can also apply or get help by:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>textphone: 0800 121 7579</li>
+            <li><a href="https://www.relayuk.bt.com/">Relay UK</a> service, if you cannot hear or speak on the
+              phone: 18001 then 0800 121 7479</li>
+            <li><a
+                    href="https://main.signvideo.me/app/8/10128?exitURL=https://www.gov.uk/access-to-work/apply">video relay service</a> for BSL users (find out <a href="https://www.youtube.com/watch?v=xgWBXN5Bp_E">how to use the service</a>)</li>
+          </ul>
+          <p>These services are available Monday to Friday, 9am to 5pm.</p>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+{% endblock %}

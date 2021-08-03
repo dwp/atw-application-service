@@ -51,3 +51,45 @@ router.route('/2-alpha-accessibility/2b-do-you-need-support')
     res.redirect(redirectUrl)
   })
 
+
+router.route('/2-alpha-accessibility/2c-bsl-support')
+  .post((req, res, next) => {
+    let redirectUrl
+    switch (req.body['do-you-need-support']) {
+      case 'no':
+        redirectUrl = '/2-alpha-accessibility/#'
+        break
+      case 'yes':
+        redirectUrl = '/2-alpha-accessibility/2c-bsl-guidance-options'
+        break
+
+      default:
+        redirectUrl = req.path
+        break
+    }
+    res.redirect(redirectUrl)
+  })
+
+
+router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
+  .post((req, res, next) => {
+    let redirectUrl
+    switch (req.body['guidance-options']) {
+      case 'online-bsl':
+        redirectUrl = '/2-alpha-accessibility/2c-bsl-online-video'
+        break
+      case 'video-relay':
+        redirectUrl = '/2-alpha-accessibility/2c-video-relay'
+        break
+      case 'interpreter':
+        redirectUrl = '/2-alpha-accessibility/2c-interpreter'
+        break
+
+      default:
+        redirectUrl = req.path
+        break
+    }
+    res.redirect(redirectUrl)
+  })
+
+
