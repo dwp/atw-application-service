@@ -10,7 +10,7 @@ router.route('/2-alpha-accessibility/2a-support-options')
     let redirectUrl
     switch (req.body['support-type']) {
       case 'online':
-        redirectUrl = '/2-alpha-accessibility/#'
+        redirectUrl = '/2-alpha-accessibility/2a-support-options'
         break
       case 'telephone':
         redirectUrl = '/2-alpha-accessibility/2a-telephone'
