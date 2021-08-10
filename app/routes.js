@@ -93,3 +93,116 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
   })
 
 
+  router.route('/3-alpha-accessibility/support-column-1')
+    .post((req, res, next) => {
+      let redirectUrl
+      switch (req.body['additional-support']) {
+        case 'yes':
+          redirectUrl = '/3-alpha-accessibility/#'
+          break
+        case 'no':
+          redirectUrl = '/3-alpha-accessibility/support-column-1-no'
+          break
+
+        default:
+          redirectUrl = req.path
+          break
+      }
+      res.redirect(redirectUrl)
+    })
+
+
+    router.route('/3-alpha-accessibility/support-column-2')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['additional-support']) {
+          case 'yes':
+            redirectUrl = '/3-alpha-accessibility/#'
+            break
+          case 'no':
+            redirectUrl = '/3-alpha-accessibility/support-column-2-no'
+            break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
+
+      router.route('/3-alpha-accessibility/support-column-3')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['additional-support']) {
+            case 'yes':
+              redirectUrl = '/3-alpha-accessibility/#'
+              break
+            case 'no':
+              redirectUrl = '/3-alpha-accessibility/support-column-3-no'
+              break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+
+    router.route('/3-alpha-accessibility/support-column-4')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['additional-support']) {
+          case 'yes':
+            redirectUrl = '/3-alpha-accessibility/#'
+            break
+          case 'no':
+            redirectUrl = '/3-alpha-accessibility/support-column-4-no'
+            break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
+
+
+      router.route('/3-alpha-accessibility/support-column-5')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['additional-support']) {
+            case 'yes':
+              redirectUrl = '/3-alpha-accessibility/#'
+              break
+            case 'no':
+              redirectUrl = '/3-alpha-accessibility/support-column-5-no'
+              break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+
+    router.route('/3-alpha-accessibility/support-column-6')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['additional-support']) {
+          case 'yes':
+            redirectUrl = '/3-alpha-accessibility/#'
+            break
+          case 'no':
+            redirectUrl = '/3-alpha-accessibility/support-column-6-no'
+            break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
