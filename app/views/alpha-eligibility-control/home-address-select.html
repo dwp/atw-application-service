@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like to apply with guidance in British Sign Language? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-control/home-address"">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-control/right-to-work-in-uk" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <form class="form" action="/alpha-eligibility-control/right-to-work-in-uk" method="post">
+
+        <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your address?
+                  </h1>
+                </legend>
+
+                <h2 class="govuk-heading-s">8 addresses found for {{data["claimant-postcode"]}}</h2>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="claimant-postcode-select">
+                    Select an address
+                  </label>
+
+                    <select class="govuk-select govuk-select--width-10" id="claimant-postcode-select" name="claimant-postcode-select">
+                      <option value="selected" selected>8 addresses found</option>
+                      <option value="line">----</option>
+                      <option value="220">220, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="222">222, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="224">224, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="226">226, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="228">228, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="230">230, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="232">232, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+                      <option value="234">234, St Vincent Street, Glasgow, {{data["claimant-postcode"]}}</option>
+
+                    </select>
+                  </div>
+              </fieldset>
+          <div class="govuk-!-padding-bottom-5"></div>
+
+          <p><a href="#">I can't find my address in the list</a></p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h3>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">
+              Reasonable adjustments for workers with disabilities or health conditions
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010">
+              Definition of disability under the Equality Act 2010
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/rights-disabled-person">
+              Disability rights
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/looking-for-work-if-disabled">
+              Looking for work if you're disabled
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

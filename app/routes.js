@@ -206,3 +206,121 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
         }
         res.redirect(redirectUrl)
       })
+
+
+     router.route('/alpha-eligibility-control/right-to-work-in-uk')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['right-to-work-in-uk']) {
+           case 'yes':
+             redirectUrl = '/alpha-eligibility-control/employment-status'
+             break
+           case 'no':
+             redirectUrl = '/alpha-eligibility-control/#'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+
+    router.route('/alpha-eligibility-control/employment-status')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['employment-status']) {
+          case 'im-employed':
+            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+            break
+          case 'im-self-employed':
+            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+            break
+          case 'job-offer':
+             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+             break
+           case 'work-experience':
+              redirectUrl = '/alpha-eligibility-control/paid-work'
+              break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
+
+     router.route('/alpha-eligibility-control/paid-work')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['paid-work']) {
+           case 'yes':
+             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+             break
+           case 'no':
+             redirectUrl = '/alpha-eligibility-control/#'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+      router.route('/alpha-eligibility-control/mainly-based-in-gb')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['mainly-gb']) {
+            case 'yes':
+              redirectUrl = '/alpha-eligibility-control/do-you-need-support'
+              break
+            case 'no':
+              redirectUrl = '/alpha-eligibility-control/#'
+              break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+
+       router.route('/alpha-eligibility-control/do-you-need-support')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['do-you-need-support']) {
+             case 'yes':
+               redirectUrl = '/alpha-eligibility-control/what-is-your-date-of-birth'
+               break
+             case 'no':
+               redirectUrl = '/alpha-eligibility-control/#'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+       router.route('/alpha-eligibility-control/are-you-16-or-over')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['are-you-16-or-over']) {
+             case 'yes':
+               redirectUrl = '/alpha-eligibility-control/current-benefits'
+               break
+             case 'no':
+               redirectUrl = '/alpha-eligibility-control/#'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })

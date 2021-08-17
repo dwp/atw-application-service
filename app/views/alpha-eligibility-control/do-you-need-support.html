@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like to apply with guidance in British Sign Language? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-control/mainly-based-in-gb">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-control/do-you-need-support" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your disability or health condition mean that you need support to help you in your job, or to get to work?
+                  </h1>
+                </legend>
+
+                <div id="do-you-need-support" class="govuk-hint">
+                  Examples of support include support workers, special equipment and adaptations to your vehicle.
+                </div>
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="do-you-need-support" name="do-you-need-support" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-support">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="do-you-need-support-2" name="do-you-need-support-gb" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-support-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h3>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">
+              Reasonable adjustments for workers with disabilities or health conditions
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010">
+              Definition of disability under the Equality Act 2010
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/rights-disabled-person">
+              Disability rights
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/looking-for-work-if-disabled">
+              Looking for work if you're disabled
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

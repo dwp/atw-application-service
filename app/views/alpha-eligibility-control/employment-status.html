@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like to apply with guidance in British Sign Language? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-control/right-to-work-in-uk">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-control/employment-status" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your employment status?
+                  </h1>
+                </legend>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employment-status" name="employment-status" type="radio"
+                           value="im-employed" aria-describedby="employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="employment-status">
+                      I'm employed
+                    </label>
+                    <div id="employment-status-hint" class="govuk-hint govuk-radios__hint">
+                      Employment includes paid apprenticeships and paid internships
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employment-status-2" name="employment-status" type="radio"
+                           value="im-self-employed" aria-describedby="employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="employment-status-2">
+                      I'm self-employed
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employment-status-3" name="employment-status" type="radio"
+                           value="job-offer" aria-describedby="employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="employment-status-3">
+                      I have a paid job offer and will start soon
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="employment-status-4" name="employment-status" type="radio"
+                           value="work-experience" aria-describedby="employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="employment-status-4">
+                      I'm on work experience or a work trial, or about to start
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h3>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">
+              Reasonable adjustments for workers with disabilities or health conditions
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010">
+              Definition of disability under the Equality Act 2010
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/rights-disabled-person">
+              Disability rights
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/looking-for-work-if-disabled">
+              Looking for work if you're disabled
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
