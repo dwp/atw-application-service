@@ -378,8 +378,11 @@
                     currently required by Policy to confirm the eligibility of a claimant. Our overall aim is to iterate
                     on this prototype to make sure it tests well, to optimise it and make it simpler.</p>
 
+                  <p><b>Currently the control prototype asks for <u>no</u> personally identifiable information</b>.
+                  </p>
+
                   <center>
-                    <a href="/alpha-eligibility-control/home-address">
+                    <a href="/alpha-eligibility-control/do-you-live-in-gb">
                       <p><button class="govuk-button" data-module="govuk-button">
                         <b>Eligibility Control</b>
                       </button></p>
@@ -406,39 +409,116 @@
 
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
-                  <h3 class="govuk-heading-m">1. #</h3>
+                  <h3 class="govuk-heading-m">1. Working out eligibility for every job-type</h3>
                   <p>GitHub: <i><a
                           href="https://github.com/dwp/atw-application-service/tree/main/app/views/alpha-eligibility-1"
                           target="_blank">/alpha-eligibility-1</a></i></p>
-                  <p>x</p>
+                  <p>It has become increasingly apparent that case managers struggle with the 'niche' employment
+                    types. For example there are complexities if someone is applying for Access to Work via the
+                    <b>Department for Education supported internship</b>, and even more complexities if they are
+                    applying for this internship from <b>Wales</b>.</p>
+
+                  <p>Case managers have stated that over time a lot of different employment-types have been stappled
+                  onto Access to Work. If a 'niche' employment type emerges in an application it can be very
+                    confusing, complex and time consuming for both the applicant and advisor.</p>
+
+                  <p>Our hypothesis is that: we believe that identifying and separating out unique job types at the
+                    start of an application will result in a better application experience and work out if someone
+                    is genuinely eligible.</p>
 
                   <div class="govuk-!-padding-bottom-3"></div>
 
+                  <h4 class="govuk-heading-s">1a. Completely separating out some Access to Work services</h4>
+
+                  <p>The purpose of this prototype is to alter the GDS GOV.UK homepage to separate out some
+                    services into a new sub-services with bespoke and accurate application and eligibility content for
+                    the user and advisor.</p>
+
                   <center>
                     <a href="/alpha-eligibility-1/#">
                       <p><button class="govuk-button" data-module="govuk-button">
-                        <b># 1</b>
+                        <b>1a. New sub-services on GOV.UK page</b>
                       </button></p>
                     </a>
                   </center>
+
+                  <h4 class="govuk-heading-s">1b. Optimising the 'What is your employment status' screen</h4>
+
+                  <p>By utilising good content and signposting, this prototype tries to incorporate all
+                    employment-types during the eligibility stage.</p>
+
                   <center>
                     <a href="/alpha-eligibility-1/#">
                       <p><button class="govuk-button" data-module="govuk-button">
-                        <b># 2</b>
+                        <b>1b. Refined 'what is your employment status' page</b>
                       </button></p>
                     </a>
                   </center>
+
+                </div>
+                </html>
+
+              </div>
+
+
+            </div>
+
+
+            <div class="govuk-grid-row-2">
+              <!DOCTYPE html>
+              <style>
+                .govuk-grid-row-2 {
+                  background-color: #f3f2f1;
+                   color: #;
+                    margin-top: 1.25em;
+                     margin-bottom: 2.25em;
+                       padding: 20px 40px 2px;
+                      }</style>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <h3 class="govuk-heading-m">2. Personal Information & Eligibility</h3>
+                  <p>GitHub: <i><a
+                          href="https://github.com/dwp/atw-application-service/tree/main/app/views/alpha-eligibility-2"
+                          target="_blank">/alpha-eligibility-2</a></i></p>
+
+                  <p>The <a href="/alpha-eligibility-control/do-you-live-in-gb">control prototype</a> asks all the questions that are
+                    required by Policy to determine if a claimant is eligible for Access to Work. The
+                    control prototype does not ask for any personally identifiable information.</p>
+
+                  <p>We believe that by asking for some personally identifiable information during the eligibility
+                    stage, we can ask fewer questions and make the application process simpler. For example if we
+                    ask for their National Insurance number we can route it to a back-end API to instantly check if
+                    they are eligible from an age, citizenship and benefit-status perspective.</p>
+
+                  <p>Our concern is that claimants may not want to reveal so much identifiable information during
+                    the eligibility stage and there may be some GDPR and security considerations.</p>
+
+                  <div class="govuk-!-padding-bottom-3"></div>
+
+                  <h4 class="govuk-heading-s">2a. Name, date of birth and address</h4>
+
+                  <p>This prototype replicates the control prototype, but asks for the name, date of birth and
+                    address of the claimant. It is believed that this information would not need to be re-asked
+                    during the Apply stage.</p>
+
                   <center>
                     <a href="/alpha-eligibility-1/#">
                       <p><button class="govuk-button" data-module="govuk-button">
-                        <b># 3</b>
+                        <b>2a. Additional personal information prototype</b>
                       </button></p>
                     </a>
                   </center>
+
+                  <h4 class="govuk-heading-s">2b. National Insurance number</h4>
+
+                  <p>This prototype replicates the control prototype, but requests the National Insurance number of
+                    the claimant to do some back-end eligibility checks.</p>
+
                   <center>
                     <a href="/alpha-eligibility-1/#">
                       <p><button class="govuk-button" data-module="govuk-button">
-                        <b># 4<b>
+                        <b>2b. National Insurance Number prototype</b>
                       </button></p>
                     </a>
                   </center>
@@ -449,6 +529,130 @@
 
 
             </div>
+
+
+            <div class="govuk-grid-row-2">
+              <!DOCTYPE html>
+              <style>
+                .govuk-grid-row-2 {
+                  background-color: #f3f2f1;
+                   color: #;
+                    margin-top: 1.25em;
+                     margin-bottom: 2.25em;
+                       padding: 20px 40px 2px;
+                      }</style>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <h3 class="govuk-heading-m">3. Eligibility Structure</h3>
+                  <p>GitHub: <i><a
+                          href="https://github.com/dwp/atw-application-service/tree/main/app/views/alpha-eligibility-3"
+                          target="_blank">/alpha-eligibility-3</a></i></p>
+
+                  <p>Different services throughout Government do eligibility checks differently. We are interested
+                    in whether eligibility should be highlighted to the claimants once they have done their
+                    eligibility check. Or alternatively, should eligibility seamlessly flow into apply.</p>
+
+                  <div class="govuk-!-padding-bottom-3"></div>
+
+                  <h4 class="govuk-heading-s">3a. "Based on your answers you may be eligible"</h4>
+
+                  <p>This prototype takes inspiration from the <a href="https://www.gov.uk/apply-blue-badge">Apply
+                    for Blue Badge</a> service which contains a "you may be eligible" holding page, with information
+                    on what you need to do for the "start application" (apply) stage.</p>
+
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>3a. "You may be eligible" prototype</b>
+                      </button></p>
+                    </a>
+                  </center>
+
+
+                  <h4 class="govuk-heading-s">3b. Unnoticeable transition from eligibility to apply</h4>
+
+                  <p>This prototype aims for a subtle transition between eligibility and apply, so it appears as one
+                  application.</p>
+
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>3b. Subtle transition prototype</b>
+                      </button></p>
+                    </a>
+                  </center>
+                </div>
+                </html>
+
+              </div>
+
+
+            </div>
+
+
+            <div class="govuk-grid-row-2">
+              <!DOCTYPE html>
+              <style>
+                .govuk-grid-row-2 {
+                  background-color: #f3f2f1;
+                   color: #;
+                    margin-top: 1.25em;
+                     margin-bottom: 2.25em;
+                       padding: 20px 40px 2px;
+                      }</style>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <h3 class="govuk-heading-m">4. Ineligibility Screens</h3>
+                  <p>GitHub: <i><a
+                          href="https://github.com/dwp/atw-application-service/tree/main/app/views/alpha-eligibility-4"
+                          target="_blank">/alpha-eligibility-4</a></i></p>
+                  <p>We believe that claimants who are ineligible will need screens with information into why they
+                    are ineligible. We are keen to test the structure, layout and format of these screens.</p>
+
+                  <div class="govuk-!-padding-bottom-3"></div>
+
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>Ineligibility Screen 1</b>
+                      </button></p>
+                    </a>
+                  </center>
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>Ineligibility Screen 2</b>
+                      </button></p>
+                    </a>
+                  </center>
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>Ineligibility Screen 3</b>
+                      </button></p>
+                    </a>
+                  </center>
+                  <center>
+                    <a href="/alpha-eligibility-1/#">
+                      <p><button class="govuk-button" data-module="govuk-button">
+                        <b>Ineligibility Screen 4<b>
+                      </button></p>
+                    </a>
+                  </center>
+                </div>
+                </html>
+
+              </div>
+
+
+            </div>
+
+
+
+
+
 
           </div>
         </div>

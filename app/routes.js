@@ -208,6 +208,43 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
       })
 
 
+     router.route('/alpha-eligibility-control/do-you-live-in-gb')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['do-you-live-in-gb']) {
+           case 'yes':
+             redirectUrl = '/alpha-eligibility-control/right-to-work-in-uk'
+             break
+           case 'no':
+             redirectUrl = '/alpha-eligibility-control/posted-worker'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+
+     router.route('/alpha-eligibility-control/posted-worker')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['posted-worker']) {
+           case 'yes':
+             redirectUrl = '/alpha-eligibility-control/employment-status'
+             break
+           case 'no':
+             redirectUrl = '/alpha-eligibility-control/ineligible-not-posted-worker'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
      router.route('/alpha-eligibility-control/right-to-work-in-uk')
        .post((req, res, next) => {
          let redirectUrl
