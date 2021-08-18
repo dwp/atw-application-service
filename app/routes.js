@@ -269,13 +269,13 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
         let redirectUrl
         switch (req.body['employment-status']) {
           case 'im-employed':
-            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+            redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
             break
           case 'im-self-employed':
-            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+            redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
             break
           case 'job-offer':
-             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+             redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
              break
            case 'work-experience':
               redirectUrl = '/alpha-eligibility-control/paid-work'
@@ -294,7 +294,7 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
          let redirectUrl
          switch (req.body['paid-work']) {
            case 'yes':
-             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+             redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
              break
            case 'no':
              redirectUrl = '/alpha-eligibility-control/#'
