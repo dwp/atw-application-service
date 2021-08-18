@@ -213,7 +213,7 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
          let redirectUrl
          switch (req.body['do-you-live-in-gb']) {
            case 'yes':
-             redirectUrl = '/alpha-eligibility-control/right-to-work-in-uk'
+             redirectUrl = '/alpha-eligibility-control/right-to-work-in-gb'
              break
            case 'no':
              redirectUrl = '/alpha-eligibility-control/posted-worker'
@@ -227,6 +227,25 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
        })
 
 
+         router.route('/alpha-eligibility-control/right-to-work-in-gb')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['right-to-work-in-gb']) {
+               case 'yes':
+                 redirectUrl = '/alpha-eligibility-control/employment-status'
+                 break
+               case 'no':
+                 redirectUrl = '/alpha-eligibility-control/ineligible-not-resident'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+
      router.route('/alpha-eligibility-control/posted-worker')
        .post((req, res, next) => {
          let redirectUrl
@@ -236,24 +255,6 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
              break
            case 'no':
              redirectUrl = '/alpha-eligibility-control/ineligible-not-posted-worker'
-             break
-
-           default:
-             redirectUrl = req.path
-             break
-         }
-         res.redirect(redirectUrl)
-       })
-
-     router.route('/alpha-eligibility-control/right-to-work-in-uk')
-       .post((req, res, next) => {
-         let redirectUrl
-         switch (req.body['right-to-work-in-uk']) {
-           case 'yes':
-             redirectUrl = '/alpha-eligibility-control/employment-status'
-             break
-           case 'no':
-             redirectUrl = '/alpha-eligibility-control/#'
              break
 
            default:
@@ -280,6 +281,9 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
            case 'work-experience':
               redirectUrl = '/alpha-eligibility-control/paid-work'
               break
+           case 'unemployed':
+              redirectUrl = '/alpha-eligibility-control/ineligible-employment-status'
+              break
 
           default:
             redirectUrl = req.path
@@ -297,7 +301,7 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
              redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
              break
            case 'no':
-             redirectUrl = '/alpha-eligibility-control/#'
+             redirectUrl = '/alpha-eligibility-control/ineligible-non-paid-work'
              break
 
            default:
