@@ -270,13 +270,13 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
         let redirectUrl
         switch (req.body['employment-status']) {
           case 'im-employed':
-            redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
+            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
             break
           case 'im-self-employed':
-            redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
+            redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
             break
           case 'job-offer':
-             redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
+             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
              break
            case 'work-experience':
               redirectUrl = '/alpha-eligibility-control/paid-work'
@@ -298,7 +298,7 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
          let redirectUrl
          switch (req.body['paid-work']) {
            case 'yes':
-             redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
+             redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
              break
            case 'no':
              redirectUrl = '/alpha-eligibility-control/ineligible-non-paid-work'
@@ -319,7 +319,7 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
               redirectUrl = '/alpha-eligibility-control/do-you-need-support'
               break
             case 'no':
-              redirectUrl = '/alpha-eligibility-control/#'
+              redirectUrl = '/alpha-eligibility-control/ineligible-employment-outside-gb'
               break
 
             default:
@@ -335,10 +335,10 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
            let redirectUrl
            switch (req.body['do-you-need-support']) {
              case 'yes':
-               redirectUrl = '/alpha-eligibility-control/what-is-your-date-of-birth'
+               redirectUrl = '/alpha-eligibility-control/are-you-16-or-over'
                break
              case 'no':
-               redirectUrl = '/alpha-eligibility-control/#'
+               redirectUrl = '/alpha-eligibility-control/ineligible-no-support-needed'
                break
 
              default:
@@ -356,8 +356,35 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
                redirectUrl = '/alpha-eligibility-control/current-benefits'
                break
              case 'no':
-               redirectUrl = '/alpha-eligibility-control/#'
+               redirectUrl = '/alpha-eligibility-control/ineligible-under-16'
                break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+       router.route('/alpha-eligibility-control/current-benefits')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['current-benefits']) {
+             case 'employment-support-allowance':
+               redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
+               break
+             case 'incapacity-benefit':
+               redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
+               break
+               case 'income-support':
+                 redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
+                 break
+               case 'severe-disability-allowance':
+                 redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
+                 break
+               case 'none':
+                 redirectUrl = '/alpha-eligibility-control/#'
+                 break
 
              default:
                redirectUrl = req.path
