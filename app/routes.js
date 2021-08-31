@@ -392,3 +392,141 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
            }
            res.redirect(redirectUrl)
          })
+
+
+       router.route('/alpha-eligibility-2/2a-right-to-work-in-gb')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['2a-right-to-work-in-gb']) {
+             case 'yes':
+               redirectUrl = '/alpha-eligibility-2/2a-employment-status'
+               break
+             case 'no':
+               redirectUrl = '/alpha-eligibility-2/2a-ineligible-not-resident'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+      router.route('/alpha-eligibility-2/2a-employment-status')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['2a-employment-status']) {
+            case 'im-employed':
+              redirectUrl = '/alpha-eligibility-2/2a-mainly-based-in-gb'
+              break
+            case 'im-self-employed':
+              redirectUrl = '/alpha-eligibility-2/2a-mainly-based-in-gb'
+              break
+            case 'job-offer':
+               redirectUrl = '/alpha-eligibility-2/2a-mainly-based-in-gb'
+               break
+             case 'work-experience':
+                redirectUrl = '/alpha-eligibility-2/2a-paid-work'
+                break
+             case 'unemployed':
+                redirectUrl = '/alpha-eligibility-2/2a-ineligible-employment-status'
+                break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+
+     router.route('/alpha-eligibility-2/2a-paid-work')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['2a-paid-work']) {
+           case 'yes':
+             redirectUrl = '/alpha-eligibility-2/2a-mainly-based-in-gb'
+             break
+           case 'no':
+             redirectUrl = '/alpha-eligibility-2/2a-ineligible-non-paid-work'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+      router.route('/alpha-eligibility-2/2a-mainly-based-in-gb')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['mainly-gb']) {
+            case 'yes':
+              redirectUrl = '/alpha-eligibility-2/2a-do-you-need-support'
+              break
+            case 'no':
+              redirectUrl = '/alpha-eligibility-2/2a-ineligible-employment-outside-gb'
+              break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+       router.route('/alpha-eligibility-2/2a-do-you-need-support')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['2a-do-you-need-support']) {
+             case 'yes':
+               redirectUrl = '/alpha-eligibility-2/2a-current-benefits'
+               break
+             case 'no':
+               redirectUrl = '/alpha-eligibility-2/2a-ineligible-no-support-needed'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+
+         router.route('/alpha-eligibility-2/2b-do-you-need-support')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['2b-do-you-need-support']) {
+               case 'yes':
+                 redirectUrl = '/alpha-eligibility-2/2b-national-insurance-number'
+                 break
+               case 'no':
+                 redirectUrl = '/alpha-eligibility-2/2b-ineligible-no-support-needed'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+           router.route('/alpha-eligibility-2/2c-do-you-need-support')
+             .post((req, res, next) => {
+               let redirectUrl
+               switch (req.body['2c-do-you-need-support']) {
+                 case 'yes':
+                   redirectUrl = '/alpha-eligibility-2/2c-national-insurance-number'
+                   break
+                 case 'no':
+                   redirectUrl = '/alpha-eligibility-2/2c-ineligible-no-support-needed'
+                   break
+
+                 default:
+                   redirectUrl = req.path
+                   break
+               }
+               res.redirect(redirectUrl)
+             })

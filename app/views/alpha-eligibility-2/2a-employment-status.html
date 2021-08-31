@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-2/2a-right-to-work-in-gb">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-2/2a-employment-status" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your employment status?
+                  </h1>
+                </legend>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="2a-employment-status" name="2a-employment-status" type="radio"
+                           value="im-employed" aria-describedby="2a-employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="2a-employment-status">
+                      I'm employed
+                    </label>
+                    <div id="employment-status-hint" class="govuk-hint govuk-radios__hint">
+                      Employment includes paid apprenticeships and paid internships
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="2a-employment-status-2" name="2a-employment-status" type="radio"
+                           value="im-self-employed" aria-describedby="2a-employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="2a-employment-status-2">
+                      I'm self-employed
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="2a-employment-status-3" name="2a-employment-status" type="radio"
+                           value="job-offer" aria-describedby="2a-employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="2a-employment-status-3">
+                      I have a paid job offer and will start soon
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="2a-employment-status-4" name="2a-employment-status" type="radio"
+                           value="work-experience" aria-describedby="2a-employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="2a-employment-status-4">
+                      I'm on work experience or a work trial, or about to start
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="2a-employment-status-5" name="2a-employment-status" type="radio"
+                           value="unemployed" aria-describedby="2a-employment-status-hint">
+                    <label class="govuk-label govuk-radios__label" for="2a-employment-status-5">
+                      I'm unemployed
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
