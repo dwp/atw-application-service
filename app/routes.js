@@ -366,32 +366,34 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
            res.redirect(redirectUrl)
          })
 
-       router.route('/alpha-eligibility-control/current-benefits')
-         .post((req, res, next) => {
-           let redirectUrl
-           switch (req.body['current-benefits']) {
-             case 'employment-support-allowance':
-               redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
-               break
-             case 'incapacity-benefit':
-               redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
-               break
-               case 'income-support':
-                 redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
-                 break
-               case 'severe-disability-allowance':
-                 redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
-                 break
-               case 'none':
-                 redirectUrl = '/alpha-eligibility-control/#'
-                 break
+router.route('/alpha-eligibility-control/current-benefits')
+  .post((req, res, next) => {
+    switch (req.body['current-benefits'][0]) {
+      case 'none':
+        redirectUrl = '/alpha-eligibility-control/you-may-be-eligible'
+        break
 
-             default:
-               redirectUrl = req.path
-               break
-           }
-           res.redirect(redirectUrl)
-         })
+      default:
+        redirectUrl = '/alpha-eligibility-control/ineligible-benefit-status'
+        break
+    }
+    res.redirect(redirectUrl)
+  })
+
+
+  router.route('/alpha-eligibility-2/2a-current-benefits')
+    .post((req, res, next) => {
+      switch (req.body['2a-current-benefits'][0]) {
+        case 'none':
+          redirectUrl = '/alpha-eligibility-2/2a-you-may-be-eligible'
+          break
+
+        default:
+          redirectUrl = '/alpha-eligibility-2/2a-ineligible-benefit-status'
+          break
+      }
+      res.redirect(redirectUrl)
+    })
 
 
        router.route('/alpha-eligibility-2/2a-right-to-work-in-gb')
