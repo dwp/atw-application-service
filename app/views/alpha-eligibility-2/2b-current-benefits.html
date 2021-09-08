@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-2/2b-do-you-need-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-2/2b-current-benefits" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="current-benefits-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Tell us the benefits that you're currently receiving.
+              </h1>
+            </legend>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+            <div id="current-benefits-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2b-current-benefits" name="2b-current-benefits"
+                       type="checkbox"
+                       value="employment-support-allowance">
+                <label class="govuk-label govuk-checkboxes__label" for="2b-current-benefits">
+                  Employment Support Allowance
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2b-current-benefits-2" name="2b-current-benefits"
+                       type="checkbox" value="incapacity-benefit">
+                <label class="govuk-label govuk-checkboxes__label" for="2b-current-benefits-2">
+                  Incapacity Benefit
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2b-current-benefits-3" name="2b-current-benefits"
+                       type="checkbox" value="income-support">
+                <label class="govuk-label govuk-checkboxes__label" for="2b-current-benefits-3">
+                  Income Support
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2b-current-benefits-4" name="2b-current-benefits"
+                       type="checkbox" value="severe-disability-allowance">
+                <label class="govuk-label govuk-checkboxes__label" for="2b-current-benefits-4">
+                  Severe Disability Allowance
+                </label>
+              </div>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <div class="govuk-checkboxes__divider"><p>or</p></div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2b-current-benefits-5" name="2b-current-benefits"
+                       type="checkbox" value="none" data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="2b-current-benefits-5">
+                  None of the above
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

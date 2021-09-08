@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-eligibility-1/1-employment-status">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-eligibility-1/1-employment-type-you-are-starting" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="1-employment-type-you-are-starting-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your employment status?
+              </h1>
+            </legend>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting" name="1-employment-type-you-are-starting" type="checkbox"
+                       value="employed">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting">
+                  Full-time or part-time employment
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-2" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="seld-employed">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-2">
+                  Self-employment
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-3" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="apprenticeship">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-3">
+                  An apprenticeship
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-4" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="dfe">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-4">
+                  A Department for Education supported internship
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-5" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="work experience">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-5">
+                  Work experience
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-6" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="work trial">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-6">
+                  A work trial
+                </label>
+              </div>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <div class="govuk-checkboxes__divider"><p>or</p></div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="1-employment-type-you-are-starting-7" name="1-employment-type-you-are-starting"
+                       type="checkbox" value="none" data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="1-employment-type-you-are-starting-7">
+                  None of the above
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
