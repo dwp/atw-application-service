@@ -724,3 +724,94 @@ router.route('/alpha-eligibility-control/current-benefits')
          }
          res.redirect(redirectUrl)
        })
+
+
+       router.route('/5-alpha-accessibility/5-do-you-need-support')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['do-you-need-support']) {
+             case 'yes':
+               redirectUrl = '/5-alpha-accessibility/5-bsl-support'
+               break
+             case 'no':
+               redirectUrl = '/5-alpha-accessibility/5-your-support-situation'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+       router.route('/5-alpha-accessibility/5-bsl-support')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['5-bsl-support']) {
+             case 'yes':
+               redirectUrl = '/5-alpha-accessibility/5-bsl-video-support'
+               break
+             case 'no':
+               redirectUrl = '/5-alpha-accessibility/5-accessibility-information'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+        router.route('/5-alpha-accessibility/5-your-support-situation')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['5-your-support-situation']) {
+              case 'yes':
+                redirectUrl = '/5-alpha-accessibility/#'
+                break
+              case 'no':
+                redirectUrl = '/5-alpha-accessibility/#'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
+
+        router.route('/5-alpha-accessibility/5-bsl-video-support')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['5-bsl-video-support']) {
+              case 'yes':
+                redirectUrl = '/5-alpha-accessibility/5-you-may-be-eligible-bsl-blue'
+                break
+              case 'no':
+                redirectUrl = '/5-alpha-accessibility/5-ineligible-no-support-needed-bsl'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
+
+         router.route('/5-alpha-accessibility/5-your-support-situation')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['5-your-support-situation']) {
+               case 'yes':
+                 redirectUrl = '/5-alpha-accessibility/5-you-may-be-eligible'
+                 break
+               case 'no':
+                 redirectUrl = '/5-alpha-accessibility/5-ineligible-no-support-needed'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })

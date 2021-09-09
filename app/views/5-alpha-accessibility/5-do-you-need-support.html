@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/5-alpha-accessibility/5-apply"">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/5-alpha-accessibility/5-do-you-need-support" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Would you like support completing this application?
+                  </h1>
+                </legend>
+
+                <div id="do-you-need-support-hint" class="govuk-hint">
+                  You can apply in other ways if you'd like support. For example, you can apply online with British Sign Language (BSL) videos or by telephone.</div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="do-you-need-support" name="do-you-need-support"
+                           type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-support">
+                      Yes, I'd like support
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="do-you-need-support-2" name="do-you-need-support"
+                           type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-support-2">
+                      No, I would not like support
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you need support to do your job due to your condition? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/5-alpha-accessibility/5-bsl-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+
+      <form class="form" action="/5-alpha-accessibility/5-bsl-video-support" method="post">
+
+      <fieldset class="govuk-fieldset" aria-describedby="5-bsl-video-support-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Does your disability or health condition mean that you need support to help you in your job, or to get to work?
+          </h1>
+        </legend>
+
+        <div id="5-bsl-video-support-hint" class="govuk-hint">
+          Examples of support include job coaches, special equipment and adaptations to your vehicle.
+        </div>
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="5-bsl-video-support" name="5-bsl-video-support" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="5-bsl-video-support">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="5-bsl-video-support-2" name="5-bsl-video-support" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="5-bsl-video-support-2">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <form class="form" action="/url/of/next/page" method="post">
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+
+      </form>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oXsP48rkrjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+      </fieldset>
+
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
