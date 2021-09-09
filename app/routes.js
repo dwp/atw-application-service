@@ -655,19 +655,47 @@ router.route('/alpha-eligibility-control/current-benefits')
      })
 
 
-    router.route('/alpha-eligibility-3/3b-current-benefits')
+    router.route('/alpha-eligibility-3/3c-current-benefits')
       .post((req, res, next) => {
         switch (req.body['current-benefits'][0]) {
           case 'none':
-            redirectUrl = '/alpha-eligibility-3/3b-do-you-know-what-support-you-need'
+            redirectUrl = '/alpha-eligibility-3/3c-do-you-know-what-support-you-need'
             break
 
           default:
-            redirectUrl = '/alpha-eligibility-3/3b-ineligible-benefit-status'
+            redirectUrl = '/alpha-eligibility-3/3c-ineligible-benefit-status'
             break
         }
         res.redirect(redirectUrl)
       })
+
+          router.route('/alpha-eligibility-3/3b-current-benefits')
+            .post((req, res, next) => {
+              switch (req.body['current-benefits'][0]) {
+                case 'none':
+                  redirectUrl = '/alpha-eligibility-3/3b-you-may-be-eligible'
+                  break
+
+                default:
+                  redirectUrl = '/alpha-eligibility-3/3b-ineligible-benefit-status'
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+      router.route('/alpha-eligibility-3/3b-current-benefits-blue')
+        .post((req, res, next) => {
+          switch (req.body['current-benefits'][0]) {
+            case 'none':
+              redirectUrl = '/alpha-eligibility-3/3b-you-may-be-eligible-blue'
+              break
+
+            default:
+              redirectUrl = '/alpha-eligibility-3/3b-ineligible-benefit-status-blue'
+              break
+          }
+          res.redirect(redirectUrl)
+        })
 
     router.route('/alpha-eligibility-1/1-employment-type')
       .post((req, res, next) => {
