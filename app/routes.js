@@ -303,6 +303,12 @@ router.route('/2-alpha-accessibility/2c-bsl-guidance-options')
            case 'work-experience':
               redirectUrl = '/alpha-eligibility-control/paid-work'
               break
+                        case 'apprenticeship':
+                           redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+                           break
+                        case 'dfe':
+                           redirectUrl = '/alpha-eligibility-control/mainly-based-in-gb'
+                           break
            case 'unemployed':
               redirectUrl = '/alpha-eligibility-control/ineligible-employment-status'
               break
