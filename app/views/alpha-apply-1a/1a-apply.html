@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Apply online for an Access to Work grant
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Benefits</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Benefits and financial support if you're disabled or have a health condition</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Get support in work if you have a disability or health condition (Access to Work)
+      </h1>
+
+
+      <h3 class="govuk-heading-s">
+        Contents
+      </h3>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">Overview</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Eligibility</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">What you'll get</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Apply online</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Other ways to apply</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">After you've applied</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Renew</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Report a change of circumstances</a>
+        </li>
+      </ul>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+    </div>
+  </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+          <div class="govuk-!-padding-bottom-4"></div>
+
+          <h2 class="govuk-heading-m">
+            Apply
+          </h3>
+
+          <p><a href="#">Check you’re eligible</a> before you apply.</p>
+
+          <p>You can apply for Access to Work online or by phone.</p>
+
+          <p class="govuk-body">You'll need to provide:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your workplace address and postcode</li>
+            <li>the name of a workplace contact who can authorise your Access to Work payments</li>
+            <li>your workplace contact’s email address or work phone number</li>
+            <li>your unique tax reference number (if you’re self-employed)</li>
+          </ul>
+
+          <p class="govuk-body">You'll also need to explain:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>how your condition affects you at work or getting to work</li>
+            <li>what help you’re already getting</li>
+            <li>what else could help you</li>
+          </ul>
+
+          <p>It will help your application if you’ve spoken to your employer about <a href="#">reasonable
+            adjustments</a>
+            before you apply for Access to Work.</p>
+
+          <div class="govuk-!-padding-bottom-3"></div>
+
+          <a href="/alpha-apply-1a/1a-who-are-you-applying-for" role="button" draggable="false"
+             class="govuk-button govuk-button--start" data-module="govuk-button">
+            Apply
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg></a>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2 class="govuk-heading-s">&#8592; Previous</h2>
+            <p class="govuk-body"><a class="govuk-link"
+              href="#">What you'll get</a></p>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2 class="govuk-heading-s">&#8594; Next</h2>
+            <p class="govuk-body"><a class="govuk-link" href="#">Other ways to apply</a></p>
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <aside class="app-related-items" role="complementary">
+            <h3 class="govuk-heading-m" id="subsection-title">
+              Related content
+            </h3>
+            <nav role="navigation" aria-labelledby="subsection-title">
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <a href="#">
+                    Easy read: get support in work if you have a disability or health condition (Access to Work)
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Reasonable adjustments for workers with disabilities or health conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Definition of disability under the Equality Act 2010
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Disability rights
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Looking for work if you're disabled
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+{% endblock %}

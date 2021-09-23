@@ -5,7 +5,7 @@ Would you like support completing this application? – Access to Work – GOV.U
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/5-alpha-accessibility/5-apply">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-eligibility-statement">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@ Would you like support completing this application? – Access to Work – GOV.U
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/5-alpha-accessibility/5-do-you-need-support" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-esa" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,28 +23,32 @@ Would you like support completing this application? – Access to Work – GOV.U
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Would you like support completing this application?
+                    Are you receiving Employment Support Allowance (ESA)?
                   </h1>
                 </legend>
-
-                <div id="do-you-need-support-hint" class="govuk-hint">
-                  You can apply in other ways if you'd like support. For example, you can apply online with British Sign Language (BSL) videos or by telephone.</div>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="do-you-need-support" name="do-you-need-support"
+                    <input class="govuk-radios__input" id="1b-esa" name="1b-esa"
                            type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="do-you-need-support">
-                      Yes, I'd like support
+                    <label class="govuk-label govuk-radios__label" for="1b-esa">
+                      Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="do-you-need-support-2" name="do-you-need-support"
+                    <input class="govuk-radios__input" id="1b-esa-2" name="1b-esa"
+                           type="radio" value="yes-but">
+                    <label class="govuk-label govuk-radios__label" for="1b-esa-2">
+                      Yes, but I will stop receiving ESA when I start a new job soon
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-esa-3" name="1b-esa"
                            type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="do-you-need-support-2">
-                      No, I would not like support
+                    <label class="govuk-label govuk-radios__label" for="1b-esa-3">
+                      No
                     </label>
                   </div>
                 </div>
@@ -73,7 +77,7 @@ Would you like support completing this application? – Access to Work – GOV.U
       <nav role="navigation" aria-labelledby="subsection-title">
         <p class="govuk-body" >Telephone: 0800 121 7479</p>
         <p>Monday to Friday, 9am to 5pm. This service is free.</p>
-        <p><a href="/5-alpha-accessibility/5-accessibility-information-1">Find out about other accessible formats</a>.
+        <p><a href="#">Find out about other accessible formats</a>.
         </p>
       </nav>
     </aside>
