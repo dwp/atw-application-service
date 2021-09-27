@@ -952,3 +952,41 @@ router.route('/alpha-apply-1b/1b-bsl-support')
         }
         res.redirect(redirectUrl)
       })
+
+          router.route('/alpha-apply-1b/1b-nominated-representative')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['1b-nominated-representative']) {
+                case 'yes':
+                  redirectUrl = '/alpha-apply-1b/#'
+                  break
+                case 'no':
+                  redirectUrl = '/alpha-apply-1b/1b-contact-preferences'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+            router.route('/alpha-apply-1b/1b-appointee')
+              .post((req, res, next) => {
+                let redirectUrl
+                switch (req.body['1b-appointee']) {
+                  case 'yes':
+                    redirectUrl = '/alpha-apply-1b/1b-appointee-details'
+                    break
+                  case 'no':
+                    redirectUrl = '/alpha-apply-1b/1b-nominated-representative'
+                    break
+
+                  default:
+                    redirectUrl = req.path
+                    break
+                }
+                res.redirect(redirectUrl)
+              })
+
+
