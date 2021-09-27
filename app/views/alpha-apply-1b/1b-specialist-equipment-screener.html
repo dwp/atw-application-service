@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Would you like support completing this application? – Access to Work – GOV.UK
+#
 {% endblock %}
 
 {% block beforeContent %}
@@ -39,17 +39,19 @@ Would you like support completing this application? – Access to Work – GOV.U
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="do-you-need-support" name="do-you-need-support"
-                           type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="do-you-need-support">
+                    <input class="govuk-radios__input" id="specialist-equipment-screener" name="specialist-equipment-screener"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="do-you-need-support-2" name="do-you-need-support"
-                           type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="do-you-need-support-2">
+                    <input class="govuk-radios__input" id="specialist-equipment-screener-2"
+                           name="specialist-equipment-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener-2">
                       No
                     </label>
                   </div>
@@ -78,5 +80,18 @@ Would you like support completing this application? – Access to Work – GOV.U
 </div>
 
   </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("specialist-equipment-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("specialist-equipment-screener", "No")
+                }
+                </script>
 
 {% endblock %}

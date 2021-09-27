@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1b/1b-workplace-adaptations-textbox" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-travelling-in-work-textbox" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,33 +23,36 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Does your condition affect how you use the workplace?
+                    Does your condition mean that you need support to travel in work?
                   </h1>
                 </legend>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
-                <p class="govuk-body">This means that you could benefit from support such as:</p>
+                <p class="govuk-body">Examples of different types of support to travel in work include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>ramps for wheelchairs to navigate a workplace</li>
-                  <li>disabled toilets</li>
-                  <li>another type of change to the physical workplace</li>
+                  <li>taxi fares for travel during work, where public transport or a company car cannot be used</li>
+                  <li>the cost of temporarily hiring a vehicle while your own is being adapted or repaired</li>
                 </ul>
+
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="workplace-adaptations-screener" name="workplace-adaptations-screener"
+                    <input class="govuk-radios__input" id="travelling-in-work-screener"
+                           name="travelling-in-work-screener"
                            type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener">
+                    <label class="govuk-label govuk-radios__label" for="travelling-in-work-screener">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="workplace-adaptations-screener-2" name="workplace-adaptations-screener"
-                           type="radio" value=No>
-                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener-2">
+                    <input class="govuk-radios__input" id="travelling-in-work-screener-2"
+                           name="travelling-in-work-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="travelling-in-work-screener-2">
                       No
                     </label>
                   </div>
@@ -83,14 +86,13 @@
                 {
                 value: "Yes",
                 text: "Yes",
-                checked: checked("workplace-adaptations-screener", "Yes")
+                checked: checked("travelling-in-work-screener", "Yes")
                 },
                 {
                 value: "No",
                 text: "No",
-                checked: checked("workplace-adaptations-screener", "No")
+                checked: checked("travelling-in-work-screener", "No")
                 }
                 </script>
-
 
 {% endblock %}

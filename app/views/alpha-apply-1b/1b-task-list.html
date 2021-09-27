@@ -12,6 +12,9 @@
         Access to Work
       </h1>
 
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed {{ sectionCount }} of 14 sections.</p>
+
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -36,11 +39,11 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/1b-what-is-your-full-name" aria-describedby="your-details-status">
+                <a href="/alpha-apply-1b/1b-what-is-your-full-name" aria-describedby="your-disability-status">
                   Your details
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="your-details-status">Completed</strong>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="your-disability-status">In progress</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -100,7 +103,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="support-workers-status">
+                <a href="/alpha-apply-1b/1b-support-worker-screener" aria-describedby="support-workers-status">
                   Support workers
                 </a>
               </span>
@@ -108,15 +111,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="workplace-change-status">
-                  Changes to your workplace
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="workplace-change-status">In progress</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="travel-to-work-status">
+                <a href="/alpha-apply-1b/1b-travelling-to-work-screener" aria-describedby="travel-to-work-status">
                   Travelling to work
                 </a>
               </span>
@@ -124,7 +119,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="travel-at-work-status">
+                <a href="/alpha-apply-1b/1b-travelling-in-work-screener" aria-describedby="travel-at-work-status">
                   Travelling at work
                 </a>
               </span>
@@ -187,4 +182,13 @@
     </div>
   </div>
 
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
+<script src="/extension-assets/%40ministryofjustice%2Ffrontend/moj/all.js"></script>
+<script src="/public/javascripts/application.js"></script>
+<script src="/public/javascripts/auto-store-data.js"></script>
+
+
 {% endblock %}
+on m
