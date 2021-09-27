@@ -20,19 +20,45 @@
                   <fieldset class="govuk-fieldset" role="group" aria-describedby="full-name-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                       <h1 class="govuk-fieldset__heading">
-                        What is your appointee's name?
+                        Your appointee's details
                       </h1>
                     </legend>
 
                     <div class="govuk-!-padding-bottom-2"></div>
 
                       <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m">First name</h2>
+                          <label class="govuk-label" for="full-name">
+                              Their full name
+                          </label>
                           <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
 
                       <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m">Last name</h2>
-                          <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                          <label class="govuk-label" for="more-detail">
+                              Their relationship to you
+                          </label>
+                          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                      </div>
+
+                      <div class="govuk-form-group">
+                          <label class="govuk-label" for="telephone-number">
+                              Their telephone number
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+
+                      <div class="govuk-form-group">
+                          <label class="govuk-label" for="email">
+                              Their email address
+                          </label>
+                          <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                      </div>
+
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="appointee" name="appointee" type="checkbox"
+                                 value="appointee">
+                          <label class="govuk-label govuk-checkboxes__label" for="appointee">
+                              I confirm that I have my appointee's permission to share these details
+                          </label>
+                      </div>
 
 
                   </fieldset>
