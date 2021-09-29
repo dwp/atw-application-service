@@ -4,6 +4,10 @@
   Task list
 {% endblock %}
 
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-apply-1b/1b-do-you-know-what-support-you-need">Back</a>
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -12,10 +16,19 @@
         Access to Work
       </h1>
 
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">You have completed {{ sectionCount }} of 14 sections.</p>
+      <h2 class="govuk-heading-m">
+        Completing your application
+      </h2>
+
+      <p>Fill in the required information and answer the questions in the sections below to complete your
+        application.</p>
+
+      <p>There are around X questions to complete. You can save your application and return to it later.</p>
+
+      <div class="govuk-!-padding-bottom-2"></div>
 
       <ol class="app-task-list">
+
         <li>
           <h2 class="app-task-list__section">
             <span class="app-task-list__section-number">1. </span> Before you start
@@ -82,9 +95,13 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">4. </span> Support
+            <span class="app-task-list__section-number">4. </span> Support and costs
           </h2>
+
           <ul class="app-task-list__items">
+
+            <p>We need to know more information about what support you need and approximate cost. If the support you need is over £500, we need quotes from three different suppliers to work out the value of your grant.</p>
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="/alpha-apply-1b/1b-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
@@ -128,37 +145,16 @@
           </ul>
         </li>
 
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">5. </span> Quotes
-
-            <div class="govuk-!-padding-bottom-2"></div>
-
-            <p>If the support you need is over £500, we need quotes from three different suppliers to work out the value of your grant.</p>
-          </h2>
-
-
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="quote-status">
-                  Upload supplier quotes for support
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="quote-status">In progress</strong>
-            </li>
-          </ul>
-        </li>
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">6. </span> Additional information
+            <span class="app-task-list__section-number">5. </span> Additional information
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1b/#" aria-describedby="additional-information-status">
-                  Extra information you would like to tell us
+                <a href="/alpha-apply-1b/1b-extra-information-screener" aria-describedby="additional-information-status">
+                  Anything else you would like to tell us
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="additional-information-status">In progress</strong>
@@ -168,13 +164,13 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">7. </span> Submit application
+            <span class="app-task-list__section-number">6. </span> Send your application
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="/alpha-apply-1b/#" aria-describedby="declaration-status">
-                  Declaration and submit application
+                  Check answers and send your application
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag govuk-tag--grey app-task-list__tag" id="declaration-status">Do this
@@ -188,13 +184,4 @@
     </div>
   </div>
 
-<!-- Javascript -->
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
-<script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
-<script src="/extension-assets/%40ministryofjustice%2Ffrontend/moj/all.js"></script>
-<script src="/public/javascripts/application.js"></script>
-<script src="/public/javascripts/auto-store-data.js"></script>
-
-
 {% endblock %}
-on m

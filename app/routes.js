@@ -828,7 +828,7 @@ router.route('/alpha-eligibility-control/current-benefits')
             let redirectUrl
             switch (req.body['1b-bsl-support']) {
               case 'yes':
-                redirectUrl = '/alpha-apply-1b/1b-#'
+                redirectUrl = '/alpha-apply-1b/1b-bsl-who-are-you-applying-for'
                 break
               case 'no':
                 redirectUrl = '/alpha-apply-1b/1b-accessibility-information'
@@ -958,7 +958,7 @@ router.route('/alpha-apply-1b/1b-bsl-support')
               let redirectUrl
               switch (req.body['1b-nominated-representative']) {
                 case 'yes':
-                  redirectUrl = '/alpha-apply-1b/#'
+                  redirectUrl = '/alpha-apply-1b/1b-nominated-representative-details'
                   break
                 case 'no':
                   redirectUrl = '/alpha-apply-1b/1b-contact-preferences'
@@ -988,5 +988,65 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                 }
                 res.redirect(redirectUrl)
               })
+
+              router.route('/alpha-apply-1b/1b-bsl-who-are-you-applying-for')
+                .post((req, res, next) => {
+                  let redirectUrl
+                  switch (req.body['1b-bsl-who-are-you-applying-for']) {
+                    case 'myself':
+                      redirectUrl = '/alpha-apply-1b/1b-bsl-eligibility-statement'
+                      break
+                    case 'someone else':
+                      redirectUrl = '/alpha-apply-1b/#'
+                      break
+
+                    default:
+                      redirectUrl = req.path
+                      break
+                  }
+                  res.redirect(redirectUrl)
+                })
+
+                router.route('/alpha-apply-1b/1b-do-you-know-what-support-you-need')
+                  .post((req, res, next) => {
+                    let redirectUrl
+                    switch (req.body['1b-do-you-know-what-support-you-need']) {
+                      case 'yes':
+                        redirectUrl = '/alpha-apply-1b/1b-task-list'
+                        break
+                      case 'no':
+                        redirectUrl = '/alpha-apply-1b/#'
+                        break
+
+                      default:
+                        redirectUrl = req.path
+                        break
+                    }
+                    res.redirect(redirectUrl)
+                  })
+
+                  router.route('/alpha-apply-1b/1b-appointee-or-representative')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      switch (req.body['appointee-or-representative']) {
+                        case 'appointee':
+                          redirectUrl = '/alpha-apply-1b/1b-appointee-details'
+                          break
+                        case 'representative':
+                          redirectUrl = '/alpha-apply-1b/1b-nominated-representative-details'
+                          break
+                          case 'none':
+                            redirectUrl = '/alpha-apply-1b/1b-contact-preferences'
+                            break
+
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })
+
+
+
 
 

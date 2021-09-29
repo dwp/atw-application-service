@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-specialist-equipment-quote-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-specialist-equipment-quote-500-1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    How long do you need this support for?
+                  </h1>
+                </legend>
+
+                <p>xxxxxxxxxxxxxxxxxx</p>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="extra-information-screener" name="extra-information-screener"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="extra-information-screener">
+                      xxxx
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="extra-information-screener-2"
+                           name="extra-information-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="extra-information-screener-2">
+                      xxxx
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="extra-information-screener-2"
+                           name="extra-information-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="extra-information-screener-2">
+                      xxxx
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="#" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("extra-information-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("extra-information-screener", "No")
+                }
+                </script>
+
+{% endblock %}
