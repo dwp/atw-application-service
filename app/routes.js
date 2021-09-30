@@ -1047,6 +1047,25 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                     })
 
 
+                   router.route('/alpha-apply-1d/1d-do-you-need-support-at-work')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['do-you-need-support-at-work']) {
+                         case 'yes':
+                           redirectUrl = '/alpha-apply-1d/1d-what-support-you-need'
+                           break
+                         case 'no':
+                           redirectUrl = '/alpha-apply-1d/1d-type-of-travel-support'
+                           break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+
 
 
 

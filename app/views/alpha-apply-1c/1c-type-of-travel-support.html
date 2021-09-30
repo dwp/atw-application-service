@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-type-of-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/#" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="type-of-travel-support-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of travel support do you need?
+              </h1>
+            </legend>
+            <div id="type-of-travel-support-hint" class="govuk-hint">
+              Select all that apply:
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-of-travel-support" name="type-of-travel-support" type="checkbox"
+                       value="travel-to-work">
+                <label class="govuk-label govuk-checkboxes__label" for="type-of-travel-support">
+                  Travel to work
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-of-travel-support-2" name="type-of-travel-support" type="checkbox"
+                       value="travel-from-work">
+                <label class="govuk-label govuk-checkboxes__label" for="type-of-travel-support-2">
+                  Travel from work
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-of-travel-support-3" name="type-of-travel-support" type="checkbox"
+                       value="both">
+                <label class="govuk-label govuk-checkboxes__label" for="type-of-travel-support-3">
+                  Both
+                </label>
+              </div>
+              <div class="govuk-checkboxes__divider"><p>or</p></div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-of-travel-support-4" name="type-of-travel-support" type="checkbox"
+                       value="something-else"
+                       data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="type-of-travel-support-4">
+                  Something else
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
