@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-another-health-condition-or-disability-3">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-xl">Check your answers: What health condition or disability do you have?</h1>
+
+      <h2 class="govuk-heading-m">1. First health condition or disability</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What health condition or disability do you have?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['1b-about-your-health-condition-or-disability-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-about-your-health-condition-or-disability-1">
+              Change
+              <span class="govuk-visually-hidden"> What health condition or disability do you have?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have another health condition or disability?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['1b-another-health-condition-or-disability-2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-another-health-condition-or-disability-2">
+              Change
+              <span class="govuk-visually-hidden"> Do you have another health condition or disability?</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+  <h2 class="govuk-heading-m">2. Other health condition or disability</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        What other health condition or disability do you have?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['1b-about-your-health-condition-or-disability-2'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1b/1b-about-your-health-condition-or-disability-2">
+          Change
+          <span class="govuk-visually-hidden"> What health condition or disability do you have?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you have another health condition or disability?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['1b-another-health-condition-or-disability-3'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1b/1b-another-health-condition-or-disability-3">
+          Change
+          <span class="govuk-visually-hidden"> Do you have another health condition or disability?</span>
+        </a>
+      </dd>
+    </div>
+
+  </dl>
+
+
+  <form class="form" action="/alpha-apply-1b/1b-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  </div>
+{% endblock %}

@@ -1065,7 +1065,86 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                        res.redirect(redirectUrl)
                      })
 
+  router.route('/alpha-apply-1b/1b-another-health-condition-or-disability-2')
+  .post((req, res, next) => {
+  let redirectUrl
+  switch (req.body['1b-another-health-condition-or-disability-2']) {
+  case 'Yes':
+  redirectUrl = '/alpha-apply-1b/1b-about-health-condition-or-disability-2'
+  break
+  case 'No':
+  redirectUrl = '/alpha-apply-1b/1b-about-your-health-condition-or-disability-check-your-answers-2'
+  break
 
+  default:
+  redirectUrl = req.path
+  break
+  }
+  res.redirect(redirectUrl)
+  })
+
+
+    router.route('/alpha-apply-1b/1b-another-health-condition-or-disability-3')
+    .post((req, res, next) => {
+    let redirectUrl
+    switch (req.body['1b-another-health-condition-or-disability-3']) {
+    case 'Yes':
+    redirectUrl = '/alpha-apply-1b/#'
+    break
+    case 'No':
+    redirectUrl = '/alpha-apply-1b/1b-about-your-health-condition-or-disability-check-your-answers-3'
+    break
+
+    default:
+    redirectUrl = req.path
+    break
+    }
+    res.redirect(redirectUrl)
+    })
+
+
+                   router.route('/alpha-apply-1b/1b-employment-status')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['1b-employment-status']) {
+                         case 'Employed':
+                           redirectUrl = '/alpha-apply-1b/1b-employment-job-title'
+                           break
+                         case 'Self-employed':
+                           redirectUrl = '/alpha-apply-1b/1b-self-employment-job-title'
+                           break
+                             case 'About to start employment':
+                               redirectUrl = '/alpha-apply-1b/1b-about-to-start-employment-job-title'
+                               break
+                             case 'About to start self-employment':
+                               redirectUrl = '/alpha-apply-1b/1b-about-to-start-self-employment-job-title'
+                               break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+
+                   router.route('/alpha-apply-1b/1b-employment-full-time')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['employment-full-time']) {
+                         case 'Yes':
+                           redirectUrl = '/alpha-apply-1b/1b-employment-employer-name'
+                           break
+                         case 'No':
+                           redirectUrl = '/alpha-apply-1b/1b-employment-hours-per-week'
+                           break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
 
 
 
