@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-self-employment-length">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-self-employment-full-time" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you work full-time?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="self-employment-full-time" name="self-employment-full-time"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="self-employment-full-time">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="self-employment-full-time-2"
+                           name="self-employment-full-time"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="self-employment-full-time-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("extra-information-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("extra-information-screener", "No")
+                }
+                </script>
+
+{% endblock %}

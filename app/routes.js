@@ -1146,5 +1146,59 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                        res.redirect(redirectUrl)
                      })
 
+                    router.route('/alpha-apply-1b/1b-self-employment-full-time')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['self-employment-full-time']) {
+                          case 'Yes':
+                            redirectUrl = '/alpha-apply-1b/1b-self-employment-workplace-address'
+                            break
+                          case 'No':
+                            redirectUrl = '/alpha-apply-1b/1b-self-employment-hours-per-week'
+                            break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+
+                    router.route('/alpha-apply-1b/1b-about-to-start-employment-full-time')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['employment-full-time']) {
+                          case 'Yes':
+                            redirectUrl = '/alpha-apply-1b/1b-about-to-start-employment-employer-name'
+                            break
+                          case 'No':
+                            redirectUrl = '/alpha-apply-1b/1b-about-to-start-employment-hours-per-week'
+                            break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+                     router.route('/alpha-apply-1b/1b-about-to-start-self-employment-full-time')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['self-employment-full-time']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1b/1b-about-to-start-self-employment-workplace-address'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1b/1b-about-to-start-self-employment-hours-per-week'
+                             break
+
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
 
 

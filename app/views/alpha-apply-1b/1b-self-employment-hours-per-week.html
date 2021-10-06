@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-self-employment-full-time">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-self-employment-workplace-address" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="job-length-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How many hours do you work per week?
+            </h1>
+          </legend>
+
+          <p>If your hours can vary, provide an estimate of the number of hours you think you work on average.</p>
+
+          <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-3" id="hours per week"
+                                                   name="hours per week"
+                                                   type="text" spellcheck="false">
+            <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
