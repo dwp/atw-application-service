@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-national-insurance-number">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-xl">Check your answers: your details</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['first-name'] }} {{ data['last-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-what-is-your-full-name">
+              Change
+              <span class="govuk-visually-hidden"> what is your full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['date-of-birth-day'] }} {{ data['date-of-birth-month'] }} {{ data['date-of-birth-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-what-is-your-date-of-birth">
+              Change
+              <span class="govuk-visually-hidden"> what is your date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+            <li>{{ data['claimant-postcode-select'] }} St Vincent Street,</li>
+              <li>Glasgow,</li>
+              <li>{{data["claimant-postcode"]}}</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-home-address-select">
+              Change
+              <span class="govuk-visually-hidden"> what is your address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application contact
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['appointee-or-representative'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-appointee-or-representative">
+              Change
+              <span class="govuk-visually-hidden"> do you have an appointee or representative</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-contact-details-phone-both">
+              Change
+              <span class="govuk-visually-hidden"> what is your phone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-contact-details-email-both">
+              Change
+              <span class="govuk-visually-hidden"> what is your email address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-national-insurance-number">
+              Change
+              <span class="govuk-visually-hidden"> what is your national insurance number</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+  <form class="form" action="/alpha-apply-1b/1b-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+  </div>
+{% endblock %}

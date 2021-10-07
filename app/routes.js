@@ -1029,13 +1029,13 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                     .post((req, res, next) => {
                       let redirectUrl
                       switch (req.body['appointee-or-representative']) {
-                        case 'appointee':
+                        case 'I have an appointee':
                           redirectUrl = '/alpha-apply-1b/1b-appointee-details'
                           break
-                        case 'representative':
+                        case 'I want to nominate a representative':
                           redirectUrl = '/alpha-apply-1b/1b-nominated-representative-details'
                           break
-                          case 'none':
+                          case 'I do not have an appointee or nominated representative':
                             redirectUrl = '/alpha-apply-1b/1b-contact-preferences'
                             break
 

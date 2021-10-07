@@ -16,68 +16,71 @@
 
     <form class="form" action="/alpha-apply-1b/1b-contact-preferences" method="post">
 
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" role="group" aria-describedby="full-name-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h1 class="govuk-fieldset__heading">
-                        Your representative's details
-                      </h1>
-                    </legend>
-
-                    <div class="govuk-!-padding-bottom-4"></div>
-
-                      <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m" for="full-name">
-                              Their full name
-                          </h2>
-                          <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
-
-                      <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m" for="more-detail">
-                              Their relationship to you
-                          </h2>
-                          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                      </div>
-
-                      <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m" for="telephone-number">
-                              Their telephone number
-                          </h2>
-                          <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
-
-                      <div class="govuk-form-group">
-                          <h2 class="govuk-heading-m" for="email">
-                              Their email address
-                          </h2>
-                          <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-                      </div>
-
-                      <div class="govuk-!-padding-bottom-3"></div>
-
-                      <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="appointee" name="appointee" type="checkbox"
-                                 value="appointee">
-                          <label class="govuk-label govuk-checkboxes__label" for="appointee">
-                              I confirm that I have my representative's permission to share these details
-                          </label>
-                      </div>
-
-
-                  </fieldset>
-                </div>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="workplace-contact">
+          Your representative's details
+        </label>
+        </h1>
 
         <div class="govuk-!-padding-bottom-3"></div>
 
-      <form class="form" action="/alpha-apply-1b/1b-contact-preferences" method="post">
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="representative-name">
+            Their full name
+          </label>
+          <input class="govuk-input" id="representative-name" name="representative-name" type="text"></div>
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="150">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="label-as-page-heading">
+              Their relationship to you
+            </label>
+            <textarea class="govuk-textarea govuk-js-character-count" id="label-as-page-heading"
+                      name="label-as-page-heading" rows="3" aria-describedby="label-as-page-heading-info"></textarea>
+          </div>
+
+          <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 150 characters
+          </div>
+
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="representative-phone">
+            Their telephone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="representative-phone" name="representative-phone" type="tel" autocomplete="tel"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="representative-email">
+            Their email address
+          </label>
+          <input class="govuk-input" id="representative-email" name="representative-email" type="email" spellcheck="false" aria-describedby="appointee-email-hint" autocomplete="email">
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="workplace-permission" name="workplace-permission" type="checkbox" value="workplace-permission">
+            <label class="govuk-label govuk-checkboxes__label" for="workplace-permission">
+              I confirm that I have my representative's permission to share these details
+            </label>
+          </div>
+
+          <div class="govuk-!-padding-bottom-0"></div>
+
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
-    </form>
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
 
+      </div>
 
-  </div>
   <div class="govuk-grid-column-one-third">
-
 
   </div>
 </div>
