@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1b/1b-self-employment-job-title">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-about-to-start-employment-job-title">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,16 +14,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1b/1b-self-employment-utr" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-about-to-start-employment-start-date" method="post">
 
 
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="self-employment-job-description">
-            What is your job description?
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employment-job-description">
+            What will your job description be?
           </label>
           </h1>
-          <p>Provide a short overview of the work that you do.</p>
+          <p>Provide a short overview of the work that you'll do.</p>
 
           <p class="govuk-body">You can include, for example:</p>
           <ul class="govuk-list govuk-list--bullet">
@@ -31,9 +31,9 @@
             <li>responsibilities</li>
             <li>day-to-day activities</li>
           </ul>
-          <textarea class="govuk-textarea govuk-js-character-count" id="self-employment-job-description"
-                    name="self-employment-job-description" rows="5"
-                    aria-describedby="self-employment-job-description-info self-employment-job-description-hint"></textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="employment-job-description"
+                    name="employment-job-description" rows="5"
+                    aria-describedby="employment-job-description-info employment-job-description-hint"></textarea>
         </div>
 
         <div id="self-employment-job-description-info" class="govuk-hint govuk-character-count__message" aria-live="polite">

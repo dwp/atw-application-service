@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1b/1b-about-to-start-employment-workplace-address-select">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-about-to-start-employment-employer-size">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1b/1b-about-to-start-employment-employer-size" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-about-to-start-employment-do-you-have-another-job" method="post">
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="workplace-contact">
@@ -32,6 +32,12 @@
             Their name
           </label>
           <input class="govuk-input" id="workplace-name" name="workplace-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="role-name">
+            Their role
+          </label>
+          <input class="govuk-input" id="role-name" name="role-name" type="text"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="workplace-email">

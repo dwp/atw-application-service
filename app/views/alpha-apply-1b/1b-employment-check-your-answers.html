@@ -75,15 +75,15 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Do you work full-time?
+            How many hours do you work per week?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['employment-full-time'] }}
+            {{ data['hours per week'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1b/1b-employment-full-time">
+            <a href="/alpha-apply-1b/1b-employment-hours-per-week">
               Change
-              <span class="govuk-visually-hidden"> do you work full-time</a>
+              <span class="govuk-visually-hidden"> how many hours do you work per week</a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -117,20 +117,20 @@
             </a>
           </dd>
         </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              How many people work at your company or organisation?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['1b-employment-employer-size'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a href="/alpha-apply-1b/1b-employment-employer-size">
-                Change
-                <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
-              </a>
-            </dd>
-          </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many people work at your company or organisation?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['1b-employment-employer-size'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1b/1b-employment-employer-size">
+              Change
+              <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
+            </a>
+          </dd>
+        </div>
       </dl>
 
 
@@ -148,6 +148,20 @@
         <a href="/alpha-apply-1b/1b-employment-workplace-contact">
           Change
           <span class="govuk-visually-hidden"> what is your workplace contacts name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['role-name'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1b/1b-employment-workplace-contact">
+          Change
+          <span class="govuk-visually-hidden"> what is your workplace contacts role</span>
         </a>
       </dd>
     </div>

@@ -996,9 +996,12 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                     case 'myself':
                       redirectUrl = '/alpha-apply-1b/1b-bsl-eligibility-statement'
                       break
-                    case 'someone else':
+                    case 'I am an appointee':
                       redirectUrl = '/alpha-apply-1b/#'
                       break
+                      case 'I am a representative':
+                        redirectUrl = '/alpha-apply-1b/#'
+                        break
 
                     default:
                       redirectUrl = req.path
@@ -1220,4 +1223,24 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                       res.redirect(redirectUrl)
                     })
 
+  router.route('/alpha-apply-1b/1b-who-are-you-applying-for')
+    .post((req, res, next) => {
+      let redirectUrl
+      switch (req.body['1b-who-are-you-applying-for']) {
+        case 'myself':
+          redirectUrl = '/alpha-apply-1b/1b-eligibility-statement'
+          break
+        case 'I am an appointee':
+          redirectUrl = '/alpha-apply-1b/1b-#'
+          break
+          case 'I am an appointee':
+            redirectUrl = '/alpha-apply-1b/1b-#'
+            break
+
+        default:
+          redirectUrl = req.path
+          break
+      }
+      res.redirect(redirectUrl)
+    })
 
