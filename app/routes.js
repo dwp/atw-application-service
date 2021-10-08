@@ -1202,3 +1202,22 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                        })
 
 
+                  router.route('/alpha-apply-1b/1b-contact-someone-else')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      switch (req.body['1b-contact-someone-else']) {
+                        case 'Yes':
+                          redirectUrl = '/alpha-apply-1b/1b-someone-else-details'
+                          break
+                        case 'No':
+                          redirectUrl = '/alpha-apply-1b/1b-your-details-check-your-answers'
+                          break
+
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })
+
+

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1b/1b-national-insurance-number">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-contact-someone-else">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -64,15 +64,15 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Application contact
+            National Insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['appointee-or-representative'] }}
+            {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1b/1b-appointee-or-representative">
+            <a href="/alpha-apply-1b/1b-national-insurance-number">
               Change
-              <span class="govuk-visually-hidden"> do you have an appointee or representative</span>
+              <span class="govuk-visually-hidden"> what is your national insurance number</span>
             </a>
           </dd>
         </div>
@@ -106,15 +106,16 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            National Insurance number
+            Would you like someone else to receive a copy of everything we send you about your application?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['national-insurance-number'] }}
+            {{ data['1b-contact-someone-else'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1b/1b-national-insurance-number">
+            <a href="/alpha-apply-1b/1b-contact-someone-else">
               Change
-              <span class="govuk-visually-hidden"> what is your national insurance number</span>
+              <span class="govuk-visually-hidden"> would you like someone else to receive a copy of everything we
+                send you about your application</span>
             </a>
           </dd>
         </div>
