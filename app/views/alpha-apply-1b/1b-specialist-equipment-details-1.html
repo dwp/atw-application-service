@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-specialist-equipment-do-you-have-a-quote-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-specialist-equipment-details-2" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-details-1">
+          Quote for {{ data['specialist-equipment-type-1'] }}
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="specialist-equipment-details-1">
+            Brand or supplier of this item
+          </label>
+          </h2>
+          <div id="1b-specialist-equipment-details-1-hint" class="govuk-hint">
+            Be as specific as you can about this equipment – for example, give the make and model.
+          </div>
+          <input class="govuk-input" id="specialist-equipment-details-1" name="specialist-equipment-details-1" type="text" aria-describedby="specialist-equipment-details-1-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="specialist-equipment-details-1">
+            What is the total cost of this equipment?
+          </label>
+          </h2>
+          <div id="specialist-equipment-details-1-hint" class="govuk-hint">
+            Include any extra costs, like delivery and VAT.
+          </div>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="specialist-equipment-details-1" name="specialist-equipment-details-1" type="text" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="150">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                   for="specialist-equipment-details-1">
+              Tell us about how this item will meet your needs at work
+            </label>
+            </h1>
+            <div class="govuk-!-padding-bottom-2"></div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-details-1" name="specialist-equipment-details-1" rows="3"
+                      aria-describedby="specialist-equipment-details-1-hint"></textarea>
+          </div>
+
+          <div id="specialist-equipment-details-1-info" class="govuk-hint govuk-character-count__message" aria-live="specialist-equipment-details-1">
+            You can enter up to 150 characters
+          </div>
+
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

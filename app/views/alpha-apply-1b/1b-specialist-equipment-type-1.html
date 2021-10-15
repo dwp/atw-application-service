@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-specialist-equipment-textbox">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-specialist-equipment-do-you-have-a-quote-1" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-type-1">
+          What type of specialist equipment do you need?
+        </label>
+        </h1>
+        <div id="specialist-equipment-type-1-hint" class="govuk-hint">
+          For example, 'ergonomic keyboard'.
+        </div>
+        <div id="specialist-equipment-type-1-hint" class="govuk-hint">
+          If you need more than one item of specialist equipment, you will have the option to add more later on.
+        </div>
+        <input class="govuk-input" id="specialist-equipment-type-1" name="specialist-equipment-type-1" type="text">
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

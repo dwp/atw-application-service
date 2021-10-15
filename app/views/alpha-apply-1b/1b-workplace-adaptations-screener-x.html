@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1b/1b-workplace-adaptations-contacting-your-employer" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-workplace-adaptations-details-1" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -44,29 +44,32 @@
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="workplace-adaptations-screener" name="workplace-adaptations-screener"
-                           type="radio" value="Yes, I need changes to my workplace">
-                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener">
-                      Yes, I need changes to my workplace
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="workplace-adaptations-screener-2" name="workplace-adaptations-screener"
-                           type="radio" value="No, I don't need changes to my workplace">
-                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener-2">
-                      No, I don't need changes to my workplace
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="workplace-adaptations-screener-2" name="workplace-adaptations-screener"
-                           type="radio" value="I still need to speak to my employer about reasonable adjustments">
-                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener-2">
-                      I still need to speak to my employer about reasonable adjustments
-                    </label>
-                  </div>
-                </div>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in">
+                          <b>Yes</b>
+                        </label>
+                        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                          I need changes to my workplace
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                          <b>No</b>
+                        </label>
+                        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                          I don't need changes to my workplace
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                          <b>I still need to speak to my employer about reasonable adjustments</b>
+                        </label>
+                      </div>
+                    </div>
 
               </fieldset>
             </div>

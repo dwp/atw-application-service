@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-specialist-equipment-type-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-specialist-equipment-details-1" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you have quotes for this item of specialist equipment?
+            </h1>
+          </legend>
+
+          <div id="specialist-equipment-do-you-have-a-quote-1-hint" class="govuk-hint">
+            If you can provide quotes, this will speed up your application. We need 1 quote if the support is under
+            £500 and 3 quotes if the support is over £500.
+          </div>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="specialist-equipment-do-you-have-a-quote-1" name="specialist-equipment-do-you-have-a-quote-1" type="radio" value="Yes, I have quotes">
+              <label class="govuk-label govuk-radios__label" for="specialist-equipment-do-you-have-a-quote-1">
+                Yes, I have quotes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="specialist-equipment-do-you-have-a-quote-1-2" name="specialist-equipment-do-you-have-a-quote-1" type="radio" value="No, I do not have quotes">
+              <label class="govuk-label govuk-radios__label" for="specialist-equipment-do-you-have-a-quote-1-2">
+                No, I do not have quotes
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

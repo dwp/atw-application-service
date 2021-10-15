@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1b/1b-task-list">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-specialist-equipment-details-3">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1b/1b-support-worker-that-you-need-1" method="post">
+    <form class="form" action="/alpha-apply-1b/1b-specialist-equipment-check-your-answers" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,36 +23,26 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Does your condition mean that you need a support worker at work?
+                    Do you need to request another item of specialist equipment?
                   </h1>
                 </legend>
-
-                <div class="govuk-!-padding-bottom-2"></div>
-
-                <p class="govuk-body">This could be things like:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>British Sign Language (BSL) interpreters</li>
-                  <li>notetakers</li>
-                  <li>carers</li>
-                  <li>job coaches</li>
-                </ul>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="support-worker-screener" name="support-worker-screener"
+                    <input class="govuk-radios__input" id="specialist-equipment-another-item" name="specialist-equipment-another-item"
                            type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="support-worker-screener">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-another-item">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="support-worker-screener-2"
-                           name="support-worker-screener"
+                    <input class="govuk-radios__input" id="specialist-equipment-another-item-2"
+                           name="specialist-equipment-another-item"
                            type="radio" value="No">
-                    <label class="govuk-label govuk-radios__label" for="support-worker-screener-2">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-another-item-2">
                       No
                     </label>
                   </div>
@@ -69,7 +59,6 @@
 
         <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
 
-    </form>
   </div>
 
   </div>
@@ -82,17 +71,5 @@
 
   </div>
 
-                <script>
-                {
-                value: "Yes",
-                text: "Yes",
-                checked: checked("support-worker-screener", "Yes")
-                },
-                {
-                value: "No",
-                text: "No",
-                checked: checked("support-worker-screener", "No")
-                }
-                </script>
 
 {% endblock %}
