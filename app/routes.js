@@ -828,7 +828,7 @@ router.route('/alpha-eligibility-control/current-benefits')
             let redirectUrl
             switch (req.body['1b-bsl-support']) {
               case 'yes':
-                redirectUrl = '/alpha-apply-1b/1b-bsl-who-are-you-applying-for'
+                redirectUrl = '/alpha-apply-1b/1b-bsl-eligibility-statement'
                 break
               case 'no':
                 redirectUrl = '/alpha-apply-1b/1b-accessibility-information'
@@ -849,7 +849,7 @@ router.route('/alpha-eligibility-control/current-benefits')
          redirectUrl = '/alpha-apply-1b/1b-bsl-support'
          break
        case 'no':
-         redirectUrl = '/alpha-apply-1b/1b-who-are-you-applying-for'
+         redirectUrl = '/alpha-apply-1b/1b-eligibility-statement'
          break
 
        default:

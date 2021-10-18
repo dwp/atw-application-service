@@ -5,13 +5,15 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1b/1b-contact-someone-else">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-contact-preferences">Back</a>
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
 
-      <h1 class="govuk-heading-xl">Check your answers: your details</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers: your details</h1>
 
       <h2 class="govuk-heading-m">Personal details</h2>
 
@@ -90,38 +92,9 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['email'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1b/1b-contact-details-email-both">
-              Change
-              <span class="govuk-visually-hidden"> what is your email address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Would you like someone else to receive a copy of everything we send you about your application?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['1b-contact-someone-else'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1b/1b-contact-someone-else">
-              Change
-              <span class="govuk-visually-hidden"> would you like someone else to receive a copy of everything we
-                send you about your application</span>
-            </a>
-          </dd>
-        </div>
-
-
       </dl>
+      </div>
+    </div>
 
   <form class="form" action="/alpha-apply-1b/1b-task-list" method="post">
   <button type="submit" class="govuk-button" data-module="govuk-button">
