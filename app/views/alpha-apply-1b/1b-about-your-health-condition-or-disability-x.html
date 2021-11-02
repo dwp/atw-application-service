@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1b/1b-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1b/1b-another-health-condition-or-disability-2" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What health condition or disability do you have?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">This can include, for example:</p>
+                <ul class="govuk-list govuk-list--bullet">
+
+                  <li>a physical disability</li>
+                  <li>a mental health condition</li>
+                  <li>a hearing or sight impairment</li>
+                  <li>a learning disability or difference</li>
+                  <li>an illness</li>
+                  <li>a temporary condition</li>
+                  <li>a developmental condition</li>
+                  <li>any other condition, disability or illness not mentioned above</li>
+
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+
+                <div class="govuk-form-group">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                         for="1b-about-your-health-condition-or-disability-1">
+                    Name of your first health condition or disability
+                  </label>
+                  </h2>
+                  <input class="govuk-input" id="1b-about-your-health-condition-or-disability-1"
+                         name="1b-about-your-health-condition-or-disability-1" type="text" aria-describedby="1b-about-your-health-condition-or-disability-1-hint" {{ data['1b-about-your-health-condition-or-disability-1'] }}>
+                </div>
+
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+                  <div class="govuk-form-group">
+                    <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                           for="about-your-health-condition-or-disability-daily-life-1">
+                      How does this health condition or disability affect your daily life?
+                    </label>
+                    </h2>
+                    <div class="govuk-!-padding-bottom-1"></div>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="about-your-health-condition-or-disability-daily-life-1" name="about-your-health-condition-or-disability-daily-life-1" rows="5" aria-describedby="about-your-health-condition-or-disability-daily-life-1-info about-your-health-condition-or-disability-daily-life-1-hint"></textarea>
+                  </div>
+
+                  <div id="about-your-health-condition-or-disability-daily-life-1-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 300 characters
+                  </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add another health condition or disability
+        </button>
+
+
+        <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1b/1b-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-do-you-need-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-bsl-support" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Would you like to apply online using British Sign Language (BSL) videos?
+                  </h1>
+                </legend>
+
+                <div id="1b-bsl-support-hint" class="govuk-hint">
+                  If you don't want to apply using BSL videos, other types of support are available, such as telephone.</div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-bsl-support" name="1b-bsl-support"
+                           type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="1b-bsl-support">
+                      Yes, I'd like to apply with BSL videos
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-bsl-support-2" name="1b-bsl-support"
+                           type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="1b-bsl-support-2">
+                      No, but I'd still like support
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Access to Work helpline
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <p class="govuk-body" >Telephone: 0800 121 7479</p>
+        <p>Monday to Friday, 9am to 5pm. This service is free.</p>
+        <p><a href="#">Find out about other accessible formats</a>.
+        </p>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

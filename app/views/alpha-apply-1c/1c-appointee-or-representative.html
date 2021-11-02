@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-home-address-select">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-appointee-or-representative" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <p class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="appointee-or-representative-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Should we contact someone else about your application?
+              </h1>
+            </legend>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee-or-representative"
+                       name="appointee-or-representative" type="radio"
+                value="I have an appointee" aria-describedby="appointee-or-representative-item-hint">
+                <label class="govuk-label govuk-radios__label" for="appointee-or-representative">
+                  <b>I have an appointee</b>
+                </label>
+                <div id="appointee-or-representative-item-hint" class="govuk-hint govuk-radios__hint">
+                  An appointee is someone that is legally responsible for managing your affairs on your behalf. They could be a friend or family member, or a representative from an organisation - for example, a solicitor.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee-or-representative-2"
+                       name="appointee-or-representative" type="radio" value="I want to nominate a representative"
+                       aria-describedby="appointee-or-representative-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="appointee-or-representative-2">
+                  <b>I want to nominate a representative</b>
+                </label>
+                <div id="appointee-or-representative-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  A representative is someone that we will use as the main point of contact about your application.
+                  For example, this could be a support worker or a family member. You will receive a copy of everything that we send them.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee-or-representative-3" name="appointee-or-representative" type="radio" value="I do not have an appointee or nominated representative"
+                       aria-describedby="appointee-or-representative-3-item-hint">
+                <label class="govuk-label govuk-radios__label" for="appointee-or-representative-3">
+                  <b>I do not have an appointee or nominated representative</b>
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

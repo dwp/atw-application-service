@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-what-is-your-date-of-birth" method="post">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="full-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        What is your name?
+                      </h1>
+                    </legend>
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                      <div class="govuk-form-group">
+                          <h2 class="govuk-heading-m">First name</h2>
+                          <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false" autocomplete="name"></div>
+
+                      <div class="govuk-form-group">
+                          <h2 class="govuk-heading-m">Last name</h2>
+                          <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false" autocomplete="name"></div>
+
+
+                  </fieldset>
+                </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+    </form>
+
+      <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

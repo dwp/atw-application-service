@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-another-health-condition-or-disability-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-another-health-condition-or-disability-3" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What other health condition or disability do you have?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">This can include, for example:</p>
+                <ul class="govuk-list govuk-list--bullet">
+
+                  <li>a physical disability</li>
+                  <li>a mental health condition</li>
+                  <li>a hearing or sight impairment</li>
+                  <li>a learning disability or difference</li>
+                  <li>an illness</li>
+                  <li>a temporary condition</li>
+                  <li>a developmental condition</li>
+                  <li>any other condition, disability or illness not mentioned above</li>
+
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-form-group">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m"
+                                                         for="1b-about-your-health-condition-or-disability-2">
+                    Name of your health condition or disability
+                  </label>
+                  </h2>
+                  <input class="govuk-input" id="1b-about-your-health-condition-or-disability-2" name="1b-about-your-health-condition-or-disability-2" type="text">
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("specialist-equipment-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("specialist-equipment-screener", "No")
+                }
+                </script>
+
+{% endblock %}

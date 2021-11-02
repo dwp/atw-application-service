@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-specialist-equipment-another-item">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-xl">Check your answers: specialist equipment</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition affect what equipment you use at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-specialist-equipment-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need specialist equipment</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What type of specialist equipment do you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-textbox'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-specialist-equipment-textbox">
+              Change
+              <span class="govuk-visually-hidden"> what specialist equipment do you need</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have quotes for this item of specialist equipment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-do-you-have-a-quote-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-specialist-equipment-do-you-have-a-quote-1">
+              Change
+              <span class="govuk-visually-hidden"> do you have quotes for this item of specialist equipment?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have quotes for this item of specialist equipment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-do-you-have-a-quote-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-specialist-equipment-do-you-have-a-quote-1">
+              Change
+              <span class="govuk-visually-hidden"> do you have quotes for this item of specialist equipment?</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+  <form class="form" action="/alpha-apply-1c/1c-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  </div>
+{% endblock %}

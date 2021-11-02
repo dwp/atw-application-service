@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-workplace-adaptations-contacting-your-employer">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-workplace-adaptations-do-you-have-another-workplace-adaptation-1" method="post">
+
+      <h1 class="govuk-heading-l">Changes to workplace and equipment</h1>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="what-change-to-workplace-1">
+          What change to your workplace do you need?
+        </label>
+        </h2>
+        <div id="what-change-to-workplace-1-hint" class="govuk-hint">
+          For example, 'a wheelchair ramp'. If you would like more than one change to your workplace, you will have
+          the option to add another one in the next step.</div>
+        <input class="govuk-input" id="what-change-to-workplace-1" name="what-change-to-workplace-1" type="text" aria-describedby="what-change-to-workplace-1-hint">
+      </div>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="workplace-adaptations-details-1">
+            Tell us about how this change will meet your needs
+          </label>
+          </h2>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="workplace-adaptations-details-1" name="workplace-adaptations-details-1" rows="5" aria-describedby="workplace-adaptations-details-1-info workplace-adaptations-details-1-hint"></textarea>
+        </div>
+
+        <div id="workplace-adaptations-details-1-info" class="govuk-hint govuk-character-count__message" aria-live="workplace-adaptations-details-1">
+          You can enter up to 300 characters
+        </div>
+
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="/alpha-apply-1c/1c-do-you-know-what-support-you-need">Back</a>
+<a class="govuk-back-link" href="/alpha-apply-1c/#">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -36,7 +36,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c#" aria-describedby="eligibility-status">
+                <a href="/alpha-apply-1c/#" aria-describedby="eligibility-status">
                   Check you're eligible
                 </a>
               </span>
@@ -52,7 +52,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-what-is-your-full-name" aria-describedby="your-disability-status">
+                <a href="/alpha-apply-1c/#" aria-describedby="your-disability-status">
                   Your details
                 </a>
               </span>
@@ -60,9 +60,8 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-about-your-health-condition-or-disability-1"
-                   aria-describedby="your-disability-status">
-                  Your health conditions or disabilities
+                <a href="/alpha-apply-1c/#" aria-describedby="your-disability-status">
+                  Your disabilities or health conditions
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="your-disability-status">In progress</strong>
@@ -77,11 +76,19 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-employment-status" aria-describedby="about-your-job-status">
-                  About your job and employer
+                <a href="/alpha-apply-1c/#" aria-describedby="about-your-job-status">
+                  About your job
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="about-your-job-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/" aria-describedby="employer-details-status">
+                  Employer details
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="employer-details-status">In progress</strong>
             </li>
           </ul>
         </li>
@@ -93,59 +100,16 @@
 
           <ul class="app-task-list__items">
 
-            <p>We need to know more information about what support you need and approximate cost. If the support you
-              need is over £500, we need quotes from 3 different suppliers to work out the value of your grant.</p>
+            <p>We need to know more information about what support you need and approximate cost. If the support you need is over £500, we need quotes from three different suppliers to work out the value of your grant.</p>
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
-                  Specialist aids and equipment
+                <a href="/alpha-apply-1c/1c-what-support-you-need"
+                   aria-describedby="what-support-you-need-status">
+                  What support you need
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="specialist-equipment-status">Completed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-support-worker-screener" aria-describedby="support-workers-status">
-                  Support workers
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="support-workers-status">In progress</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-travelling-to-work-screener" aria-describedby="travel-to-work-status">
-                  Travel and work
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="travel-to-work-status">In progress</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-mental-health-support-screener"
-                   aria-describedby="mental-health-support-status">
-                  Mental health support
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="mental-health-support-status">In progress</strong>
-            </li>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
-                  Changes to workplace and equipment
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="changes-to-your-vehicle-status">Completed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-changes-to-your-vehicle-screener"
-                   aria-describedby="changes-to-your-vehicle-status">
-                  Changes to your vehicle
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="changes-to-your-vehicle-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag" id="what-support-you-need-status">Completed</strong>
             </li>
           </ul>
         </li>
@@ -156,7 +120,8 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c/1c-extra-information-screener" aria-describedby="additional-information-status">
+                <a href="/alpha-apply-1c/#"
+                   aria-describedby="additional-information-status">
                   Anything else you would like to tell us
                 </a>
               </span>
@@ -172,7 +137,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1c#" aria-describedby="declaration-status">
+                <a href="/alpha-apply-1c/#" aria-describedby="declaration-status">
                   Check answers and send your application
                 </a>
               </span>

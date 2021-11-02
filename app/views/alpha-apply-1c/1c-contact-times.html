@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-contact-preferences">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-contact-selecting-time" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h1 class="govuk-fieldset__heading">
+              Contacting you about your application
+            </h1>
+          </legend>
+          <p>We may need to contact you about your application during the hours of 9am to 5pm, Monday to Friday.</p>
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Are there any times that we should not contact you during these hours?
+            </h2>
+          </legend>
+
+          <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-times" name="contact-times" type="radio"
+                     value="Yes, there are times that you should not contact me">
+              <label class="govuk-label govuk-radios__label" for="contact-times">
+                Yes, there are times that you should not contact me
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-times-2" name="contact-times" type="radio" value="No, you can call me at any time">
+              <label class="govuk-label govuk-radios__label" for="contact-times-2">
+                No, you can call me at any time
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

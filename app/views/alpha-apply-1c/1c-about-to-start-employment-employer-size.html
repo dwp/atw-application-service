@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-about-to-start-employment-workplace-address-select">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-about-to-start-employment-workplace-contact" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    How many people work for your employer?
+                  </h1>
+                </legend>
+
+                <div id="1b-employment-employer-size-hint" class="govuk-hint">
+                  Your employer may need to share some of the cost of support. This will depend on the support you need and the size of your company or organisation.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-about-to-start-employment-employer-size" name="1b-employment-employer-size"
+                           type="radio" value="1 to 9">
+                    <label class="govuk-label govuk-radios__label" for="1b-about-to-start-employment-employer-size">
+                      1 to 9
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-about-to-start-employment-employer-size-2" name="1b-employment-employer-size"
+                           type="radio" value="10 to 49">
+                    <label class="govuk-label govuk-radios__label" for="1b-about-to-start-employment-employer-size-2">
+                      10 to 49
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-about-to-start-employment-employer-size-3"
+                           name="1b-employment-employer-size"
+                           type="radio" value="50 to 249">
+                    <label class="govuk-label govuk-radios__label" for="1b-about-to-start-employment-employer-size-3">
+                      50 to 249
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-about-to-start-employment-employer-size-4"
+                           name="1b-employment-employer-size"
+                           type="radio" value="250 or more">
+                    <label class="govuk-label govuk-radios__label" for="1b-about-to-start-employment-employer-size-4">
+                      250 or more
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1b-about-to-start-employment-employer-size-5"
+                           name="1b-employment-employer-size"
+                           type="radio" value="I'm not sure">
+                    <label class="govuk-label govuk-radios__label" for="1b-about-to-start-employment-employer-size-5">
+                      I'm not sure
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+      </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
