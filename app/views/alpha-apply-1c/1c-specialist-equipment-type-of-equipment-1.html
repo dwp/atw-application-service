@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-specialist-equipment-workplace-assessment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-1" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-type-1">
+          What type of specialist equipment do you need?
+        </label>
+        </h1>
+        <div class="govuk-!-padding-bottom-1"></div>
+        <div id="specialist-equipment-type-1-hint" class="govuk-hint">
+          For example, 'ergonomic keyboard'.
+        </div>
+        <input class="govuk-input" id="specialist-equipment-type-1" name="specialist-equipment-type-1" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="add-another-1-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--s">
+            Do you need to add another item?
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="add-another-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="add-another-1-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

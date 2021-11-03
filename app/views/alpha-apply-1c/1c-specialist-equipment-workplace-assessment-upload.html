@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-specialist-equipment-workplace-assessment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-specialist-equipment-check-your-answers-3" method="post">
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="workplace-assessment">
+            Upload a copy of your workplace assessment
+          </label>
+          </h1>
+          <div id="account-number-hint" class="govuk-hint">
+            This should be a PDF or Word document.
+          </div>
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+
+        <p><a href="#">I do not have a copy of my workplace assessment</a></p>
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("specialist-equipment-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("specialist-equipment-screener", "No")
+                }
+                </script>
+
+{% endblock %}

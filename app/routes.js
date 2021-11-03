@@ -1667,3 +1667,131 @@ router.route('/alpha-apply-1b/1b-bsl-support')
       })
 
 
+      router.route('/alpha-apply-1c/1c-specialist-equipment-screener')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['specialist-equipment-screener']) {
+            case 'Yes':
+              redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-do-you-know-what-specialist-equipment-you-need'
+              break
+            case 'No':
+              redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-check-your-answers-1'
+              break
+
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+        router.route('/alpha-apply-1c/1c-specialist-equipment-do-you-know-what-specialist-equipment-you-need')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['specialist-equipment-do-you-know-what-specialist-equipment-you-need']) {
+              case 'Yes, I know what I need':
+                redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-workplace-assessment'
+                break
+              case 'No, I do not know what I need':
+                redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-tell-us-ways-that-you-think-it-might-help'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
+
+
+          router.route('/alpha-apply-1c/1c-specialist-equipment-workplace-assessment')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['specialist-equipment-workplace-assessment']) {
+                case 'Yes':
+                  redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-workplace-assessment-upload'
+                  break
+                case 'No':
+                  redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-1'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+           router.route('/alpha-apply-1c/1c-specialist-equipment-hmrc-table-1')
+             .post((req, res, next) => {
+               let redirectUrl
+               switch (req.body['add-another']) {
+                 case 'Yes':
+                   redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-2'
+                   break
+                 case 'No':
+                   redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-check-your-answers-#'
+                   break
+
+                 default:
+                   redirectUrl = req.path
+                   break
+               }
+               res.redirect(redirectUrl)
+             })
+
+             router.route('/alpha-apply-1c/1c-specialist-equipment-hmrc-table-3')
+               .post((req, res, next) => {
+                 let redirectUrl
+                 switch (req.body['add-another-3']) {
+                   case 'Yes':
+                     redirectUrl = '/alpha-apply-1c/#'
+                     break
+                   case 'No':
+                     redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-impact-of-not-having-it-3'
+                     break
+
+                   default:
+                     redirectUrl = req.path
+                     break
+                 }
+                 res.redirect(redirectUrl)
+               })
+
+               router.route('/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-1')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['add-another-1']) {
+                     case 'Yes':
+                       redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-2'
+                       break
+                     case 'No':
+                       redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-impact-of-not-having-it-1'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+                 router.route('/alpha-apply-1c/1c-specialist-equipment-hmrc-table-2')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['add-another-2']) {
+                       case 'Yes':
+                         redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-type-of-equipment-3'
+                         break
+                       case 'No':
+                         redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-impact-of-not-having-it-2'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })
+
+
