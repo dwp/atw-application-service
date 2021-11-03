@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1c/1c-support-worker-screener">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-support-worker-that-you-need-1">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1c/1c-support-worker-check-your-answers" method="post">
+    <form class="form" action="/alpha-apply-1c/1c-#" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,30 +23,31 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Tell us about how you think a support worker could meet your needs
+                    Tell us ways that a support worker  will help you at work
                   </h1>
                 </legend>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
-                <p class="govuk-body">You should include:</p>
+                <p class="govuk-body">You can include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>the type of support worker that you think you need</li>
-                  <li>examples of how a support worker could help you at work</li>
-                  <li>the impact of not currently having a support worker</li>
+                  <li>activities at work that a support worker would help you with</li>
+                  <li>the effect of not currently having any a support worker at work</li>
                 </ul>
 
                 <div class="govuk-!-padding-bottom-2"></div>
-                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
                   <div class="govuk-form-group">
 
-                    <textarea class="govuk-textarea govuk-js-character-count" id="support-worker-textbox"
-                              name="support-worker-textbox"
-                              rows="15" aria-describedby="specialist-equipment-textbox-info with-hint-hint">{{ data['support-worker-textbox'] }}</textarea>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="support-worker-will-help"
+                              name="support-worker-might-help"
+                              rows="10" aria-describedby="support-worker-will-help-info with-hint-hint">{{
+                      data['support-worker-will-help'] }}</textarea>
                   </div>
 
-                  <div id="support-worker-textbox-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-                    You can enter up to 1000 characters
+                  <div id="support-worker-will-help-info" class="govuk-hint govuk-character-count__message"
+                       aria-live="polite">
+                    You can enter up to 500 characters
                   </div>
 
 

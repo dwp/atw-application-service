@@ -1675,7 +1675,7 @@ router.route('/alpha-apply-1b/1b-bsl-support')
               redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-do-you-know-what-specialist-equipment-you-need'
               break
             case 'No':
-              redirectUrl = '/alpha-apply-1c/1c-specialist-equipment-check-your-answers-1'
+              redirectUrl = '/alpha-apply-1c/1c-task-list'
               break
 
             default:
@@ -1794,4 +1794,38 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                      res.redirect(redirectUrl)
                    })
 
+      router.route('/alpha-apply-1c/1c-support-worker-screener')
+        .post((req, res, next) => {
+          let redirectUrl
+          switch (req.body['support-worker-screener']) {
+            case 'Yes':
+              redirectUrl = '/alpha-apply-1c/1c-support-worker-do-you-know-what-support-worker-you-need'
+              break
+            case 'No':
+              redirectUrl = '/alpha-apply-1c/1c-task-list'
+              break
 
+            default:
+              redirectUrl = req.path
+              break
+          }
+          res.redirect(redirectUrl)
+        })
+
+        router.route('/alpha-apply-1c/1c-support-worker-do-you-know-what-support-worker-you-need')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['support-worker-do-you-know-what-support-worker-you-need']) {
+              case 'Yes, I know what I need':
+                redirectUrl = '/alpha-apply-1c/1c-support-worker-that-you-need-1'
+                break
+              case 'No, I do not know what I need':
+                redirectUrl = '/alpha-apply-1c/1c-support-worker-might-help'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
