@@ -1829,3 +1829,111 @@ router.route('/alpha-apply-1b/1b-bsl-support')
             }
             res.redirect(redirectUrl)
           })
+
+         router.route('/alpha-apply-1c/1c-support-worker-short-or-long-term-two-options')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['support-worker-short-or-long-term-two-options']) {
+               case 'Long-term':
+                 redirectUrl = '/alpha-apply-1c/1c-support-worker-how-many-hours-a-week-long-term'
+                 break
+               case 'Short-term':
+                 redirectUrl = '/alpha-apply-1c/1c-support-worker-how-long-for'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+          router.route('/alpha-apply-1c/1c-support-worker-do-you-have-a-quote-short-term-1')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['support-worker-do-you-have-a-quote-short-term-1']) {
+                case 'Yes, I have quotes':
+                  redirectUrl = '/alpha-apply-1c/#'
+                  break
+                case 'No, I do not have quotes':
+                  redirectUrl = '/alpha-apply-1c/1c-support-worker-short-term-hmrc-table-1'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+            router.route('/alpha-apply-1c/1c-support-worker-providing-quotes-for-this-support-long-term-1')
+              .post((req, res, next) => {
+                let redirectUrl
+                switch (req.body['support-worker-providing-quotes-for-this-support-long-term-1']) {
+                  case 'Yes, I have quotes':
+                    redirectUrl = '/alpha-apply-1c/1c-support-worker-quote-long-term-1'
+                    break
+                  case 'No, I do not have quotes':
+                    redirectUrl = '/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-1'
+                    break
+
+                  default:
+                    redirectUrl = req.path
+                    break
+                }
+                res.redirect(redirectUrl)
+              })
+
+              router.route('/alpha-apply-1c/1c-support-worker-providing-quotes-for-this-support-short-term-1')
+                .post((req, res, next) => {
+                  let redirectUrl
+                  switch (req.body['support-worker-providing-quotes-for-this-support-short-term-1']) {
+                    case 'Yes, I have quotes':
+                      redirectUrl = '/alpha-apply-1c/1c-support-worker-quote-short-term-1'
+                      break
+                    case 'No, I do not have quotes':
+                      redirectUrl = '/alpha-apply-1c/1c-support-worker-short-term-hmrc-table-1'
+                      break
+
+                    default:
+                      redirectUrl = req.path
+                      break
+                  }
+                  res.redirect(redirectUrl)
+                })
+
+                router.route('/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-1-quote-1')
+                  .post((req, res, next) => {
+                    let redirectUrl
+                    switch (req.body['support-worker-second-quote-long-term-1']) {
+                      case 'Yes':
+                        redirectUrl = '/alpha-apply-1c/1c-support-worker-quote-long-term-2'
+                        break
+                      case 'No':
+                        redirectUrl = '/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-2'
+                        break
+
+                      default:
+                        redirectUrl = req.path
+                        break
+                    }
+                    res.redirect(redirectUrl)
+                  })
+
+                  router.route('/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-2-quote-1')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      switch (req.body['support-worker-second-quote-long-term-3']) {
+                        case 'Yes':
+                          redirectUrl = '/alpha-apply-1c/1c-support-worker-quote-long-term-3'
+                          break
+                        case 'No':
+                          redirectUrl = '/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-3'
+                          break
+
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })

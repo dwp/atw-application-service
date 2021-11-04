@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-support-worker-how-many-hours-a-week-long-term">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-support-worker-providing-quotes-for-this-support-long-term-1" method="post">
+
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-heading-l">Providing quotes for this support</h1>
+
+        <p>We ask for 3 quotes so that we can work out the value of your grant and be certain that you'll receive the right level of support.</p>
+
+        <p>Providing quotes is optional at this stage, but it will speed up your application if you can give them now. If you cannot provide them now, we will need to ask for them at a later date.</p>
+
+        <p class="govuk-body">We will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the name of the support worker provider</li>
+          <li>cost per hour</li>
+          <li>the number of hours per week you'll need this support for</li>
+        </ul>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Do you have quotes for the support worker that you need?
+            </h2>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="support-worker-providing-quotes-for-this-support-long-term-1" name="support-worker-providing-quotes-for-this-support-long-term-1" type="radio" value="Yes, I have quotes">
+              <label class="govuk-label govuk-radios__label" for="support-worker-providing-quotes-for-this-support-long-term-1">
+                Yes, I have quotes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="support-worker-providing-quotes-for-this-support-long-term-1-2" name="support-worker-providing-quotes-for-this-support-long-term-1" type="radio" value="No, I do not have quotes">
+              <label class="govuk-label govuk-radios__label" for="support-worker-providing-quotes-for-this-support-long-term-1-2">
+                No, I do not have quotes
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

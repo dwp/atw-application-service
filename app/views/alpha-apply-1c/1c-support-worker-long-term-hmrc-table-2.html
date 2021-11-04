@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-support-worker-long-term-hmrc-table-1-quote-1">
+    Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<h1 class="govuk-heading-l">Check your answers: support worker</h1>
+<div class="govuk-form-group">
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Does your condition mean that you need a support worker at work?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-screener'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-screener">
+          Change<span class="govuk-visually-hidden"> Does your condition mean that you need a support worker at work?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you know what type of support worker you need?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-do-you-know-what-support-worker-you-need">
+          Change<span class="govuk-visually-hidden"> Do you know what type of support worker you need?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        What type of support worker do you need?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['type-of-support-worker'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-that-you-need-1">
+          Change<span class="govuk-visually-hidden"> What type of support worker do you need?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Tell us ways that a support worker will help you at work
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-will-help'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-will-help">
+          Change<span class="govuk-visually-hidden"> Tell us ways that a support worker will help you at work</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Will you need a support worker long-term or short-term?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-short-or-long-term-two-options'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-short-or-long-term-two-options">
+          Change<span class="govuk-visually-hidden"> Will you need a support worker long-term or short-term?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        How many hours per week do you need this support at work?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-hour-per-week-1'] }} hours per week
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-how-many-hours-a-week-long-term">
+          Change<span class="govuk-visually-hidden"> How many hours per week do you need this support at work?</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you have quotes for the support worker that you need?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-providing-quotes-for-this-support-long-term-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-providing-quotes-for-this-support-long-term-1">
+          Change<span class="govuk-visually-hidden"> Do you have quotes for the support worker that you need?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <h2 class="govuk-heading-m">First quote for {{ data['type-of-support-worker'] }}</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Support worker provider
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['support-worker-provider-1'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-quote-long-term-1">
+        Change<span class="govuk-visually-hidden"> Support worker provider</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Cost per hour
+    </dt>
+    <dd class="govuk-summary-list__value">
+      £ {{ data['support-worker-cost-per-hour-1'] }} per hour
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-quote-long-term-1">
+        Change<span class="govuk-visually-hidden"> Cost per hour</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Have you worked with this support worker provider before?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['support-worker-worked-with-them-before-1'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="/alpha-apply-1c/1c-support-worker-quote-long-term-1">
+        Change<span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+
+
+
+<form method="post" action="/alpha-apply-1c/1c-task-list">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you need to request another support worker?
+      </legend>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="add-another-1-2">
+            No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div class="govuk-!-padding-bottom-1s"></div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
+</form>
+
+{% endblock %}

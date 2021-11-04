@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-support-worker-will-help">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-support-worker-short-or-long-term-two-options" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="short-or-long-term-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Will you need a support worker long-term or short-term?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options" name="support-worker-short-or-long-term-two-options" type="radio"
+                     value="Long-term" aria-describedby="support-worker-short-or-long-term-two-options-item-hint">
+              <label class="govuk-label govuk-radios__label" for="support-worker-short-or-long-term-two-options">
+                <b>Long-term</b>
+              </label>
+              <div id="support-worker-short-or-long-term-two-options-hint" class="govuk-hint govuk-radios__hint">
+                For example, if you have a hearing impairment and need a British Sign Language interpreter on an ongoing basis.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options-2" name="support-worker-short-or-long-term-two-options" type="radio"
+                     value="Short-term" aria-describedby="support-worker-short-or-long-term-two-options-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="support-worker-short-or-long-term-two-options-2">
+                <b>Short-term</b>
+              </label>
+              <div id="support-worker-short-or-long-term-two-options-2-item-hint" class="govuk-hint govuk-radios__hint">
+                For example, if you have a broken arm and need a notetaker for a short period of time.
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}
