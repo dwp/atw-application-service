@@ -1937,3 +1937,39 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                       }
                       res.redirect(redirectUrl)
                     })
+
+                    router.route('/alpha-apply-1c/1c-your-health-condition-or-disability-1')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['add-another-1']) {
+                          case 'Yes':
+                            redirectUrl = '/alpha-apply-1c/1c-your-health-condition-or-disability-2'
+                            break
+                          case 'No':
+                            redirectUrl = '/alpha-apply-1c/1c-your-health-condition-or-disability-affects-your-work-1'
+                            break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+                      router.route('/alpha-apply-1c/1c-your-health-condition-or-disability-hrmc-table-2')
+                        .post((req, res, next) => {
+                          let redirectUrl
+                          switch (req.body['add-another-2']) {
+                            case 'Yes':
+                              redirectUrl = '/alpha-apply-1c/1c-your-health-condition-or-disability-3'
+                              break
+                            case 'No':
+                              redirectUrl = '/alpha-apply-1c/1c-your-health-condition-or-disability-affects-your-work-2'
+                              break
+
+                            default:
+                              redirectUrl = req.path
+                              break
+                          }
+                          res.redirect(redirectUrl)
+                        })
