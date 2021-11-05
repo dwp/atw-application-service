@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-contacting-you-phone">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-contacting-you-check-your-answers" method="post">
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="contact-selecting-time">
+            What times are you available to answer the phone from Monday to Friday, 9am to 5pm?
+
+          </label>
+          </h1>
+          <div id="contact-selecting-time-hint" class="govuk-hint">
+            For example, 'I am a teacher, so I cannot be contacted between 9am and 3:30pm during term time.'
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="contact-selecting-time"
+                    name="contact-selecting-time" rows="5" aria-describedby="contact-selecting-time with-hint-info contact-selecting-time-hint"></textarea>
+        </div>
+
+        <div id="contact-selecting-time-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 200 characters
+        </div>
+
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
