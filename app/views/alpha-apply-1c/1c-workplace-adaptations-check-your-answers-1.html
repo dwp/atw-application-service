@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-workplace-adaptations-do-you-know-what-you-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <h1 class="govuk-heading-l">Check your answers: changes to workplace</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you would benefit from physical changes at your workplace?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workplace-adaptations-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-workplace-adaptations-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you would benefit from physical changes at your workplace?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you know what physical changes should be made at your workplace to support your needs?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workplace-adaptations-do-you-know-what-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-workplace-adaptations-do-you-know-what-you-need">
+              Change
+              <span class="govuk-visually-hidden"> Do you know what physical changes should be made at your workplace to support your needs?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+  <form class="form" action="/alpha-apply-1c/1c-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+  </div>
+{% endblock %}

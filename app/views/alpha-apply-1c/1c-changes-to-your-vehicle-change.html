@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-changes-to-your-vehicle-vehicle-type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-changes-to-your-vehicle-check-your-answers" method="post">
+
+      <h1 class="govuk-heading-l">Changes to your vehicle</h1>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="what-changes-do-you-need-to-your-vehicle">
+            What change do you need to your vehicle?
+          </label>
+          </h1>
+
+          <textarea class="govuk-textarea govuk-js-character-count" id="what-changes-do-you-need-to-your-vehicle"
+                    name="what-changes-do-you-need-to-your-vehicle" rows="8"
+                    aria-describedby="what-changes-do-you-need-to-your-vehicle-info what-changes-do-you-need-to-your-vehicle"></textarea>
+        </div>
+
+        <div id="what-changes-do-you-need-to-your-vehicle-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 300 characters
+        </div>
+
+      </div>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="how-will-vehicle-changes-meet-your-needs">
+            Tell us about how this change will meet your needs
+          </label>
+          </h1>
+
+          <div id="how-will-vehicle-changes-meet-your-needs-hint" class="govuk-hint">
+            You should include the effect of not currently having this change to your vehicle.
+          </div>
+
+          <textarea class="govuk-textarea govuk-js-character-count" id="how-will-vehicle-changes-meet-your-needs" name="how-will-vehicle-changes-meet-your-needs" rows="8"
+                    aria-describedby="how-will-vehicle-changes-meet-your-needs-info how-will-vehicle-changes-meet-your-needs-hint"></textarea>
+        </div>
+
+        <div id="how-will-vehicle-changes-meet-your-needs-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 300 characters
+        </div>
+
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

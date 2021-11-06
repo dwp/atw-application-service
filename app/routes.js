@@ -1992,3 +1992,57 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                            }
                            res.redirect(redirectUrl)
                          })
+
+                         router.route('/alpha-apply-1c/1c-changes-to-your-vehicle-screener')
+                           .post((req, res, next) => {
+                             let redirectUrl
+                             switch (req.body['changes-to-your-vehicle-screener']) {
+                               case 'Yes':
+                                 redirectUrl = '/alpha-apply-1c/1c-changes-to-your-vehicle-vehicle-type'
+                                 break
+                               case 'No':
+                                 redirectUrl = '/alpha-apply-1c/1c-task-list'
+                                 break
+
+                               default:
+                                 redirectUrl = req.path
+                                 break
+                             }
+                             res.redirect(redirectUrl)
+                           })
+
+                           router.route('/alpha-apply-1c/1c-workplace-adaptations-screener')
+                             .post((req, res, next) => {
+                               let redirectUrl
+                               switch (req.body['workplace-adaptations-screener']) {
+                                 case 'Yes, I need changes to my workplace':
+                                   redirectUrl = '/alpha-apply-1c/1c-workplace-adaptations-contacting-your-employer'
+                                   break
+                                 case 'No, I do not need changes to my workplace':
+                                   redirectUrl = '/alpha-apply-1c/1c-task-list'
+                                   break
+
+                                 default:
+                                   redirectUrl = req.path
+                                   break
+                               }
+                               res.redirect(redirectUrl)
+                             })
+
+                             router.route('/alpha-apply-1c/1c-workplace-adaptations-do-you-know-what-you-need')
+                               .post((req, res, next) => {
+                                 let redirectUrl
+                                 switch (req.body['workplace-adaptations-do-you-know-what-you-need']) {
+                                   case 'Yes, I know what changes should be made':
+                                     redirectUrl = '/alpha-apply-1c/1c-workplace-adaptations-details'
+                                     break
+                                   case 'No, I do not know what changes should be made':
+                                     redirectUrl = '/alpha-apply-1c/1c-workplace-adaptations-check-your-answers-1'
+                                     break
+
+                                   default:
+                                     redirectUrl = req.path
+                                     break
+                                 }
+                                 res.redirect(redirectUrl)
+                               })
