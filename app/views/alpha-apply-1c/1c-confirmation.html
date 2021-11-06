@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application complete</h1>
+        <div class="govuk-panel__body">
+          Unique reference number (URN)<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>The Access to Work team will contact you about your application within the next 12
+        weeks, and might want to book a workplace assessment for you.</p>
+      <p>If your job is starting within the next 4 weeks, we will contact you as soon as
+        possible.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">
+      Access to Work helpline
+    </h2>
+    <nav role="navigation" aria-labelledby="subsection-title">
+      <p class="govuk-body" >Telephone: 0800 121 7479</p>
+      <p>Monday to Friday, 9am to 5pm. This service is free.</p>
+      <p><a href="#">Find out about other accessible formats</a>.
+      </p>
+    </nav>
+  </aside>
+
+</div>
+
+{% endblock %}

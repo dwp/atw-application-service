@@ -1973,3 +1973,22 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                           }
                           res.redirect(redirectUrl)
                         })
+
+
+                       router.route('/alpha-apply-1c/1c-extra-information-screener')
+                         .post((req, res, next) => {
+                           let redirectUrl
+                           switch (req.body['extra-information-screener']) {
+                             case 'Yes':
+                               redirectUrl = '/alpha-apply-1c/1c-extra-information-textbox'
+                               break
+                             case 'No':
+                               redirectUrl = '/alpha-apply-1c/1c-task-list'
+                               break
+
+                             default:
+                               redirectUrl = req.path
+                               break
+                           }
+                           res.redirect(redirectUrl)
+                         })

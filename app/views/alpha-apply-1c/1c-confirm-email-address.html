@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-do-you-want-to-your-save-application">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-email-now-saved" method="post">
+
+      <h1 class="govuk-heading-l">Confirm the email address</h1>
+
+      <p>Check the email you have chosen is correct. If it's wrong, you can re-type it here</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          <b>Email address</b>
+        </label>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false"
+               aria-describedby="email-hint" autocomplete="email" value="{{ data['save-application-email'] }}">
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

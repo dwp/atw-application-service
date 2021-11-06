@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1c/1c-contact-times">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-national-insurance-number">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -66,6 +66,20 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1c/1c-what-is-your-email">
+              Change
+              <span class="govuk-visually-hidden"> what is your email</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             National Insurance number
           </dt>
           <dd class="govuk-summary-list__value">
@@ -75,48 +89,6 @@
             <a href="/alpha-apply-1c/1c-national-insurance-number">
               Change
               <span class="govuk-visually-hidden"> what is your national insurance number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Phone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['telephone-number'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1c/1c-contact-details-phone-both">
-              Change
-              <span class="govuk-visually-hidden"> what is your phone number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Are there any times that we should not contact you?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['contact-times'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1c/1c-contact-times">
-              Change
-              <span class="govuk-visually-hidden"> Are there any times that we should not contact you?</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            What times are you available to answer the phone from Monday to Friday, 9am to 5pm?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['contact-selecting-time'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1c/1c-contact-selecting-time">
-              Change
-              <span class="govuk-visually-hidden"> What times are you available to answer the phone from Monday to Friday, 9am to 5pm?</span>
             </a>
           </dd>
         </div>
