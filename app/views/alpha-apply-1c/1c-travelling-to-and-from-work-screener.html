@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-travelling-to-and-from-work-screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that it's difficult for you to drive or get public
+                    transport?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travelling-to-and-from-work-screener" name="travelling-to-and-from-work-screener"
+                           type="radio" value="Yes, it is difficult for me to drive or get public transport">
+                    <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-screener">
+                      Yes, it's difficult for me to drive or get public transport
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travelling-to-and-from-work-screener-2"
+                           name="travelling-to-and-from-work-screener"
+                           type="radio" value="No, it is not difficult for me to drive or get public transport">
+                    <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-screener-2">
+                      No, it's not difficult for me to drive or get public transport
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

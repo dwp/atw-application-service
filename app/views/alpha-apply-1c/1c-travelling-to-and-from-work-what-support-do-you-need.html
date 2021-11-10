@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-travelling-to-and-from-work-how-would-meet-your-needs" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="travelling-to-and-from-work-what-support-do-you-need-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What support do you need to travel to work?
+            </h1>
+          </legend>
+          <div id="travelling-to-and-from-work-what-support-do-you-need-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="travelling-to-and-from-work-what-support-do-you-need"
+                     name="travelling-to-and-from-work-what-support-do-you-need" type="checkbox" value="Taxi">
+              <label class="govuk-label govuk-checkboxes__label" for="travelling-to-and-from-work-what-support-do-you-need">
+                Taxi
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="travelling-to-and-from-work-what-support-do-you-need-2"
+                     name="travelling-to-and-from-work-what-support-do-you-need" type="checkbox" value="Lift from a friend, colleague or family member">
+              <label class="govuk-label govuk-checkboxes__label" for="travelling-to-and-from-work-what-support-do-you-need-2">
+                Lift from a friend, colleague or family member
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="travelling-to-and-from-work-what-support-do-you-need-3"
+                     name="travelling-to-and-from-work-what-support-do-you-need" type="checkbox" value="Something else">
+              <label class="govuk-label govuk-checkboxes__label" for="travelling-to-and-from-work-what-support-do-you-need-3">
+                Something else
+              </label>
+            </div>
+            <div class="govuk-!-padding-bottom-1"></div>
+            <div class="govuk-checkboxes__divider"><p>or</p></div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="travelling-to-and-from-work-what-support-do-you-need-4"
+                     name="travelling-to-and-from-work-what-support-do-you-need" type="checkbox" value="I'm not sure"
+                     data-behaviour="exclusive">
+              <label class="govuk-label govuk-checkboxes__label" for="travelling-to-and-from-work-what-support-do-you-need-4">
+                I'm not sure
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

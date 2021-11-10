@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1c/1c-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1c/1c-travel-during-work-screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you need support to travel to other locations during your working day that you're not able to walk, drive or get public transport to?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-4"></div>
+
+                <h2 class="govuk-heading-s">For example:</h2>
+
+                <div class="govuk-inset-text">
+                  You are a mobile hairdresser and visit the homes of different clients during the working day.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travel-during-work-screener" name="travel-during-work-screener"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="travel-during-work-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travel-during-work-screener-2"
+                           name="travel-during-work-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="travel-during-work-screener-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1c/1c-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

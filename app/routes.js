@@ -2046,3 +2046,21 @@ router.route('/alpha-apply-1b/1b-bsl-support')
                                  }
                                  res.redirect(redirectUrl)
                                })
+
+    router.route('/alpha-apply-1c/1c-travelling-to-and-from-work-screener')
+    .post((req, res, next) => {
+       let redirectUrl
+        switch (req.body['travelling-to-and-from-work-screener']) {
+         case 'Yes, it is difficult for me to drive or get public transport':
+           redirectUrl = '/alpha-apply-1c/1c-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'
+         break
+         case 'No, it is not difficult for me to drive or get public transport':
+           redirectUrl = '/alpha-apply-1c/1c-task-list'
+         break
+
+         default:
+           redirectUrl = req.path
+         break
+         }
+           res.redirect(redirectUrl)
+         })
