@@ -2064,3 +2064,39 @@ router.route('/alpha-apply-1b/1b-bsl-support')
          }
            res.redirect(redirectUrl)
          })
+
+      router.route('/alpha-apply-1c/1c-travel-during-work-screener')
+      .post((req, res, next) => {
+         let redirectUrl
+          switch (req.body['travel-during-work-screener']) {
+           case 'Yes':
+             redirectUrl = '/alpha-apply-1c/1c-travel-during-work-support-you-may-need'
+           break
+           case 'No':
+             redirectUrl = '/alpha-apply-1c/1c-task-list'
+           break
+
+           default:
+             redirectUrl = req.path
+           break
+           }
+             res.redirect(redirectUrl)
+           })
+
+        router.route('/alpha-apply-1c/1c-mental-health-support-screener')
+        .post((req, res, next) => {
+           let redirectUrl
+            switch (req.body['mental-health-support-screener']) {
+             case 'Yes':
+               redirectUrl = '/alpha-apply-1c/1c-mental-health-support-check-your-answers'
+             break
+             case 'No':
+               redirectUrl = '/alpha-apply-1c/1c-task-list'
+             break
+
+             default:
+               redirectUrl = req.path
+             break
+             }
+               res.redirect(redirectUrl)
+             })
