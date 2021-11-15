@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-mental-health-support-screener">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/alpha-apply-1d/1d-task-list" method="post">
+
+      <h1 class="govuk-heading-l">Receiving mental health support</h1>
+
+      <p>Access to Work mental health support is provided by Able Futures and Remploy. We will refer your details
+        to one of these providers but you can also apply for advice and guidance directly from <a href="https://able-futures.co.uk/individuals" class="govuk-link" rel="noreferrer noopener" target="_blank">Able Futures</a> or
+      <a
+              href="https://www.remploy.co.uk/employers/mental-health-and-wellbeing/workplace-mental-health-support-service-employers" class="govuk-link" rel="noreferrer noopener" target="_blank">Remploy</a> (both links open in a new tab).</p>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+</div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+
+{% endblock %}

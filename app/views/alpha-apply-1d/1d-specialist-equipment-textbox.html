@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-specialist-equipment-screener">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-specialist-equipment-type-1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Tell us about what specialist equipment you think would meet your needs
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">You should include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>examples of what equipment would improve your day-to-day experiences at work</li>
+                  <li>a description of how this equipment would improve your day-to-day experiences at work</li>
+                  <li>the impact of not currently having this equipment at work</li>
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-textbox"
+                              name="specialist-equipment-textbox"
+                              rows="15" aria-describedby="specialist-equipment-textbox-info with-hint-hint">{{ data['specialist-equipment-textbox'] }}</textarea>
+                  </div>
+
+                  <div id="specialist-equipment-textbox-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 1000 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

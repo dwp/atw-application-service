@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-travelling-to-and-from-work-what-support-do-you-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-journeys" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Tell us about how you think support to travel to work would meet your needs
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">You should include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>what you find difficult about travelling to work</li>
+                  <li>how long it takes you to travel to work</li>
+                  <li>the impact of not having any support to travel to work</li>
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count" id="travelling-to-and-from-work-how-would-meet-your-needs"
+                              name="travelling-to-and-from-work-how-would-meet-your-needs"
+                              rows="10" aria-describedby="specialist-equipment-textbox-info with-hint-hint">{{
+                      data['travelling-to-work-textbox'] }}</textarea>
+                  </div>
+
+                  <div id="travelling-to-and-from-work-how-would-meet-your-needs-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 500 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

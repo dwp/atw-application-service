@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-workplace-adaptations-details-1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you would benefit from physical changes at your workplace?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">This could be things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>ramps for wheelchairs to navigate a workplace</li>
+                  <li>disabled toilets</li>
+                  <li>accessible car parking</li>
+                </ul>
+
+                <div class="govuk-inset-text">
+                  You should talk to your employer about <a
+                        href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">reasonable adjustments</a>
+                  before claiming for changes to your workplace using Access to Work.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in">
+                          <b>Yes</b>
+                        </label>
+                        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                          I need changes to my workplace
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                          <b>No</b>
+                        </label>
+                        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                          I don't need changes to my workplace
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                          <b>I still need to speak to my employer about reasonable adjustments</b>
+                        </label>
+                      </div>
+                    </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("workplace-adaptations-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("workplace-adaptations-screener", "No")
+                }
+                </script>
+
+
+{% endblock %}

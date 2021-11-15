@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-contact-someone-else">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-your-details-check-your-answers" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="workplace-contact">
+          Your contact's details
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="someone-else-name">
+            Their full name
+          </label>
+          <input class="govuk-input" id="someone-else-name" name="someone-else-name" type="text"></div>
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="100">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="relationship-to-you">
+              Their relationship to you
+            </label>
+            <textarea class="govuk-textarea govuk-js-character-count" id="relationship-to-you"
+                      name="relationship-to-you" rows="2" aria-describedby="relationship-to-you"-info"></textarea>
+          </div>
+
+          <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 100 characters
+          </div>
+
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="someone-else-phone">
+            Their telephone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="someone-else-phone" name="someone-else-phone" type="tel" autocomplete="tel"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="someone-else-email">
+            Their email address
+          </label>
+          <input class="govuk-input" id="someone-else-email" name="someone-else-email" type="email" spellcheck="false" aria-describedby="someone-else-email-hint" autocomplete="email">
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="someone-else-permission" name="someone-else-permission" type="checkbox" value="workplace-permission">
+            <label class="govuk-label govuk-checkboxes__label" for="someone-else-permission">
+              I confirm that I have my contact's permission to share these details
+            </label>
+          </div>
+
+          <div class="govuk-!-padding-bottom-0"></div>
+
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+      </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

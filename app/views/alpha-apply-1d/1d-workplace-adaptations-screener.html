@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-workplace-adaptations-screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you would benefit from physical changes at your workplace?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">This could be things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>ramps for wheelchairs to navigate a workplace</li>
+                  <li>disabled toilets</li>
+                  <li>accessible car parking</li>
+                </ul>
+
+                <div class="govuk-inset-text">
+                  You should talk to your employer about <a
+                        href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">reasonable adjustments
+                (opens in new tab)</a>
+                  before claiming for changes to your workplace using Access to Work.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="workplace-adaptations-screener" name="workplace-adaptations-screener"
+                           type="radio" value="Yes, I need changes to my workplace">
+                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener">
+                      Yes, I need changes to my workplace
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="workplace-adaptations-screener-2" name="workplace-adaptations-screener"
+                           type="radio" value="No, I do not need changes to my workplace">
+                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-screener-2">
+                      No, I do not need changes to my workplace
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("workplace-adaptations-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("workplace-adaptations-screener", "No")
+                }
+                </script>
+
+
+{% endblock %}

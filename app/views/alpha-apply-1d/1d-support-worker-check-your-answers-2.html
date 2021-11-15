@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-support-worker-short-or-long-term">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-l">Check your answers: support worker</h1>
+
+        {{ data['specialist-equipment-screener'] }}
+
+        <div class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Does your condition mean that you need a support worker at work?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['support-worker-screener'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-screener">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you know what type of support worker you need?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-do-you-know-what-support-worker-you-need">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Tell us ways that you think that a support worker might help you at work
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['support-worker-might-help'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-might-help">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Will you need a support worker long-term or short-term?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['short-or-long-term'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-short-or-long-term">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+      </div>
+
+  <form class="form" action="/alpha-apply-1d/1d-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+{% endblock %}

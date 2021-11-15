@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-changes-to-your-vehicle-change">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <h1 class="govuk-heading-l">Check your answers: changes to your vehicle</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you need changes to the vehicle you use to travel to work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-your-vehicle-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-changes-to-your-vehicle-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you need changes to the vehicle you use to travel to work?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is the make and model of your vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-your-vehicle-vehicle-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-changes-to-your-vehicle-vehicle-type">
+              Change
+              <span class="govuk-visually-hidden"> What is the make and model of your vehicle?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What change do you need to your vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-changes-do-you-need-to-your-vehicle'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> What change do you need to your vehicle?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us about how this change will meet your needs
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-will-vehicle-changes-meet-your-needs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> Tell us about how this change will meet your needs</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+  <form class="form" action="/alpha-apply-1d/1d-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+  </div>
+{% endblock %}

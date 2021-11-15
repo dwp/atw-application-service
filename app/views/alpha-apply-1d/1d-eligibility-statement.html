@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-do-you-need-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-eligibility-statement" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Before you start, check you're eligible
+                      </h1>
+                    </legend>
+                    <p>Select all that apply to you:</p>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="disability" name="disability" type="checkbox"
+                               value="disability">
+                        <label class="govuk-label govuk-checkboxes__label" for="disability">
+                          I have a physical or mental health condition or disability that means I need support to do my job, or to get to and from work
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="age-2" name="age" type="checkbox" value="age">
+                        <label class="govuk-label govuk-checkboxes__label" for="age-2">
+                          I’m aged 16 or over
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="paid-work-3" name="paid-work" type="checkbox"
+                               value="paid-work">
+                        <label class="govuk-label govuk-checkboxes__label" for="paid-work-3">
+                          I'm in paid work (or about to start or return to work) in England, Scotland or Wales
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="gb-4" name="gb" type="checkbox" value="gb">
+                        <label class="govuk-label govuk-checkboxes__label" for="gb-4">
+                          I live in England, Scotland or Wales
+                        </label>
+                      </div>
+                    </div>
+
+
+                  </fieldset>
+                </div>
+
+
+                <p>We will ask you for more information about these things during the application process.</p>
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+              </fieldset>
+
+            </div>
+
+        <a href="#" id="eligibleRedirect" role="button" draggable="false"
+           class="govuk-button govuk-button--start" data-module="govuk-button">
+          Start now
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg></a>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+<script>
+                    document.getElementById("eligibleRedirect").addEventListener("click", eligibleFunction);
+
+                    function eligibleFunction() {
+                      var checkboxes = Array.from(document.getElementsByClassName("govuk-checkboxes__input"));
+                      var linkHref = "/alpha-apply-1d/1d-ineligible-1";
+                      var count = 0;
+                      for (var i = 0; i < checkboxes.length; i++) {
+                        if (checkboxes[i].checked ) {
+                          count++;
+                        }
+                      }
+                      if (count == 4) {
+                        linkHref = "/alpha-apply-1d/1d-esa";
+                        }
+                      document.location.href = linkHref;
+                    }
+                    </script>
+
+{% endblock %}

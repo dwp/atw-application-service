@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-specialist-equipment-do-you-know-what-specialist-equipment-you-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+
+      <h1 class="govuk-heading-l">Check your answers: specialist equipment</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you need specialist equipment at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-specialist-equipment-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need specialist equipment?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you know what specialist equipment you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-specialist-equipment-do-you-know-what-specialist-equipment-you-need">
+              Change
+              <span class="govuk-visually-hidden"> do you know what specialist equipment you need?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us ways that you think specialist equipment might help you at work
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-tell-us-ways-that-you-think-it-might-help'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-1d-specialist-equipment-tell-us-ways-that-you-think-it-might-help">
+              Change
+              <span class="govuk-visually-hidden"> Tell us ways that you think specialist equipment might help you at work</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+  <form class="form" action="/alpha-apply-1d/1d-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+{% endblock %}

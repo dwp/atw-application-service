@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-you-may-be-eligible-blue">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-confirm-email-address" method="post">
+
+      <h1 class="govuk-heading-l">Save your progress as you go</h1>
+
+      <p>If you choose to save, you'll be able to return to this application at any point over the next 14 days and
+        pick up where you left off.</p>
+
+      <p>Provide an email address, so that your progress can be saved as you go.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          If you already have a saved application, you'll need to submit it first, or use a different email address.
+        </strong>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="save-application-email">
+          <b>Email address</b>
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll only use this to send you information about this application.
+        </div>
+        <input class="govuk-input" id="save-application-email" name="save-application-email" type="email" spellcheck="false"
+               aria-describedby="save-application-email-hint" autocomplete="email">
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      <p><a href="">I don't want to save my progress as I go</a></p>
+
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

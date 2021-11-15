@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-specialist-equipment-type-of-equipment-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-specialist-equipment-check-your-answers-4" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is the impact of not having this specialist equipment to help you with your condition at work?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-5"></div>
+
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Item</th>
+                    <th scope="col" class="govuk-table__header">Specialist equipment</th>
+                  </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">1</th>
+                    <td class="govuk-table__cell">{{ data['specialist-equipment-type-1'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <div class="govuk-!-padding-bottom-3"></div>
+
+                <h2 class="govuk-heading-s">For example:</h2>
+
+                <div class="govuk-inset-text">
+                  My limited mobility means that by not having an ergonomic keyboard, it takes me longer to get my
+                  work done. This is because I find it more difficult to type with a regular keyboard.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-textbox-1"
+                              name="specialist-equipment-textbox-1"
+                              rows="10" aria-describedby="specialist-equipment-textbox-1-info with-hint-hint">{{
+                      data['specialist-equipment-textbox-1'] }}</textarea>
+                  </div>
+
+                  <div id="specialist-equipment-textbox-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 500 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
