@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-1-quote-1">
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-2-quote-1">
     Back</a>
 {% endblock %}
 
@@ -154,6 +154,94 @@
 </dl>
 
 
+  <h2 class="govuk-heading-m">Second quote for {{ data['type-of-support-worker'] }}</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Support worker provider
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-provider-2'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-2">
+          Change<span class="govuk-visually-hidden"> Support worker provider</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Cost per hour
+      </dt>
+      <dd class="govuk-summary-list__value">
+        £ {{ data['support-worker-cost-per-hour-2'] }} per hour
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-2">
+          Change<span class="govuk-visually-hidden"> Cost per hour</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Have you worked with this support worker provider before?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-worked-with-them-before-2'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-2">
+          Change<span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+
+  <h2 class="govuk-heading-m">Third quote for {{ data['type-of-support-worker'] }}</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Support worker provider
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-provider-3'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-3">
+          Change<span class="govuk-visually-hidden"> Support worker provider</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Cost per hour
+      </dt>
+      <dd class="govuk-summary-list__value">
+        £ {{ data['support-worker-cost-per-hour-3'] }} per hour
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-3">
+          Change<span class="govuk-visually-hidden"> Cost per hour</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Have you worked with this support worker provider before?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-worked-with-them-before-3'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-support-worker-quote-short-term-3">
+          Change<span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
 
 
 <form method="post" action="/alpha-apply-1d/1d-task-list">
@@ -165,14 +253,14 @@
       </legend>
       <div class="govuk-radios govuk-radios--inline">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes">
-          <label class="govuk-label govuk-radios__label" for="add-another-1">
+          <input class="govuk-radios__input" id="add-another-2" name="add-another-2" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-2">
             Yes
           </label>
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No">
-          <label class="govuk-label govuk-radios__label" for="add-another-1-2">
+          <input class="govuk-radios__input" id="add-another-2-2" name="add-another-2" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="add-another-2-2">
             No
           </label>
         </div>
@@ -181,7 +269,7 @@
     </fieldset>
   </div>
 
-  <div class="govuk-!-padding-bottom-1s"></div>
+  <div class="govuk-!-padding-bottom-1"></div>
 
   <button class="govuk-button" data-module="govuk-button">
     Save and continue

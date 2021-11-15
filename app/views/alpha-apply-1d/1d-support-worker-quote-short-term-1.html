@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-support-worker-providing-quotes-for-this-support-short-term-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-1-quote-1" method="post">
+
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-heading-l">First quote for {{ data['type-of-support-worker'] }}</h1>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="support-worker-provider-1">
+            Support worker provider
+          </label>
+          </h2>
+          <div id="support-worker-provider-1-hint" class="govuk-hint">
+            The name of the company or organisation that provides support workers. If this support worker is self-employed, give their name instead.
+          </div>
+          <input class="govuk-input" id="support-worker-provider-1" name="support-worker-provider-1" type="text" aria-describedby="support-worker-provider-1-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="support-worker-cost-per-hour-1">
+            Cost per hour
+          </label>
+          </h2>
+          <div id="support-worker-cost-per-hour-1-hint" class="govuk-hint">
+            Include any extra costs, like VAT.
+          </div>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="support-worker-cost-per-hour-1" name="support-worker-cost-per-hour-1" type="text"
+                   spellcheck="false">
+            <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
+          </div>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="support-worker-worked-with-them-before-1-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Have you worked with this support worker provider before?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="support-worker-worked-with-them-before-1"
+                       name="support-worker-worked-with-them-before-1" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="support-worker-worked-with-them-before-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="support-worker-worked-with-them-before-1-2"
+                       name="support-worker-worked-with-them-before-1" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="support-worker-worked-with-them-before-1-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

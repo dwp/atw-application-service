@@ -2546,7 +2546,7 @@ router.route('/alpha-apply-1d/1d-bsl-support')
           let redirectUrl
           switch (req.body['specialist-equipment-do-you-know-what-specialist-equipment-you-need']) {
             case 'Yes, I know what I need':
-              redirectUrl = '/alpha-apply-1d/1d-specialist-equipment-workplace-assessment'
+              redirectUrl = '/alpha-apply-1d/1d-specialist-equipment-type-of-equipment-1'
               break
             case 'No, I do not know what I need':
               redirectUrl = '/alpha-apply-1d/1d-specialist-equipment-tell-us-ways-that-you-think-it-might-help'
@@ -2957,3 +2957,56 @@ router.route('/alpha-apply-1d/1d-bsl-support')
              res.redirect(redirectUrl)
            })
 
+          router.route('/alpha-apply-1d/1d-support-worker-providing-quotes-for-this-support-short-term-1')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['support-worker-providing-quotes-for-this-support-short-term-1']) {
+                case 'Yes, I have quotes':
+                  redirectUrl = '/alpha-apply-1d/1d-support-worker-quote-short-term-1'
+                  break
+                case 'No, I do not have quotes':
+                  redirectUrl = '/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-1'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+              router.route('/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-1-quote-1')
+                .post((req, res, next) => {
+                  let redirectUrl
+                  switch (req.body['support-worker-second-quote-short-term-1']) {
+                    case 'Yes':
+                      redirectUrl = '/alpha-apply-1d/1d-support-worker-quote-short-term-2'
+                      break
+                    case 'No':
+                      redirectUrl = '/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-2'
+                      break
+
+                    default:
+                      redirectUrl = req.path
+                      break
+                  }
+                  res.redirect(redirectUrl)
+                })
+
+                  router.route('/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-2-quote-1')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      switch (req.body['support-worker-second-quote-short-term-3']) {
+                        case 'Yes':
+                          redirectUrl = '/alpha-apply-1d/1d-support-worker-quote-short-term-3'
+                          break
+                        case 'No':
+                          redirectUrl = '/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-3'
+                          break
+
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })
