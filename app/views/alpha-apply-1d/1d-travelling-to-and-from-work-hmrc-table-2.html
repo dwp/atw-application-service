@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-travelling-to-and-from-work-hmrc-table-1-quote-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-l">Check your answers: travelling to and from work</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that it's difficult for you to drive or get public transport?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that it's difficult for you to drive or get public transport?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you get to work at the moment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment">
+              Change
+              <span class="govuk-visually-hidden"> How do you get to work at the moment?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What support do you need to travel to work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-what-support-do-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-what-support-do-you-need">
+              Change
+              <span class="govuk-visually-hidden"> What support do you need to travel to work?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us about how you think support to travel to work would meet your needs
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-would-meet-your-needs-taxi'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-taxi">
+              Change
+              <span class="govuk-visually-hidden"> Tell us about how you think support to travel to work would meet your needs</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many journeys will you need support for per week?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-many-journeys'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-journeys-taxi">
+              Change
+              <span class="govuk-visually-hidden"> How many journeys will you need support for per week?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Will all of your journeys be from your home address to your work address?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-locations-taxi'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-taxi">
+              Change
+              <span class="govuk-visually-hidden"> Will all of your journeys be from your home address to your work address?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have quotes for the support you need to travel to work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-providing-quotes-taxi'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1d/1d-travelling-to-and-from-work-providing-quotes-taxi">
+              Change
+              <span class="govuk-visually-hidden"> Do you have quotes for the support you need to travel to work?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+<h2 class="govuk-heading-m">First quote for taxi</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Taxi company name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['taxi-company-name-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-travelling-to-and-from-work-quote-1">
+          Change<span class="govuk-visually-hidden"> Taxi company name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Cost per journey
+      </dt>
+      <dd class="govuk-summary-list__value">
+        £ {{ data['taxi-cost-1'] }} per hour
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1d/1d-travelling-to-and-from-work-quote-1">
+          Change<span class="govuk-visually-hidden"> Cost per hour</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <form class="form" action="/alpha-apply-1d/1d-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+  </div>
+{% endblock %}

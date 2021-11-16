@@ -3105,3 +3105,39 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                 }
                 res.redirect(redirectUrl)
               })
+
+               router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-hmrc-table-1-quote-1')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['travelling-to-and-from-work-hmrc-table-1-quote-1']) {
+                     case 'Yes':
+                       redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-quote-2'
+                       break
+                     case 'No':
+                       redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-hmrc-table-2'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+                router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-hmrc-table-2-quote-1')
+                  .post((req, res, next) => {
+                    let redirectUrl
+                    switch (req.body['travelling-to-and-from-work-hmrc-table-2-quote-1']) {
+                      case 'Yes':
+                        redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-quote-3'
+                        break
+                      case 'No':
+                        redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-hmrc-table-3'
+                        break
+
+                      default:
+                        redirectUrl = req.path
+                        break
+                    }
+                    res.redirect(redirectUrl)
+                  })
