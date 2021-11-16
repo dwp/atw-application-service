@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-lift">Back
+  </a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1d/1d-travelling-to-and-from-work-locations-lift" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="travelling-to-and-from-work-how-many-journeys">
+          How many journeys will you need support for per week?
+        </label>
+        </h1>
+        <div id="travelling-to-and-from-work-how-many-journeys-hint" class="govuk-hint">
+          If it could be different every week, give the maximum number of journeys you will need support for.
+        </div>
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-3" id="travelling-to-and-from-work-how-many-journeys"
+                                                 name="travelling-to-and-from-work-how-many-journeys" type="text" spellcheck="false">
+          <div class="govuk-input__suffix" aria-hidden="true">journeys per week</div>
+        </div>
+      </div>
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1d/1d-task-list">Return to list</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -2993,15 +2993,21 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                   res.redirect(redirectUrl)
                 })
 
-                  router.route('/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-2-quote-1')
+                  router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-what-support-do-you-need')
                     .post((req, res, next) => {
                       let redirectUrl
-                      switch (req.body['support-worker-second-quote-short-term-3']) {
-                        case 'Yes':
-                          redirectUrl = '/alpha-apply-1d/1d-support-worker-quote-short-term-3'
+                      switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
+                        case 'Taxi':
+                          redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-taxi'
                           break
-                        case 'No':
-                          redirectUrl = '/alpha-apply-1d/1d-support-worker-short-term-hmrc-table-3'
+                        case 'Lift from a friend, colleague or family member':
+                          redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-lift'
+                          break
+                        case 'Something else':
+      redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-something-else'
+                          break
+                        case 'I am not sure':
+    redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-not-sure'
                           break
 
                         default:
@@ -3010,3 +3016,92 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                       }
                       res.redirect(redirectUrl)
                     })
+
+                  router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-locations-taxi')
+                    .post((req, res, next) => {
+                      let redirectUrl
+                      switch (req.body['travelling-to-and-from-work-locations-taxi']) {
+                        case 'Yes':
+                          redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-providing-quotes-taxi'
+                          break
+                        case 'No':
+                          redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-taxi'
+                          break
+                        default:
+                          redirectUrl = req.path
+                          break
+                      }
+                      res.redirect(redirectUrl)
+                    })
+
+                    router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-locations-lift')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['travelling-to-and-from-work-locations-lift']) {
+                          case 'Yes':
+                            redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-lift'
+                            break
+                          case 'No':
+                            redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-lift'
+                            break
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+                     router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-locations-not-sure')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['travelling-to-and-from-work-locations-not-sure']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-not-sure'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-not-sure'
+                             break
+                           case 'Not sure':
+                             redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-not-sure'
+                             break
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+                     router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-locations-something-else')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['travelling-to-and-from-work-locations-something-else']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-something-else'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-something-else'
+                             break
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+            router.route('/alpha-apply-1d/1d-travelling-to-and-from-work-providing-quotes-taxi')
+              .post((req, res, next) => {
+                let redirectUrl
+                switch (req.body['travelling-to-and-from-work-providing-quotes-taxi']) {
+                  case 'Yes, I have quotes':
+                    redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-quote-1'
+                    break
+                  case 'No, I do not have quotes':
+                    redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-taxi-1'
+                    break
+
+                  default:
+                    redirectUrl = req.path
+                    break
+                }
+                res.redirect(redirectUrl)
+              })
