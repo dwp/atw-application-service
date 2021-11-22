@@ -2676,7 +2676,7 @@ router.route('/alpha-apply-1d/1d-bsl-support')
               redirectUrl = '/alpha-apply-1d/1d-support-worker-that-you-need-1'
               break
             case 'No, I do not know what I need':
-              redirectUrl = '/alpha-apply-1d/1d-support-worker-might-help'
+              redirectUrl = '/alpha-apply-1d/1d-support-worker-short-or-long-term'
               break
 
             default:
@@ -2690,10 +2690,10 @@ router.route('/alpha-apply-1d/1d-bsl-support')
          .post((req, res, next) => {
            let redirectUrl
            switch (req.body['support-worker-short-or-long-term-two-options']) {
-             case 'Long-term':
+             case 'No, I need a support worker on a permanent basis':
                redirectUrl = '/alpha-apply-1d/1d-support-worker-how-many-hours-a-week-long-term'
                break
-             case 'Short-term':
+             case 'Yes, I need a support worker on a temporary basis':
                redirectUrl = '/alpha-apply-1d/1d-support-worker-how-long-for'
                break
 
@@ -2907,10 +2907,10 @@ router.route('/alpha-apply-1d/1d-bsl-support')
   .post((req, res, next) => {
      let redirectUrl
       switch (req.body['travelling-to-and-from-work-screener']) {
-       case 'Yes, it is difficult for me to drive or get public transport':
+       case 'Yes':
          redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'
        break
-       case 'No, it is not difficult for me to drive or get public transport':
+       case 'No':
          redirectUrl = '/alpha-apply-1d/1d-task-list'
        break
 
@@ -3061,7 +3061,7 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                            case 'No':
                              redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-miles-not-sure'
                              break
-                           case 'Not sure':
+                           case "I'm not sure":
                              redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-check-your-answers-not-sure'
                              break
                            default:
