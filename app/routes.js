@@ -3007,7 +3007,7 @@ router.route('/alpha-apply-1d/1d-bsl-support')
       redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-something-else'
                           break
                         case 'I am not sure':
-    redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-would-meet-your-needs-not-sure'
+    redirectUrl = '/alpha-apply-1d/1d-travelling-to-and-from-work-how-many-journeys-not-sure'
                           break
 
                         default:
