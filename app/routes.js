@@ -3141,3 +3141,65 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                     }
                     res.redirect(redirectUrl)
                   })
+
+
+router.post('/alpha-apply-1d/1d-benefits', function(req, res, next){
+ if (req.session.data['benefits']){
+  for (i = 0; i<req.session.data['benefits'].length; i++){
+  switch (req.session.data['benefits'][i]){
+   case "Employment Support Allowance" :  return res.redirect("/alpha-apply-1d/1d-esa"); next(); break;
+   case "Incapacity Benefit" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "Income Support" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "Severe Disability Allowance" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "None of these" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   default: continue;
+   }
+   break;
+  }
+ } else {
+ }
+return res.redirect("/alpha-apply-1d/1d-esa"); next();
+})
+router.post('/alpha-apply-1d/1d-benefits', function(req, res, next){
+ if (req.session.data['benefits']){
+  for (i = 0; i<req.session.data['benefits'].length; i++){
+  switch (req.session.data['benefits'][i]){
+   case "Incapacity Benefit" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "Income Support" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "Income Support" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "None of these" :  return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   default: continue;
+   }
+   break;
+  }
+ } else {
+ }
+return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next();
+})
+router.post('/alpha-apply-1d/1d-benefits', function(req, res, next){
+ if (req.session.data['benefits']){
+  for (i = 0; i<req.session.data['benefits'].length; i++){
+  switch (req.session.data['benefits'][i]){
+   case "Income Support" :  return res.redirect("alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   case "None of these" :  return res.redirect("alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   default: continue;
+   }
+   break;
+  }
+ } else {
+ }
+return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next();
+})
+router.post('/alpha-apply-1d/1d-benefits', function(req, res, next){
+ if (req.session.data['benefits']){
+  for (i = 0; i<req.session.data['benefits'].length; i++){
+  switch (req.session.data['benefits'][i]){
+   case "None of these" :  return res.redirect("alpha-apply-1d/1d-you-may-be-eligible-blue"); next(); break;
+   default: continue;
+   }
+   break;
+  }
+ } else {
+ }
+return res.redirect("/alpha-apply-1d/1d-you-may-be-eligible-blue"); next();
+})
