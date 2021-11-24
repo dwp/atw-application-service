@@ -37,6 +37,7 @@ if (fs.existsSync('./app/v6/routes.js')) {
 }
 
 const app = express()
+app.use(bodyParser.urlencoded({extended: false}));
 const documentationApp = express()
 
 if (useV6) {
