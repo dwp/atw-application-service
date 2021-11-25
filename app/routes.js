@@ -3145,21 +3145,21 @@ router.route('/alpha-apply-1d/1d-bsl-support')
 
                 router.route('/alpha-apply-1d/1d-benefits')
                     .post((req, res, next) => {
-const selections = req.body.benefits;
-    // Stay on same page if not any option selected
-    redirectUrl = '/alpha-apply-1d/1d-ineligible-benefits'
-    console.log(selections + ' length = ' + selections.length)
-    if (selections.length === 1)
-    {
-        // Handle single selections
-        if(selections[0].trim() === "Employment Support Allowance") {
-            redirectUrl = '/alpha-apply-1d/1d-esa'
-        } else if(selections[0].trim() === 'None of these') {
-            redirectUrl = '/alpha-apply-1d/1d-you-may-be-eligible-blue'
-        }
-     } else {
-        // Handle Multiple selections
-            redirectUrl = '/alpha-apply-1d/1d-ineligible-benefits'
-    }
-    res.redirect(redirectUrl)
-                    })
+                        const selections = req.body.benefits;
+                         // Stay on same page if not any option selected
+                         redirectUrl = '/alpha-apply-1d/1d-ineligible-benefits'
+                            console.log(selections + ' length = ' + selections.length)
+                              if (selections.length === 1)
+                                 {
+                                     // Handle single selections
+                              if(selections[0].trim() === "Employment Support Allowance") {
+                                redirectUrl = '/alpha-apply-1d/1d-esa'
+                                   } else if(selections[0].trim() === 'None of these') {
+                                redirectUrl = '/alpha-apply-1d/1d-you-may-be-eligible-blue'
+                                    }
+                                    } else {
+                                 // Handle Multiple selections
+                            redirectUrl = '/alpha-apply-1d/1d-ineligible-benefits'
+                                      }
+                                    res.redirect(redirectUrl)
+                                          })

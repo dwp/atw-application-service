@@ -57,7 +57,13 @@
                   Your details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="your-detail-status">In progress</strong>
+              {%if data['what-is-your-name'] !=="true" %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {% elseif data ['what-is-your-name'] =="true" %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+              {% elseif ((data ['what-is-your-name'] =="true") and (data ['your-details-check-your-answers']))%}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+              {% endif %}
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
