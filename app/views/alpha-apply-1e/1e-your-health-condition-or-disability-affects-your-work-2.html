@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-your-health-condition-or-disability-hrmc-table-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e/1e-your-health-condition-or-disability-check-your-answers-2"
+          method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    How do your conditions or disabilities affect you at work?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-5"></div>
+
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Number</th>
+                    <th scope="col" class="govuk-table__header">Health condition or disability</th>
+                  </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">1</th>
+                    <td class="govuk-table__cell">{{ data['1e-your-health-condition-or-disability-1'] }}</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">2</th>
+                    <td class="govuk-table__cell">{{ data['1e-your-health-condition-or-disability-2'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p class="govuk-body">You can include things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>how your conditions or disabilities affects you day-to-day</li>
+                  <li>work activities that you might find difficult</li>
+                  <li>anything else you'd like to tell us about your conditions or disabilities</li>
+                </ul>
+
+
+                <div class="govuk-!-padding-bottom-2"></div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count"
+                              id="your-health-condition-or-disability-affects-your-work-2"
+                              name="your-health-condition-or-disability-affects-your-work-2"
+                              rows="15"
+                              aria-describedby="your-health-condition-or-disability-affects-your-work-2-info with-hint-hint">{{
+                      data['your-health-condition-or-disability-affects-your-work-2'] }}</textarea>
+                  </div>
+
+                  <div id="your-health-condition-or-disability-affects-your-work-2-info"
+                       class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 1000 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

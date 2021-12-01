@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-support-worker-do-you-have-a-quote-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e#" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-details-1">
+          Quote for {{ data['type-of-support-worker'] }}
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="specialist-equipment-details-1">
+            Support worker organisation
+          </label>
+          </h2>
+          <input class="govuk-input" id="specialist-equipment-details-1" name="specialist-equipment-details-1" type="text" aria-describedby="specialist-equipment-details-1-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="specialist-equipment-details-1">
+            Cost per hour  
+          </label>
+          </h2>
+          <div id="specialist-equipment-details-1-hint" class="govuk-hint">
+            Include any extra costs, like VAT.
+          </div>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="cost-per-hour" name="cost-per-hour" type="text"
+                   spellcheck="false">
+            <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
+          </div>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="hour-per-week-1">
+            How many hours per week do you need this support at work?
+          </label>
+          </h2>
+          <div id="hour-per-week-1-hint" class="govuk-hint">
+            If you're not sure, give the maximum number of hours per week you will need this support.
+          </div>
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="hour-per-week-1"
+                                                 name="hour-per-week-1" type="text" spellcheck="false">
+          <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
+        </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="hour-per-week-1">
+            Length of time you need this support for
+          </label>
+          </h2>
+          <div id="hour-per-week-1-hint" class="govuk-hint">
+            Tell us how long you think you will need this support for – for example, 16 weeks.
+          </div>
+          <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="hour-per-week-1"
+                                                   name="hour-per-week-1" type="text" spellcheck="false">
+            <div class="govuk-input__suffix" aria-hidden="true">weeks</div>
+          </div>
+        </div>
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="150">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                   for="specialist-equipment-details-1">
+              Tell us about how having a support worker will meet your needs
+            </label>
+            </h1>
+            <div class="govuk-!-padding-bottom-2"></div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-details-1" name="specialist-equipment-details-1" rows="3"
+                      aria-describedby="specialist-equipment-details-1-hint"></textarea>
+          </div>
+
+          <div id="specialist-equipment-details-1-info" class="govuk-hint govuk-character-count__message" aria-live="specialist-equipment-details-1">
+            You can enter up to 150 characters
+          </div>
+
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

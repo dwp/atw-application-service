@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-specialist-equipment-impact-of-not-having-it-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+      <h1 class="govuk-heading-l">Check your answers: specialist equipment</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you need specialist equipment at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need specialist equipment</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you know what specialist equipment you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-do-you-know-what-specialist-equipment-you-need">
+              Change
+              <span class="govuk-visually-hidden"> do you know what specialist equipment you need?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you had a workplace assessment in the last 6 months that recommends specialist equipment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-workplace-assessment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-workplace-assessment">
+              Change
+              <span class="govuk-visually-hidden"> Have you had a workplace assessment in the last 6 months that recommends specialist equipment?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What type of specialist equipment do you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-type-of-equipment-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1">
+              Change
+              <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need to add another item?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['add-another-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1">
+              Change
+              <span class="govuk-visually-hidden"> Do you need to add another item?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How will this equipment help you at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-textbox-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-impact-of-not-having-it-1">
+              Change
+              <span class="govuk-visually-hidden"> What is the impact of not having this specialist equipment to help you with your condition at work?</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+      </dl>
+
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+{% endblock %}

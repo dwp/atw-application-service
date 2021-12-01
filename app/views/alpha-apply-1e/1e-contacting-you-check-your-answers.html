@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-contacting-you-selecting-time">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers: contacting you about your application</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> what is your phone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When are the best times to reach you?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-selecting-time'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-selecting-time">
+              Change
+              <span class="govuk-visually-hidden"> When are the best times to reach you?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      </div>
+    </div>
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+  </div>
+{% endblock %}

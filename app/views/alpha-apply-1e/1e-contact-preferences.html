@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-national-insurance-number">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e/1e-contact-times" method="post">
+
+      <div class="govuk-form-group">
+        <div class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Contacting you about your application
+            </h1>
+          </legend>
+          <p>We may contact you about your application by phone. This must be a personal phone number, not a work phone
+            number.</p>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="telephone-number-hint">
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="telephone-number">
+                  UK telephone number
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+
+              <p><a href="/alpha-apply-1e/1e-contact-preferences-reasonable-adjustment">I cannot hear or speak on the phone</a></p>
+
+              <div class="govuk-!-padding-bottom-2"></div>
+
+            </fieldset>
+          </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

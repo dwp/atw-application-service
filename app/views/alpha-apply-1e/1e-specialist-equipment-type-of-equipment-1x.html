@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-specialist-equipment-workplace-assessment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e/#" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-type-of-equipment-1">
+          What type of specialist equipment do you need?
+        </label>
+        </h1>
+
+        <p>If you need more than one item of specialist equipment, you will have the option to add more later on.</p>
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="specialist-equipment-type-of-equipment-1">
+            Type of equipment
+          </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            For example, 'ergonomic keyboard'.
+          </div>
+          <input class="govuk-input" id="specialist-equipment-type-of-equipment-1" name="specialist-equipment-type-of-equipment-1" type="text" aria-describedby="specialist-equipment-type-of-equipment-1-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+            What is the impact of not having this specialist equipment to help you with your condition at work?
+          </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            For example, 'my limited mobility means that by not having a specialist keyboard, it takes me
+            longer for me to get my work done. This is because I find it harder to type with a regular keyboard'
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travel-during-work-support-you-may-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">Check your answers: travelling during work</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need support to travel to other locations during your working day that you're not able to walk, drive or get public transport to?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travel-during-work-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travel-during-work-screener">
+              Change
+              <span class="govuk-visually-hidden"> Do you need support to travel to other locations during your working day that you're not able to walk, drive or get public transport to?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us about your travelling during work and the support you think you need
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travel-during-work-support-you-may-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travel-during-work-support-you-may-need">
+              Change
+              <span class="govuk-visually-hidden"> Tell us about your travelling during work and the support you think you need</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  </div>
+{% endblock %}

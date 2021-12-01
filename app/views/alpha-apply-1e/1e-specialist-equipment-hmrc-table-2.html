@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">You have added 2 items of specialist equipment</h1>
+<div class="govuk-form-group">
+  <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
+
+    <div class="hmrc-add-to-a-list__contents">
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        {{ data['specialist-equipment-type-1'] }}
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change specialist equipment</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove specialist equipment from the list</span>
+        </a>
+      </dd>
+    </div>
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        {{ data['specialist-equipment-type-2'] }}
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-2">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change specialist equipment</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove specialist equipment from the list</span>
+        </a>
+      </dd>
+    </div>
+
+  </dl>
+
+<form method="post" action="/alpha-apply-1e/1e-specialist-equipment-hmrc-table-2">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you need to add another item?
+      </legend>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-2" name="add-another-2" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-2">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-2-2" name="add-another-2" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="add-another-2-2">
+            No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
+</form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

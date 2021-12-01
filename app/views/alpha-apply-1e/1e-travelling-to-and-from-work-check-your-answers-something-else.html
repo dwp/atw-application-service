@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travelling-to-and-from-work-locations-something-else">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-l">Check your answers: travelling to and from work</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that it's difficult for you to drive or get public transport?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that it's difficult for you to drive or get public transport?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you get to work at the moment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment">
+              Change
+              <span class="govuk-visually-hidden"> How do you get to work at the moment?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What support do you need to travel to work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-what-support-do-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-what-support-do-you-need">
+              Change
+              <span class="govuk-visually-hidden"> What support do you need to travel to work?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How will support to travel to and from work meet your needs?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-would-meet-your-needs-something-else'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-how-would-meet-your-needs-something-else">
+              Change
+              <span class="govuk-visually-hidden"> How will support to travel to and from work meet your needs?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many journeys will you need support for in a week?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-how-many-journeys'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-journeys-something-else">
+              Change
+              <span class="govuk-visually-hidden"> How many journeys will you need support for in a week?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Will your journeys to and from work be between your home and work addresses?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelling-to-and-from-work-locations-something-else'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/d-travelling-to-and-from-work-locations-something-else">
+              Change
+              <span class="govuk-visually-hidden"> Will your journeys to and from work be between your home and work addresses?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+
+  </div>
+{% endblock %}

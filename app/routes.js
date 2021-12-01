@@ -3163,3 +3163,1066 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                                       }
                                     res.redirect(redirectUrl)
                                           })
+
+         router.route('/alpha-apply-1e/1e-bsl-support')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['1e-bsl-support']) {
+               case 'yes':
+                 redirectUrl = '/alpha-apply-1e/1e-bsl-eligibility-statement'
+                 break
+               case 'no':
+                 redirectUrl = '/alpha-apply-1e/1e-accessibility-information'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+  router.route('/alpha-apply-1e/1e-do-you-need-support')
+    .post((req, res, next) => {
+      let redirectUrl
+      switch (req.body['do-you-need-support']) {
+        case 'yes':
+          redirectUrl = '/alpha-apply-1e/1e-bsl-support'
+          break
+        case 'no':
+          redirectUrl = '/alpha-apply-1e/1e-eligibility-statement'
+          break
+
+        default:
+          redirectUrl = req.path
+          break
+      }
+      res.redirect(redirectUrl)
+    })
+
+ router.route('/alpha-apply-1e/1e-bsl-support')
+   .post((req, res, next) => {
+     let redirectUrl
+     switch (req.body['1e-bsl-support']) {
+       case 'yes':
+         redirectUrl = '/alpha-apply-1e/#'
+         break
+       case 'no':
+         redirectUrl = '/alpha-apply-1e/1e-accessibility-information'
+         break
+
+       default:
+         redirectUrl = req.path
+         break
+     }
+     res.redirect(redirectUrl)
+   })
+
+
+   router.route('/alpha-apply-1e/1e-who-are-you-applying-for')
+     .post((req, res, next) => {
+       let redirectUrl
+       switch (req.body['1e-who-are-you-applying-for']) {
+         case 'myself':
+           redirectUrl = '/alpha-apply-1e/1e-eligibility-statement'
+           break
+         case 'someone else':
+           redirectUrl = '/alpha-apply-1e/1e-#'
+           break
+
+         default:
+           redirectUrl = req.path
+           break
+       }
+       res.redirect(redirectUrl)
+     })
+
+    router.route('/alpha-apply-1e/1e-esa')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['1e-esa']) {
+          case 'yes':
+            redirectUrl = '/alpha-apply-1e/1e-less-than-16-hours'
+            break
+          case 'yes-but':
+            redirectUrl = '/alpha-apply-1e/1e-you-may-be-eligible-blue'
+            break
+             case 'no':
+               redirectUrl = '/alpha-apply-1e/1e-you-may-be-eligible-blue'
+               break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
+     router.route('/alpha-apply-1e/1e-less-than-16-hours')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['1e-less-than-16-hours']) {
+           case 'yes':
+             redirectUrl = '/alpha-apply-1e/1e-you-may-be-eligible-blue'
+             break
+           case 'no':
+             redirectUrl = '/alpha-apply-1e/1e-paid-supported-permitted-work'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+     router.route('/alpha-apply-1e/1e-paid-supported-permitted-work')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['1e-paid-supported-permitted-work']) {
+           case 'yes':
+             redirectUrl = '/alpha-apply-1e/1e-you-may-be-eligible-blue'
+             break
+           case 'no':
+             redirectUrl = '/alpha-apply-1e/1e-ineligible'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+           router.route('/alpha-apply-1e/1e-nominated-representative')
+             .post((req, res, next) => {
+               let redirectUrl
+               switch (req.body['1e-nominated-representative']) {
+                 case 'yes':
+                   redirectUrl = '/alpha-apply-1e/1e-nominated-representative-details'
+                   break
+                 case 'no':
+                   redirectUrl = '/alpha-apply-1e/1e-contact-preferences'
+                   break
+
+                 default:
+                   redirectUrl = req.path
+                   break
+               }
+               res.redirect(redirectUrl)
+             })
+
+             router.route('/alpha-apply-1e/1e-appointee')
+               .post((req, res, next) => {
+                 let redirectUrl
+                 switch (req.body['1e-appointee']) {
+                   case 'yes':
+                     redirectUrl = '/alpha-apply-1e/1e-appointee-details'
+                     break
+                   case 'no':
+                     redirectUrl = '/alpha-apply-1e/1e-nominated-representative'
+                     break
+
+                   default:
+                     redirectUrl = req.path
+                     break
+                 }
+                 res.redirect(redirectUrl)
+               })
+
+               router.route('/alpha-apply-1e/1e-bsl-who-are-you-applying-for')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['1e-bsl-who-are-you-applying-for']) {
+                     case 'myself':
+                       redirectUrl = '/alpha-apply-1e/1e-bsl-eligibility-statement'
+                       break
+                     case 'I am an appointee':
+                       redirectUrl = '/alpha-apply-1e/#'
+                       break
+                       case 'I am a representative':
+                         redirectUrl = '/alpha-apply-1e/#'
+                         break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+                 router.route('/alpha-apply-1e/1e-do-you-know-what-support-you-need')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['1e-do-you-know-what-support-you-need']) {
+                       case 'yes':
+                         redirectUrl = '/alpha-apply-1e/1e-task-list'
+                         break
+                       case 'no':
+                         redirectUrl = '/alpha-apply-1e/#'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })
+
+                   router.route('/alpha-apply-1e/1e-appointee-or-representative')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['appointee-or-representative']) {
+                         case 'I have an appointee':
+                           redirectUrl = '/alpha-apply-1e/1e-appointee-details'
+                           break
+                         case 'I want to nominate a representative':
+                           redirectUrl = '/alpha-apply-1e/1e-nominated-representative-details'
+                           break
+                           case 'I do not have an appointee or nominated representative':
+                             redirectUrl = '/alpha-apply-1e/1e-contact-preferences'
+                             break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+
+                    router.route('/alpha-apply-1e/1e-do-you-need-support-at-work')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['do-you-need-support-at-work']) {
+                          case 'yes':
+                            redirectUrl = '/alpha-apply-1e/1e-what-support-you-need'
+                            break
+                          case 'no':
+                            redirectUrl = '/alpha-apply-1e/1e-type-of-travel-support'
+                            break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+   router.route('/alpha-apply-1e/1e-another-health-condition-or-disability-2')
+   .post((req, res, next) => {
+   let redirectUrl
+   switch (req.body['1e-another-health-condition-or-disability-2']) {
+   case 'Yes':
+   redirectUrl = '/alpha-apply-1e/1e-about-health-condition-or-disability-2'
+   break
+   case 'No':
+   redirectUrl = '/alpha-apply-1e/1e-about-your-health-condition-or-disability-check-your-answers-2'
+   break
+
+   default:
+   redirectUrl = req.path
+   break
+   }
+   res.redirect(redirectUrl)
+   })
+
+
+     router.route('/alpha-apply-1e/1e-another-health-condition-or-disability-3')
+     .post((req, res, next) => {
+     let redirectUrl
+     switch (req.body['1e-another-health-condition-or-disability-3']) {
+     case 'Yes':
+     redirectUrl = '/alpha-apply-1e/#'
+     break
+     case 'No':
+     redirectUrl = '/alpha-apply-1e/1e-about-your-health-condition-or-disability-check-your-answers-3'
+     break
+
+     default:
+     redirectUrl = req.path
+     break
+     }
+     res.redirect(redirectUrl)
+     })
+
+
+                    router.route('/alpha-apply-1e/1e-employment-status')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['1e-employment-status']) {
+                          case 'Employed':
+                            redirectUrl = '/alpha-apply-1e/1e-employment-job-title'
+                            break
+                          case 'Self-employed':
+                            redirectUrl = '/alpha-apply-1e/1e-self-employment-job-title'
+                            break
+                              case 'About to start employment':
+                                redirectUrl = '/alpha-apply-1e/1e-about-to-start-employment-job-title'
+                                break
+                              case 'About to start self-employment':
+                                redirectUrl = '/alpha-apply-1e/1e-about-to-start-self-employment-job-title'
+                                break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+
+                    router.route('/alpha-apply-1e/1e-employment-full-time')
+                      .post((req, res, next) => {
+                        let redirectUrl
+                        switch (req.body['employment-full-time']) {
+                          case 'Yes':
+                            redirectUrl = '/alpha-apply-1e/1e-employment-employer-name'
+                            break
+                          case 'No':
+                            redirectUrl = '/alpha-apply-1e/1e-employment-hours-per-week'
+                            break
+
+                          default:
+                            redirectUrl = req.path
+                            break
+                        }
+                        res.redirect(redirectUrl)
+                      })
+
+                     router.route('/alpha-apply-1e/1e-self-employment-full-time')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['self-employment-full-time']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1e/1e-self-employment-workplace-address'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1e/1e-self-employment-hours-per-week'
+                             break
+
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+
+                     router.route('/alpha-apply-1e/1e-about-to-start-employment-full-time')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['employment-full-time']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1e/1e-about-to-start-employment-employer-name'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1e/1e-about-to-start-employment-hours-per-week'
+                             break
+
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+                      router.route('/alpha-apply-1e/1e-about-to-start-self-employment-full-time')
+                        .post((req, res, next) => {
+                          let redirectUrl
+                          switch (req.body['self-employment-full-time']) {
+                            case 'Yes':
+                              redirectUrl = '/alpha-apply-1e/1e-about-to-start-self-employment-workplace-address'
+                              break
+                            case 'No':
+                              redirectUrl = '/alpha-apply-1e/1e-about-to-start-self-employment-hours-per-week'
+                              break
+
+                            default:
+                              redirectUrl = req.path
+                              break
+                          }
+                          res.redirect(redirectUrl)
+                        })
+
+
+                   router.route('/alpha-apply-1e/1e-contact-someone-else')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['1e-contact-someone-else']) {
+                         case 'Yes':
+                           redirectUrl = '/alpha-apply-1e/1e-someone-else-details'
+                           break
+                         case 'No':
+                           redirectUrl = '/alpha-apply-1e/1e-your-details-check-your-answers'
+                           break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+   router.route('/alpha-apply-1e/1e-who-are-you-applying-for')
+     .post((req, res, next) => {
+       let redirectUrl
+       switch (req.body['1e-who-are-you-applying-for']) {
+         case 'myself':
+           redirectUrl = '/alpha-apply-1e/1e-eligibility-statement'
+           break
+         case 'I am an appointee':
+           redirectUrl = '/alpha-apply-1e/1e-#'
+           break
+           case 'I am an appointee':
+             redirectUrl = '/alpha-apply-1e/1e-#'
+             break
+
+         default:
+           redirectUrl = req.path
+           break
+       }
+       res.redirect(redirectUrl)
+     })
+
+
+     router.route('/alpha-apply-1e/1e-specialist-equipment-screener')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['specialist-equipment-screener']) {
+           case 'Yes':
+             redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-do-you-know-what-specialist-equipment-you-need'
+             break
+           case 'No':
+             redirectUrl = '/alpha-apply-1e/1e-task-list'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+       router.route('/alpha-apply-1e/1e-specialist-equipment-do-you-know-what-specialist-equipment-you-need')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['specialist-equipment-do-you-know-what-specialist-equipment-you-need']) {
+             case 'Yes, I know what I need':
+               redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1'
+               break
+             case 'No, I do not know what I need':
+               redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-tell-us-ways-that-you-think-it-might-help'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+
+         router.route('/alpha-apply-1e/1e-specialist-equipment-workplace-assessment')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['specialist-equipment-workplace-assessment']) {
+               case 'Yes':
+                 redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-workplace-assessment-upload'
+                 break
+               case 'No':
+                 redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+          router.route('/alpha-apply-1e/1e-specialist-equipment-hmrc-table-1')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['add-another']) {
+                case 'Yes':
+                  redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-2'
+                  break
+                case 'No':
+                  redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-check-your-answers-#'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+            router.route('/alpha-apply-1e/1e-specialist-equipment-hmrc-table-3')
+              .post((req, res, next) => {
+                let redirectUrl
+                switch (req.body['add-another-3']) {
+                  case 'Yes':
+                    redirectUrl = '/alpha-apply-1e/#'
+                    break
+                  case 'No':
+                    redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-impact-of-not-having-it-3'
+                    break
+
+                  default:
+                    redirectUrl = req.path
+                    break
+                }
+                res.redirect(redirectUrl)
+              })
+
+              router.route('/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-1')
+                .post((req, res, next) => {
+                  let redirectUrl
+                  switch (req.body['add-another-1']) {
+                    case 'Yes':
+                      redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-2'
+                      break
+                    case 'No':
+                      redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-impact-of-not-having-it-1'
+                      break
+
+                    default:
+                      redirectUrl = req.path
+                      break
+                  }
+                  res.redirect(redirectUrl)
+                })
+
+                router.route('/alpha-apply-1e/1e-specialist-equipment-hmrc-table-2')
+                  .post((req, res, next) => {
+                    let redirectUrl
+                    switch (req.body['add-another-2']) {
+                      case 'Yes':
+                        redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-type-of-equipment-3'
+                        break
+                      case 'No':
+                        redirectUrl = '/alpha-apply-1e/1e-specialist-equipment-impact-of-not-having-it-2'
+                        break
+
+                      default:
+                        redirectUrl = req.path
+                        break
+                    }
+                    res.redirect(redirectUrl)
+                  })
+
+     router.route('/alpha-apply-1e/1e-support-worker-screener')
+       .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['support-worker-screener']) {
+           case 'Yes':
+             redirectUrl = '/alpha-apply-1e/1e-support-worker-do-you-know-what-support-worker-you-need'
+             break
+           case 'No':
+             redirectUrl = '/alpha-apply-1e/1e-task-list'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+       })
+
+       router.route('/alpha-apply-1e/1e-support-worker-do-you-know-what-support-worker-you-need')
+         .post((req, res, next) => {
+           let redirectUrl
+           switch (req.body['support-worker-do-you-know-what-support-worker-you-need']) {
+             case 'Yes, I know what I need':
+               redirectUrl = '/alpha-apply-1e/1e-support-worker-that-you-need-1'
+               break
+             case 'No, I do not know what I need':
+               redirectUrl = '/alpha-apply-1e/1e-support-worker-short-or-long-term'
+               break
+
+             default:
+               redirectUrl = req.path
+               break
+           }
+           res.redirect(redirectUrl)
+         })
+
+        router.route('/alpha-apply-1e/1e-support-worker-short-or-long-term-two-options')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['support-worker-short-or-long-term-two-options']) {
+              case 'No, I need a support worker on a permanent basis':
+                redirectUrl = '/alpha-apply-1e/1e-support-worker-how-many-hours-a-week-long-term'
+                break
+              case 'Yes, I need a support worker on a temporary basis':
+                redirectUrl = '/alpha-apply-1e/1e-support-worker-how-long-for'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
+
+         router.route('/alpha-apply-1e/1e-support-worker-do-you-have-a-quote-short-term-1')
+           .post((req, res, next) => {
+             let redirectUrl
+             switch (req.body['support-worker-do-you-have-a-quote-short-term-1']) {
+               case 'Yes, I have quotes':
+                 redirectUrl = '/alpha-apply-1e/#'
+                 break
+               case 'No, I do not have quotes':
+                 redirectUrl = '/alpha-apply-1e/1e-support-worker-short-term-hmrc-table-1'
+                 break
+
+               default:
+                 redirectUrl = req.path
+                 break
+             }
+             res.redirect(redirectUrl)
+           })
+
+           router.route('/alpha-apply-1e/1e-support-worker-providing-quotes-for-this-support-long-term-1')
+             .post((req, res, next) => {
+               let redirectUrl
+               switch (req.body['support-worker-providing-quotes-for-this-support-long-term-1']) {
+                 case 'Yes, I have quotes':
+                   redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-long-term-1'
+                   break
+                 case 'No, I do not have quotes':
+                   redirectUrl = '/alpha-apply-1e/1e-support-worker-long-term-hmrc-table-1'
+                   break
+
+                 default:
+                   redirectUrl = req.path
+                   break
+               }
+               res.redirect(redirectUrl)
+             })
+
+             router.route('/alpha-apply-1e/1e-support-worker-providing-quotes-for-this-support-short-term-1')
+               .post((req, res, next) => {
+                 let redirectUrl
+                 switch (req.body['support-worker-providing-quotes-for-this-support-short-term-1']) {
+                   case 'Yes, I have quotes':
+                     redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-short-term-1'
+                     break
+                   case 'No, I do not have quotes':
+                     redirectUrl = '/alpha-apply-1e/1e-support-worker-short-term-hmrc-table-1'
+                     break
+
+                   default:
+                     redirectUrl = req.path
+                     break
+                 }
+                 res.redirect(redirectUrl)
+               })
+
+               router.route('/alpha-apply-1e/1e-support-worker-long-term-hmrc-table-1-quote-1')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['support-worker-second-quote-long-term-1']) {
+                     case 'Yes':
+                       redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-long-term-2'
+                       break
+                     case 'No':
+                       redirectUrl = '/alpha-apply-1e/1e-support-worker-long-term-hmrc-table-2'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+                 router.route('/alpha-apply-1e/1e-support-worker-long-term-hmrc-table-2-quote-1')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['support-worker-second-quote-long-term-3']) {
+                       case 'Yes':
+                         redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-long-term-3'
+                         break
+                       case 'No':
+                         redirectUrl = '/alpha-apply-1e/1e-support-worker-long-term-hmrc-table-3'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })
+
+                   router.route('/alpha-apply-1e/1e-your-health-condition-or-disability-1')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['add-another-1']) {
+                         case 'Yes':
+                           redirectUrl = '/alpha-apply-1e/1e-your-health-condition-or-disability-2'
+                           break
+                         case 'No':
+                           redirectUrl = '/alpha-apply-1e/1e-your-health-condition-or-disability-affects-your-work-1'
+                           break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+                     router.route('/alpha-apply-1e/1e-your-health-condition-or-disability-hrmc-table-2')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['add-another-2']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1e/1e-your-health-condition-or-disability-3'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1e/1e-your-health-condition-or-disability-affects-your-work-2'
+                             break
+
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+
+                      router.route('/alpha-apply-1e/1e-extra-information-screener')
+                        .post((req, res, next) => {
+                          let redirectUrl
+                          switch (req.body['extra-information-screener']) {
+                            case 'Yes':
+                              redirectUrl = '/alpha-apply-1e/1e-extra-information-textbox'
+                              break
+                            case 'No':
+                              redirectUrl = '/alpha-apply-1e/1e-task-list'
+                              break
+
+                            default:
+                              redirectUrl = req.path
+                              break
+                          }
+                          res.redirect(redirectUrl)
+                        })
+
+                        router.route('/alpha-apply-1e/1e-changes-to-your-vehicle-screener')
+                          .post((req, res, next) => {
+                            let redirectUrl
+                            switch (req.body['changes-to-your-vehicle-screener']) {
+                              case 'Yes':
+                                redirectUrl = '/alpha-apply-1e/1e-changes-to-your-vehicle-vehicle-type'
+                                break
+                              case 'No':
+                                redirectUrl = '/alpha-apply-1e/1e-task-list'
+                                break
+
+                              default:
+                                redirectUrl = req.path
+                                break
+                            }
+                            res.redirect(redirectUrl)
+                          })
+
+                          router.route('/alpha-apply-1e/1e-workplace-adaptations-screener')
+                            .post((req, res, next) => {
+                              let redirectUrl
+                              switch (req.body['workplace-adaptations-screener']) {
+                                case 'Yes, I need changes to my workplace':
+                                  redirectUrl = '/alpha-apply-1e/1e-workplace-adaptations-contacting-your-employer'
+                                  break
+                                case 'No, I do not need changes to my workplace':
+                                  redirectUrl = '/alpha-apply-1e/1e-task-list'
+                                  break
+
+                                default:
+                                  redirectUrl = req.path
+                                  break
+                              }
+                              res.redirect(redirectUrl)
+                            })
+
+                            router.route('/alpha-apply-1e/1e-workplace-adaptations-do-you-know-what-you-need')
+                              .post((req, res, next) => {
+                                let redirectUrl
+                                switch (req.body['workplace-adaptations-do-you-know-what-you-need']) {
+                                  case 'Yes, I know what changes should be made':
+                                    redirectUrl = '/alpha-apply-1e/1e-workplace-adaptations-details'
+                                    break
+                                  case 'No, I do not know what changes should be made':
+                                    redirectUrl = '/alpha-apply-1e/1e-workplace-adaptations-check-your-answers-1'
+                                    break
+
+                                  default:
+                                    redirectUrl = req.path
+                                    break
+                                }
+                                res.redirect(redirectUrl)
+                              })
+
+   router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-screener')
+   .post((req, res, next) => {
+      let redirectUrl
+       switch (req.body['travelling-to-and-from-work-screener']) {
+        case 'Yes':
+          redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'
+        break
+        case 'No':
+          redirectUrl = '/alpha-apply-1e/1e-task-list'
+        break
+
+        default:
+          redirectUrl = req.path
+        break
+        }
+          res.redirect(redirectUrl)
+        })
+
+     router.route('/alpha-apply-1e/1e-travel-during-work-screener')
+     .post((req, res, next) => {
+        let redirectUrl
+         switch (req.body['travel-during-work-screener']) {
+          case 'Yes':
+            redirectUrl = '/alpha-apply-1e/1e-travel-during-work-support-you-may-need'
+          break
+          case 'No':
+            redirectUrl = '/alpha-apply-1e/1e-task-list'
+          break
+
+          default:
+            redirectUrl = req.path
+          break
+          }
+            res.redirect(redirectUrl)
+          })
+
+       router.route('/alpha-apply-1e/1e-mental-health-support-screener')
+       .post((req, res, next) => {
+          let redirectUrl
+           switch (req.body['mental-health-support-screener']) {
+            case 'Yes':
+              redirectUrl = '/alpha-apply-1e/1e-mental-health-support-check-your-answers'
+            break
+            case 'No':
+              redirectUrl = '/alpha-apply-1e/1e-task-list'
+            break
+
+            default:
+              redirectUrl = req.path
+            break
+            }
+              res.redirect(redirectUrl)
+            })
+
+           router.route('/alpha-apply-1e/1e-support-worker-providing-quotes-for-this-support-short-term-1')
+             .post((req, res, next) => {
+               let redirectUrl
+               switch (req.body['support-worker-providing-quotes-for-this-support-short-term-1']) {
+                 case 'Yes, I have quotes':
+                   redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-short-term-1'
+                   break
+                 case 'No, I do not have quotes':
+                   redirectUrl = '/alpha-apply-1e/1e-support-worker-short-term-hmrc-table-1'
+                   break
+
+                 default:
+                   redirectUrl = req.path
+                   break
+               }
+               res.redirect(redirectUrl)
+             })
+
+               router.route('/alpha-apply-1e/1e-support-worker-short-term-hmrc-table-1-quote-1')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['support-worker-second-quote-short-term-1']) {
+                     case 'Yes':
+                       redirectUrl = '/alpha-apply-1e/1e-support-worker-quote-short-term-2'
+                       break
+                     case 'No':
+                       redirectUrl = '/alpha-apply-1e/1e-support-worker-short-term-hmrc-table-2'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+                   router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-what-support-do-you-need')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
+                         case 'Taxi':
+                           redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-would-meet-your-needs-taxi'
+                           break
+                         case 'Lift from a friend, colleague or family member':
+                           redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-would-meet-your-needs-lift'
+                           break
+                         case 'Something else':
+       redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-would-meet-your-needs-something-else'
+                           break
+                         case 'I am not sure':
+     redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-journeys-not-sure'
+                           break
+
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+                   router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-locations-taxi')
+                     .post((req, res, next) => {
+                       let redirectUrl
+                       switch (req.body['travelling-to-and-from-work-locations-taxi']) {
+                         case 'Yes':
+                           redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-providing-quotes-taxi'
+                           break
+                         case 'No':
+                           redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-miles-taxi'
+                           break
+                         default:
+                           redirectUrl = req.path
+                           break
+                       }
+                       res.redirect(redirectUrl)
+                     })
+
+                     router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-locations-lift')
+                       .post((req, res, next) => {
+                         let redirectUrl
+                         switch (req.body['travelling-to-and-from-work-locations-lift']) {
+                           case 'Yes':
+                             redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers-lift'
+                             break
+                           case 'No':
+                             redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-miles-lift'
+                             break
+                           default:
+                             redirectUrl = req.path
+                             break
+                         }
+                         res.redirect(redirectUrl)
+                       })
+
+                      router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-locations-not-sure')
+                        .post((req, res, next) => {
+                          let redirectUrl
+                          switch (req.body['travelling-to-and-from-work-locations-not-sure']) {
+                            case 'Yes':
+                              redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers-not-sure'
+                              break
+                            case 'No':
+                              redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-miles-not-sure'
+                              break
+                            case "I'm not sure":
+                              redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers-not-sure'
+                              break
+                            default:
+                              redirectUrl = req.path
+                              break
+                          }
+                          res.redirect(redirectUrl)
+                        })
+
+                      router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-locations-something-else')
+                        .post((req, res, next) => {
+                          let redirectUrl
+                          switch (req.body['travelling-to-and-from-work-locations-something-else']) {
+                            case 'Yes':
+                              redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers-something-else'
+                              break
+                            case 'No':
+                              redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-how-many-miles-something-else'
+                              break
+                            default:
+                              redirectUrl = req.path
+                              break
+                          }
+                          res.redirect(redirectUrl)
+                        })
+
+             router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-providing-quotes-taxi')
+               .post((req, res, next) => {
+                 let redirectUrl
+                 switch (req.body['travelling-to-and-from-work-providing-quotes-taxi']) {
+                   case 'Yes, I have quotes':
+                     redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-quote-1'
+                     break
+                   case 'No, I do not have quotes':
+                     redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers-taxi-1'
+                     break
+
+                   default:
+                     redirectUrl = req.path
+                     break
+                 }
+                 res.redirect(redirectUrl)
+               })
+
+                router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-1-quote-1')
+                  .post((req, res, next) => {
+                    let redirectUrl
+                    switch (req.body['travelling-to-and-from-work-hmrc-table-1-quote-1']) {
+                      case 'Yes':
+                        redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-quote-2'
+                        break
+                      case 'No':
+                        redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-2'
+                        break
+
+                      default:
+                        redirectUrl = req.path
+                        break
+                    }
+                    res.redirect(redirectUrl)
+                  })
+
+                 router.route('/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-2-quote-1')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['travelling-to-and-from-work-hmrc-table-2-quote-1']) {
+                       case 'Yes':
+                         redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-quote-3'
+                         break
+                       case 'No':
+                         redirectUrl = '/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-3'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })
+
+
+                 router.route('/alpha-apply-1e/1e-benefits')
+                     .post((req, res, next) => {
+                         const selections = req.body.benefits;
+                          // Stay on same page if not any option selected
+                          redirectUrl = '/alpha-apply-1e/1e-ineligible-benefits'
+                             console.log(selections + ' length = ' + selections.length)
+                               if (selections.length === 1)
+                                  {
+                                      // Handle single selections
+                               if(selections[0].trim() === "Employment Support Allowance") {
+                                 redirectUrl = '/alpha-apply-1e/1e-esa'
+                                    } else if(selections[0].trim() === 'None of these') {
+                                 redirectUrl = '/alpha-apply-1e/1e-you-may-be-eligible-blue'
+                                     }
+                                     } else {
+                                  // Handle Multiple selections
+                             redirectUrl = '/alpha-apply-1e/1e-ineligible-benefits'
+                                       }
+                                     res.redirect(redirectUrl)
+                                           })

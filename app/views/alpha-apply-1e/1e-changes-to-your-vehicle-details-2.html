@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-changes-to-your-vehicle-do-you-have-a-quote-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e/1e-changes-to-your-vehicle-details-3" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l"
+                                               for="changes-to-your-vehicle-details-2">
+          Quote for {{ data['changes-to-your-vehicle-vehicle-type-1'] }}
+        </label>
+        </h1>
+
+        <p>We need 2 more quotes to make sure that the grant will cover your needs, if it's awarded.</p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                 for="changes-to-your-vehicle-details-2">
+            Name of provider
+          </label>
+          </h2>
+          <div id="changes-to-your-vehicle-details-2-hint" class="govuk-hint">
+            Be as specific as you can about this equipment – for example, give the make and model.
+          </div>
+          <input class="govuk-input" id="changes-to-your-vehicle-details-2" name="changes-to-your-vehicle-details-2"
+                 type="text" aria-describedby="changes-to-your-vehicle-details-2-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
+                                                 for="changes-to-your-vehicle-details-2">
+            What is the total cost of this change?
+          </label>
+          </h2>
+          <div id="changes-to-your-vehicle-details-2-hint" class="govuk-hint">
+            Include any extra charges, such as administration fees and VAT.
+          </div>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="changes-to-your-vehicle-details-2"
+                   name="changes-to-your-vehicle-details-2" type="text" spellcheck="false">
+          </div>
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
