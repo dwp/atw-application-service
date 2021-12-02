@@ -70,6 +70,7 @@
         <div class="govuk-!-padding-bottom-0"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="mental-health" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
@@ -88,17 +89,5 @@
 
   </div>
 
-                <script>
-                {
-                value: "Yes",
-                text: "Yes",
-                checked: checked("support-worker-screener", "Yes")
-                },
-                {
-                value: "No",
-                text: "No",
-                checked: checked("support-worker-screener", "No")
-                }
-                </script>
 
 {% endblock %}
