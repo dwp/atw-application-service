@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-about-to-start-self-employment-job-description">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1e/1e-about-to-start-self-employment-do-you-have-a-utr" method="post">
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="about-to-start-self-employment-do-you-have-a-utr-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you have a Unique Taxpayer Reference (UTR) number?
+            </h1>
+          </legend>
+          <div id="about-to-start-self-employment-do-you-have-a-utr-hint" class="govuk-hint">
+            This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
+          </div>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="about-to-start-self-employment-do-you-have-a-utr"
+                     name="about-to-start-self-employment-do-you-have-a-utr" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="about-to-start-self-employment-do-you-have-a-utr">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="about-to-start-self-employment-do-you-have-a-utr-2" name="about-to-start-self-employment-do-you-have-a-utr" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="about-to-start-self-employment-do-you-have-a-utr-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

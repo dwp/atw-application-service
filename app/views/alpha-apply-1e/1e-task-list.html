@@ -22,7 +22,7 @@
         Completing your application
       </h2>
 
-      <p>There are around X questions and you can complete the sections in any order.</p>
+      <p>There are 6 sections and you can complete the sections in any order.</p>
 
       <p>You can save your progress and return to your application later.</p>
 
@@ -102,8 +102,21 @@
                   Your job and employer
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="about-your-job-status">Not
-                started</strong>
+              <strong>
+                {%if data['employment-status'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['employment-check-your-answers'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['self-employment-check-your-answers'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['about-to-start-employment-check-your-answers'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['about-to-start-self-employment-check-your-answers'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['employment-status'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
             </li>
           </ul>
         </li>
@@ -147,7 +160,8 @@
                   Equipment, adaptations and software
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="specialist-equipment-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="specialist-equipment-status">Not
+              started</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -155,7 +169,8 @@
                   Support workers
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="support-workers-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="support-workers-status">Not
+                started</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -183,7 +198,9 @@
                   Travelling to and from work
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="travelling-to-and-from-work-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
+                      id="travelling-to-and-from-work-status">Not started
+              </strong>
             </li>
             </li>
             <li class="app-task-list__item">
@@ -192,15 +209,17 @@
                   Travelling during work
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="optional-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="optional-status">Not started</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="/alpha-apply-1e/1e-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
-                  Changes to workplace
+                  Changes to your workplace
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="workplace-adaptations-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="workplace-adaptations-status">Not
+                started
+              </strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -209,7 +228,9 @@
                   Changes to your vehicle
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="changes-to-your-vehicle-status">Optional</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="changes-to-your-vehicle-status">Not
+                started
+              </strong>
             </li>
           </ul>
         </li>

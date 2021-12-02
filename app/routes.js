@@ -4226,3 +4226,39 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                                        }
                                      res.redirect(redirectUrl)
                                            })
+
+                 router.route('/alpha-apply-1e/1e-self-employment-do-you-have-a-company-registration-number')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['self-employment-do-you-have-a-company-registration-number']) {
+                       case 'Yes':
+                         redirectUrl = '/alpha-apply-1e/1e-self-employment-company-registration-number'
+                         break
+                       case 'No':
+                         redirectUrl = '/alpha-apply-1e/1e-self-employment-length'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })
+
+                 router.route('/alpha-apply-1e/1e-about-to-start-self-employment-do-you-have-a-utr')
+                   .post((req, res, next) => {
+                     let redirectUrl
+                     switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+                       case 'Yes':
+                         redirectUrl = '/alpha-apply-1e/1e-about-to-start-self-employment-utr'
+                         break
+                       case 'No':
+                         redirectUrl = '/alpha-apply-1e/1e-about-to-start-self-employment-start-date'
+                         break
+
+                       default:
+                         redirectUrl = req.path
+                         break
+                     }
+                     res.redirect(redirectUrl)
+                   })

@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-self-employment-do-you-have-another-job">Back</a>
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">Check your answers: employment status</h1>
+
+      <h2 class="govuk-heading-m">Employment details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employment status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            About to start self-employment
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-employment-status">
+              Change
+              <span class="govuk-visually-hidden"> what is your employment status</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What will your job title be?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['job-title'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-job-title">
+              Change
+              <span class="govuk-visually-hidden"> What will your job title be?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Job description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['self-employment-job-description'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-job-description">
+              Change
+              <span class="govuk-visually-hidden"> what is your job title</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have a Unique Taxpayer Reference (UTR) number?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['about-to-start-self-employment-do-you-have-a-utr'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-do-you-have-a-utr">
+              Change
+              <span class="govuk-visually-hidden"> Do you have a Unique Taxpayer Reference (UTR) number?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your Unique Taxpayer Reference (UTR)?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['utr'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-utr">
+              Change
+              <span class="govuk-visually-hidden"> What is your Unique Taxpayer Reference (UTR)?</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When will you be starting your self-employment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['about-to-start-self-employment-start-date-day'] }} / {{
+            data['about-to-start-self-employment-start-date-month'] }} / {{
+            data['about-to-start-self-employment-start-date-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-start-date">
+              Change
+              <span class="govuk-visually-hidden"> When will you be starting your self-employment?</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many hours do you think you'll work per week?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['hours per week'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-hours-per-week">
+              Change
+              <span class="govuk-visually-hidden"> How many hours do you think you'll work per week?</a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+            <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
+              <li>Glasgow,</li>
+              <li>{{data["workplace-postcode"]}}</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-self-employment-workplace-address">
+              Change
+              <span class="govuk-visually-hidden"> what is your workplace address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+  <h2 class="govuk-heading-m">Additional employment</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you have another job?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['do-you-have-another-job'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-self-employment-do-you-have-another-job">
+          Change
+          <span class="govuk-visually-hidden"> Do you have another job?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+    <input type="hidden" name="about-to-start-self-employment-check-your-answers" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+
+  </div>
+{% endblock %}
