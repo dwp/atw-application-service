@@ -10,29 +10,9 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Check your answers</h1>
 
-      <h1 class="govuk-heading-l">Check your answers: mental health support</h1>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Do you need mental health support at work?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['mental-health-support-screener'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1e/1e-1e-mental-health-support-screener">
-              Change
-              <span class="govuk-visually-hidden"> Do you need mental health support at work?</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-      </div>
-    </div>
+      {% include "alpha-apply-1e/1e-mental-health-support-check-your-answers-body.html" %}
 
   <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
       <input type="hidden" name="mental-health-check-your-answers" value="true">
@@ -42,5 +22,4 @@
 
       </form>
 
-  </div>
 {% endblock %}

@@ -1,0 +1,370 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+      {% if (data['support-worker-do-you-know-what-support-worker-you-need'] =="No, I do not know what I need") %}
+
+      <h2 class="govuk-heading-m">Support worker</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Does your condition mean that you need a support worker at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['support-worker-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-support-worker-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you need a support worker at work?</span>
+            </a>
+          </dd>
+        </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you know what type of support worker you need?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-do-you-know-what-support-worker-you-need">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you know what type of support worker you need?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Will you need a support worker on a temporary basis?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['short-or-long-term'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-short-or-long-term">
+                      Change
+                      <span class="govuk-visually-hidden"> Will you need a support worker on a temporary basis?</span>
+                  </a>
+              </dd>
+          </div>
+
+      </dl>
+
+      {% endif %}
+
+          {% if (data['support-worker-do-you-know-what-support-worker-you-need'] =="Yes, I know what I need") %}
+
+          <h2 class="govuk-heading-m">Support worker</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Does your condition mean that you need a support worker at work?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-screener'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-screener">
+                      Change
+                      <span class="govuk-visually-hidden"> Does your condition mean that you need a support worker at work?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you know what type of support worker you need?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-do-you-know-what-support-worker-you-need">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you know what type of support worker you need?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  How will a support worker help you at work?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-might-help'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-will-help">
+                      Change
+                      <span class="govuk-visually-hidden"> How will a support worker help you at work?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Will you need a support worker on a temporary basis?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-short-or-long-term-two-options'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-short-or-long-term-two-options">
+                      Change
+                      <span class="govuk-visually-hidden"> Will you need a support worker on a temporary basis?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% if data['support-worker-short-or-long-term-two-options'] =="Yes, I need a support worker on a temporary basis" %}
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  How long do you need a support worker for?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-how-long-for'] }} weeks
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-how-long-for">
+                      Change
+                      <span class="govuk-visually-hidden"> How long do you need a support worker for?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  How many hours per week do you need this support at work?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-hour-per-week'] }} hours per week
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-how-many-hours-a-week">
+                      Change
+                      <span class="govuk-visually-hidden"> How many hours per week do you need this support at work?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you have quotes for the support worker that you need?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-providing-quotes-for-this-support'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-providing-quotes-for-this-support">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you have quotes for the support worker that you need?</span>
+                  </a>
+              </dd>
+          </div>
+
+
+          {% if data['support-worker-providing-quotes-for-this-support'] =="Yes, I have quotes" %}
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <h2 class="govuk-heading-m">First quote for {{ data['type-of-support-worker'] }}</h2>
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Support worker provider
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      {{ data['support-worker-provider-1'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                      <a href="/alpha-apply-1e/1e-support-worker-quote-1">
+                          Change
+                          <span class="govuk-visually-hidden"> Support worker provider</span>
+                      </a>
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Cost per hour
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      £ {{ data['support-worker-cost-per-hour-1'] }} per hour
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                      <a href="/alpha-apply-1e/1e-support-worker-quote-1">
+                          Change
+                          <span class="govuk-visually-hidden"> Cost per hour</span>
+                      </a>
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Have you worked with this support worker provider before?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      {{ data['support-worker-worked-with-them-before-1'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                      <a href="/alpha-apply-1e/1e-support-worker-quote-1">
+                          Change
+                          <span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+                      </a>
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you have a second quote?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-second-quote-1'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-1">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you have a second quote?</span>
+                  </a>
+              </dd>
+              </div>
+
+          {% endif %}
+
+          {% if ((data['support-worker-providing-quotes-for-this-support'] =="Yes, I have quotes") and
+          (data['support-worker-second-quote-1'] =="Yes")) %}
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <h2 class="govuk-heading-m">Second quote for {{ data['type-of-support-worker'] }}</h2>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Support worker provider
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-provider-2'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-2">
+                      Change
+                      <span class="govuk-visually-hidden"> Support worker provider</span>
+                  </a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Cost per hour
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  £ {{ data['support-worker-cost-per-hour-2'] }} per hour
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-2">
+                      Change
+                      <span class="govuk-visually-hidden"> Cost per hour</span>
+                  </a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Have you worked with this support worker provider before?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-worked-with-them-before-2'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-2">
+                      Change
+                      <span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+                  </a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you have a third quote?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-second-quote-2'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-2">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you have a second quote?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
+
+          {% if ((data['support-worker-providing-quotes-for-this-support'] =="Yes, I have quotes") and
+          (data['support-worker-third-quote-3'] =="Yes")) %}
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <h2 class="govuk-heading-m">Third quote for {{ data['type-of-support-worker'] }}</h2>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Support worker provider
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-provider-3'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-3">
+                      Change
+                      <span class="govuk-visually-hidden"> Support worker provider</span>
+                  </a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Cost per hour
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  £ {{ data['support-worker-cost-per-hour-3'] }} per hour
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-3">
+                      Change
+                      <span class="govuk-visually-hidden"> Cost per hour</span>
+                  </a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Have you worked with this support worker provider before?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-worked-with-them-before-3'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-quote-3">
+                      Change
+                      <span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
+      </dl>
+
+          {% endif %}
+
+
+      </div>
+    </div>
+
+
+{% endblock %}

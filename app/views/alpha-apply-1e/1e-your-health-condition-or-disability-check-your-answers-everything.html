@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-your-health-condition-or-disability-affects-your-work-3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Check your answers</h1>
+
+{% include "alpha-apply-1e/1e-your-health-condition-or-disability-check-your-answers-everything-body.html" %}
+
+<form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <input type="hidden" name="your-health-condition-or-disability-check-your-answers-everything" value="true">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Confirm and save
+  </button>
+</form>
+
+{% endblock %}

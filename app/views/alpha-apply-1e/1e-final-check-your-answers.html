@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+          {% include "alpha-apply-1e/1e-your-details-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1e/1e-your-health-condition-or-disability-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1e/1e-employment-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1e/1e-contacting-you-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1e/1e-support-worker-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1e/1e-mental-health-support-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1e/1e-travel-during-work-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1e/1e-workplace-adaptations-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1e/1e-changes-to-your-vehicle-check-your-answers-body.html" %}
+
+          <!--{% include "alpha-apply-1e/1e-specialist-equipment-check-your-answers-2-body.html" %}-->
+
+      <form class="form" action="/alpha-apply-1e/1e-declaration" method="post">
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+         </button>
+      </form>
+
+
+{% endblock %}

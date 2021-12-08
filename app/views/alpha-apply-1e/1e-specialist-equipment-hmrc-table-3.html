@@ -18,6 +18,8 @@
 <div class="govuk-form-group">
   <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
 
+    {% if data ['specialist-equipment-type-1']%}
+
     <div class="hmrc-add-to-a-list__contents">
       <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
         {{ data['specialist-equipment-type-1'] }}
@@ -35,6 +37,10 @@
         </a>
       </dd>
     </div>
+
+    {% endif %}
+
+    {% if data ['specialist-equipment-type-2']%}
 
       <div class="hmrc-add-to-a-list__contents">
       <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
@@ -54,6 +60,10 @@
       </dd>
       </div>
 
+    {% endif %}
+
+    {% if data ['specialist-equipment-type-3']%}
+
       <div class="hmrc-add-to-a-list__contents">
     <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
       {{ data['specialist-equipment-type-3'] }}
@@ -71,6 +81,9 @@
       </a>
     </dd>
     </div>
+
+    {% endif %}
+
   </dl>
 </div>
 

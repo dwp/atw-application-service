@@ -1,0 +1,66 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      {% if data['support-worker-screener'] =="Yes" %}
+
+      {% if ((data['support-worker-do-you-know-what-support-worker-you-need']) =="No, I do not know what I need" and
+      (data['support-worker-short-or-long-term-task-list']) =="true") %}
+
+      <h2 class="govuk-heading-m">Support worker</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Does your condition mean that you need a support worker at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['support-worker-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-support-worker-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you need a support worker at work?</span>
+            </a>
+          </dd>
+        </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you know what type of support worker you need?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-do-you-know-what-support-worker-you-need">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you know what type of support worker you need?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Will you need a support worker on a temporary basis?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['short-or-long-term'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1e/1e-support-worker-short-or-long-term">
+                      Change
+                      <span class="govuk-visually-hidden"> Will you need a support worker on a temporary basis?</span>
+                  </a>
+              </dd>
+          </div>
+
+
+      </dl>
+   </div>
+    </div>
+
+
+{% endblock %}

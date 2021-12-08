@@ -1,0 +1,69 @@
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      {% if data ['task-list-completed'] !=="true" %}
+      <h1 class="govuk-heading-l">Check your answers: specialist equipment</h1>
+      {% endif %}
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you need specialist equipment at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need specialist equipment?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you know what specialist equipment you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-specialist-equipment-do-you-know-what-specialist-equipment-you-need">
+              Change
+              <span class="govuk-visually-hidden"> do you know what specialist equipment you need?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us ways that you think specialist equipment might help you at work
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['specialist-equipment-tell-us-ways-that-you-think-it-might-help'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-1e-specialist-equipment-tell-us-ways-that-you-think-it-might-help">
+              Change
+              <span class="govuk-visually-hidden"> Tell us ways that you think specialist equipment might help you at work</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+  </div>
+</div>
+
+{% if data ['task-list-completed'] !=="true" %}
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+    <input type="hidden" name="specialist-equipment-check-your-answers-2" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-contacting-someone-else">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers: contacting you about your application</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who would you like to be contacted about your application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-you-about-your-application'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> Who would you like to be contacted about your application?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their relationship to you
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['relationship-to-you'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their relationship to you</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their email address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      </div>
+    </div>
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+    <input type="hidden" name="contacting-you-check-your-answers" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  <p><a href="/alpha-apply-1e/1e-task-list">Return to menu</a></p>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-support-worker-quote-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+<h1 class="govuk-heading-l">You have provided 2 quotes for your support worker</h1>
+
+<div class="govuk-!-padding-bottom-3"></div>
+
+<h1 class="govuk-heading-m">First quote for {{ data['type-of-support-worker'] }}</h1>
+
+<div class="govuk-form-group">
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Support worker provider
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-provider-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-1">
+          Change<span class="govuk-visually-hidden"> Support worker provider</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Cost per hour
+      </dt>
+      <dd class="govuk-summary-list__value">
+        £ {{ data['support-worker-cost-per-hour-1'] }} per hour
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-1">
+          Change<span class="govuk-visually-hidden"> Cost per hour</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Have you worked with this support worker provider before?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['support-worker-worked-with-them-before-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-1">
+          Change<span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <h1 class="govuk-heading-m">Second quote for {{ data['type-of-support-worker'] }}</h1>
+
+  <div class="govuk-form-group">
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Support worker provider
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['support-worker-provider-2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-2">
+            Change<span class="govuk-visually-hidden"> Support worker provider</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost per hour
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £ {{ data['support-worker-cost-per-hour-2'] }} per hour
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-2">
+            Change<span class="govuk-visually-hidden"> Cost per hour</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you worked with this support worker provider before?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['support-worker-worked-with-them-before-2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/alpha-apply-1e/1e-support-worker-quote-2">
+            Change<span class="govuk-visually-hidden"> Have you worked with this support worker provider before?</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+<form method="post" action="/alpha-apply-1e/1e-support-worker-hmrc-table-2-quote-1">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="support-worker-third-quote-3-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you have a third quote?
+      </legend>
+      <div id="support-worker-third-quote-3-hint" class="govuk-hint">
+        If you provide 3 quotes, this will speed up the processing of your application. If you cannot provide quotes now, we will ask you for them at a later date.
+      </div>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="support-worker-third-quote-3"
+                 name="support-worker-third-quote-3" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="support-worker-third-quote-3">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="support-worker-third-quote-3-2"
+                 name="support-worker-third-quote-3" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="support-worker-third-quote-3-2">
+            No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div class="govuk-!-padding-bottom-1"></div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,171 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if data['contacting-you-about-your-application-task-list'] =="true" %}
+
+    <h2 class="govuk-heading-m">Contacting you about your application</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        {% if data['contacting-you-about-your-application'] =="Me" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who would you like to be contacted about your application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-you-about-your-application'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> Who would you like to be contacted about your application?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> what is your phone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When are the best times to reach you?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-selecting-time'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-selecting-time">
+              Change
+              <span class="govuk-visually-hidden"> When are the best times to reach you?</span>
+            </a>
+          </dd>
+        </div>
+
+        {% elseif (data['contacting-you-about-your-application'] =="Someone else") %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who would you like to be contacted about your application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-you-about-your-application'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> Who would you like to be contacted about your application?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their relationship to you
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['relationship-to-you'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their relationship to you</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-someone-else-email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their email address</span>
+            </a>
+          </dd>
+        </div>
+
+        {% elseif (data['contacting-you-email']) %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who would you like to be contacted about your application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contacting-you-about-your-application'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-you-phone">
+              Change
+              <span class="govuk-visually-hidden"> Who would you like to be contacted about your application?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['email-reasonable-adjustment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-contacting-reasonable-adjustment-email">
+              Change
+              <span class="govuk-visually-hidden"> Confirm your personal email address</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+      </dl>
+    {% endif %}
+
+  </div>
+</div>
+
+
+
+{% endblock %}

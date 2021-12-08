@@ -5,53 +5,24 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1e/1e-support-worker-textbox">Back</a>
+<a class="govuk-back-link" href="/alpha-apply-1e/1e-support-worker-screener">Back</a>
 {% endblock %}
+
 
 {% block content %}
 
-      <h1 class="govuk-heading-xl">Check your answers: support-worker</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h1 class="govuk-heading-l">Check your answers</h1>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Does your condition mean that you need specialist equipment at work?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['support-worker-screener'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1e/1e-support-worker-screener">
-              Change
-              <span class="govuk-visually-hidden"> do you need a support worker</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Tell us about how you think a support worker could meet your needs
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['support-worker-textbox'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1e/1e-support-worker-textbox">
-              Change
-              <span class="govuk-visually-hidden"> what type of support-worker do you need</span>
-            </a>
-          </dd>
-        </div>
+      {% include "alpha-apply-1e/1e-support-worker-check-your-answers-body.html" %}
 
-      </dl>
-
-  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-          Confirm and save
-        </button>
+      <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+          <input type="hidden" name="support-worker-check-your-answers-task-list" value="true">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+              Confirm and save
+          </button>
 
       </form>
 
-  </div>
+
 {% endblock %}

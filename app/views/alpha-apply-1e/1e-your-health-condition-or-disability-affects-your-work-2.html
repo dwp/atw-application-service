@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1e/1e-your-health-condition-or-disability-check-your-answers-2"
+    <form class="form" action="/alpha-apply-1e/1e-your-health-condition-or-disability-check-your-answers-everything"
           method="post">
 
     <div class="govuk-form-group">
@@ -62,14 +62,14 @@
                   <div class="govuk-form-group">
 
                     <textarea class="govuk-textarea govuk-js-character-count"
-                              id="your-health-condition-or-disability-affects-your-work-2"
-                              name="your-health-condition-or-disability-affects-your-work-2"
+                              id="1e-your-health-condition-or-disability-affects-your-work-2"
+                              name="1e-your-health-condition-or-disability-affects-your-work-2"
                               rows="15"
-                              aria-describedby="your-health-condition-or-disability-affects-your-work-2-info with-hint-hint">{{
-                      data['your-health-condition-or-disability-affects-your-work-2'] }}</textarea>
+                              aria-describedby="1e-your-health-condition-or-disability-affects-your-work-2-info with-hint-hint">{{
+                      data['1e-your-health-condition-or-disability-affects-your-work-2'] }}</textarea>
                   </div>
 
-                  <div id="your-health-condition-or-disability-affects-your-work-2-info"
+                  <div id="1e-your-health-condition-or-disability-affects-your-work-2-info"
                        class="govuk-hint govuk-character-count__message" aria-live="polite">
                     You can enter up to 1000 characters
                   </div>
@@ -83,6 +83,7 @@
 
 
       <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="your-health-condition-or-disability-affects-your-work-2" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 

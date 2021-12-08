@@ -1,0 +1,362 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-apply-1f/1f-you-may-be-eligible-blue">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Access to Work
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Completing your application
+      </h2>
+
+      <p>There are 6 sections and you can complete the sections in any order.</p>
+
+      <p>You can save your progress and return to your application later.</p>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <ol class="app-task-list">
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Before you start
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1f#" aria-describedby="eligibility-status">
+                  Check you're eligible
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> About you
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if (data ["what-is-your-name"]) or (data ['your-details-check-your-answers'] =="true")%}
+                <a href="/alpha-apply-1f/1f-your-details-check-your-answers" aria-describedby="your-details-status">
+                  Your details
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-what-is-your-full-name" aria-describedby="your-details-status">
+                  Your details
+                </a>
+                {% endif %}
+              </span>
+              <strong>
+              {%if data['what-is-your-name'] !=="true" %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {% elseif (data ['what-is-your-name'] =="true") and (data ['your-details-check-your-answers'] =="true") %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+              {% elseif data ['what-is-your-name'] =="true" %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+              {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
+
+              <span class="app-task-list__task-name">
+                {% if (data ["your-health-condition-or-disability-1"]) or (data
+                ['your-health-condition-or-disability-check-your-answers-everything'] =="true")%}
+                <a href="/alpha-apply-1f/1f-your-health-condition-or-disability-check-your-answers-everything" aria-describedby="your-disability-status">
+                  Your conditions and disabilities
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-your-health-condition-or-disability-1"
+                   aria-describedby="your-disability-status">
+                  Your conditions and disabilities
+                </a>
+                {% endif %}
+              </span>
+
+              <strong>
+                {%if data['your-health-condition-or-disability-1'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['your-health-condition-or-disability-1'] =="true") and (data
+                ['your-health-condition-or-disability-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['your-health-condition-or-disability-1'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Employment
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+
+                <span class="app-task-list__task-name">
+                {% if (data ["employment-status"]) or (data
+                ['contacting-you-check-your-answers-everything'] =="true")%}
+                <a href="/alpha-apply-1f/1f-employment-check-your-answers-everything"
+                   aria-describedby="your-employment-details-status">
+                  Your job and employer
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-employment-status"
+                   aria-describedby="your-employment-details-status">
+                  Your job and employer
+                </a>
+                {% endif %}
+                </span>
+
+              <strong>
+                {%if data['employment-status'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['employment-check-your-answers-everything']
+                =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['self-employment-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['about-to-start-employment-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ['employment-status'] =="true") and (data ['about-to-start-self-employment-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['employment-status'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Contacting you about your application
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                {% if (data ["contacting-you-about-your-application-task-list"]) or (data
+                ['contacting-you-check-your-answers-everything'] =="true")%}
+                <a href="/alpha-apply-1f/1f-contacting-you-check-your-answers-everything" aria-describedby="your-contact-details-status">
+                  Your contact details
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-contacting-you-about-your-application"
+                   aria-describedby="your-contact-details-status">
+                  Your contact details
+                </a>
+                {% endif %}
+                </span>
+              <strong>
+                {%if data['contacting-you-about-your-application-task-list'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['contacting-you-about-your-application-task-list'] =="true") and (data
+                ['contacting-you-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['contacting-you-about-your-application-task-list'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Support
+          </h3>
+
+          <ul class="app-task-list__items">
+
+            <p>Complete the sections for the support that you need. If you're not sure what support you need, answer the questions in each section.</p>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if (data ["specialist-equipment-screener"]) or (data ['specialist-equipment-check-your-answers-2'] =="true")%}
+                <a href="/alpha-apply-1f/1f-specialist-equipment-check-your-answers-2" aria-describedby="specialist-equipment-status">
+                  Equipment, adaptations and software
+                </a>
+                {% else %}
+                 <a href="/alpha-apply-1f/1f-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
+                  Equipment, adaptations and software
+                </a>
+                {% endif %}
+              </span>
+
+              {% if (data ["specialist-equipment-screener"] =="No") or (data ['specialist-equipment-check-your-answers-2'] =="true")%}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+              {% elseif (data ["specialist-equipment-screener"] =="Yes")%}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {% endif %}
+
+            </li>
+
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1f/1f-support-worker-screener" aria-describedby="support-workers-status">
+                  Support workers
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="support-workers-status">Not
+                started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if (data ["mental-health-support"]) or (data ['mental-health-check-your-answers'] =="true")%}
+                <a href="/alpha-apply-1f/1f-mental-health-support-check-your-answers"
+                   aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-mental-health-support-screener" aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% endif %}
+              </span>
+              <strong>
+                {% if (data ["mental-health-support-screener"] =="No") or (data ['mental-health-check-your-answers'] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["mental-health-support-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-screener" aria-describedby="travelling-to-and-from-work-status">
+                  Travelling to and from work
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
+                      id="travelling-to-and-from-work-status">Not started
+              </strong>
+            </li>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if (data ["travel-during-work"]) or (data ['travel-during-work-check-your-answers'] =="true")%}
+                <a href="/alpha-apply-1f/1f-travel-during-work-check-your-answers" aria-describedby="travel-during-work-status">
+                  Travelling during work
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-travel-during-work-screener" aria-describedby="travel-during-work-status">
+                  Travelling during work
+                </a>
+                {% endif %}
+              </span>
+              <strong>
+                {% if (data ["travel-during-work-screener"] =="No") or (data
+                ['travel-during-work-check-your-answers'] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["travel-during-work-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1f/1f-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
+                  Changes to your workplace
+                </a>
+              </span>
+              <strong>
+                {% if (data ["workplace-adaptations-screener"] =="No") or (data
+                ["workplace-adaptations-check-your-answers"] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["workplace-adaptations-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if (data ["changes-to-your-vehicle"]) or (data ['changes-to-your-vehicle-check-your-answers'] =="true")%}
+                <a href="/alpha-apply-1f/1f-changes-to-your-vehicle-check-your-answers" aria-describedby="changes-to-your-vehicle-status">
+                  Changes to your vehicle
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-changes-to-your-vehicle-screener" aria-describedby="changes-to-your-vehicle-status">
+                  Changes to your vehicle
+                </a>
+                {% endif %}
+              </span>
+              <strong>
+                {% if (data ["changes-to-your-vehicle-screener"] =="No") or (data
+                ["changes-to-your-vehicle-check-your-answers"] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["changes-to-your-vehicle-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
+              </strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">6. </span> Additional information
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1f/1f-extra-information-screener" aria-describedby="additional-information-status">
+                  Anything else you would like to tell us
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="additional-information-status">Optional
+              </strong>
+            </li>
+          </ul>
+        </li>
+
+      </ol>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+        <form action="/alpha-apply-1f/1f-final-check-your-answers">
+          <input type="hidden" name="task-list-completed" value="true">
+          <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+            <b>Submit application</b>
+          </button>
+        </form>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

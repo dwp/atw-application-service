@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-workplace-adaptations-do-you-have-another-workplace-adaptation-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">Check your answers: changes to workplace and equipment</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you would benefit from physical changes at your workplace?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workplace-adaptations-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-workplace-adaptations-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need workplace adaptations</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What change to your workplace do you need?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-change-to-workplace-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-workplace-adaptations-textbox">
+              Change
+              <span class="govuk-visually-hidden"> what change to your workplace do you need?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us about how this change will meet your needs
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workplace-adaptations-details-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-workplace-adaptations-textbox">
+              Change
+              <span class="govuk-visually-hidden"> tell us about how this change will meet your needs</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need to request another change to your workplace?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workplace-adaptations-do-you-have-another-workplace-adaptation-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-workplace-adaptations-textbox">
+              Change
+              <span class="govuk-visually-hidden"> do you need to request another change to your workplace?</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  </div>
+{% endblock %}
