@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travelling-to-and-from-work-how-would-meet-your-needs-not-sure">
-    Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travelling-to-and-from-work-what-support-do-you-need">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,22 +14,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1e/1e-travelling-to-and-from-work-locations-taxi" method="post">
+    <form class="form" action="/alpha-apply-1e/1e-travelling-to-and-from-work-locations-not-sure" method="post">
 
       <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l"
-                                               for="travelling-to-and-from-work-how-many-journeys-taxi">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="travelling-to-and-from-work-how-many-journeys">
           How many journeys will you need support for in a week?
         </label>
         </h1>
-        <div id="travelling-to-and-from-work-how-many-journeys-taxi-hint" class="govuk-hint">
+        <div id="travelling-to-and-from-work-how-many-journeys-hint" class="govuk-hint">
           If it varies, give the maximum number of journeys you will need support for. A journey to work and a journey back home in a day counts as two journeys.
         </div>
-        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-3" id="travelling-to-and-from-work-how-many-journeys-taxi"
-                                                 name="travelling-to-and-from-work-how-many-journeys-taxi" type="text" spellcheck="false">
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-3" id="travelling-to-and-from-work-how-many-journeys"
+                                                 name="travelling-to-and-from-work-how-many-journeys" type="text" spellcheck="false">
           <div class="govuk-input__suffix" aria-hidden="true">journeys a week</div>
         </div>
+
+        <div class="govuk-!-padding-bottom-5"></div>
+
+        <p><a href="#" class="govuk-link govuk-link--no-visited-state">I'm not sure how many journeys I need</a></p>
       </div>
+
       <form class="form" action="/url/of/next/page" method="post">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>

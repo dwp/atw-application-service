@@ -113,7 +113,7 @@
 
                 <span class="app-task-list__task-name">
                 {% if (data ["employment-status"]) or (data
-                ['contacting-you-check-your-answers-everything'] =="true")%}
+                ['employment-check-your-answers-everything'] =="true")%}
                 <a href="/alpha-apply-1e/1e-employment-check-your-answers-everything"
                    aria-describedby="your-employment-details-status">
                   Your job and employer
@@ -277,13 +277,27 @@
             </li>
 
             <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
+                <span class="app-task-list__task-name">
+                {% if (data ["travelling-to-and-from-work-screener-task-list"]) or (data
+                ['travelling-to-and-from-work-task-list'] =="true")%}
+                <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-check-your-answers"
+                   aria-describedby="travelling-to-and-from-work-status">
+                  Travelling to and from work
+                </a>
+                {% else %}
                 <a href="/alpha-apply-1e/1e-travelling-to-and-from-work-screener" aria-describedby="travelling-to-and-from-work-status">
                   Travelling to and from work
                 </a>
+                {% endif %}
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
-                      id="travelling-to-and-from-work-status">Not started
+              <strong>
+                {% if (data ["travelling-to-and-from-work-screener"] =="No") or (data ['travelling-to-and-from-work-task-list'] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["travelling-to-and-from-work-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
               </strong>
             </li>
             </li>

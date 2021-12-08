@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-1-quote-1">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-travelling-to-and-from-work-providing-quotes-taxi">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,32 +14,32 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-2-quote-1" method="post">
+    <form class="form" action="/alpha-apply-1e/1e-travelling-to-and-from-work-hmrc-table-1-quote-1" method="post">
 
       <div class="govuk-form-group">
 
-        <h1 class="govuk-heading-l">Second taxi quote</h1>
+        <h1 class="govuk-heading-l">First taxi quote</h1>
 
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-company-name-2">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-company-name-1">
             Taxi company name
           </label>
           </h2>
-          <input class="govuk-input" id="taxi-company-name-2" name="taxi-company-name-2" type="text"
-                 aria-describedby="taxi-company-name-2-hint">
+          <input class="govuk-input" id="taxi-company-name-1" name="taxi-company-name-1" type="text"
+                 aria-describedby="taxi-company-name-1-hint">
         </div>
 
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-cost-2">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-cost-1">
             Cost per journey
           </label>
           </h2>
-          <div id="taxi-cost-2-hint" class="govuk-hint">
+          <div id="taxi-cost-1-hint" class="govuk-hint">
             Include any extra costs, like booking fees and VAT.
           </div>
           <div class="govuk-input__wrapper">
             <div class="govuk-input__prefix" aria-hidden="true">£</div>
-            <input class="govuk-input govuk-input--width-5" id="taxi-cost-2" name="taxi-cost-2" type="text"
+            <input class="govuk-input govuk-input--width-5" id="taxi-cost-1" name="taxi-cost-1" type="text"
                    spellcheck="false">
             <div class="govuk-input__suffix" aria-hidden="true">per journey</div>
           </div>
@@ -50,7 +50,6 @@
       <div class="govuk-!-padding-bottom-1"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
-        <input type="hidden" name="travelling-to-and-from-work-quote-2" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
