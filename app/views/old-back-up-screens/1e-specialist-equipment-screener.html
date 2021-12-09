@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1e/1e-extra-information-screener" method="post">
+    <form class="form" action="/alpha-apply-1e/1e-specialist-equipment-screener" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,30 +23,35 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Is there anything else that you would like to tell us?
+                    Do you need equipment, adaptations or software to support you with your condition at work?
                   </h1>
                 </legend>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
-                <p>You can tell us anything else that you think we should know as part of your application, that you have not mentioned already.</p>
+                <p class="govuk-body">This could be things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>specialist equipment, like adapted keyboards and mouse alternatives</li>
+                  <li>assistive software, like screen readers</li>
+                  <li>another type of equipment, adaptations or software to support your condition</li>
+                </ul>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="extra-information-screener" name="extra-information-screener"
+                    <input class="govuk-radios__input" id="specialist-equipment-screener" name="specialist-equipment-screener"
                            type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="extra-information-screener">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="extra-information-screener-2"
-                           name="extra-information-screener"
+                    <input class="govuk-radios__input" id="specialist-equipment-screener-2"
+                           name="specialist-equipment-screener"
                            type="radio" value="No">
-                    <label class="govuk-label govuk-radios__label" for="extra-information-screener-2">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener-2">
                       No
                     </label>
                   </div>
@@ -58,7 +63,6 @@
         <div class="govuk-!-padding-bottom-0"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
-        <input type="hidden" name="extra-information-screener-task-list" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
@@ -76,5 +80,6 @@
 </div>
 
   </div>
+
 
 {% endblock %}

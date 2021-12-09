@@ -4,16 +4,8 @@
 #
 {% endblock %}
 
-{% if not inEditMode and casa.journeyPreviousUrl %}
-{{ govukBackLink({
-classes: 'hide-print',
-text: t('common:back'),
-href: casa.journeyPreviousUrl
-}) }}
-{% endif %}
-
 {% block beforeContent %}
-<a class="govuk-back-link" onclick="history.back()">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-specialist-equipment-hmrc-table-3">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +14,7 @@ href: casa.journeyPreviousUrl
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1e/1e-specialist-equipment-check-your-answers" method="post">
+    <form class="form" action="/alpha-apply-1e/1e-specialist-equipment-check-your-answers-6" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -49,6 +41,14 @@ href: casa.journeyPreviousUrl
                     <th scope="row" class="govuk-table__header">1</th>
                     <td class="govuk-table__cell">{{ data['specialist-equipment-type-1'] }}</td>
                   </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">2</th>
+                    <td class="govuk-table__cell">{{ data['specialist-equipment-type-2'] }}</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">3</th>
+                    <td class="govuk-table__cell">{{ data['specialist-equipment-type-3'] }}</td>
+                  </tr>
                   </tbody>
                 </table>
 
@@ -57,22 +57,24 @@ href: casa.journeyPreviousUrl
                 <h2 class="govuk-heading-s">For example:</h2>
 
                 <div class="govuk-inset-text">
-                  I need an ergonomic keyboard because my limited movement means that it takes me longer to get my work done without one. This is because I find it difficult to type with a regular keyboard.
+                  <p>I need an ergonomic keyboard and mouse because my limited movement means that it takes me longer to get my work done without one. This is because I find it difficult to click around screens and type with a regular keyboard and mouse.</p>
+                  <p>I also need to change working positions often due to my condition, so a standing desk will make my working life more comfortable.</p>
                 </div>
 
                 <div class="govuk-!-padding-bottom-2"></div>
                 <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
                   <div class="govuk-form-group">
 
-                    <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-textbox-1"
-                              name="specialist-equipment-textbox-1"
-                              rows="10" aria-describedby="specialist-equipment-textbox-1-info with-hint-hint">{{
-                      data['specialist-equipment-textbox-1'] }}</textarea>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="specialist-equipment-textbox-3"
+                              name="specialist-equipment-textbox-3"
+                              rows="10" aria-describedby="specialist-equipment-textbox-3-info with-hint-hint">{{
+                      data['specialist-equipment-textbox'] }}</textarea>
                   </div>
 
-                  <div id="specialist-equipment-textbox-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                  <div id="specialist-equipment-textbox-3-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
                     You can enter up to 500 characters
                   </div>
+
 
 
                 </div>

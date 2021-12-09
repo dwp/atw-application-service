@@ -4,10 +4,17 @@
 #
 {% endblock %}
 
-{% block beforeContent %}
-<a class="govuk-back-link" href="/alpha-apply-1e/1e-support-worker-screener">Back</a>
-{% endblock %}
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
 
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
 
 {% block content %}
 

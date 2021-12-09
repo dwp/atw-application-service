@@ -4,48 +4,26 @@
 #
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1e/1e-extra-information-textbox">Back</a>
-{% endblock %}
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
 
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
 {% block content %}
 
-      <h1 class="govuk-heading-xl">Check your answers: additional information</h1>
+<h1 class="govuk-heading-l">Check your answers</h1>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Is there anything else that you would like to tell us?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['extra-information-screener'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1e/1e-extra-information-screener">
-              Change
-              <span class="govuk-visually-hidden"> do you need specialist equipment</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Tell us anything else that you think we should know, that you have not mentioned already
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['extra-information-textbox'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1e/1e-specialist-equipment-textbox">
-              Change
-              <span class="govuk-visually-hidden"> what specialist equipment do you need</span>
-            </a>
-          </dd>
-        </div>
-
-      </dl>
+{% include "alpha-apply-1e/1e-extra-information-check-your-answers-body.html" %}
 
   <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
-  <button type="submit" class="govuk-button" data-module="govuk-button">
+      <input type="hidden" name="extra-information-check-your-answers-task-list" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
           Confirm and save
         </button>
 

@@ -188,19 +188,30 @@
 
             <p>Complete the sections for the support that you need. If you're not sure what support you need, answer the questions in each section.</p>
 
-
-
-
-                <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
+            <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                {% if (data ["specialist-equipment-screener-task-list"]) or (data
+                ['specialist-equipment-check-your-answers-task-list'] =="true")%}
+                <a href="/alpha-apply-1e/1e-specialist-equipment-check-your-answers"
+                   aria-describedby="specialist-equipment-status">
+                  Equipment, adaptations and software
+                </a>
+                {% else %}
                 <a href="/alpha-apply-1e/1e-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
                   Equipment, adaptations and software
                 </a>
+                {% endif %}
               </span>
-                  <strong class="govuk-tag govuk-tag--red app-task-list__tag"
-                          id="specialist-equipment-status">Section broken
-                  </strong>
-                </li>
+            <strong>
+              {% if (data ["specialist-equipment-screener"] =="No") or (data ['specialist-equipment-check-your-answers-task-list'] =="true")%}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+              {% elseif (data ["specialist-equipment-screener"] =="Yes")%}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {% endif %}
+            </strong>
+          </li>
 
 <!--            <li>-->
 <!--              <span class="app-task-list__task-name">-->
@@ -376,17 +387,35 @@
           </h3>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-apply-1e/1e-extra-information-screener" aria-describedby="additional-information-status">
+            <span class="app-task-list__task-name">
+                {% if ((data ["extra-information-screener"]) =="No")%}
+                <a href="/alpha-apply-1e/1e-extra-information-screener" aria-describedby="extra-information-status">
                   Anything else you would like to tell us
                 </a>
+                {% elseif (data ["extra-information-screener-task-list"]) or (data
+                ['extra-information-check-your-answers-task-list'] =="true")%}
+                <a href="/alpha-apply-1e/1e-extra-information-check-your-answers"
+                   aria-describedby="extra-information-status">
+                  Anything else you would like to tell us
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1e/1e-extra-information-screener" aria-describedby="extra-information-status">
+                  Anything else you would like to tell us
+                </a>
+                {% endif %}
               </span>
-              <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="additional-information-status">Optional
+              <strong>
+                {% if (data ["extra-information-screener"] =="No") or (data ['extra-information-check-your-answers-task-list'] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["extra-information-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="not started">Optional</strong>
+                {% endif %}
               </strong>
             </li>
           </ul>
         </li>
-
       </ol>
 
       <div class="govuk-!-padding-bottom-3"></div>
