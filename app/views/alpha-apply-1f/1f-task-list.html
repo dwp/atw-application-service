@@ -32,8 +32,6 @@ href: casa.journeyPreviousUrl
 
       <p>There are 6 sections and you can complete the sections in any order.</p>
 
-      <p>You can save your progress and return to your application later.</p>
-
       <div class="govuk-!-padding-bottom-2"></div>
 
       <ol class="app-task-list">
@@ -83,6 +81,32 @@ href: casa.journeyPreviousUrl
             </li>
 
             <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                {% if (data ["contacting-you-about-your-application-task-list"]) or (data
+                ['contacting-you-check-your-answers-everything'] =="true")%}
+                <a href="/alpha-apply-1f/1f-contacting-you-check-your-answers-everything" aria-describedby="your-contact-details-status">
+                  How we contact you
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-contacting-you-about-your-application"
+                   aria-describedby="your-contact-details-status">
+                  How we contact you
+                </a>
+                {% endif %}
+                </span>
+              <strong>
+                {%if data['contacting-you-about-your-application-task-list'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['contacting-you-about-your-application-task-list'] =="true") and (data
+                ['contacting-you-check-your-answers-everything'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['contacting-you-about-your-application-task-list'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
 
               <span class="app-task-list__task-name">
                 {% if (data ["your-health-condition-or-disability-1"]) or (data
@@ -109,6 +133,7 @@ href: casa.journeyPreviousUrl
                 {% endif %}
               </strong>
             </li>
+
           </ul>
         </li>
 
@@ -156,45 +181,12 @@ href: casa.journeyPreviousUrl
 
         <li>
           <h3 class="app-task-list__section">
-            <span class="app-task-list__section-number">4. </span> Contacting you about your application
-          </h3>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                {% if (data ["contacting-you-about-your-application-task-list"]) or (data
-                ['contacting-you-check-your-answers-everything'] =="true")%}
-                <a href="/alpha-apply-1f/1f-contacting-you-check-your-answers-everything" aria-describedby="your-contact-details-status">
-                  Your contact details
-                </a>
-                {% else %}
-                <a href="/alpha-apply-1f/1f-contacting-you-about-your-application"
-                   aria-describedby="your-contact-details-status">
-                  Your contact details
-                </a>
-                {% endif %}
-                </span>
-              <strong>
-                {%if data['contacting-you-about-your-application-task-list'] !=="true" %}
-                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% elseif (data ['contacting-you-about-your-application-task-list'] =="true") and (data
-                ['contacting-you-check-your-answers-everything'] =="true") %}
-                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
-                {% elseif data ['contacting-you-about-your-application-task-list'] =="true" %}
-                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
-                {% endif %}
-              </strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h3 class="app-task-list__section">
-            <span class="app-task-list__section-number">5. </span> Support
+            <span class="app-task-list__section-number">4. </span> Support
           </h3>
 
           <ul class="app-task-list__items">
 
-            <p>Complete the sections for the support that you need. If you're not sure what support you need, answer the questions in each section.</p>
+            <p>Complete these sections to tell us about the types of support you need from Access to Work.</p>
 
             <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -391,7 +383,7 @@ href: casa.journeyPreviousUrl
 
         <li>
           <h3 class="app-task-list__section">
-            <span class="app-task-list__section-number">6. </span> Additional information
+            <span class="app-task-list__section-number">5. </span> Additional information
           </h3>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">

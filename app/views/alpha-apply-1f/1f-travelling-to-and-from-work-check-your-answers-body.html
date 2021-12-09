@@ -89,25 +89,6 @@
               </dd>
           </div>
 
-          {% if data['travelling-to-and-from-work-locations-not-sure'] =="No" %}
-
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  How many miles is each journey?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                  {{ data['travelling-to-and-from-work-how-many-miles-not-sure'] }} miles
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                  <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-miles-not-sure">
-                      Change
-                      <span class="govuk-visually-hidden"> How many miles is each journey?</span>
-                  </a>
-              </dd>
-          </div>
-
-          {% endif %}
-
           {% elseif data['travelling-to-and-from-work-what-support-do-you-need'] =="Something else" %}
 
           <div class="govuk-summary-list__row">
@@ -168,25 +149,6 @@
               </dd>
           </div>
 
-          {% if data['travelling-to-and-from-work-locations-something-else'] =="No" %}
-
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  How many miles is each journey?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                  {{ data['travelling-to-and-from-work-how-many-miles-something-else'] }} miles
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                  <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-miles-something-else">
-                      Change
-                      <span class="govuk-visually-hidden"> How many miles is each journey?</span>
-                  </a>
-              </dd>
-          </div>
-
-          {% endif %}
-
           {% elseif data['travelling-to-and-from-work-what-support-do-you-need'] =="Lift in a car from a friend, colleague or family member" %}
 
           <div class="govuk-summary-list__row">
@@ -233,24 +195,6 @@
               </dd>
           </div>
 
-          {% if data['travelling-to-and-from-work-locations-lift'] =="No" %}
-
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  How many miles is each journey?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                  {{ data['travelling-to-and-from-work-how-many-miles-lift'] }} miles
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                  <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-miles-lift">
-                      Change
-                      <span class="govuk-visually-hidden"> How many miles is each journey?</span>
-                  </a>
-              </dd>
-          </div>
-
-          {% endif %}
 
           {% elseif data['travelling-to-and-from-work-what-support-do-you-need'] =="Taxi" %}
 
@@ -297,25 +241,6 @@
                   </a>
               </dd>
           </div>
-
-          {% if data['travelling-to-and-from-work-locations-taxi'] =="No" %}
-
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  How many miles is each journey?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                  {{ data['travelling-to-and-from-work-how-many-miles-taxi'] }} miles
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                  <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-miles-taxi">
-                      Change
-                      <span class="govuk-visually-hidden"> How many miles is each journey?</span>
-                  </a>
-              </dd>
-          </div>
-
-          {% endif %}
 
       </dl>
 

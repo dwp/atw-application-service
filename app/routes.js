@@ -4471,11 +4471,11 @@ router.route('/alpha-apply-1f/1f-bsl-support')
     router.route('/alpha-apply-1f/1f-paid-supported-permitted-work')
       .post((req, res, next) => {
         let redirectUrl
-        switch (req.body['1f-paid-supported-permitted-work']) {
-          case 'yes':
+        switch (req.body['paid-supported-permitted-work']) {
+          case 'Yes':
             redirectUrl = '/alpha-apply-1f/1f-you-may-be-eligible-blue'
             break
-          case 'no':
+          case 'No':
             redirectUrl = '/alpha-apply-1f/1f-ineligible'
             break
 
@@ -4934,7 +4934,7 @@ router.route('/alpha-apply-1f/1f-bsl-support')
                                  {
                                      // Handle single selections
                               if(selections[0].trim() === "Employment Support Allowance") {
-                                redirectUrl = '/alpha-apply-1f/1f-esa'
+                                redirectUrl = '/alpha-apply-1f/1f-less-than-16-hours'
                                    } else if(selections[0].trim() === 'None of these') {
                                 redirectUrl = '/alpha-apply-1f/1f-you-may-be-eligible-blue'
                                     }
@@ -5233,7 +5233,7 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                           redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-providing-quotes-taxi'
                           break
                         case 'No':
-                          redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-miles-taxi'
+                          redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-check-your-answers'
                           break
                         default:
                           redirectUrl = req.path
