@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-about-to-start-employment-workplace-contact">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1f/1f-about-to-start-self-employment-do-you-have-another-job" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    How many people will work at your company or organisation?
+                  </h1>
+                </legend>
+
+                <div id="passport-issued-hint" class="govuk-hint">
+                  Choose the number of people that will work at your company when you first start being self-employed.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1f-about-to-start-employment-employer-size" name="1f-employment-employer-size"
+                           type="radio" value="1 to 9">
+                    <label class="govuk-label govuk-radios__label" for="1f-about-to-start-employment-employer-size">
+                      1 to 9
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1f-about-to-start-employment-employer-size-2" name="1f-employment-employer-size"
+                           type="radio" value="10 to 49">
+                    <label class="govuk-label govuk-radios__label" for="1f-about-to-start-employment-employer-size-2">
+                      10 to 49
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1f-about-to-start-employment-employer-size-3"
+                           name="1f-employment-employer-size"
+                           type="radio" value="50 to 249">
+                    <label class="govuk-label govuk-radios__label" for="1f-about-to-start-employment-employer-size-3">
+                      50 to 249
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="1f-about-to-start-employment-employer-size-4"
+                           name="1f-employment-employer-size"
+                           type="radio" value="250 or more">
+                    <label class="govuk-label govuk-radios__label" for="1f-about-to-start-employment-employer-size-4">
+                      250 or more
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>
+
+      </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    {% if data['extra-information-screener'] =="Yes" %}
+
+    <h1 class="govuk-heading-m">Additional information</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Is there anything else that you would like to tell us?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['extra-information-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-extra-information-screener">
+              Change
+              <span class="govuk-visually-hidden"> do you need specialist equipment</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tell us anything else that you think we should know, that you have not mentioned already
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['extra-information-textbox'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-specialist-equipment-textbox">
+              Change
+              <span class="govuk-visually-hidden"> what specialist equipment do you need</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-about-to-start-employment-employer-size">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1f/1f-about-to-start-employment-do-you-have-another-job" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="workplace-contact">
+          Your workplace contact
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <p>Your workplace contact should be someone that can confirm you'll work there, such as a manager or an HR
+          representative. If you need mental health support from Access to Work, we do not need to get in touch with your workplace contact about this.</p>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="workplace-name">
+            Their name
+          </label>
+          <input class="govuk-input" id="workplace-name" name="workplace-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="role-name">
+            Their role
+          </label>
+          <input class="govuk-input" id="role-name" name="role-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="workplace-email">
+            Their email address
+          </label>
+          <input class="govuk-input" id="workplace-email" name="workplace-email" type="email" spellcheck="false" aria-describedby="workplace-email-hint" autocomplete="email">
+
+          <div class="govuk-!-padding-bottom-6"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="workplace-phone">
+            Their phone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="workplace-phone" name="workplace-phone" type="tel" autocomplete="tel"></div>
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>
+
+      </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

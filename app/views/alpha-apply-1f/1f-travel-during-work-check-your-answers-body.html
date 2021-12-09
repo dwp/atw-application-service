@@ -1,0 +1,47 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+{% if data['travel-during-work-screener'] =="Yes" %}
+
+<h2 class="govuk-heading-m">Travelling during work</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need support to travel to other locations during your working day?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travel-during-work-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-travel-during-work-screener">
+              Change
+              <span class="govuk-visually-hidden"> Do you need support to travel to other locations during your working day?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How will support to travel during work meet your needs?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travel-during-work-support-you-may-need'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-travel-during-work-support-you-may-need">
+              Change
+              <span class="govuk-visually-hidden"> How will support to travel during work meet your needs?</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+{% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

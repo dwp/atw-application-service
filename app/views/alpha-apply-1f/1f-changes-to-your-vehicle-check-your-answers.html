@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Check your answers</h1>
+
+{% include "alpha-apply-1f/1f-changes-to-your-vehicle-check-your-answers-body.html" %}
+
+  <form class="form" action="/alpha-apply-1f/1f-task-list" method="post">
+    <input type="hidden" name="changes-to-your-vehicle-check-your-answers" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-workplace-adaptations-do-you-know-what-you-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Check your answers</h1>
+
+{% include "alpha-apply-1f/1f-workplace-adaptations-check-your-answers-body.html" %}
+
+  <form class="form" action="/alpha-apply-1f/1f-task-list" method="post">
+    <input type="hidden" name="workplace-adaptations-check-your-answers" value="true">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+      </form>
+
+{% endblock %}

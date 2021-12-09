@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application complete</h1>
+        <div class="govuk-panel__body">
+          Your application reference<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <p>
+        We have sent you a confirmation email including your reference number.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>The Access to Work team will review your application and get back to you in the next 12 weeks. We'll contact you by phone, unless you have told us otherwise.</p>
+      <p>We might want to book a workplace assessment for you to make sure that you get the support you need.</p>
+      <p>If your job is starting within the next 4 weeks, we'll contact you as soon as possible.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+      <h2 class="govuk-heading-m">If you need to contact us</h2>
+
+      <p>Use the Access to Work helpline if you need to contact us about your application:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>telephone: 0800 121 7479</li>
+        <li>textphone: 0800 121 7579</li>
+        <li><a href="https://www.relayuk.bt.com/">Relay UK</a> (if you cannot hear or speak on the phone): 18001 then 0800 121 7479</li>
+        <li><a href="http://dwpatwenquiry.signvideo.net/">video relay service</a> for British Sign Language (BSL) users - <a href="https://www.youtube.com/watch?v=xgWBXN5Bp_E">check you can use
+          the service</a></li>
+
+      </ul>
+
+      <p>These services are free, and they're available from Monday to Friday, 9am to 5pm.</p>
+
+    </div>
+
+<div class="govuk-grid-column-one-third">
+
+</div>
+
+{% endblock %}
