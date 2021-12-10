@@ -4953,7 +4953,7 @@ router.route('/alpha-apply-1f/1f-bsl-support')
                         redirectUrl = '/alpha-apply-1f/1f-self-employment-company-registration-number'
                         break
                       case 'No':
-                        redirectUrl = '/alpha-apply-1f/1f-self-employment-length'
+                        redirectUrl = '/alpha-apply-1f/1f-self-employment-6-weeks'
                         break
 
                       default:
@@ -5386,3 +5386,21 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                }
                res.redirect(redirectUrl)
              })
+
+             router.route('/alpha-apply-1f/1f-changes-to-your-vehicle-vehicle-type')
+               .post((req, res, next) => {
+                 let redirectUrl
+                 switch (req.body['changes-to-your-vehicle-ownership']) {
+                   case 'Me':
+                     redirectUrl = '/alpha-apply-1f/1f-changes-to-your-vehicle-change'
+                     break
+                   case 'Someone else':
+                     redirectUrl = '/alpha-apply-1f/1f-changes-to-your-vehicle-someone-else'
+                     break
+
+                   default:
+                     redirectUrl = req.path
+                     break
+                 }
+                 res.redirect(redirectUrl)
+               })

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-changes-to-your-vehicle-vehicle-type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1f/1f-changes-to-your-vehicle-change" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l">
+          Who owns this vehicle?
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="changes-to-vehicle-someone-else-name">
+            Their full name
+          </label>
+          <input class="govuk-input" id="changes-to-vehicle-someone-else-name" name="changes-to-vehicle-someone-else-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="changes-to-vehicle-someone-else-relationship-to-you">
+            Their relationship to you
+          </label>
+          <input class="govuk-input" id="changes-to-vehicle-someone-else-relationship-to-you" name="changes-to-vehicle-someone-else-relationship-to-you" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="changes-to-vehicle-someone-else-phone">
+            Their telephone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="changes-to-vehicle-someone-else-phone" name="changes-to-vehicle-someone-else-phone" type="tel" autocomplete="tel"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="changes-to-vehicle-someone-else-email">
+            Their email address
+          </label>
+          <input class="govuk-input" id="changes-to-vehicle-someone-else-email"
+                 name="changes-to-vehicle-someone-else-email" type="email" spellcheck="false"
+                 aria-describedby="changes-to-vehicle-someone-else-email-hint" autocomplete="email">
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+          <div class="govuk-inset-text">
+            You should let this person know that we will be contacting them about your application.
+          </div>
+
+
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

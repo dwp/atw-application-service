@@ -14,7 +14,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1f/1f-changes-to-your-vehicle-change" method="post">
+    <form class="form" action="/alpha-apply-1f/1f-changes-to-your-vehicle-vehicle-type" method="post">
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="changes-to-your-vehicle-vehicle-type">
@@ -25,6 +25,38 @@
           For example, 'Nissan Micra'.
         </div>
         <input class="govuk-input" id="changes-to-your-vehicle-vehicle-type" name="changes-to-your-vehicle-vehicle-type" type="text">
+      </div>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+            <fieldset class="govuk-fieldset" aria-describedby="changes-to-your-vehicle-ownership-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Who owns this vehicle?
+                </h1>
+              </legend>
+              <div id="changes-to-your-vehicle-ownership-hint" class="govuk-hint">
+                If you do not own this vehicle, we'll need permission from the owner to make changes to it.
+              </div>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership" name="changes-to-your-vehicle-ownership" type="radio" value="Me">
+                  <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership">
+                    Me
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else">
+                  <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-2">
+                    Someone else
+                  </label>
+                </div>
+              </div>
+
+        </fieldset>
       </div>
 
       <div class="govuk-!-padding-bottom-1"></div>
