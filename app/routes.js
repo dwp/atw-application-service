@@ -5404,3 +5404,51 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                  }
                  res.redirect(redirectUrl)
                })
+
+               router.route('/alpha-apply-1f/1f-equality-information')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['equalities-info']) {
+                     case 'Yes, answer the equality questions (takes 2 minutes)':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group'
+                       break
+                     case 'No, skip the equality questions':
+                       redirectUrl = '/alpha-apply-1f/1f-confirmation'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })
+
+               router.route('/alpha-apply-1f/1f-ethnic-group')
+                 .post((req, res, next) => {
+                   let redirectUrl
+                   switch (req.body['ethnicity']) {
+                     case 'white':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group-white'
+                       break
+                     case 'multiple':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group-multiple'
+                       break
+                     case 'asian':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group-asian'
+                       break
+                     case 'black':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group-black'
+                       break
+                     case 'other':
+                       redirectUrl = '/alpha-apply-1f/1f-ethnic-group-other'
+                       break
+                     case 'skip':
+                       redirectUrl = '/alpha-apply-1f/1f-equality-sex-and-gender'
+                       break
+
+                     default:
+                       redirectUrl = req.path
+                       break
+                   }
+                   res.redirect(redirectUrl)
+                 })

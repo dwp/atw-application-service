@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-equality-information">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1f/1f-ethnic-group" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is your ethnic group?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity" name="ethnicity" type="radio" value="white">
+              <label class="govuk-label govuk-radios__label" for="ethnicity">
+                White
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity-2" name="ethnicity" type="radio" value="multiple">
+              <label class="govuk-label govuk-radios__label" for="ethnicity-2">
+                Mixed or multiple ethnic groups
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity-3" name="ethnicity" type="radio" value="asian">
+              <label class="govuk-label govuk-radios__label" for="ethnicity-3">
+                Asian or Asian British
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity-4" name="ethnicity" type="radio" value="black">
+              <label class="govuk-label govuk-radios__label" for="ethnicity-4">
+                Black, African, Caribbean or Black British
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity-5" name="ethnicity" type="radio" value="other">
+              <label class="govuk-label govuk-radios__label" for="ethnicity-5">
+                Other ethnic group
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicity-7" name="ethnicity" type="radio" value="skip">
+              <label class="govuk-label govuk-radios__label" for="ethnicity-7">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

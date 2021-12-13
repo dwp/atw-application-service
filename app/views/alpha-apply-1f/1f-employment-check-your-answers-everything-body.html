@@ -63,9 +63,10 @@
             {{ data['employment-6-weeks'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <span href="/alpha-apply-1f/1f-employment-6-weeks">
+            <a href="/alpha-apply-1f/1f-employment-6-weeks">
               Change
               <span class="govuk-visually-hidden"> Have you had this job for more than 6 weeks?</span>
+            </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -76,11 +77,26 @@
             {{ data['hours per week'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <span href="/alpha-apply-1f/1f-employment-hours-per-week">
+            <span a="/alpha-apply-1f/1f-employment-hours-per-week">
               Change
               <span class="govuk-visually-hidden"> how many hours do you work per week</span>
+              </a>
           </dd>
         </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which days of the week do you work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['day-of-week'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-employment-days-of-week">
+              Change
+              <span class="govuk-visually-hidden"> Which days of the week do you work?</span>
+            </a>
+        </dd>
+      </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Company or organisation name
@@ -89,9 +105,10 @@
             {{ data['employer-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <span href="/alpha-apply-1f/1f-employment-employer-name">
+            <a href="/alpha-apply-1f/1f-employment-employer-name">
               Change
               <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
+            </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -287,6 +304,8 @@
         </dd>
       </div>
 
+      {% if (data['self-employment-do-you-have-a-company-registration-number'] =="Yes") %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           What is your company registration number?
@@ -302,6 +321,8 @@
         </dd>
       </div>
 
+      {% endif %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Have you had this job for more than 6 weeks?
@@ -310,9 +331,10 @@
           {{ data['self-employment-6-weeks'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-self-employment-6-weeks">
+          <a href="/alpha-apply-1f/1f-self-employment-6-weeks">
             Change
             <span class="govuk-visually-hidden"> Have you had this job for more than 6 weeks?</span>
+          </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -323,9 +345,25 @@
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-self-employment-hours-per-week">
+          <a href="/alpha-apply-1f/1f-self-employment-hours-per-week">
             Change
             <span class="govuk-visually-hidden"> how many hours do you work per week</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which days of the week do you work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['day-of-week'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-self-employment-days-of-week">
+              Change
+              <span class="govuk-visually-hidden"> Which days of the week do you work?</span>
+              </a>
         </dd>
       </div>
 
@@ -380,7 +418,7 @@
           About to start employment
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-apply-1f/1f-about-to-start-employment-status">
+          <a href="/alpha-apply-1f/1f-employment-status">
             Change
             <span class="govuk-visually-hidden"> what is your employment status</span>
           </a>
@@ -426,9 +464,10 @@
           {{ data['about-to-start-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-about-to-start-employment-start-date">
+          <a href="/alpha-apply-1f/1f-about-to-start-employment-start-date">
             Change
             <span class="govuk-visually-hidden"> When will you be starting your new job?</span>
+          </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -439,9 +478,24 @@
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-about-to-start-employment-hours-per-week">
+          <a href="/alpha-apply-1f/1f-about-to-start-employment-hours-per-week">
             Change
             <span class="govuk-visually-hidden"> How many hours will you work per week?</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What days of the week will you work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['day-of-week'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-about-to-start-employment-days-of-week">
+            Change
+            <span class="govuk-visually-hidden"> What days of the week will you work?</span>
+          </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -452,9 +506,10 @@
           {{ data['employer-name'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-about-to-start-employment-employer-name">
+          <a href="/alpha-apply-1f/1f-about-to-start-employment-employer-name">
             Change
             <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
+          </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -634,6 +689,8 @@
         </dd>
       </div>
 
+      {% if (data['about-to-start-self-employment-do-you-have-a-utr'] =="Yes") %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           What is your Unique Taxpayer Reference (UTR)?
@@ -649,7 +706,7 @@
         </dd>
       </div>
 
-
+      {% endif %}
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -661,9 +718,10 @@
           data['about-to-start-self-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-about-to-start-self-employment-start-date">
+          <a href="/alpha-apply-1f/1f-about-to-start-self-employment-start-date">
             Change
             <span class="govuk-visually-hidden"> When will you be starting your self-employment?</span>
+          </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -674,9 +732,25 @@
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <span href="/alpha-apply-1f/1f-about-to-start-self-employment-hours-per-week">
+          <a href="/alpha-apply-1f/1f-about-to-start-self-employment-hours-per-week">
             Change
             <span class="govuk-visually-hidden"> How many hours do you think you'll work per week?</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What days of the week will you work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['day-of-week'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-about-to-start-self-employment-days-of-week">
+            Change
+            <span class="govuk-visually-hidden"> What days of the week will you work?</span>
+          </a>
         </dd>
       </div>
 
