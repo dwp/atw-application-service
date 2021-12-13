@@ -14,8 +14,6 @@ Would you like support completing this application? – Access to Work – GOV.U
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1f/1f-national-insurance-number" method="post">
-
       <div class="govuk-form-group">
         <div class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -38,13 +36,21 @@ Would you like support completing this application? – Access to Work – GOV.U
                 </label>
                 <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
               </div>
-              <div class="govuk-!-padding-bottom-2"></div>
-
             </fieldset>
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <form class="form" action="/alpha-apply-1f/1f-national-insurance-number" method="post">
+            <p>
+              <input type="hidden" name="no-email" value="true">
+              <a href="/alpha-apply-1f/1f-national-insurance-number">I don't have an email address</a>
+            </p>
+            </form>
+            <div class="govuk-!-padding-bottom-2"></div>
           </div>
 
-      <form class="form" action="/url/of/next/page" method="post">
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      <form class="form" action="/alpha-apply-1f/1f-national-insurance-number" method="post">
+        <input type="hidden" name="email-true" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
         <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>

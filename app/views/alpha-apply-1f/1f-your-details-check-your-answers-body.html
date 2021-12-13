@@ -37,6 +37,9 @@
             </a>
           </dd>
         </div>
+
+        {% if data['home-address-select-true'] =="true" %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Address
@@ -55,6 +58,55 @@
             </a>
           </dd>
         </div>
+
+        {% endif %}
+
+        {% if data['address-manual-true'] =="true" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>{{ data['address-line-1'] }}</li>
+              <li>{{ data['address-line-2'] }}</li>
+              <li>{{ data['address-town'] }}</li>
+              <li>{{ data['address-county'] }}</li>
+              <li>{{ data['address-postcode'] }}</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-home-address-select">
+              Change
+              <span class="govuk-visually-hidden"> what is your address</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        {% if data['no-email'] =="true" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I don't have an email address
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1f/1f-what-is-your-email">
+              Change
+              <span class="govuk-visually-hidden"> what is your email</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        {% if data['email-true'] =="true" %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Email address
@@ -69,6 +121,11 @@
             </a>
           </dd>
         </div>
+
+        {% endif %}
+
+        {% if data['national-insurance-number-true'] =="true" %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             National Insurance number
@@ -83,6 +140,8 @@
             </a>
           </dd>
         </div>
+
+        {% endif %}
       </dl>
     {% endif %}
       </div>

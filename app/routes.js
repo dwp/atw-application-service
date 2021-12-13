@@ -5377,7 +5377,7 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                    redirectUrl = '/alpha-apply-1f/1f-specialist-equipment-type-of-equipment-1'
                    break
                  case 'No, I do not know what I need':
-                   redirectUrl = '/alpha-apply-1f/1f-specialist-equipment-check-your-answers'
+                   redirectUrl = '/alpha-apply-1f/1f-specialist-equipment-guidance'
                    break
 
                  default:

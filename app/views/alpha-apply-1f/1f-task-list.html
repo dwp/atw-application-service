@@ -4,16 +4,8 @@
   Task list
 {% endblock %}
 
-{% if not inEditMode and casa.journeyPreviousUrl %}
-{{ govukBackLink({
-classes: 'hide-print',
-text: t('common:back'),
-href: casa.journeyPreviousUrl
-}) }}
-{% endif %}
-
 {% block beforeContent %}
-<a class="govuk-back-link" onclick="history.back()">Back</a>
+<a class="govuk-back-link" href="/alpha-apply-1f/1f-you-may-be-eligible-blue">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -59,7 +51,7 @@ href: casa.journeyPreviousUrl
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                {% if (data ["what-is-your-name"]) or (data ['your-details-check-your-answers'] =="true")%}
+                {% if (data ['your-details-check-your-answers'] =="true")%}
                 <a href="/alpha-apply-1f/1f-your-details-check-your-answers" aria-describedby="your-details-status">
                   Your details
                 </a>
@@ -82,8 +74,7 @@ href: casa.journeyPreviousUrl
 
             <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                {% if (data ["contacting-you-about-your-application-task-list"]) or (data
-                ['contacting-you-check-your-answers-everything'] =="true")%}
+                {% if (data ['contacting-you-check-your-answers-everything'] =="true")%}
                 <a href="/alpha-apply-1f/1f-contacting-you-check-your-answers-everything" aria-describedby="your-contact-details-status">
                   How we contact you
                 </a>
@@ -109,8 +100,7 @@ href: casa.journeyPreviousUrl
             <li class="app-task-list__item">
 
               <span class="app-task-list__task-name">
-                {% if (data ["your-health-condition-or-disability-1"]) or (data
-                ['your-health-condition-or-disability-check-your-answers-everything'] =="true")%}
+                {% if (data ['your-health-condition-or-disability-check-your-answers-everything'] =="true")%}
                 <a href="/alpha-apply-1f/1f-your-health-condition-or-disability-check-your-answers-everything" aria-describedby="your-disability-status">
                   Your conditions and disabilities
                 </a>
@@ -143,10 +133,8 @@ href: casa.journeyPreviousUrl
           </h3>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-
                 <span class="app-task-list__task-name">
-                {% if (data ["employment-status"]) or (data
-                ['employment-check-your-answers-everything'] =="true")%}
+                {% if (data ['employment-check-your-answers-everything'] =="true")%}
                 <a href="/alpha-apply-1f/1f-employment-check-your-answers-everything"
                    aria-describedby="your-employment-details-status">
                   Your job and employer
@@ -158,7 +146,6 @@ href: casa.journeyPreviousUrl
                 </a>
                 {% endif %}
                 </span>
-
               <strong>
                 {%if data['employment-status'] !=="true" %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
@@ -189,9 +176,12 @@ href: casa.journeyPreviousUrl
             <p>Complete these sections to tell us about the types of support you need from Access to Work.</p>
 
             <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-                {% if (data ["specialist-equipment-screener-task-list"]) or (data
-                ['specialist-equipment-check-your-answers-task-list'] =="true")%}
+              <span class="app-task-list__task-name">
+                {% if ((data ["specialist-equipment-screener"]) =="No")%}
+                <a href="/alpha-apply-1f/1f-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
+                  Equipment, adaptations and software
+                </a>
+                {% elseif (data ["specialist-equipment-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-apply-1f/1f-specialist-equipment-check-your-answers"
                    aria-describedby="specialist-equipment-status">
                   Equipment, adaptations and software
@@ -239,9 +229,13 @@ href: casa.journeyPreviousUrl
 
 
             <li class="app-task-list__item">
+
               <span class="app-task-list__task-name">
-                {% if (data ["support-worker-screener-task-list"]) or (data
-                ['support-worker-check-your-answers-task-list'] =="true")%}
+                {% if (data ["support-worker-screener"] =="No")%}
+                <a href="/alpha-apply-1f/1f-support-worker-screener" aria-describedby="support-worker-status">
+                  Support workers
+                </a>
+                {% elseif (data ["support-worker-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-apply-1f/1f-support-worker-check-your-answers"
                    aria-describedby="support-worker-status">
                   Support workers
@@ -265,7 +259,11 @@ href: casa.journeyPreviousUrl
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                {% if (data ["mental-health-support"]) or (data ['mental-health-check-your-answers'] =="true")%}
+                {% if ((data ["mental-health-support"]) =="No")%}
+                <a href="/alpha-apply-1f/1f-mental-health-support-screener" aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% elseif (data ["mental-health-check-your-answers"] =="true")%}
                 <a href="/alpha-apply-1f/1f-mental-health-support-check-your-answers"
                    aria-describedby="mental-health-support-status">
                   Mental health support
@@ -288,9 +286,12 @@ href: casa.journeyPreviousUrl
             </li>
 
             <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                {% if (data ["travelling-to-and-from-work-screener-task-list"]) or (data
-                ['travelling-to-and-from-work-task-list'] =="true")%}
+              <span class="app-task-list__task-name">
+                {% if ((data ["travelling-to-and-from-work-screener-task-list"]) =="No")%}
+                <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-screener" aria-describedby="travelling-to-and-from-work-status">
+                  Travelling to and from work
+                </a>
+                {% elseif (data ["travelling-to-and-from-work-task-list"] =="true")%}
                 <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-check-your-answers"
                    aria-describedby="travelling-to-and-from-work-status">
                   Travelling to and from work
@@ -315,8 +316,13 @@ href: casa.journeyPreviousUrl
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                {% if (data ["travel-during-work"]) or (data ['travel-during-work-check-your-answers'] =="true")%}
-                <a href="/alpha-apply-1f/1f-travel-during-work-check-your-answers" aria-describedby="travel-during-work-status">
+                {% if ((data ["travel-during-work"]) =="No")%}
+                <a href="/alpha-apply-1f/1f-travel-during-work-screener" aria-describedby="travel-during-work-status">
+                  Travelling during work
+                </a>
+                {% elseif (data ["travel-during-work-check-your-answers"] =="true")%}
+                <a href="/alpha-apply-1f/1f-travel-during-work-check-your-answers"
+                   aria-describedby="travel-during-work-status">
                   Travelling during work
                 </a>
                 {% else %}
@@ -339,9 +345,20 @@ href: casa.journeyPreviousUrl
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                {% if ((data ["workplace-adaptations-screener"]) =="No")%}
                 <a href="/alpha-apply-1f/1f-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
                   Changes to your workplace
                 </a>
+                {% elseif (data ["workplace-adaptations-check-your-answers"] =="true")%}
+                <a href="/alpha-apply-1f/1f-workplace-adaptations-check-your-answers"
+                   aria-describedby="workplace-adaptations-status">
+                  Changes to your workplace
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1f/1f-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
+                  Changes to your workplace
+                </a>
+                {% endif %}
               </span>
               <strong>
                 {% if (data ["workplace-adaptations-screener"] =="No") or (data
@@ -357,8 +374,13 @@ href: casa.journeyPreviousUrl
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                {% if (data ["changes-to-your-vehicle"]) or (data ['changes-to-your-vehicle-check-your-answers'] =="true")%}
-                <a href="/alpha-apply-1f/1f-changes-to-your-vehicle-check-your-answers" aria-describedby="changes-to-your-vehicle-status">
+                {% if ((data ["changes-to-your-vehicle"]) =="No")%}
+                <a href="/alpha-apply-1f/1f-changes-to-your-vehicle-screener" aria-describedby="changes-to-your-vehicle-status">
+                  Changes to your vehicle
+                </a>
+                {% elseif (data ["extra-information-check-your-answers-task-list"] =="true")%}
+                <a href="/alpha-apply-1f/1f-changes-to-your-vehicle-check-your-answers"
+                   aria-describedby="changes-to-your-vehicle-status">
                   Changes to your vehicle
                 </a>
                 {% else %}
@@ -392,8 +414,7 @@ href: casa.journeyPreviousUrl
                 <a href="/alpha-apply-1f/1f-extra-information-screener" aria-describedby="extra-information-status">
                   Anything else you would like to tell us
                 </a>
-                {% elseif (data ["extra-information-screener-task-list"]) or (data
-                ['extra-information-check-your-answers-task-list'] =="true")%}
+                {% elseif (data ["extra-information-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-apply-1f/1f-extra-information-check-your-answers"
                    aria-describedby="extra-information-status">
                   Anything else you would like to tell us
@@ -418,12 +439,16 @@ href: casa.journeyPreviousUrl
         </li>
       </ol>
 
+      <div class="govuk-inset-text">
+        You will have the chance to check all of your answers before you send your application.
+      </div>
+
       <div class="govuk-!-padding-bottom-3"></div>
 
-        <form action="/alpha-apply-1f/1f-final-check-your-answers">
+      <form action="/alpha-apply-1f/1f-final-check-your-answers">
           <input type="hidden" name="task-list-completed" value="true">
           <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-            <b>Submit application</b>
+            <b>Save and continue</b>
           </button>
         </form>
 
