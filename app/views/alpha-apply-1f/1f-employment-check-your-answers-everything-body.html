@@ -111,24 +111,71 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <ul class="govuk-list">
+
+      {% if data['workplace-address-select-true'] =="true" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if (data['workplace-postcode-select'] =="220")
+          or (data['workplace-postcode-select'] =="222")
+          or (data['workplace-postcode-select'] =="224")
+          or (data['workplace-postcode-select'] =="226")
+          or (data['workplace-postcode-select'] =="228")
+          or (data['workplace-postcode-select'] =="230")
+          or (data['workplace-postcode-select'] =="232")
+          or (data['workplace-postcode-select'] =="234")
+          %}
+          <ul class="govuk-list">
             <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
-              <li>Glasgow,</li>
-              <li>{{data["workplace-postcode"]}}</li>
-            </ul>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1f/1f-employment-workplace-address">
-              Change
-              <span class="govuk-visually-hidden"> what is your workplace address</span>
-            </a>
-          </dd>
-        </div>
+            <li>Glasgow,</li>
+            <li>{{data["workplace-postcode"]}}</li>
+          </ul>
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-employment-workplace-address">
+            Change
+            <span class="govuk-visually-hidden"> what is your workplace address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% endif %}
+
+
+      {% if data['employment-workplace-address-manual-true'] =="true" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            {{ data['workplace-address-line-1'] }}
+            <br>
+            {{ data['workplace-address-line-2'] }}
+            <br>
+            {{ data['workplace-address-town'] }}
+            <br>
+            {{ data['workplace-address-county'] }}
+            <br>
+            {{ data['workplace-address-postcode'] }}
+            <br>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-employment-address-manual">
+            Change
+            <span class="govuk-visually-hidden"> what is your workplace address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% endif %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How many people work at your company or organisation?
@@ -367,16 +414,28 @@
         </dd>
       </div>
 
+      {% if data['self-employment-workplace-address-select-true'] =="true" %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Address
+          Workplace address
         </dt>
         <dd class="govuk-summary-list__value">
+          {% if (data['workplace-postcode-select'] =="220")
+          or (data['workplace-postcode-select'] =="222")
+          or (data['workplace-postcode-select'] =="224")
+          or (data['workplace-postcode-select'] =="226")
+          or (data['workplace-postcode-select'] =="228")
+          or (data['workplace-postcode-select'] =="230")
+          or (data['workplace-postcode-select'] =="232")
+          or (data['workplace-postcode-select'] =="234")
+          %}
           <ul class="govuk-list">
             <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
             <li>Glasgow,</li>
             <li>{{data["workplace-postcode"]}}</li>
           </ul>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1f/1f-self-employment-workplace-address">
@@ -385,6 +444,39 @@
           </a>
         </dd>
       </div>
+
+      {% endif %}
+
+      {% if data['self-employment-workplace-address-manual-true'] =="true" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            {{ data['workplace-address-line-1'] }}
+            <br>
+            {{ data['workplace-address-line-2'] }}
+            <br>
+            {{ data['workplace-address-town'] }}
+            <br>
+            {{ data['workplace-address-county'] }}
+            <br>
+            {{ data['workplace-address-postcode'] }}
+            <br>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-self-employment-address-manual">
+            Change
+            <span class="govuk-visually-hidden"> what is your workplace address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% endif %}
+
     </dl>
 
 
@@ -512,16 +604,29 @@
           </a>
         </dd>
       </div>
+
+      {% if data['about-to-start-employment-workplace-address-select-true'] =="true" %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Address
+          Workplace address
         </dt>
         <dd class="govuk-summary-list__value">
+          {% if (data['workplace-postcode-select'] =="220")
+          or (data['workplace-postcode-select'] =="222")
+          or (data['workplace-postcode-select'] =="224")
+          or (data['workplace-postcode-select'] =="226")
+          or (data['workplace-postcode-select'] =="228")
+          or (data['workplace-postcode-select'] =="230")
+          or (data['workplace-postcode-select'] =="232")
+          or (data['workplace-postcode-select'] =="234")
+          %}
           <ul class="govuk-list">
             <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
             <li>Glasgow,</li>
             <li>{{data["workplace-postcode"]}}</li>
           </ul>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1f/1f-about-to-start-employment-workplace-address">
@@ -530,6 +635,39 @@
           </a>
         </dd>
       </div>
+
+      {% endif %}
+
+      {% if data['about-to-start-employment-workplace-address-manual-true'] =="true" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            {{ data['workplace-address-line-1'] }}
+            <br>
+            {{ data['workplace-address-line-2'] }}
+            <br>
+            {{ data['workplace-address-town'] }}
+            <br>
+            {{ data['workplace-address-county'] }}
+            <br>
+            {{ data['workplace-address-postcode'] }}
+            <br>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-about-to-start-employment-address-manual">
+            Change
+            <span class="govuk-visually-hidden"> what is your workplace address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% endif %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           How many people work at your company or organisation?
@@ -754,16 +892,28 @@
         </dd>
       </div>
 
+      {% if data['about-to-start-self-employment-workplace-address-select-true'] =="true" %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Address
+          Workplace address
         </dt>
         <dd class="govuk-summary-list__value">
+          {% if (data['workplace-postcode-select'] =="220")
+          or (data['workplace-postcode-select'] =="222")
+          or (data['workplace-postcode-select'] =="224")
+          or (data['workplace-postcode-select'] =="226")
+          or (data['workplace-postcode-select'] =="228")
+          or (data['workplace-postcode-select'] =="230")
+          or (data['workplace-postcode-select'] =="232")
+          or (data['workplace-postcode-select'] =="234")
+          %}
           <ul class="govuk-list">
             <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
             <li>Glasgow,</li>
             <li>{{data["workplace-postcode"]}}</li>
           </ul>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1f/1f-about-to-start-self-employment-workplace-address">
@@ -772,6 +922,39 @@
           </a>
         </dd>
       </div>
+
+      {% endif %}
+
+      {% if data['about-to-start-self-employment-workplace-address-manual-true'] =="true" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            {{ data['workplace-address-line-1'] }}
+            <br>
+            {{ data['workplace-address-line-2'] }}
+            <br>
+            {{ data['workplace-address-town'] }}
+            <br>
+            {{ data['workplace-address-county'] }}
+            <br>
+            {{ data['workplace-address-postcode'] }}
+            <br>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-about-to-start-self-employment-address-manual">
+            Change
+            <span class="govuk-visually-hidden"> what is your workplace address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% endif %}
+
     </dl>
 
 
