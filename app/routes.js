@@ -4986,7 +4986,7 @@ router.route('/alpha-apply-1f/1f-bsl-support')
                     let redirectUrl
                     switch (req.body['contacting-you-about-your-application']) {
                           case 'Me':
-                        redirectUrl = '/alpha-apply-1f/1f-contacting-you-phone'
+                        redirectUrl = '/alpha-apply-1f/1f-contacting-you-check-your-answers-everything'
                         break
                       case 'Someone else':
                         redirectUrl = '/alpha-apply-1f/1f-contacting-someone-else'

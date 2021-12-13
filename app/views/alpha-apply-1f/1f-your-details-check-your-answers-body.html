@@ -45,11 +45,21 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
+            {% if (data['claimant-postcode-select'] =="220")
+            or (data['claimant-postcode-select'] =="222")
+            or (data['claimant-postcode-select'] =="224")
+            or (data['claimant-postcode-select'] =="226")
+            or (data['claimant-postcode-select'] =="228")
+            or (data['claimant-postcode-select'] =="230")
+            or (data['claimant-postcode-select'] =="232")
+            or (data['claimant-postcode-select'] =="234")
+            %}
             <ul class="govuk-list">
             <li>{{ data['claimant-postcode-select'] }} St Vincent Street,</li>
               <li>Glasgow,</li>
               <li>{{data["claimant-postcode"]}}</li>
             </ul>
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/alpha-apply-1f/1f-home-address-select">

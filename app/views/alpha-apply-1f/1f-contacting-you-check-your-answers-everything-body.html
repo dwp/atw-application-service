@@ -12,15 +12,15 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Who should we contact about your application?
+            Phone number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['contacting-you-about-your-application'] }}
+            I find it difficult to hear or speak on the phone
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1f/1f-contacting-you-about-your-application">
+            <a href="/alpha-apply-1f/1f-contacting-reasonable-adjustment-email">
               Change
-              <span class="govuk-visually-hidden"> Who should we contact about your application?</span>
+              <span class="govuk-visually-hidden"> Confirm your personal email address</span>
             </a>
           </dd>
         </div>
@@ -40,15 +40,7 @@
           </dd>
         </div>
 
-      </dl>
-
-    {% endif %}
-
-    {% if data['contacting-you-phone'] =="true" %}
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-    <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Who should we contact about your application?
           </dt>
@@ -62,6 +54,14 @@
             </a>
           </dd>
         </div>
+
+      </dl>
+
+    {% endif %}
+
+    {% if data['contacting-you-phone'] =="true" %}
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -91,6 +91,20 @@
             </a>
           </dd>
         </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who should we contact about your application?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['contacting-you-about-your-application'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1f/1f-contacting-you-about-your-application">
+            Change
+            <span class="govuk-visually-hidden"> Who should we contact about your application?</span>
+          </a>
+        </dd>
+      </div>
 
     </dl>
 
@@ -98,22 +112,10 @@
 
     {% if (data['contacting-you-about-your-application'] =="Someone else") %}
 
+    <h2 class="govuk-heading-m">Details of the person we should contact</h2>
+
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-    <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Who would you like to be contacted about your application?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['contacting-you-about-your-application'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1f/1f-contacting-you-phone">
-              Change
-              <span class="govuk-visually-hidden"> Who would you like to be contacted about your application?</span>
-            </a>
-          </dd>
-        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Their full name
