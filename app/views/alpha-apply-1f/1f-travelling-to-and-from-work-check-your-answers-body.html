@@ -42,6 +42,25 @@
               </dd>
           </div>
 
+          {% if (data['public-transport-two-hours-true'] =="true") %}
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you spend more than 2 hours on public transport on your journey to work, or back from work?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['public-transport-two-hours'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-public-transport">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you spend more than 2 hours on public transport on your journey to work, or back from work?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                   What type of support do you need to travel to work?

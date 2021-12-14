@@ -79,18 +79,17 @@
                   How we contact you
                 </a>
                 {% else %}
-                <a href="/alpha-apply-1f/1f-contacting-you-phone"
-                   aria-describedby="your-contact-details-status">
+                <a href="/alpha-apply-1f/1f-contacting-you-about-your-application" aria-describedby="your-contact-details-status">
                   How we contact you
                 </a>
                 {% endif %}
                 </span>
               <strong>
-                {%if data['contacting-you-phone'] !=="true" %}
+                {%if data['contacting-you-about-your-application-task-list'] !=="true" %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% elseif (data ['contacting-you-phone'] =="true") and (data ['contacting-you-check-your-answers-everything'] =="true") %}
+                {% elseif (data ['contacting-you-about-your-application-task-list'] =="true") and (data ['contacting-you-check-your-answers-everything'] =="true") %}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
-                {% elseif data ['contacting-you-phone'] =="true" %}
+                {% elseif data ['contacting-you-about-your-application-task-list'] =="true" %}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% endif %}
               </strong>

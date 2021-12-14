@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Would you like support completing this application? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1f/1f-contacting-you-about-your-application">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1f/1f-contacting-you-selecting-time" method="post">
+
+      <h1 class="govuk-heading-l">How we contact you</h1>
+
+      <p>We'll contact you about your application by telephone.</p>
+
+      <h2 class="govuk-heading-m">Confirm your personal telephone number</h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="telephone-number">
+          <b>UK telephone number</b>
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+
+
+      <p><a href="/alpha-apply-1f/1f-contacting-reasonable-adjustment-email" input type="hidden"
+            name="contacting-you-email" value="true">I find it difficult to hear or speak
+        on the telephone</a></p>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="contacting-you-phone" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

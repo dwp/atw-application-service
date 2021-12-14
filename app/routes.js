@@ -4986,7 +4986,7 @@ router.route('/alpha-apply-1f/1f-bsl-support')
                     let redirectUrl
                     switch (req.body['contacting-you-about-your-application']) {
                           case 'Me':
-                        redirectUrl = '/alpha-apply-1f/1f-contacting-you-check-your-answers-everything'
+                        redirectUrl = '/alpha-apply-1f/1f-contacting-you-confirm-phone'
                         break
                       case 'Someone else':
                         redirectUrl = '/alpha-apply-1f/1f-contacting-someone-else'
@@ -5225,22 +5225,6 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                       res.redirect(redirectUrl)
                     })
 
-                  router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-locations-taxi')
-                    .post((req, res, next) => {
-                      let redirectUrl
-                      switch (req.body['travelling-to-and-from-work-locations-taxi']) {
-                        case 'Yes':
-                          redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-providing-quotes-taxi'
-                          break
-                        case 'No':
-                          redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-check-your-answers'
-                          break
-                        default:
-                          redirectUrl = req.path
-                          break
-                      }
-                      res.redirect(redirectUrl)
-                    })
 
           router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-providing-quotes-taxi')
             .post((req, res, next) => {
@@ -5452,3 +5436,45 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                    }
                    res.redirect(redirectUrl)
                  })
+
+
+//                router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment')
+//                    .post((req, res, next) => {
+//                        const selections = req.body;
+//                         // Stay on same page if not any option selected
+//                         redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need'
+//                              if (selections === 1)
+//                                 {
+//                                     // Handle single selections
+//                              if(selections === "Public transport") {
+//                                redirectUrl = '/alpha-apply-1f/1f-less-than-16-hours'
+//                                   } else if(selection === 'I have not started work yet') {
+//                                redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need'
+//                                    }
+//                                    } else {
+//                                 // Handle Multiple selections
+//                            redirectUrl = '/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need'
+//                                      }
+//                                    res.redirect(redirectUrl)
+//                                          })
+
+router.post('/alpha-apply-1f/1f-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment', function(req, res, next){
+ if (req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment']){
+  for (i = 0; i<req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'].length; i++){
+  switch (req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'][i]){
+   case "Public transport" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-public-transport"); next(); break;
+   case "Drive or lift in a car" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+   case "Walking or cycling" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+   case "Taxi" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+   case "I work from home" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+   case "Other" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+   case "I have not started work yet" :  return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-what-support-do-you-need"); next(); break;
+
+   default: continue;
+   }
+   break;
+  }
+ } else {
+ }
+return res.redirect("/alpha-apply-1f/1f-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment"); next();
+})
