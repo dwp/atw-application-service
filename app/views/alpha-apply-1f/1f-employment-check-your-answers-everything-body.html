@@ -326,7 +326,11 @@
           What is your Unique Taxpayer Reference (UTR)?
         </dt>
         <dd class="govuk-summary-list__value">
+          {% if data['self-employment-utr-true'] =="true" %}
           {{ data['utr'] }}
+          {% else %}
+          <p>I do not have a UTR</p>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1f/1f-self-employment-utr">

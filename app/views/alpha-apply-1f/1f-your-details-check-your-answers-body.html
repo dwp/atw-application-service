@@ -30,12 +30,14 @@
           <dd class="govuk-summary-list__value">
             {{ data['date-of-birth-day'] }} {{ data['date-of-birth-month'] }} {{ data['date-of-birth-year'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}
+          <dd class="govuk-summary-list__actions govuk-!-display-none-print">
             <a href="/alpha-apply-1f/1f-what-is-your-date-of-birth">
               Change
               <span class="govuk-visually-hidden"> what is your date of birth</span>
             </a>
           </dd>
+          {% endif %}
         </div>
 
         {% if data['home-address-select-true'] =="true" %}

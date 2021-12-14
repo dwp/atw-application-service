@@ -26,9 +26,18 @@
 
           <div id="passport-issued-hint" class="govuk-hint">If you do not have a start date yet, provide an estimated start date.</div>
 
-          <div id="passport-issued-hint" class="govuk-hint">
-            For example, 29 11 2021.
+          <div id="about-to-start-employment-start-date-hint" class="govuk-hint">
+            For example, <span id="about-to-start-self-employment-future-date"></span>.
           </div>
+
+          <script>
+            const d = new Date();
+            d.setMonth(d.getMonth() + 1);
+            document.getElementById("about-to-start-self-employment-future-date").innerHTML = d.getDate() + " " + d
+            .getMonth() + 1 + " " + d.getFullYear();
+          </script>
+
+
           <div class="govuk-date-input" id="about-to-start-self-employment-start-date">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
