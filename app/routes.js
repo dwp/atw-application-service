@@ -5378,8 +5378,11 @@ router.route('/alpha-apply-1f/1f-travelling-to-and-from-work-screener')
                    case 'Me':
                      redirectUrl = '/alpha-apply-1f/1f-changes-to-your-vehicle-change'
                      break
-                   case 'Someone else':
+                   case 'Someone else, like a family member':
                      redirectUrl = '/alpha-apply-1f/1f-changes-to-your-vehicle-someone-else'
+                     break
+                   case 'This is a lease or company vehicle':
+                     redirectUrl = '/alpha-apply-1f/1f-changes-to-your-vehicle-change'
                      break
 
                    default:

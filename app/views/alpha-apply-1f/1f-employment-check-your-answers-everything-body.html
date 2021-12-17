@@ -57,18 +57,20 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Have you had this job for more than 6 weeks?
+            When did you start this job?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['employment-6-weeks'] }}
+            {{ data['employment-start-day'] }} / {{ data['employment-start-month'] }} / {{
+            data['employment-start-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-apply-1f/1f-employment-6-weeks">
+            <a href="/alpha-apply-1f/1f-employment-start-date">
               Change
-              <span class="govuk-visually-hidden"> Have you had this job for more than 6 weeks?</span>
+              <span class="govuk-visually-hidden"> When did you start this job?</span>
             </a>
           </dd>
         </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How many hours do you work per week?
@@ -342,49 +344,16 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Do you have a company registration number?
+          When did you start this job?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['self-employment-do-you-have-a-company-registration-number'] }}
+          {{ data['self-employment-start-day'] }} / {{ data['self-employment-start-month'] }} / {{
+          data['self-employment-start-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-apply-1f/1f-self-employment-do-you-have-a-company-registration-number">
+          <a href="/alpha-apply-1f/1f-self-employment-start-date">
             Change
-            <span class="govuk-visually-hidden"> Do you have a company registration number?</span>
-          </a>
-        </dd>
-      </div>
-
-      {% if (data['self-employment-do-you-have-a-company-registration-number'] =="Yes") %}
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          What is your company registration number?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['self-employment-company-registration-number'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/alpha-apply-1f/1f-self-employment-company-registration-number">
-            Change
-            <span class="govuk-visually-hidden"> What is your company registration number?</span>
-          </a>
-        </dd>
-      </div>
-
-      {% endif %}
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Have you had this job for more than 6 weeks?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['self-employment-6-weeks'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/alpha-apply-1f/1f-self-employment-6-weeks">
-            Change
-            <span class="govuk-visually-hidden"> Have you had this job for more than 6 weeks?</span>
+            <span class="govuk-visually-hidden"> When did you start this job?</span>
           </a>
         </dd>
       </div>

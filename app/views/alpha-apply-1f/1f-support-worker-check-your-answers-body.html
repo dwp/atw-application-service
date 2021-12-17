@@ -131,7 +131,10 @@
                   How long do you need a support worker for?
               </dt>
               <dd class="govuk-summary-list__value">
-                  {{ data['support-worker-how-long-for'] }} weeks
+                  {{ data['support-worker-how-long-for'] }}
+                  {% if data['support-worker-how-long-for'] =="1" %} week
+                  {% else %} weeks
+                  {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                   <a href="/alpha-apply-1f/1f-support-worker-how-long-for">
@@ -148,7 +151,10 @@
                   How many hours per week do you need this support at work?
               </dt>
               <dd class="govuk-summary-list__value">
-                  {{ data['support-worker-hour-per-week'] }} hours per week
+                  {{ data['support-worker-hour-per-week'] }}
+                  {% if data['support-worker-hour-per-week'] =="1" %} hour per week
+                  {% else %} hours per week
+                  {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                   <a href="/alpha-apply-1f/1f-support-worker-how-many-hours-a-week">

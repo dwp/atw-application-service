@@ -8,7 +8,7 @@
 
       {% if (data['travelling-to-and-from-work-screener'] =="Yes") %}
 
-      <h2 class="govuk-heading-m">Support worker</h2>
+      <h2 class="govuk-heading-m">Travelling to and from work</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
@@ -83,7 +83,10 @@
                   How many journeys will you need support for in a week?
               </dt>
               <dd class="govuk-summary-list__value">
-                  {{ data['travelling-to-and-from-work-how-many-journeys'] }} journeys a week
+                  {{ data['travelling-to-and-from-work-how-many-journeys'] }}
+                  {% if data['travelling-to-and-from-work-how-many-journeys'] =="1" %} journey a week
+                  {% else %} journeys a week
+                  {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                   <a href="/alpha-apply-1f/1f-travelling-to-and-from-work-how-many-journeys-not-sure">

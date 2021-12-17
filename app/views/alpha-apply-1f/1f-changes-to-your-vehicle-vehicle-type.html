@@ -31,30 +31,35 @@
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-
-            <fieldset class="govuk-fieldset" aria-describedby="changes-to-your-vehicle-ownership-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h2 class="govuk-fieldset__heading">
-                  Who owns this vehicle?
-                </h2>
-              </legend>
-              <div id="changes-to-your-vehicle-ownership-hint" class="govuk-hint">
-                If you do not own this vehicle, we'll need permission from the owner to make changes to it.
-              </div>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership" name="changes-to-your-vehicle-ownership" type="radio" value="Me">
-                  <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership">
-                    Me
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else">
-                  <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-2">
-                    Someone else
-                  </label>
-                </div>
-              </div>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-fieldset__heading">
+              Who owns this vehicle?
+            </h2>
+          </legend>
+          <div id="changes-to-your-vehicle-ownership-hint" class="govuk-hint">
+            If you do not own this vehicle, we'll need permission from the owner to make changes to it.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership"
+                     name="changes-to-your-vehicle-ownership" type="radio" value="Me">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership">
+                Me
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else, like a family member">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-2">
+                Someone else, like a family member
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-3" name="changes-to-your-vehicle-ownership" type="radio" value="This is a lease or company vehicle">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-3">
+                This is a lease or company vehicle
+              </label>
+            </div>
+          </div>
 
         </fieldset>
       </div>
