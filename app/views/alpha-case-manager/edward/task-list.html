@@ -96,31 +96,19 @@
         <h3 class="app-task-list__section">
           <span class="app-task-list__section-number">2. </span> Requested support
         </h3>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/edward/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/edward/specialist-equipment" aria-describedby="eligibility-status">
                   Equipment, adaptations and software
                 </a>
               </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-          </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/edward/#" aria-describedby="eligibility-status">
-                  Mental health support
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {%if data['specialist-equipment-true-edward'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}
             </li>
-          <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/edward/#" aria-describedby="eligibility-status">
-                  Changes to your workplace
-                </a>
-              </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-          </li>
           </ul>
         </li>
 
@@ -131,12 +119,15 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/edward/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/edward/contact-preferences" aria-describedby="eligibility-status">
                   Contact details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-            </li>
+              {%if data['contact-preferences-true-edward'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}            </li>
           </ul>
         </li>
       </ol>

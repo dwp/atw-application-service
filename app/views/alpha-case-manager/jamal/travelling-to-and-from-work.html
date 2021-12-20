@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-case-manager/jamal/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+  .govuk-grid-row-2 {
+  background-color: #1f70b8;
+  color: #fff;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+  padding: 20px 40px 2px;
+  }
+
+  </style>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-xl" style="color:white">AB 12 30 07 C</span>
+        <h1 class="govuk-heading-xl" style="color:white">Jamal Smith</h1>
+
+      </fieldset>
+      </html>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+              <h2 class="govuk-heading-m">Travelling to and from work</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Does your condition mean that it's difficult for you to drive and get public transport to and from work?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How do you get to and from work at the moment?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Public transport
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you spend more than 2 hours on public transport on your journey to work, or back from work?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What type of support do you need to travel to and from work?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Lift in a car from a friend, colleague or family member
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How will support to travel to and from work meet your needs?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    I am recently disabled and getting the bus like I used to will be much more difficult, especially during busy times
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How many journeys will you need support for in a week?                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    10
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Will your journeys to and from work be between your home and work addresses?               </dt>
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                </div>
+
+
+              </dl>
+
+  <form class="form" action="/alpha-case-manager/jamal/task-list" method="post">
+    <input type="hidden" name="travelling-to-and-from-work-true-jamal" value="true">
+    <button class="govuk-button" data-module="govuk-button">
+        Completed
+      </button>
+  </form>
+
+    </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+  </div>
+
+{% endblock %}

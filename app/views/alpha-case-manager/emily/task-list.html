@@ -118,12 +118,15 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/emily/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/contact-preferences" aria-describedby="eligibility-status">
                   Contact details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-            </li>
+              {%if data['contact-preferences-true-emily'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}            </li>
           </ul>
         </li>
       </ol>

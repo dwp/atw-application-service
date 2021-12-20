@@ -99,27 +99,39 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/jamal/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/jamal/specialist-equipment" aria-describedby="eligibility-status">
                   Equipment, adaptations and software
                 </a>
               </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+            {%if data['specialist-equipment-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
           </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/jamal/#" aria-describedby="eligibility-status">
-                  Mental health support
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-            </li>
           <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/jamal/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/jamal/travelling-to-and-from-work" aria-describedby="eligibility-status">
+                  Travelling to and from work
+                </a>
+              </span>
+            {%if data['travelling-to-and-from-work-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
+          </li>
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/changes-to-your-workplace" aria-describedby="eligibility-status">
                   Changes to your workplace
                 </a>
               </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+            {%if data['changes-to-your-workplace-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
           </li>
           </ul>
         </li>
@@ -131,11 +143,15 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/jamal/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/jamal/contact-preferences" aria-describedby="eligibility-status">
                   Contact details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {%if data['contact-preferences-true-jamal'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}
             </li>
           </ul>
         </li>
