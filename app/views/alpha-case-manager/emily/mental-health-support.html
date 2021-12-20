@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-case-manager/emily/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+  .govuk-grid-row-2 {
+  background-color: #1f70b8;
+  color: #fff;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+  padding: 20px 40px 2px;
+  }
+
+  </style>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-xl" style="color:white">AB 12 30 07 C</span>
+        <h1 class="govuk-heading-xl" style="color:white">Emily Stone</h1>
+
+      </fieldset>
+      </html>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Important
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        Refer customer to by Able Futures or Remploy
+      </p>
+    </div>
+  </div>
+
+              <h2 class="govuk-heading-m">Mental Health Support</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you need mental health support at work?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+              </dl>
+
+
+
+  <form class="form" action="/alpha-case-manager/emily/task-list" method="post">
+    <input type="hidden" name="mental-health-support-true-emily" value="true">
+    <button class="govuk-button" data-module="govuk-button">
+        Completed
+      </button>
+  </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+  </div>
+
+{% endblock %}

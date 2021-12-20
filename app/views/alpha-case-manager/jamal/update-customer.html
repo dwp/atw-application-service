@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-case-manager/jamal/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+  .govuk-grid-row-2 {
+  background-color: #1f70b8;
+  color: #fff;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+  padding: 20px 40px 2px;
+  }
+
+  </style>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-xl" style="color:white">NN 34 33 98 Z</span>
+        <h1 class="govuk-heading-xl" style="color:white">Jamal Smith</h1>
+
+      </fieldset>
+      </html>
+
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+              <h2 class="govuk-heading-m">Customer details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Surname
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Smith
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Forename(s)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Jamal
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    NINO
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    NN 34 33 98 Z
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    02 / 03 / 2000
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    32 New Road
+                    <br>
+                    Arville
+                    <br>
+                    Northshire
+                    <br>
+                    United Kingdom
+                    <br>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Postcode
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    SE31 8UN
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of initial contact
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  20 / 12 / 2021
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Telephone Number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    01043 852039
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    jpsmith@message.tk
+                  </dd>
+                </div>
+              </dl>
+
+      <h2 class="govuk-heading-m">Preferred communication method</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who should we contact about your application?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Me
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Method
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Phone
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            01043 852039
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When are the best times to contact?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Weekday mornings are usually fine
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Disability description</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            First disability
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lower limb paralysis
+          </dd>
+        </div>
+      </dl>
+
+      </div>
+  </div>
+
+
+
+  <form class="form" action="/alpha-case-manager/jamal/task-list" method="post">
+    <input type="hidden" name="update-customer-true-jamal" value="true">
+    <button class="govuk-button" data-module="govuk-button">
+        Completed
+      </button>
+  </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+  </div>
+
+{% endblock %}

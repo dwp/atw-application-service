@@ -29,7 +29,7 @@
 
       <fieldset class="govuk-fieldset">
         <span class="govuk-caption-xl" style="color:white">AB 12 30 07 C</span>
-        <h1 class="govuk-heading-xl" style="color:white">Maynard James Keenan</h1>
+        <h1 class="govuk-heading-xl" style="color:white">Emily Stone</h1>
 
       </fieldset>
       </html>
@@ -51,12 +51,12 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/update-customer" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/update-customer" aria-describedby="eligibility-status">
                   Update customer
                 </a>
               </span>
               <strong>
-                {%if data['update-customer-true'] =="true" %}
+                {%if data['update-customer-true-emily'] =="true" %}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
@@ -66,11 +66,11 @@
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/employer-and-job" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/employer-and-job" aria-describedby="eligibility-status">
                   Update employer and job
                 </a>
               </span>
-              {%if data['employer-and-job-true'] =="true" %}
+              {%if data['employer-and-job-true-emily'] =="true" %}
               <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
               {% else %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
@@ -79,11 +79,11 @@
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/business-case" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/business-case" aria-describedby="eligibility-status">
                   Create business case
                 </a>
               </span>
-              {%if data['business-case-true'] =="true" %}
+              {%if data['business-case-true-emily'] =="true" %}
               <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
               {% else %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
@@ -97,30 +97,17 @@
           <span class="app-task-list__section-number">2. </span> Requested support
         </h3>
         <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/#" aria-describedby="eligibility-status">
-                  Equipment, adaptations and software
-                </a>
-              </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-          </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/mental-health-support" aria-describedby="eligibility-status">
                   Mental health support
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-            </li>
-          <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/#" aria-describedby="eligibility-status">
-                  Changes to your workplace
-                </a>
-              </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-          </li>
+              {%if data['mental-health-support-true-emily'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}            </li>
           </ul>
         </li>
 
@@ -131,7 +118,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/alpha-case-manager/#" aria-describedby="eligibility-status">
+                <a href="/alpha-case-manager/emily/#" aria-describedby="eligibility-status">
                   Contact details
                 </a>
               </span>
