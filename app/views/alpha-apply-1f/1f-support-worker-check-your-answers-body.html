@@ -179,6 +179,25 @@
               </dd>
           </div>
 
+          {% if data['support-worker-providing-quotes-for-this-support'] =="No, I do not have quotes" %}
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you need another support worker?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['do-you-need-another-support-worker'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1f/1f-support-worker-do-you-need-another-support-worker">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you need another support worker?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
 
           {% if data['support-worker-providing-quotes-for-this-support'] =="Yes, I have quotes" %}
 
@@ -363,6 +382,32 @@
           </div>
 
           {% endif %}
+
+      </dl>
+
+          {% if (data['support-worker-providing-quotes-for-this-support'] =="Yes, I have quotes") %}
+
+      <h2 class="govuk-heading-m">Additional support worker</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Do you need another support worker?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['do-you-need-another-support-worker'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-apply-1f/1f-support-worker-do-you-need-another-support-worker">
+                      Change
+                      <span class="govuk-visually-hidden"> Do you need another support worker?</span>
+                  </a>
+              </dd>
+          </div>
+
+          {% endif %}
+
 
       </dl>
 

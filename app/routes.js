@@ -3871,7 +3871,7 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                    redirectUrl = '/alpha-apply-1f/1f-support-worker-quote-1'
                    break
                  case 'No, I do not have quotes':
-                   redirectUrl = '/alpha-apply-1f/1f-support-worker-check-your-answers'
+                   redirectUrl = '/alpha-apply-1f/1f-support-worker-do-you-need-another-support-worker'
                    break
 
                  default:
@@ -3880,42 +3880,6 @@ router.route('/alpha-apply-1d/1d-bsl-support')
                }
                res.redirect(redirectUrl)
              })
-
-               router.route('/alpha-apply-1f/1f-support-worker-hmrc-table-1-quote-1')
-                 .post((req, res, next) => {
-                   let redirectUrl
-                   switch (req.body['support-worker-second-quote-1']) {
-                     case 'Yes':
-                       redirectUrl = '/alpha-apply-1f/1f-support-worker-quote-2'
-                       break
-                     case 'No':
-                       redirectUrl = '/alpha-apply-1f/1f-support-worker-check-your-answers'
-                       break
-
-                     default:
-                       redirectUrl = req.path
-                       break
-                   }
-                   res.redirect(redirectUrl)
-                 })
-
-               router.route('/alpha-apply-1f/1f-support-worker-hmrc-table-2-quote-1')
-                 .post((req, res, next) => {
-                   let redirectUrl
-                   switch (req.body['support-worker-third-quote-3']) {
-                     case 'Yes':
-                       redirectUrl = '/alpha-apply-1f/1f-support-worker-quote-3'
-                       break
-                     case 'No':
-                       redirectUrl = '/alpha-apply-1f/1f-support-worker-check-your-answers'
-                       break
-
-                     default:
-                       redirectUrl = req.path
-                       break
-                   }
-                   res.redirect(redirectUrl)
-                 })
 
 router.route('/alpha-apply-1e/1e-support-worker-screener')
   .post((req, res, next) => {
@@ -5081,7 +5045,7 @@ router.route('/alpha-apply-1f/1f-support-worker-screener')
                  redirectUrl = '/alpha-apply-1f/1f-support-worker-quote-2'
                  break
                case 'No':
-                 redirectUrl = '/alpha-apply-1f/1f-support-worker-check-your-answers'
+                 redirectUrl = '/alpha-apply-1f/1f-support-worker-do-you-need-another-support-worker'
                  break
 
                default:
@@ -5099,7 +5063,7 @@ router.route('/alpha-apply-1f/1f-support-worker-screener')
                  redirectUrl = '/alpha-apply-1f/1f-support-worker-quote-3'
                  break
                case 'No':
-                 redirectUrl = '/alpha-apply-1f/1f-support-worker-check-your-answers'
+                 redirectUrl = '/alpha-apply-1f/1f-support-worker-do-you-need-another-support-worker'
                  break
 
                default:

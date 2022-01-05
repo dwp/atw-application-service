@@ -1,20 +1,27 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Is there anything else you'd like to tell us? – Access to Work – GOV.UK
+Do you need another support worker? – Access to Work – GOV.UK
 {% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1f/1f-task-list">Back</a>
+<a class="govuk-back-link" onclick="history.back()">Back</a>
 {% endblock %}
-
 {% block content %}
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1f/1f-extra-information-screener" method="post">
+    <form class="form" action="/alpha-apply-1f/1f-support-worker-check-your-answers" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -23,30 +30,31 @@ Is there anything else you'd like to tell us? – Access to Work – GOV.UK
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    Is there anything else that you would like to tell us?
+                    Do you need another support worker?
                   </h1>
                 </legend>
 
-                <div class="govuk-!-padding-bottom-2"></div>
-
-                <p>You can tell us anything else that you think we should know as part of your application, that you have not mentioned already.</p>
+                <div class="govuk-hint">
+                  You can have more than one type of support worker with Access to Work.
+                </div>
 
                 <div class="govuk-!-padding-bottom-2"></div>
 
                 <div class="govuk-radios">
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="extra-information-screener" name="extra-information-screener"
+                    <input class="govuk-radios__input" id="do-you-need-another-support-worker"
+                           name="do-you-need-another-support-worker"
                            type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="extra-information-screener">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-another-support-worker">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="extra-information-screener-2"
-                           name="extra-information-screener"
+                    <input class="govuk-radios__input" id="do-you-need-another-support-worker-2"
+                           name="do-you-need-another-support-worker"
                            type="radio" value="No">
-                    <label class="govuk-label govuk-radios__label" for="extra-information-screener-2">
+                    <label class="govuk-label govuk-radios__label" for="do-you-need-another-support-worker-2">
                       No
                     </label>
                   </div>
@@ -58,13 +66,11 @@ Is there anything else you'd like to tell us? – Access to Work – GOV.UK
         <div class="govuk-!-padding-bottom-0"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
-        <input type="hidden" name="extra-information-screener-task-list" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
         <p><a href="/alpha-apply-1f/1f-task-list">Return to menu</a></p>
 
-    </form>
   </div>
 
   </div>
@@ -76,5 +82,6 @@ Is there anything else you'd like to tell us? – Access to Work – GOV.UK
 </div>
 
   </div>
+
 
 {% endblock %}
