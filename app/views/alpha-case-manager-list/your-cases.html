@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+  .govuk-grid-row-2 {
+  background-color: #1f70b8;
+  color: #fff;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+  padding: 20px 40px 2px;
+  }
+
+  </style>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-xl" style="color:white">Case Manager</span>
+        <h1 class="govuk-heading-xl" style="color:white">Katten Jansson</h1>
+      </fieldset>
+      </html>
+
+    </div>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Assigned cases</caption>
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Name</th>
+        <th scope="col" class="govuk-table__header">Case type</th>
+        <th scope="col" class="govuk-table__header">Date submitted</th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Jamal Smith</th>
+        <td class="govuk-table__cell">New application</td>
+        <td class="govuk-table__cell">20th December 2021, 11:54</td>
+        <td class="govuk-table__cell"><a href="/alpha-case-manager-list/jamal/list">Go to case</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Emily Stone</th>
+        <td class="govuk-table__cell">New application</td>
+        <td class="govuk-table__cell">20th December 2021, 11:57</td>
+        <td class="govuk-table__cell"><a href="/alpha-case-manager-list/emily/list">Go to case</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Edward Boultly</th>
+        <td class="govuk-table__cell">New application</td>
+        <td class="govuk-table__cell">20th December 2021, 11:58</td>
+        <td class="govuk-table__cell"><a href="/alpha-case-manager-list/edward/list">Go to case</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      </div>
+  </div>
+
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+  </div>
+
+{% endblock %}
