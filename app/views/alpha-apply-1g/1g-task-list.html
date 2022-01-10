@@ -225,6 +225,34 @@ Complete your application – Access to Work – GOV.UK
 <!--              {% endif %}-->
 <!--            </li>-->
 
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                {% if ((data ["mental-health-support"]) =="No")%}
+                <a href="/alpha-apply-1g/1g-mental-health-support-screener" aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% elseif (data ["mental-health-check-your-answers"] =="true")%}
+                <a href="/alpha-apply-1g/1g-mental-health-support-check-your-answers"
+                   aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% else %}
+                <a href="/alpha-apply-1g/1g-mental-health-support-screener" aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+                {% endif %}
+              </span>
+              <strong>
+                {% if (data ["mental-health-support-screener"] =="No") or (data ['mental-health-check-your-answers'] =="true")%}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif (data ["mental-health-support-screener"] =="Yes")%}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% endif %}
+              </strong>
+            </li>
+
 
             <li class="app-task-list__item">
 
@@ -248,34 +276,6 @@ Complete your application – Access to Work – GOV.UK
                 {% if (data ["support-worker-screener"] =="No") or (data ['support-worker-check-your-answers-task-list'] =="true")%}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
                 {% elseif (data ["support-worker-screener"] =="Yes")%}
-                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
-                {% else %}
-                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
-              </strong>
-            </li>
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                {% if ((data ["mental-health-support"]) =="No")%}
-                <a href="/alpha-apply-1g/1g-mental-health-support-screener" aria-describedby="mental-health-support-status">
-                  Mental health support
-                </a>
-                {% elseif (data ["mental-health-check-your-answers"] =="true")%}
-                <a href="/alpha-apply-1g/1g-mental-health-support-check-your-answers"
-                   aria-describedby="mental-health-support-status">
-                  Mental health support
-                </a>
-                {% else %}
-                <a href="/alpha-apply-1g/1g-mental-health-support-screener" aria-describedby="mental-health-support-status">
-                  Mental health support
-                </a>
-                {% endif %}
-              </span>
-              <strong>
-                {% if (data ["mental-health-support-screener"] =="No") or (data ['mental-health-check-your-answers'] =="true")%}
-                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
-                {% elseif (data ["mental-health-support-screener"] =="Yes")%}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
