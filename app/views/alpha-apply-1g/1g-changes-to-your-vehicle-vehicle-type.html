@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Vehicle details – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-changes-to-your-vehicle-screener">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-changes-to-your-vehicle-vehicle-type" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="changes-to-your-vehicle-vehicle-type">
+          What is the make and model of your vehicle?
+        </label>
+        </h1>
+        <div id="changes-to-your-vehicle-vehicle-type-hint" class="govuk-hint">
+          For example, 'Nissan Micra'.
+        </div>
+        <input class="govuk-input" id="changes-to-your-vehicle-vehicle-type" name="changes-to-your-vehicle-vehicle-type" type="text">
+      </div>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-fieldset__heading">
+              Who owns this vehicle?
+            </h2>
+          </legend>
+          <div id="changes-to-your-vehicle-ownership-hint" class="govuk-hint">
+            If you do not own this vehicle, we'll need permission from the owner to make changes to it.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership"
+                     name="changes-to-your-vehicle-ownership" type="radio" value="Me">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership">
+                Me
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else, like a family member">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-2">
+                Someone else, like a family member
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-3" name="changes-to-your-vehicle-ownership" type="radio" value="This is a lease or company vehicle">
+              <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-3">
+                This is a lease or company vehicle
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

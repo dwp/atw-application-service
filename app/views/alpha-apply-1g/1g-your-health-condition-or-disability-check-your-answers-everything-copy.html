@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers: conditions and disabilities – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-your-health-condition-or-disability-affects-your-work-3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Check your answers:
+        {% if data['your-health-condition-or-disability-3'] or data['your-health-condition-or-disability-2'] %}
+        your conditions or disabilities
+        {% elseif data['your-health-condition-or-disability-1'] %}
+        your condition or disability
+        {% endif %}</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            {% if data['your-health-condition-or-disability-3'] or data['your-health-condition-or-disability-2'] %}
+            Health conditions or disabilities
+            {% elseif data['your-health-condition-or-disability-1'] %}
+            Health condition or disability
+            {% endif %}
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['1g-your-health-condition-or-disability-1'] }}
+            <br>
+            {% if data['1g-your-health-condition-or-disability-2'] %}
+            {{ data['1g-your-health-condition-or-disability-2'] }}
+            {% endif %}
+            <br>
+            {% if data['1g-your-health-condition-or-disability-3'] %}
+            {{ data['1g-your-health-condition-or-disability-3'] }}
+            {% endif %}
+            <br>
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+            {% if data['1g-your-health-condition-or-disability-3'] %}
+            <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-hrmc-table-3">
+              Change
+              <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
+            </a>
+            {% elseif data['1g-your-health-condition-or-disability-2'] %}
+            <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-hrmc-table-2">
+              Change
+              <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
+            </a>
+            {% else %}
+            <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-1">
+              Change
+              <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
+            </a>
+            {% endif %}
+          </dd>
+        </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          {% if data['your-health-condition-or-disability-affects-your-work-3'] or
+          data['your-health-condition-or-disability-affects-your-work-2'] %}
+          How do your conditions or disabilities affect you at work?
+          {% elseif data['your-health-condition-or-disability-affects-your-work-1'] %}
+          How does your condition or disability affect you at work?
+          {% endif %}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['1g-your-health-condition-or-disability-affects-your-work-1'] }}
+          {% if data['1g-your-health-condition-or-disability-affects-your-work-2'] %}
+          {{ data['1g-your-health-condition-or-disability-affects-your-work-2'] }}
+          {% endif %}
+          {% if data['1g-your-health-condition-or-disability-affects-your-work-3'] %}
+          {{ data['1g-your-health-condition-or-disability-affects-your-work-3'] }}
+          {% endif %}
+          <br>
+        </dd>
+
+        <dd class="govuk-summary-list__actions">
+          {% if data['1g-your-health-condition-or-disability-affects-your-work-3'] %}
+          <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-affects-your-work-3">
+            Change
+            <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
+          </a>
+          {% elseif data['1g-your-health-condition-or-disability-affects-your-work-2'] %}
+          <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-affects-your-work-2">
+            Change
+            <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
+          </a>
+          {% else %}
+          <a href="/alpha-apply-1g/1g-your-health-condition-or-disability-affects-your-work-1">
+            Change
+            <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
+          </a>
+          {% endif %}
+        </dd>
+      </div>
+    </dl>
+
+
+  <form class="form" action="/alpha-apply-1g/1g-task-list" method="post">
+    <input type="hidden" name="your-health-condition-or-disability-check-your-answers-everything" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you spend more than 2 hours on public transport on your journey to work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-travelling-to-and-from-work-what-support-do-you-need"
+          method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="public-transport-two-hours-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you spend more than 2 hours on public transport on your journey to work, or back from work?
+            </h1>
+          </legend>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-transport-two-hours" name="public-transport-two-hours"
+                     type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="public-transport-two-hours">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-transport-two-hours-2" name="public-transport-two-hours"
+                     type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="public-transport-two-hours-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="public-transport-two-hours-true" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

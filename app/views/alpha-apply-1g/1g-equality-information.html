@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you want to answer the equality questions? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-declaration">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">We have received your application</h1>
+
+    <p class="govuk-body">Before you finish using the service, we’d like to ask some equality questions.</p>
+
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <form class="form" action="/alpha-apply-1g/1g-equality-information" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="equalities-info-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Do you want to answer the equality questions?
+            </legend>
+            <div id="equalities-info-hint" class="govuk-hint">
+              <p class="govuk-!-margin-top-0">These questions are optional.</p>
+
+              <p>We ask these questions so that we can collect and publish information about the equality and
+                diversity of our services. This helps us to eliminate discrimination, advance equality of opportunity and foster good relations in line with the Equality Act 2010.</p>
+
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="equalities-info" name="equalities-info" type="radio" value="Yes, answer the equality questions (takes 2 minutes)">
+                <label class="govuk-label govuk-radios__label" for="equalities-info">
+                  Yes, answer the equality questions (takes 2 minutes)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="equalities-info-2" name="equalities-info" type="radio" value="No, skip the equality questions">
+                <label class="govuk-label govuk-radios__label" for="equalities-info-2">
+                  No, skip the equality questions
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="changes-to-your-vehicle" value="true">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+
+{% endblock %}

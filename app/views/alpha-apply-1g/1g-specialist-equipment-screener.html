@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you need specialist equipment at work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-specialist-equipment-screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you need equipment, adaptations or software to support you with your condition at work?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">Access to Work can provide things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>specialist equipment, like adapted keyboards and mouse alternatives</li>
+                  <li>assistive software, like screen readers</li>
+                  <li>another type of equipment, adaptations or software to support your condition</li>
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="specialist-equipment-screener" name="specialist-equipment-screener"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="specialist-equipment-screener-2"
+                           name="specialist-equipment-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-screener-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="specialist-equipment-screener-task-list" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

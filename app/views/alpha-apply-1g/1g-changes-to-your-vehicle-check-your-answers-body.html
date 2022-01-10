@@ -1,0 +1,199 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+{% if data['changes-to-your-vehicle-screener'] =="Yes" %}
+
+<h2 class="govuk-heading-m">Changes to your vehicle</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Does your condition mean that you need changes to the vehicle you use to travel to work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-your-vehicle-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you need changes to the vehicle you use to travel to work?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is the make and model of your vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-your-vehicle-vehicle-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-vehicle-type">
+              Change
+              <span class="govuk-visually-hidden"> What is the make and model of your vehicle?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who owns this vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-your-vehicle-ownership'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-vehicle-type">
+              Change
+              <span class="govuk-visually-hidden"> Who owns this vehicle?</span>
+            </a>
+          </dd>
+        </div>
+
+        {% if data['changes-to-your-vehicle-ownership'] =="Me" %}
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What changes do you need to your vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-changes-do-you-need-to-your-vehicle'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> What change do you need to your vehicle?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How will these changes meet your needs?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-will-vehicle-changes-meet-your-needs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> How will these changes meet your needs?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+    {% endif %}
+
+
+      </dl>
+
+        {% if data['changes-to-your-vehicle-ownership'] =="Someone else" %}
+
+        <h2 class="govuk-heading-m">Contact details of the vehicle owner</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+    <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-vehicle-someone-else-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their relationship to you
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-vehicle-someone-else-relationship-to-you'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their relationship to you</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-vehicle-someone-else-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Their email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-vehicle-someone-else-email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-someone-else">
+              Change
+              <span class="govuk-visually-hidden"> Their email address</span>
+            </a>
+          </dd>
+        </div>
+    </dl>
+
+      <h2 class="govuk-heading-m">Requested vehicle changes</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What changes do you need to your vehicle?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-changes-do-you-need-to-your-vehicle'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> What change do you need to your vehicle?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How will this change meet your needs?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-will-vehicle-changes-meet-your-needs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1g/1g-changes-to-your-vehicle-change">
+              Change
+              <span class="govuk-visually-hidden"> Tell us about how this change will meet your needs</span>
+            </a>
+          </dd>
+        </div>
+
+    </dl>
+
+        {% endif %}
+
+{% endif %}
+  </div>
+</div>
+
+{% endblock %}

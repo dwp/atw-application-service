@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Print answers – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{% set print = true %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Application information</h1>
+
+<p>These are the details of the application you are submitting. You can also save and print a copy of your claim
+    submission.</p>
+
+        <form>
+        <input type="button" class="govuk-button govuk-!-display-none-print" data-module="govuk-button" value="Print this page" onClick="window.print()">
+        </form>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    </div>
+</div>
+
+          {% include "alpha-apply-1g/1g-your-details-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-your-health-condition-or-disability-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1g/1g-employment-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1g/1g-contacting-you-check-your-answers-everything-body.html" %}
+
+          {% include "alpha-apply-1g/1g-specialist-equipment-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-support-worker-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-mental-health-support-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-travelling-to-and-from-work-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-travel-during-work-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-workplace-adaptations-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-changes-to-your-vehicle-check-your-answers-body.html" %}
+
+          {% include "alpha-apply-1g/1g-extra-information-check-your-answers-body.html" %}
+
+
+{% endblock %}

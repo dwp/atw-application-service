@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your email address? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-what-is-your-telephone-number">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <div class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is your email address?
+            </h1>
+          </legend>
+          <div id="email-hint" class="govuk-hint">
+            This must be a personal email address, not a work email address.
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="email-hint">
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                  <b>Personal email address</b>
+                </label>
+                <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+              </div>
+            </fieldset>
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <form class="form" action="/alpha-apply-1g/1g-national-insurance-number" method="post">
+            <p>
+              <input type="hidden" name="no-email" value="true">
+              <a href="/alpha-apply-1g/1g-national-insurance-number">I don't have an email address</a>
+            </p>
+            </form>
+            <div class="govuk-!-padding-bottom-2"></div>
+          </div>
+
+      <form class="form" action="/alpha-apply-1g/1g-national-insurance-number" method="post">
+        <input type="hidden" name="email-true" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

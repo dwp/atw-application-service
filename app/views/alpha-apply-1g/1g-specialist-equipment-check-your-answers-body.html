@@ -1,0 +1,154 @@
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+  {% if data['specialist-equipment-screener'] =="Yes" %}
+
+    <h2 class="govuk-heading-m">Specialist equipment</h2>
+
+    {% if (data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] =="No, I do not know what I need") %}
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you need equipment, adaptations or software to support you with your condition at work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-screener'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1g/1g-specialist-equipment-screener">
+            Change
+            <span class="govuk-visually-hidden"> Do you need equipment, adaptations or software to support you with your condition at work?</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you know what specialist equipment you need?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1g/1g-specialist-equipment-do-you-know-what-specialist-equipment-you-need">
+            Change
+            <span class="govuk-visually-hidden"> Do you know what specialist equipment you need?</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    {% endif %}
+
+    {% if (data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] =="Yes, I know what I need") %}
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you need equipment, adaptations or software to support you with your condition at work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-screener'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1g/1g-specialist-equipment-screener">
+            Change
+            <span class="govuk-visually-hidden"> Do you need equipment, adaptations or software to support you with your condition at work?</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you know what specialist equipment you need?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-apply-1g/1g-specialist-equipment-do-you-know-what-specialist-equipment-you-need">
+            Change
+            <span class="govuk-visually-hidden"> Do you know what specialist equipment you need?</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What type of specialist equipment do you need?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-type-1'] }}
+          <br>
+          {{ data['specialist-equipment-type-2'] }}
+          <br>
+          {{ data['specialist-equipment-type-3'] }}
+          <br>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          {% if data['specialist-equipment-type-3'] %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-hmrc-table-3">
+            Change
+            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+          </a>
+          {% elseif data['specialist-equipment-type-2'] %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-hmrc-table-2">
+            Change
+            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+          </a>
+          {% else %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-hmrc-table-1">
+            Change
+            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+          </a>
+          {% endif %}
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How will this equipment help you at work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['specialist-equipment-textbox-3'] }}
+          {% if data['specialist-equipment-textbox-2'] %}
+          {{ data['specialist-equipment-textbox-2'] }}
+          {% endif %}
+          {% if data['specialist-equipment-textbox-1'] %}
+          {{ data['specialist-equipment-textbox-1'] }}
+          {% endif %}
+          <br>
+        </dd>
+
+        <dd class="govuk-summary-list__actions">
+          {% if data['specialist-equipment-textbox-3'] %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-impact-of-not-having-it-3">
+            Change
+            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+          </a>
+          {% elseif data['specialist-equipment-textbox-2'] %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-impact-of-not-having-it-2">
+            Change
+            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+          </a>
+          {% else %}
+          <a href="/alpha-apply-1g/1g-specialist-equipment-impact-of-not-having-it-1">
+            Change
+            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+          </a>
+          {% endif %}
+        </dd>
+      </div>
+    </dl>
+    {% endif %}
+
+    {% endif %}
+
+  </div>
+</div>
+
+
+{% endblock %}

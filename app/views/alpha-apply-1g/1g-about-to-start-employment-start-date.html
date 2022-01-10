@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+When will your start this job? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-about-to-start-employment-job-description">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-about-to-start-employment-hours-per-week" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="about-to-start-employment-start-date-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              When will you be starting your new job?
+            </h1>
+          </legend>
+
+          <div id="about-to-start-employment-start-date-hint" class="govuk-hint">If you do not have a start date yet, provide an estimated start date.</div>
+
+          <div id="about-to-start-employment-start-date-hint" class="govuk-hint">
+            For example, <span id="about-to-start-employment-future-date"></span>.
+          </div>
+
+          <script>
+            const d = new Date();
+            d.setMonth(d.getMonth() + 1);
+            document.getElementById("about-to-start-employment-future-date").innerHTML = d.getDate() + " " + d.getMonth() + 1 + " " + d.getFullYear();
+          </script>
+
+          <div class="govuk-date-input" id="about-to-start-employment-start-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="about-to-start-employment-start-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="about-to-start-employment-start-date-day" name="about-to-start-employment-start-date-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="about-to-start-employment-start-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="about-to-start-employment-start-date-month" name="about-to-start-employment-start-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="about-to-start-employment-start-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="about-to-start-employment-start-date-year" name="about-to-start-employment-start-date-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+
+  </div>
+
+{% endblock %}

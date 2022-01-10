@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-self-employment-do-you-have-a-company-registration-number">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-self-employment-6-weeks" method="post">
+
+
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="self-employment-company-registration-number">
+          What is your company registration number?
+        </label>
+        </h1>
+        <div id="self-employment-company-registration-number-hint" class="govuk-hint">
+          You can search Companies House for your <a
+                href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">company registration number (opens in a new tab)</a>.
+        </div>
+        <div class="govuk-!-padding-bottom-2"></div>
+        <input class="govuk-input govuk-input--width-10" id="self-employment-company-registration-number" name="self-employment-company-registration-number" type="text" aria-describedby="self-employment-company-registration-number-hint">
+      </div>
+
+
+      <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

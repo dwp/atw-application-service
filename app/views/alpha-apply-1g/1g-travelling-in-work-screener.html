@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you need support to travel during work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-travelling-in-work-textbox" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you need support to travel in work?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">Examples of different types of support to travel in work include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>taxi fares for travel during work, where public transport or a company car cannot be used</li>
+                  <li>the cost of temporarily hiring a vehicle while your own is being adapted or repaired</li>
+                </ul>
+
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travelling-in-work-screener"
+                           name="travelling-in-work-screener"
+                           type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="travelling-in-work-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travelling-in-work-screener-2"
+                           name="travelling-in-work-screener"
+                           type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="travelling-in-work-screener-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("travelling-in-work-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("travelling-in-work-screener", "No")
+                }
+                </script>
+
+{% endblock %}

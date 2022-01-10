@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-do-you-need-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-who-are-you-applying-for" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="1g-who-are-you-applying-for-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Who are you applying for?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1g-who-are-you-applying-for" name="1g-who-are-you-applying-for" type="radio"
+                       value="myself" aria-describedby="1g-who-are-you-applying-for-hint">
+                <label class="govuk-label govuk-radios__label" for="1g-who-are-you-applying-for">
+                  <b>Myself</b>
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  I have a disability or physical or mental health condition that means I need support to do my job
+                  or get to work.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1g-who-are-you-applying-for-2" name="1g-who-are-you-applying-for" type="radio"
+                       value="someone else" aria-describedby="1g-who-are-you-applying-for-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="1g-who-are-you-applying-for-2">
+                  <b>Someone else</b>
+                </label>
+                <div id="1g-who-are-you-applying-for-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  I am applying for someone else that has a disability or physical or mental health condition that
+                  means they need support to do their job or to get to work.
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+
+  </div>
+
+
+  <p>Or, you can <a href="#">return to a saved Access to Work application</a>.</p>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

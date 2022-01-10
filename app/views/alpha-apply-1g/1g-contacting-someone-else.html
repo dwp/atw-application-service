@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details of the person we should contact – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-contacting-you-about-your-application">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1g/1g-contacting-you-check-your-answers-everything" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l">
+          Details of the person we should contact
+        </label>
+        </h1>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contacting-someone-else-name">
+            Their full name
+          </label>
+          <input class="govuk-input" id="contacting-someone-else-name" name="contacting-someone-else-name" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="relationship-to-you">
+            Their relationship to you
+          </label>
+          <input class="govuk-input" id="relationship-to-you" name="relationship-to-you" type="text"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contacting-someone-else-phone">
+            Their telephone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="contacting-someone-else-phone" name="contacting-someone-else-phone" type="tel" autocomplete="tel"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contacting-someone-else-email">
+            Their email address
+          </label>
+          <input class="govuk-input" id="contacting-someone-else-email" name="contacting-someone-else-email" type="email" spellcheck="false" aria-describedby="contacting-someone-else-email-hint" autocomplete="email">
+
+          <div class="govuk-!-padding-bottom-1"></div>
+
+          <div class="govuk-inset-text">
+            We may ask you to confirm your permission for us to contact this person at a later date.
+          </div>
+
+
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+      </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

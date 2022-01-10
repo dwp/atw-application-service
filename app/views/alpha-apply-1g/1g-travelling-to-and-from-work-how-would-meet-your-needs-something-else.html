@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How will support to travel to and from work meet your needs? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-travelling-to-and-from-work-what-support-do-you-need">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">Travel to work support</h1>
+
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m"
+                                                 for="what-do-you-need-travel-something-else">
+            What support do you need to travel to work?
+          </label>
+          </h2>
+
+          <div id="what-do-you-need-travel-something-else-hint" class="govuk-hint">
+            For example: community bus service.
+          </div>
+
+          <input class="govuk-input" id="what-do-you-need-travel-something-else" name="what-do-you-need-travel-something-else" type="text">
+        </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="how-will-support-help-something-else">
+                  <h2 class="govuk-fieldset__heading">
+                    How will support to travel to work meet your needs?
+                  </h2>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">You can include things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>what you find difficult about travelling to work</li>
+                  <li>how long it takes you to travel to work</li>
+                  <li>the effect of not having any support to travel to work</li>
+                </ul>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count" id="how-will-support-help-something-else"
+                              name="how-will-support-help-something-else"
+                              rows="10" aria-describedby="how-will-support-help-something-else-info how-will-support-help-something-else"></textarea>
+                  </div>
+
+                  <div id="how-will-support-help-something-else-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 500 characters
+                  </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+
+      <form class="form" action="/alpha-apply-1g/1g-travelling-to-and-from-work-how-many-journeys-something-else"
+            method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+
+
+{% endblock %}
