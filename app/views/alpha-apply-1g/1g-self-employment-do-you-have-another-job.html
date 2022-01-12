@@ -33,7 +33,7 @@ Do you have another job? – Access to Work – GOV.UK
 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job"
-                           type="radio" value="Yes">
+                           type="radio" value="Yes" {{ checked("do-you-have-another-job", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="do-you-have-another-job">
                       Yes
                     </label>
@@ -41,7 +41,7 @@ Do you have another job? – Access to Work – GOV.UK
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="do-you-have-another-job-2"
                            name="do-you-have-another-job"
-                           type="radio" value="No">
+                           type="radio" value="No" {{ checked("do-you-have-another-job", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2">
                       No
                     </label>

@@ -55,8 +55,7 @@ What health condition or disability do you have? – Access to Work – GOV.UK
                   </div>
                   <input class="govuk-input" id="1g-your-health-condition-or-disability-1"
                          name="1g-your-health-condition-or-disability-1" type="text"
-                         aria-describedby="1g-your-health-condition-or-disability-1-hint" {{
-                         data['1g-your-health-condition-or-disability-1'] }}>
+                         aria-describedby="1g-your-health-condition-or-disability-1-hint" value="{{ data['1g-your-health-condition-or-disability-1'] }}">
                 </div>
 
               </fieldset>
@@ -69,13 +68,15 @@ What health condition or disability do you have? – Access to Work – GOV.UK
             </legend>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes">
+                <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes" {{
+                       checked("add-another-1", "Yes") }}>
                 <label class="govuk-label govuk-radios__label" for="add-another-1">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No">
+                <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No" {{
+                       checked("add-another-1", "No") }}>
                 <label class="govuk-label govuk-radios__label" for="add-another-1-2">
                   No
                 </label>

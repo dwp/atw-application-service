@@ -30,25 +30,29 @@ Details of the person we should contact – Access to Work – GOV.UK
           <label class="govuk-label" for="contacting-someone-else-name">
             Their full name
           </label>
-          <input class="govuk-input" id="contacting-someone-else-name" name="contacting-someone-else-name" type="text"></div>
+          <input class="govuk-input" id="contacting-someone-else-name" name="contacting-someone-else-name"
+                 type="text" value="{{ data['contacting-someone-else-name'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="relationship-to-you">
             Their relationship to you
           </label>
-          <input class="govuk-input" id="relationship-to-you" name="relationship-to-you" type="text"></div>
+          <input class="govuk-input" id="relationship-to-you" name="relationship-to-you" type="text" value="{{ data['relationship-to-you'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="contacting-someone-else-phone">
             Their telephone number
           </label>
-          <input class="govuk-input govuk-input--width-20" id="contacting-someone-else-phone" name="contacting-someone-else-phone" type="tel" autocomplete="tel"></div>
+          <input class="govuk-input govuk-input--width-20" id="contacting-someone-else-phone"
+                 name="contacting-someone-else-phone" type="tel" autocomplete="tel" value="{{ data['contacting-someone-else-phone'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="contacting-someone-else-email">
             Their email address
           </label>
-          <input class="govuk-input" id="contacting-someone-else-email" name="contacting-someone-else-email" type="email" spellcheck="false" aria-describedby="contacting-someone-else-email-hint" autocomplete="email">
+          <input class="govuk-input" id="contacting-someone-else-email" name="contacting-someone-else-email"
+                 type="email" spellcheck="false" aria-describedby="contacting-someone-else-email-hint"
+                 autocomplete="email" value="{{ data['contacting-someone-else-email'] }}">
 
           <div class="govuk-!-padding-bottom-1"></div>
 

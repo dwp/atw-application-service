@@ -34,14 +34,14 @@ Do you need a change to your vehicle? – Access to Work – GOV.UK
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="changes-to-your-vehicle-screener" name="changes-to-your-vehicle-screener"
-                           type="radio" value="Yes">
+                           type="radio" value="Yes" {{ checked("changes-to-your-vehicle-screener", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-screener">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="changes-to-your-vehicle-screener-2" name="changes-to-your-vehicle-screener"
-                           type="radio" value="No">
+                           type="radio" value="No" {{ checked("changes-to-your-vehicle-screener", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-screener-2">
                       No
                     </label>

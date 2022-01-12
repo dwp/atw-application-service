@@ -37,7 +37,7 @@ Is there anything else you'd like to tell us? – Access to Work – GOV.UK
 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="extra-information-screener" name="extra-information-screener"
-                           type="radio" value="Yes">
+                           type="radio" value="Yes" {{ checked("extra-information-screener", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="extra-information-screener">
                       Yes
                     </label>
@@ -45,7 +45,7 @@ Is there anything else you'd like to tell us? – Access to Work – GOV.UK
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="extra-information-screener-2"
                            name="extra-information-screener"
-                           type="radio" value="No">
+                           type="radio" value="No" {{ checked("extra-information-screener", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="extra-information-screener-2">
                       No
                     </label>

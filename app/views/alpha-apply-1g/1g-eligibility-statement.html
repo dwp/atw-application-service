@@ -34,26 +34,29 @@ Check you're eligible – Access to Work – GOV.UK
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="disability" name="disability" type="checkbox"
-                               value="disability">
+                               value="disability" data-behaviour="exclusive" {{ checked("I have a physical or mental health condition or disability that means I need support to do my job, or to get to and from work", "disability") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="disability">
                           I have a physical or mental health condition or disability that means I need support to do my job, or to get to and from work
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="age-2" name="age" type="checkbox" value="age">
+                        <input class="govuk-checkboxes__input" id="age-2" name="age" type="checkbox" value="age-2"
+                               data-behaviour="exclusive" {{ checked("I’m aged 16 or over", "age-2") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="age-2">
                           I’m aged 16 or over
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="paid-work-3" name="paid-work" type="checkbox"
-                               value="paid-work">
+                               value="paid-work-3" data-behaviour="exclusive" {{ checked("I'm in paid work (or about
+                        to start or return to work) in England, Scotland or Wales", "paid-work-3") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="paid-work-3">
                           I'm in paid work (or about to start or return to work) in England, Scotland or Wales
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="gb-4" name="gb" type="checkbox" value="gb">
+                        <input class="govuk-checkboxes__input" id="gb-4" name="gb" type="checkbox" value="gb-4"
+                               data-behaviour="exclusive" {{ checked("I live in England, Scotland or Wales", "gb-4") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="gb-4">
                           I live in England, Scotland or Wales
                         </label>

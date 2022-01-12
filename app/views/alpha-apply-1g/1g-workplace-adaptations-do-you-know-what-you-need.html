@@ -36,14 +36,14 @@ Do you know what physical changes should be made at your workplace? – Access t
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="workplace-adaptations-do-you-know-what-you-need" name="workplace-adaptations-do-you-know-what-you-need"
-                           type="radio" value="Yes, I know what changes should be made">
+                           type="radio" value="Yes, I know what changes should be made" {{ checked("workplace-adaptations-do-you-know-what-you-need", "Yes, I know what changes should be made") }}>
                     <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-know-what-you-need">
                       Yes, I know what changes should be made
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="workplace-adaptations-do-you-know-what-you-need-2" name="workplace-adaptations-do-you-know-what-you-need"
-                           type="radio" value="No, I do not know what changes should be made">
+                           type="radio" value="No, I do not know what changes should be made" {{ checked("workplace-adaptations-do-you-know-what-you-need", "No, I do not know what changes should be made") }}>
                     <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-know-what-you-need-2">
                       No, I do not know what changes should be made
                     </label>

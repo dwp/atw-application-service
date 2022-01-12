@@ -30,19 +30,20 @@
 
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="short-or-long-term" name="short-or-long-term" type="radio" value="Yes, I need a support worker on a temporary basis">
+              <input class="govuk-radios__input" id="short-or-long-term" name="short-or-long-term" type="radio"
+                     value="Yes, I need a support worker on a temporary basis" {{ checked("short-or-long-term", "Yes, I need a support worker on a temporary basis") }}>
               <label class="govuk-label govuk-radios__label" for="short-or-long-term">
                 Yes, I need a support worker on a temporary basis
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="short-or-long-term-2" name="short-or-long-term" type="radio" value="No, I need a support worker on a permanent basis">
+              <input class="govuk-radios__input" id="short-or-long-term-2" name="short-or-long-term" type="radio" value="No, I need a support worker on a permanent basis" {{ checked("short-or-long-term", "No, I need a support worker on a permanent basis") }}>
               <label class="govuk-label govuk-radios__label" for="short-or-long-term-2">
                 No, I need a support worker on a permanent basis
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="short-or-long-term-3" name="short-or-long-term" type="radio" value="I'm not sure">
+              <input class="govuk-radios__input" id="short-or-long-term-3" name="short-or-long-term" type="radio" value="I'm not sure" {{ checked("short-or-long-term", "I'm not sure") }}>
               <label class="govuk-label govuk-radios__label" for="short-or-long-term-3">
                 I'm not sure
               </label>

@@ -26,7 +26,7 @@ Second quote – Access to Work – GOV.UK
           </label>
           </h2>
           <input class="govuk-input" id="taxi-company-name-2" name="taxi-company-name-2" type="text"
-                 aria-describedby="taxi-company-name-2-hint">
+                 aria-describedby="taxi-company-name-2-hint" value="{{ data['taxi-company-name-2'] }}">
         </div>
 
         <div class="govuk-form-group">
@@ -40,7 +40,7 @@ Second quote – Access to Work – GOV.UK
           <div class="govuk-input__wrapper">
             <div class="govuk-input__prefix" aria-hidden="true">£</div>
             <input class="govuk-input govuk-input--width-5" id="taxi-cost-2" name="taxi-cost-2" type="text"
-                   spellcheck="false">
+                   spellcheck="false" value="{{ data['taxi-cost-2'] }}">
             <div class="govuk-input__suffix" aria-hidden="true">per journey</div>
           </div>
         </div>

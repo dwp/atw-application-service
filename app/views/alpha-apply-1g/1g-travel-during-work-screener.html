@@ -46,7 +46,7 @@ Do you need support to travel during work? – Access to Work – GOV.UK
 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="travel-during-work-screener" name="travel-during-work-screener"
-                           type="radio" value="Yes">
+                           type="radio" value="Yes" {{ checked("travel-during-work-screener", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="travel-during-work-screener">
                       Yes
                     </label>
@@ -54,7 +54,7 @@ Do you need support to travel during work? – Access to Work – GOV.UK
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="travel-during-work-screener-2"
                            name="travel-during-work-screener"
-                           type="radio" value="No">
+                           type="radio" value="No" {{ checked("travel-during-work-screener", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="travel-during-work-screener-2">
                       No
                     </label>

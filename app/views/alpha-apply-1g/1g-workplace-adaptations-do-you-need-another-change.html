@@ -34,14 +34,16 @@ Do you need another physical change at your workplace? – Access to Work – GO
                   <div class="govuk-radios govuk-radios--inline">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="workplace-adaptations-do-you-need-another-change"
-                             name="workplace-adaptations-do-you-need-another-change" type="radio" value="Yes">
+                             name="workplace-adaptations-do-you-need-another-change" type="radio" value="Yes" {{
+                             checked("workplace-adaptations-do-you-need-another-change", "Yes") }}>
                       <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-need-another-change">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="workplace-adaptations-do-you-need-another-change-2"
-                             name="workplace-adaptations-do-you-need-another-change" type="radio" value="No">
+                             name="workplace-adaptations-do-you-need-another-change" type="radio" value="No" {{
+                             checked("workplace-adaptations-do-you-need-another-change", "No") }}>
                       <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-need-another-change-2">
                         No
                       </label>

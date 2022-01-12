@@ -29,13 +29,13 @@ href: casa.journeyPreviousUrl
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="what-changes-do-you-need-to-your-vehicle">
-            What changes do you need to your vehicle?
+            What changes do you need to the vehicle?
           </label>
           </h1>
 
           <textarea class="govuk-textarea govuk-js-character-count" id="what-changes-do-you-need-to-your-vehicle"
                     name="what-changes-do-you-need-to-your-vehicle" rows="8"
-                    aria-describedby="what-changes-do-you-need-to-your-vehicle-info what-changes-do-you-need-to-your-vehicle"></textarea>
+                    aria-describedby="what-changes-do-you-need-to-your-vehicle-info what-changes-do-you-need-to-your-vehicle">{{ data['what-changes-do-you-need-to-your-vehicle'] }}</textarea>
         </div>
 
         <div id="what-changes-do-you-need-to-your-vehicle-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
@@ -52,11 +52,11 @@ href: casa.journeyPreviousUrl
           </h1>
 
           <div id="how-will-vehicle-changes-meet-your-needs-hint" class="govuk-hint">
-            You should include the effect of not currently having theses changes to your vehicle.
+            You should include the effect of not currently having theses changes to the vehicle.
           </div>
 
           <textarea class="govuk-textarea govuk-js-character-count" id="how-will-vehicle-changes-meet-your-needs" name="how-will-vehicle-changes-meet-your-needs" rows="8"
-                    aria-describedby="how-will-vehicle-changes-meet-your-needs-info how-will-vehicle-changes-meet-your-needs-hint"></textarea>
+                    aria-describedby="how-will-vehicle-changes-meet-your-needs-info how-will-vehicle-changes-meet-your-needs-hint">{{ data['how-will-vehicle-changes-meet-your-needs'] }}</textarea>
         </div>
 
         <div id="how-will-vehicle-changes-meet-your-needs-info" class="govuk-hint govuk-character-count__message" aria-live="polite">

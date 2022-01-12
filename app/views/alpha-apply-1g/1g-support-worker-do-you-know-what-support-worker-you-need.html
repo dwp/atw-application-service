@@ -37,7 +37,7 @@ Do you know what type of support worker you need? – Access to Work – GOV.UK
 
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="support-worker-do-you-know-what-support-worker-you-need" name="support-worker-do-you-know-what-support-worker-you-need"
-                           type="radio" value="Yes, I know what I need">
+                           type="radio" value="Yes, I know what I need" {{ checked("support-worker-do-you-know-what-support-worker-you-need", "Yes, I know what I need") }}>
                     <label class="govuk-label govuk-radios__label" for="support-worker-do-you-know-what-support-worker-you-need">
                       Yes, I know what I need
                     </label>
@@ -45,7 +45,7 @@ Do you know what type of support worker you need? – Access to Work – GOV.UK
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="support-worker-do-you-know-what-support-worker-you-need-2"
                            name="support-worker-do-you-know-what-support-worker-you-need"
-                           type="radio" value="No, I do not know what I need">
+                           type="radio" value="No, I do not know what I need" {{ checked("support-worker-do-you-know-what-support-worker-you-need", "No, I do not know what I need") }}>
                     <label class="govuk-label govuk-radios__label" for="support-worker-do-you-know-what-support-worker-you-need-2">
                       No, I do not know what I need
                     </label>

@@ -30,13 +30,17 @@
 
                 <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="contacting-you-about-your-application" name="contacting-you-about-your-application" type="radio" value="Me">
+                        <input class="govuk-radios__input" id="contacting-you-about-your-application"
+                               name="contacting-you-about-your-application" type="radio" value="Me" {{
+                               checked("contacting-you-about-your-application", "Me") }}>
                         <label class="govuk-label govuk-radios__label" for="contacting-you-about-your-application">
                             Me
                         </label>
                     </div>
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="contacting-you-about-your-application-2" name="contacting-you-about-your-application" type="radio" value="Someone else">
+                        <input class="govuk-radios__input" id="contacting-you-about-your-application-2"
+                               name="contacting-you-about-your-application" type="radio" value="Someone else" {{
+                               checked("contacting-you-about-your-application", "Someone else") }}>
                         <label class="govuk-label govuk-radios__label" for="contacting-you-about-your-application-2">
                             Someone else
                         </label>

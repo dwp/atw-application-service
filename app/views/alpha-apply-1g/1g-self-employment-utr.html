@@ -26,7 +26,8 @@ What is your Unique Taxpayer Reference? – Access to Work – GOV.UK
         <div id="utr-hint" class="govuk-hint">
           This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
         </div>
-        <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
+        <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint"
+               value="{{ data['utr'] }}">
       </div>
 
       <p><a href="/alpha-apply-1g/1g-self-employment-start-date">I do not have a

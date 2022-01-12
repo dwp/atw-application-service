@@ -5,7 +5,7 @@ Confirm your email address – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1g/1g-contacting-you-phone">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-contacting-you-confirm-phone">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -34,7 +34,8 @@ Confirm your email address – Access to Work – GOV.UK
 
               <div class="govuk-form-group">
                 <input class="govuk-input" id="email-reasonable-adjustment" name="email-reasonable-adjustment" type="email"
-                       spellcheck="false" aria-describedby="email-reasonable-adjustment-hint" autocomplete="email">
+                       spellcheck="false" aria-describedby="email-reasonable-adjustment-hint" autocomplete="email"
+                       value="{{ data['email-reasonable-adjustment'] }}">
               </div>
               <div class="govuk-!-padding-bottom-2"></div>
 

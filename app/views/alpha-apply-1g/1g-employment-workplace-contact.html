@@ -34,19 +34,20 @@ Your workplace contact – Access to Work – GOV.UK
           <label class="govuk-label" for="workplace-name">
             Their name
           </label>
-          <input class="govuk-input" id="workplace-name" name="workplace-name" type="text"></div>
+          <input class="govuk-input" id="workplace-name" name="workplace-name" type="text" value="{{ data['workplace-name'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="role-name">
             Their job title
           </label>
-          <input class="govuk-input" id="role-name" name="role-name" type="text"></div>
+          <input class="govuk-input" id="role-name" name="role-name" type="text" value="{{ data['role-name'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="workplace-email">
             Their email address
           </label>
-          <input class="govuk-input" id="workplace-email" name="workplace-email" type="email" spellcheck="false" aria-describedby="workplace-email-hint" autocomplete="email">
+          <input class="govuk-input" id="workplace-email" name="workplace-email" type="email" spellcheck="false"
+                 aria-describedby="workplace-email-hint" autocomplete="email" value="{{ data['workplace-email'] }}">
 
           <div class="govuk-!-padding-bottom-6"></div>
 
@@ -54,7 +55,8 @@ Your workplace contact – Access to Work – GOV.UK
           <label class="govuk-label" for="workplace-phone">
             Their telephone number
           </label>
-          <input class="govuk-input govuk-input--width-20" id="workplace-phone" name="workplace-phone" type="tel" autocomplete="tel"></div>
+          <input class="govuk-input govuk-input--width-20" id="workplace-phone" name="workplace-phone" type="tel"
+                 autocomplete="tel" value="{{ data['workplace-phone'] }}"></div>
 
       </div>
 

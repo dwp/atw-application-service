@@ -19,7 +19,7 @@ What is your job description? – Access to Work – GOV.UK
 
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="self-employment-job-description">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employment-job-description">
             What is your job description?
           </label>
           </h1>
@@ -31,12 +31,12 @@ What is your job description? – Access to Work – GOV.UK
             <li>responsibilities</li>
             <li>day-to-day activities</li>
           </ul>
-          <textarea class="govuk-textarea govuk-js-character-count" id="self-employment-job-description"
-                    name="self-employment-job-description" rows="10"
-                    aria-describedby="self-employment-job-description-info self-employment-job-description-hint"></textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="employment-job-description"
+                    name="employment-job-description" rows="10"
+                    aria-describedby="employment-job-description-info employment-job-description-hint">{{ data['employment-job-description'] }}</textarea>
         </div>
 
-        <div id="self-employment-job-description-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        <div id="employment-job-description-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
           You can enter up to 500 characters
         </div>
 

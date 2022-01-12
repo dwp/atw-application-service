@@ -82,13 +82,15 @@
       </legend>
       <div class="govuk-radios govuk-radios--inline">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-3" name="add-another-3" type="radio" value="Yes">
+          <input class="govuk-radios__input" id="add-another-3" name="add-another-3" type="radio" value="Yes" {{
+                 checked("add-another-3", "Yes") }}>
           <label class="govuk-label govuk-radios__label" for="add-another-3">
             Yes
           </label>
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-3-2" name="add-another-3" type="radio" value="No">
+          <input class="govuk-radios__input" id="add-another-3-2" name="add-another-3" type="radio" value="No" {{
+                 checked("add-another-3", "No") }}>
           <label class="govuk-label govuk-radios__label" for="add-another-3-2">
             No
           </label>

@@ -32,7 +32,8 @@ How will support to travel to and from work meet your needs? – Access to Work 
             For example: community bus service.
           </div>
 
-          <input class="govuk-input" id="what-do-you-need-travel-something-else" name="what-do-you-need-travel-something-else" type="text">
+          <input class="govuk-input" id="what-do-you-need-travel-something-else"
+                 name="what-do-you-need-travel-something-else" type="text" value="{{ data['what-do-you-need-travel-something-else'] }}">
         </div>
 
             <div class="govuk-form-group">
@@ -59,7 +60,7 @@ How will support to travel to and from work meet your needs? – Access to Work 
 
                     <textarea class="govuk-textarea govuk-js-character-count" id="how-will-support-help-something-else"
                               name="how-will-support-help-something-else"
-                              rows="10" aria-describedby="how-will-support-help-something-else-info how-will-support-help-something-else"></textarea>
+                              rows="10" aria-describedby="how-will-support-help-something-else-info how-will-support-help-something-else">{{ data['how-will-support-help-something-else'] }}</textarea>
                   </div>
 
                   <div id="how-will-support-help-something-else-info" class="govuk-hint govuk-character-count__message" aria-live="polite">

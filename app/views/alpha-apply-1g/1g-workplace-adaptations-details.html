@@ -26,7 +26,8 @@ What change to your workplace do you need? – Access to Work – GOV.UK
         <div id="what-change-to-workplace-hint" class="govuk-hint">
           For example, 'a wheelchair ramp'. If you would like more than one change to your workplace, you will have
           the option to add another one in the next step.</div>
-        <input class="govuk-input" id="what-change-to-workplace" name="what-change-to-workplace" type="text" aria-describedby="what-change-to-workplace-hint">
+        <input class="govuk-input" id="what-change-to-workplace" name="what-change-to-workplace" type="text"
+               aria-describedby="what-change-to-workplace-hint" value="{{ data['what-change-to-workplace'] }}">
       </div>
 
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
@@ -38,7 +39,7 @@ What change to your workplace do you need? – Access to Work – GOV.UK
           </h2>
           <div id="workplace-adaptations-how-will-this-meet-your-needs-hint" class="govuk-hint">
             You should include the effect of not currently having this change at your workplace.</div>
-          <textarea class="govuk-textarea govuk-js-character-count" id="workplace-adaptations-how-will-this-meet-your-needs" name="workplace-adaptations-how-will-this-meet-your-needs" rows="5" aria-describedby="workplace-adaptations-how-will-this-meet-your-needs-info workplace-adaptations-how-will-this-meet-your-needs-hint"></textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="workplace-adaptations-how-will-this-meet-your-needs" name="workplace-adaptations-how-will-this-meet-your-needs" rows="5" aria-describedby="workplace-adaptations-how-will-this-meet-your-needs-info workplace-adaptations-how-will-this-meet-your-needs-hint">{{ data['workplace-adaptations-how-will-this-meet-your-needs'] }}</textarea>
         </div>
 
         <div id="workplace-adaptations-how-will-this-meet-your-needs-info" class="govuk-hint govuk-character-count__message" aria-live="workplace-adaptations-how-will-this-meet-your-needs">

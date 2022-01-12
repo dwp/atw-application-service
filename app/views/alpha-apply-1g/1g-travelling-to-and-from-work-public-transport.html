@@ -28,14 +28,14 @@ Do you spend more than 2 hours on public transport on your journey to work? – 
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="public-transport-two-hours" name="public-transport-two-hours"
-                     type="radio" value="Yes">
+                     type="radio" value="Yes" {{ checked("public-transport-two-hours", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="public-transport-two-hours">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="public-transport-two-hours-2" name="public-transport-two-hours"
-                     type="radio" value="No">
+                     type="radio" value="No" {{ checked("public-transport-two-hours", "No") }}>
               <label class="govuk-label govuk-radios__label" for="public-transport-two-hours-2">
                 No
               </label>

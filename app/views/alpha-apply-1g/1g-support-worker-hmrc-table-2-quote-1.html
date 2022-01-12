@@ -121,14 +121,14 @@ You have provided 2 quotes – Access to Work – GOV.UK
       <div class="govuk-radios govuk-radios--inline">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="support-worker-third-quote-3"
-                 name="support-worker-third-quote-3" type="radio" value="Yes">
+                 name="support-worker-third-quote-3" type="radio" value="Yes" {{ checked("support-worker-third-quote-3", "Yes") }}>
           <label class="govuk-label govuk-radios__label" for="support-worker-third-quote-3">
             Yes
           </label>
         </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="support-worker-third-quote-3-2"
-                 name="support-worker-third-quote-3" type="radio" value="No">
+                 name="support-worker-third-quote-3" type="radio" value="No" {{ checked("support-worker-third-quote-3", "No") }}>
           <label class="govuk-label govuk-radios__label" for="support-worker-third-quote-3-2">
             No
           </label>

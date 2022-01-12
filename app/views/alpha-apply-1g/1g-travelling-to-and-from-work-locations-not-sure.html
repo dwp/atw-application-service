@@ -26,20 +26,23 @@ Will your journeys be between your home and work addresses? â€“ Access to Work â
           <div class="govuk-!-padding-bottom-2"></div>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure" name="travelling-to-and-from-work-locations-not-sure" type="radio" value="Yes">
+              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure"
+                     name="travelling-to-and-from-work-locations-not-sure" type="radio" value="Yes" {{
+                     checked("travelling-to-and-from-work-locations-not-sure", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure-2" name="travelling-to-and-from-work-locations-not-sure" type="radio" value="No">
+              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure-2" name="travelling-to-and-from-work-locations-not-sure" type="radio" value="No" {{ checked("travelling-to-and-from-work-locations-not-sure", "No") }}>
               <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure-2">
                 No
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure-3"
-                     name="travelling-to-and-from-work-locations-not-sure" type="radio" value="I'm not sure">
+                     name="travelling-to-and-from-work-locations-not-sure" type="radio" value="I am not sure" {{
+                     checked("travelling-to-and-from-work-locations-not-sure", "I am not sure") }}>
               <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure-3">
                 I'm not sure
               </label>

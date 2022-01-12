@@ -24,7 +24,8 @@ Vehicle details – Access to Work – GOV.UK
         <div id="changes-to-your-vehicle-vehicle-type-hint" class="govuk-hint">
           For example, 'Nissan Micra'.
         </div>
-        <input class="govuk-input" id="changes-to-your-vehicle-vehicle-type" name="changes-to-your-vehicle-vehicle-type" type="text">
+        <input class="govuk-input" id="changes-to-your-vehicle-vehicle-type"
+               name="changes-to-your-vehicle-vehicle-type" type="text" value="{{ data['changes-to-your-vehicle-vehicle-type'] }}">
       </div>
 
       <div class="govuk-!-padding-bottom-2"></div>
@@ -42,19 +43,19 @@ Vehicle details – Access to Work – GOV.UK
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership"
-                     name="changes-to-your-vehicle-ownership" type="radio" value="Me">
+                     name="changes-to-your-vehicle-ownership" type="radio" value="Me" {{ checked("changes-to-your-vehicle-ownership", "Me") }}>
               <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership">
                 Me
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else, like a family member">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-2" name="changes-to-your-vehicle-ownership" type="radio" value="Someone else, like a family member" {{ checked("changes-to-your-vehicle-ownership", "Someone else, like a family member") }}>
               <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-2">
                 Someone else, like a family member
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-3" name="changes-to-your-vehicle-ownership" type="radio" value="This is a lease or company vehicle">
+              <input class="govuk-radios__input" id="changes-to-your-vehicle-ownership-3" name="changes-to-your-vehicle-ownership" type="radio" value="This is a lease or company vehicle" {{ checked("changes-to-your-vehicle-ownership", "This is a lease or company vehicle") }}>
               <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-ownership-3">
                 This is a lease or company vehicle
               </label>

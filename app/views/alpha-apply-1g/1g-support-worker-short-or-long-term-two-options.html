@@ -30,13 +30,15 @@ Will you need a support worker on a temporary basis? – Access to Work – GOV.
 
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options" name="support-worker-short-or-long-term-two-options" type="radio" value="Yes, I need a support worker on a temporary basis">
+              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options"
+                     name="support-worker-short-or-long-term-two-options" type="radio"
+                     value="Yes, I need a support worker on a temporary basis" {{ checked("support-worker-short-or-long-term-two-options", "Yes, I need a support worker on a temporary basis") }}>
               <label class="govuk-label govuk-radios__label" for="support-worker-short-or-long-term-two-options">
                 Yes, I need a support worker on a temporary basis
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options-2" name="support-worker-short-or-long-term-two-options" type="radio" value="No, I need a support worker on a permanent basis">
+              <input class="govuk-radios__input" id="support-worker-short-or-long-term-two-options-2" name="support-worker-short-or-long-term-two-options" type="radio" value="No, I need a support worker on a permanent basis" {{ checked("support-worker-short-or-long-term-two-options", "No, I need a support worker on a permanent basis") }}>
               <label class="govuk-label govuk-radios__label" for="support-worker-short-or-long-term-two-options-2">
                 No, I need a support worker on a permanent basis
               </label>
