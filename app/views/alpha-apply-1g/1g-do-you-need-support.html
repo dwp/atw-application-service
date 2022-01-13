@@ -35,14 +35,14 @@ Do you need support with this application? – Access to Work – GOV.UK
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="do-you-need-support" name="do-you-need-support"
-                           type="radio" value="yes">
+                           type="radio" value="yes" {{ checked("do-you-need-support", "yes") }}>
                     <label class="govuk-label govuk-radios__label" for="do-you-need-support">
                       Yes, I'd like support
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="do-you-need-support-2" name="do-you-need-support"
-                           type="radio" value="no">
+                           type="radio" value="no" {{ checked("do-you-need-support", "no") }}>
                     <label class="govuk-label govuk-radios__label" for="do-you-need-support-2">
                       No, I would not like support
                     </label>

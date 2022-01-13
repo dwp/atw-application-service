@@ -25,38 +25,44 @@ What is your ethnic group? – Access to Work – GOV.UK
           </legend>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity" name="ethnicity" type="radio" value="white">
+              <input class="govuk-radios__input" id="ethnicity" name="ethnicity" type="radio" value="white" {{
+                     checked("ethnicity", "white") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity">
                 White
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity-2" name="ethnicity" type="radio" value="multiple">
+              <input class="govuk-radios__input" id="ethnicity-2" name="ethnicity" type="radio" value="multiple" {{
+                     checked("ethnicity", "multiple") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity-2">
                 Mixed or multiple ethnic groups
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity-3" name="ethnicity" type="radio" value="asian">
+              <input class="govuk-radios__input" id="ethnicity-3" name="ethnicity" type="radio" value="asian" {{
+                     checked("ethnicity", "asian") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity-3">
                 Asian or Asian British
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity-4" name="ethnicity" type="radio" value="black">
+              <input class="govuk-radios__input" id="ethnicity-4" name="ethnicity" type="radio" value="black" {{
+                     checked("ethnicity", "black") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity-4">
                 Black, African, Caribbean or Black British
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity-5" name="ethnicity" type="radio" value="other">
+              <input class="govuk-radios__input" id="ethnicity-5" name="ethnicity" type="radio" value="other" {{
+                     checked("ethnicity", "other") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity-5">
                 Other ethnic group
               </label>
             </div>
             <div class="govuk-radios__divider">or</div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="ethnicity-7" name="ethnicity" type="radio" value="skip">
+              <input class="govuk-radios__input" id="ethnicity-7" name="ethnicity" type="radio" value="skip" {{
+                     checked("ethnicity", "skip") }}>
               <label class="govuk-label govuk-radios__label" for="ethnicity-7">
                 Prefer not to say
               </label>

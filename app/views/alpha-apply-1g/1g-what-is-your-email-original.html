@@ -14,9 +14,6 @@ What is your email address? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-apply-1g/1g-national-insurance-number" method="post">
-      <input type="hidden" name="email-true" value="true">
-
       <div class="govuk-form-group">
         <div class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -33,7 +30,10 @@ What is your email address? – Access to Work – GOV.UK
 
               <div class="govuk-form-group">
                 <input class="govuk-input" id="your-email" name="your-email" type="your-email" spellcheck="false"
-                       aria-describedby="your-email-hint" autocomplete="your-email" value="{{ data['your-email'] }}">
+                       aria-describedby="your-email-hint" autocomplete="your-email">
+                {% if data['email-true'] =="true" %}
+                {{ data['your-email'] }}
+                {% endif %}
               </div>
             </fieldset>
             <div class="govuk-!-padding-bottom-5"></div>
@@ -41,10 +41,12 @@ What is your email address? – Access to Work – GOV.UK
             <p><a href="/alpha-apply-1g/1g-national-insurance-number" input type="hidden"
                   name="contacting-you-email" value="true">I don't have an email address</a></p>
 
-
+            
             <div class="govuk-!-padding-bottom-2"></div>
           </div>
 
+      <form class="form" action="/alpha-apply-1g/1g-national-insurance-number" method="post">
+        <input type="hidden" name="email-true" value="true">
           <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 

@@ -5,7 +5,7 @@ What is your address? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-apply-1g/1g-what-is-your-date-of-birth"">Back</a>
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-what-is-your-date-of-birth">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -37,7 +37,7 @@ What is your address? – Access to Work – GOV.UK
                     For example, WA4 1AB.
                   </div>
                   <input class="govuk-input govuk-input--width-10" id="claimant-postcode" name="claimant-postcode"
-                         type="text" autocomplete="postcodes"></div>
+                         type="text" autocomplete="postcodes" value="{{ data['claimant-postcode'] }}"></div>
 
               </fieldset>
             </div>
