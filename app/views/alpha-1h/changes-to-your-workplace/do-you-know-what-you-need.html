@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you know what physical changes should be made at your workplace? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/changes-to-your-workplace/contacting-your-employer">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/changes-to-your-workplace/do-you-know-what-you-need" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you know what physical changes should be made at your workplace to support your needs?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-3"></div>
+
+                <p>If you're not sure, we can help you find the right options for you.</p>
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="workplace-adaptations-do-you-know-what-you-need" name="workplace-adaptations-do-you-know-what-you-need"
+                           type="radio" value="Yes, I know what changes should be made" {{ checked("workplace-adaptations-do-you-know-what-you-need", "Yes, I know what changes should be made") }}>
+                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-know-what-you-need">
+                      Yes, I know what changes should be made
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="workplace-adaptations-do-you-know-what-you-need-2" name="workplace-adaptations-do-you-know-what-you-need"
+                           type="radio" value="No, I do not know what changes should be made" {{ checked("workplace-adaptations-do-you-know-what-you-need", "No, I do not know what changes should be made") }}>
+                    <label class="govuk-label govuk-radios__label" for="workplace-adaptations-do-you-know-what-you-need-2">
+                      No, I do not know what changes should be made
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("workplace-adaptations-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("workplace-adaptations-screener", "No")
+                }
+                </script>
+
+
+{% endblock %}

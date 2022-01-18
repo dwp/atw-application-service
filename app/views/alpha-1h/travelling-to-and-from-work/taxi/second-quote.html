@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Second quote – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/travelling-to-and-from-work/taxi/first-quote-summary">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/travelling-to-and-from-work/taxi/second-quote-summary" method="post">
+
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-heading-l">Second taxi quote</h1>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-company-name-2">
+            Taxi company name
+          </label>
+          </h2>
+          <input class="govuk-input" id="taxi-company-name-2" name="taxi-company-name-2" type="text"
+                 aria-describedby="taxi-company-name-2-hint" value="{{ data['taxi-company-name-2'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="taxi-cost-2">
+            Cost per journey
+          </label>
+          </h2>
+          <div id="taxi-cost-2-hint" class="govuk-hint">
+            Including any extra costs, like account fees and VAT.
+          </div>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="taxi-cost-2" name="taxi-cost-2" type="text"
+                   spellcheck="false" value="{{ data['taxi-cost-2'] }}">
+            <div class="govuk-input__suffix" aria-hidden="true">per journey</div>
+          </div>
+        </div>
+
+        </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="travelling-to-and-from-work-quote-2" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

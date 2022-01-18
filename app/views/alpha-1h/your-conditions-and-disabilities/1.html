@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What health condition or disability do you have? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/your-conditions-and-disabilities/1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What condition or disability do you have?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <p class="govuk-body">This can include, for example:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>a physical disability</li>
+                  <li>a mental health condition</li>
+                  <li>a hearing or sight impairment</li>
+                  <li>a learning disability or difference</li>
+                  <li>an illness</li>
+                  <li>a temporary condition</li>
+                  <li>a developmental condition</li>
+                  <li>any other condition, disability or illness not mentioned above</li>
+                </ul>
+
+                <p>You do not have to be medically diagnosed with a health condition or disability to be eligible.</p>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="1h-your-health-condition-or-disability-1">
+                    First condition or disability
+                  </label>
+                  </h1>
+                  <div id="1h-your-health-condition-or-disability-1-hint" class="govuk-hint">
+                    Add the name of one condition or disability – you'll have the option to add more in the next step.
+                  </div>
+                  <input class="govuk-input" id="1h-your-health-condition-or-disability-1"
+                         name="1h-your-health-condition-or-disability-1" type="text"
+                         aria-describedby="1h-your-health-condition-or-disability-1-hint" value="{{ data['1h-your-health-condition-or-disability-1'] }}">
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="add-another-1-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+              Do you have another condition or disability?
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-1" name="add-another-1" type="radio" value="Yes" {{
+                       checked("add-another-1", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="add-another-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-1-2" name="add-another-1" type="radio" value="No" {{
+                       checked("add-another-1", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="add-another-1-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <form class="form" action="/url/of/next/page" method="post">
+          <input type="hidden" name="your-health-condition-or-disability-1" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

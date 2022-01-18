@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application complete</h1>
+        <div class="govuk-panel__body">
+          Your application reference<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <p class="govuk-body">We have sent you a confirmation email which includes:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your application reference number</li>
+        <li>a copy of your application</li>
+        <li>information on what happens next</li>
+        <li>Access to Work helpline details</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>The Access to Work team will review your application and contact you in the next 12 weeks. We'll contact you by phone, unless you have told us otherwise.</p>
+      <p>We might want to book a workplace assessment for you to make sure that you get the support you need.</p>
+      <p>If your job is starting within the next 4 weeks, we'll contact you as soon as possible.</p>
+      <p><a href="https://getinvolved.dwp.gov.uk/digital/cdc1a144/" class="govuk-link" rel="noreferrer noopener" target="_blank">What did you think of this service? (opens in new tab)</a></p>
+
+    </div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">
+      If you need to contact us
+    </h2>
+    <nav role="navigation" aria-labelledby="subsection-title">
+      <p class="govuk-body" >Telephone: 0800 121 7479</p>
+      <p>Monday to Friday, 9am to 5pm. This service is free.</p>
+      <p><a href="/alpha-1h/accessibility-information">Find out about other accessible formats</a>.
+      </p>
+    </nav>
+  </aside>
+
+</div>
+
+{% endblock %}

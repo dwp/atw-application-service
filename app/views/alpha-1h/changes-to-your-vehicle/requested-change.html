@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Changes to your vehicle – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/changes-to-your-vehicle/guidance" method="post">
+
+      <h1 class="govuk-heading-l">Changes to your vehicle</h1>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="what-changes-do-you-need-to-your-vehicle">
+            What changes do you need to the vehicle?
+          </label>
+          </h1>
+
+          <textarea class="govuk-textarea govuk-js-character-count" id="what-changes-do-you-need-to-your-vehicle"
+                    name="what-changes-do-you-need-to-your-vehicle" rows="8"
+                    aria-describedby="what-changes-do-you-need-to-your-vehicle-info what-changes-do-you-need-to-your-vehicle">{{ data['what-changes-do-you-need-to-your-vehicle'] }}</textarea>
+        </div>
+
+        <div id="what-changes-do-you-need-to-your-vehicle-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 300 characters
+        </div>
+
+      </div>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="how-will-vehicle-changes-meet-your-needs">
+            How will these changes meet your needs?
+          </label>
+          </h1>
+
+          <div id="how-will-vehicle-changes-meet-your-needs-hint" class="govuk-hint">
+            You should include the effect of not currently having theses changes to the vehicle.
+          </div>
+
+          <textarea class="govuk-textarea govuk-js-character-count" id="how-will-vehicle-changes-meet-your-needs" name="how-will-vehicle-changes-meet-your-needs" rows="8"
+                    aria-describedby="how-will-vehicle-changes-meet-your-needs-info how-will-vehicle-changes-meet-your-needs-hint">{{ data['how-will-vehicle-changes-meet-your-needs'] }}</textarea>
+        </div>
+
+        <div id="how-will-vehicle-changes-meet-your-needs-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 300 characters
+        </div>
+
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

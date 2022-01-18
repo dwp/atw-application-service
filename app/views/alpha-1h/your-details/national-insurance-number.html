@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your National Insurance Number? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/your-details/what-is-your-email">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/your-details/check-your-answers" method="post">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="national-insurance-number-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        What is your National Insurance number?
+                      </h1>
+                    </legend>
+
+                      <div id="changed-name-hint" class="govuk-hint">
+                          It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12
+                          34 56 C’.
+                      </div>
+                          <input class="govuk-input govuk-input--width-10" id="national-insurance-number"
+                                 name="national-insurance-number" type="text" spellcheck="false"
+                                 aria-describedby="national-insurance-number-hint" value="{{ data['national-insurance-number'] }}">
+                      </div>
+                  </fieldset>
+
+        <div class="govuk-inset-text">
+            <p>We will use this to check your eligibility for Access to Work. This will not affect any other benefits you are receiving.</p>
+        </div>
+
+        <p>Find a <a href="https://www.gov.uk/lost-national-insurance-number" class="govuk-link"
+                     rel="noreferrer noopener" target="_blank">lost National Insurance number</a> (opens in new tab)</p>
+
+        <p><a href="/alpha-1h/your-details/check-your-answers">I don't have a National Insurance number</a></p>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+                </div>
+</div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+          <input type="hidden" name="national-insurance-number-true" value="true">
+              <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+<p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
