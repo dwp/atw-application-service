@@ -6825,7 +6825,7 @@ return res.redirect("/alpha-apply-1g/1g-travelling-to-and-from-work-how-do-you-g
                                    redirectUrl = '/alpha-1h/changes-to-your-workplace/details'
                                    break
                                  case 'No, I do not know what changes should be made':
-                                   redirectUrl = '/alpha-1h/task-list'
+                                   redirectUrl = '/alpha-1h/changes-to-your-workplace/check-your-answers'
                                    break
 
                                  default:
@@ -7346,3 +7346,21 @@ return res.redirect("/alpha-1h/travelling-to-and-from-work/how-do-you-get-to-wor
                   }
                   res.redirect(redirectUrl)
                 })
+
+    router.route('/alpha-1h/travelling-during-work/screener')
+    .post((req, res, next) => {
+       let redirectUrl
+        switch (req.body['travel-during-work-screener']) {
+         case 'Yes':
+           redirectUrl = '/alpha-1h/travelling-during-work/support-you-may-need'
+         break
+         case 'No':
+           redirectUrl = '/alpha-1h/task-list'
+         break
+
+         default:
+           redirectUrl = req.path
+         break
+         }
+           res.redirect(redirectUrl)
+         })
