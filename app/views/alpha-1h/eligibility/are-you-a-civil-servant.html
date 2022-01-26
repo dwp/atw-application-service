@@ -17,28 +17,35 @@ Are you a civil servant? – Access to Work – GOV.UK
     <form class="form" action="/alpha-1h/eligibility/are-you-a-civil-servant" method="post">
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="civil-servant-hint">
+        <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
               Are you a civil servant?
             </h1>
           </legend>
           <div id="civil-servant-hint" class="govuk-hint">
-            A <a href="https://www.gov.uk/government/organisations/civil-service/about" class="govuk-link" rel="noreferrer noopener" target="_blank">civil servant (opens in new tab)</a> is someone that works to support the government and covers a range of
-            professional
-                 roles.
+            A civil servant is employed by 'the Crown', which usually means they work in a professional role for a government department.
           </div>
-          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="civil-servant" name="civil-servant" type="radio" value="yes">
+              <input class="govuk-radios__input" id="civil-servant" name="civil-servant" type="radio"
+                     value="yes" {{ checked("civil-servant", "yes") }}>
               <label class="govuk-label govuk-radios__label" for="civil-servant">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="civil-servant-2" name="civil-servant" type="radio" value="no">
+              <input class="govuk-radios__input" id="civil-servant-2" name="civil-servant" type="radio"
+                     value="no" {{ checked("civil-servant", "no") }}>
               <label class="govuk-label govuk-radios__label" for="civil-servant-2">
                 No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant-3" name="civil-servant" type="radio"
+                     value="not sure" {{ checked("civil-servant", "not sure") }}>
+              <label class="govuk-label govuk-radios__label" for="civil-servant-3">
+                I'm not sure
               </label>
             </div>
           </div>

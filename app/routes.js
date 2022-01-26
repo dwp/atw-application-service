@@ -6929,6 +6929,9 @@ return res.redirect("/alpha-apply-1g/1g-travelling-to-and-from-work-how-do-you-g
                      case 'no':
                        redirectUrl = '/alpha-1h/eligibility/what-benefits-are-you-receiving'
                        break
+                     case 'not sure':
+                       redirectUrl = '/alpha-1h/eligibility/ineligible-civil-servant'
+                       break
 
                      default:
                        redirectUrl = req.path
