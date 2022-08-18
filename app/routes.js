@@ -3,7 +3,10 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+router.use('/alpha-1i', require('./views/alpha-1i/_routes'));
+
 module.exports = router
+
 
 router.route('/2-alpha-accessibility/2a-support-options')
   .post((req, res, next) => {

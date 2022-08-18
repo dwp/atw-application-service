@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which days of the week do you work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/your-job-and-employer/employment/hours-per-week">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/your-job-and-employer/employment/employer-name" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which days of the week do you work?
+            </h1>
+          </legend>
+          <div id="countries-hint" class="govuk-hint">
+            If it can vary, select all of the days that you might work on.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week" name="day-of-week" type="checkbox"
+                     value="Monday" data-behaviour="exclusive" {{ checked("day-of-week", "Monday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week">
+                Monday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-2" name="day-of-week" type="checkbox" value="Tuesday" data-behaviour="exclusive" {{ checked("day-of-week", "Tuesday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-2">
+                Tuesday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-3" name="day-of-week" type="checkbox" value="Wednesday" data-behaviour="exclusive" {{ checked("day-of-week", "Wednesday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-3">
+                Wednesday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-4" name="day-of-week" type="checkbox" value="Thursday" data-behaviour="exclusive" {{ checked("day-of-week", "Thursday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-4">
+                Thursday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-5" name="day-of-week" type="checkbox" value="Friday" data-behaviour="exclusive" {{ checked("day-of-week", "Friday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-5">
+                Friday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-6" name="day-of-week" type="checkbox" value="Saturday" data-behaviour="exclusive" {{ checked("day-of-week", "Saturday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-6">
+                Saturday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-7" name="day-of-week" type="checkbox" value="Sunday" data-behaviour="exclusive" {{ checked("day-of-week", "Sunday") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-7">
+                Sunday
+              </label>
+            </div>
+            <div class="govuk-!-padding-bottom-1"></div>
+            <div class="govuk-checkboxes__divider"><p>or</p></div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-8" name="day-of-week" type="checkbox" value="I work flexibly or on a shift pattern" data-behaviour="exclusive" {{ checked("day-of-week", "I work flexibly or on a shift pattern") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-8">
+                I work flexibly or on a shift pattern
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

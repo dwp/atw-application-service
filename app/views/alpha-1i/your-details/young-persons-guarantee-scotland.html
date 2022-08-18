@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Young Person's Guarantee Scotland – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1h/#">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<!--Not featured in prototype, this screen needs to be automated into prototype via devs according to the following:
+
+applicant is 24 or under
+applicant has a Scottish postcode
+
+-->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-apply-1h/#" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="civil-servant-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Did you find your job through the Young Person's Guarantee?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant" name="civil-servant" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="civil-servant">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant-2" name="civil-servant" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="civil-servant-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+
+</div>
+
+
+{% endblock %}

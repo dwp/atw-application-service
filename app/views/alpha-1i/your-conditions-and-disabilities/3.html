@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What other health condition or disability do you have? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/your-conditions-and-disabilities/summary-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/your-conditions-and-disabilities/summary-3" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l"
+                                               for="1h-your-health-condition-or-disability-3">
+          What other condition or disability do you have?
+        </label>
+        </h1>
+
+        <input class="govuk-input" id="1h-your-health-condition-or-disability-3"
+               name="1h-your-health-condition-or-disability-3" type="text" value="{{ data['1h-your-health-condition-or-disability-3'] }}">
+      </div>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="your-health-condition-or-disability-3" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

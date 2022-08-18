@@ -1,0 +1,32 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      {% if data['mental-health-support-screener'] =="Yes" %}
+
+      <h2 class="govuk-heading-m">Mental health support</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you need mental health support at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['mental-health-support-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1h/mental-health-support/screener">
+              Change
+              <span class="govuk-visually-hidden"> Do you need mental health support at work?</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      {% endif %}
+      </div>
+    </div>
+
+
+{% endblock %}

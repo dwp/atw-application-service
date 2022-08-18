@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check you're eligible – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="//alpha-1h/do-you-need-support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/eligibility/check-youre-eligible" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Before you start, check you're eligible
+                      </h1>
+                    </legend>
+                    <p>Select all that apply to you:</p>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="disability" name="disability" type="checkbox"
+                               value="disability" data-behaviour="exclusive" {{ checked("I have a physical or mental health condition or disability that means I need support to do my job, or to get to and from work", "disability") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="disability">
+                          I have a physical or mental health condition or disability that means I need support to do my job, or to get to and from work
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="age-2" name="age" type="checkbox" value="age-2"
+                               data-behaviour="exclusive" {{ checked("I’m aged 16 or over", "age-2") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="age-2">
+                          I’m aged 16 or over
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="paid-work-3" name="paid-work" type="checkbox"
+                               value="paid-work-3" data-behaviour="exclusive" {{ checked("I'm in paid work (or about
+                        to start or return to work) in England, Scotland or Wales", "paid-work-3") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="paid-work-3">
+                          I'm in paid work (or about to start or return to work) in England, Scotland or Wales
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="gb-4" name="gb" type="checkbox" value="gb-4"
+                               data-behaviour="exclusive" {{ checked("I live in England, Scotland or Wales", "gb-4") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="gb-4">
+                          I live in England, Scotland or Wales
+                        </label>
+                      </div>
+                    </div>
+
+
+                  </fieldset>
+                </div>
+
+
+                <p>We will ask you for more information about these things during the application process.</p>
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+              </fieldset>
+
+            </div>
+
+        <a href="#" id="eligibleRedirect" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Continue
+          </a>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+<script>
+                    document.getElementById("eligibleRedirect").addEventListener("click", eligibleFunction);
+
+                    function eligibleFunction() {
+                      var checkboxes = Array.from(document.getElementsByClassName("govuk-checkboxes__input"));
+                      var linkHref = "/alpha-1h/eligibility/ineligible";
+                      var count = 0;
+                      for (var i = 0; i < checkboxes.length; i++) {
+                        if (checkboxes[i].checked ) {
+                          count++;
+                        }
+                      }
+                      if (count == 4) {
+                        linkHref = "/alpha-1h/eligibility/are-you-a-civil-servant";
+                        }
+                      document.location.href = linkHref;
+                    }
+
+</script>
+
+{% endblock %}

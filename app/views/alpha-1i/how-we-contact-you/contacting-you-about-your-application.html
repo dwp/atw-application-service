@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-1h/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/how-we-contact-you/contacting-you-about-your-application" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Who should we contact about your application?
+                    </h1>
+                </legend>
+
+                <div id="contacting-you-about-your-application-hint" class="govuk-hint">
+                    You can give us details for someone else, like a family member or representative, if you'd like us to contact them about your application instead.
+                </div>
+
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contacting-you-about-your-application"
+                               name="contacting-you-about-your-application" type="radio" value="Me" {{
+                               checked("contacting-you-about-your-application", "Me") }}>
+                        <label class="govuk-label govuk-radios__label" for="contacting-you-about-your-application">
+                            Me
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contacting-you-about-your-application-2"
+                               name="contacting-you-about-your-application" type="radio" value="Someone else" {{
+                               checked("contacting-you-about-your-application", "Someone else") }}>
+                        <label class="govuk-label govuk-radios__label" for="contacting-you-about-your-application-2">
+                            Someone else
+                        </label>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+          <input type="hidden" name="contacting-you-about-your-application-task-list" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

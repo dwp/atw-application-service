@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Are you a civil servant? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/eligibility/check-youre-eligible">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/eligibility/are-you-a-civil-servant" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Are you a civil servant?
+            </h1>
+          </legend>
+          <div id="civil-servant-hint" class="govuk-hint">
+            A civil servant is employed by 'the Crown', which usually means they work in a professional role for a government department.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant" name="civil-servant" type="radio"
+                     value="yes" {{ checked("civil-servant", "yes") }}>
+              <label class="govuk-label govuk-radios__label" for="civil-servant">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant-2" name="civil-servant" type="radio"
+                     value="no" {{ checked("civil-servant", "no") }}>
+              <label class="govuk-label govuk-radios__label" for="civil-servant-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="civil-servant-3" name="civil-servant" type="radio"
+                     value="not sure" {{ checked("civil-servant", "not sure") }}>
+              <label class="govuk-label govuk-radios__label" for="civil-servant-3">
+                I'm not sure
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+
+</div>
+
+
+{% endblock %}

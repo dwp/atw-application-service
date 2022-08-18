@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Will your journeys be between your home and work addresses? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/travelling-to-and-from-work/not-sure/how-many-journeys">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/travelling-to-and-from-work/check-your-answers" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="travelling-to-and-from-work-locations-not-sure-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Will your journeys to and from work be between your home and work addresses?
+            </h1>
+          </legend>
+          <div class="govuk-!-padding-bottom-2"></div>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure"
+                     name="travelling-to-and-from-work-locations-not-sure" type="radio" value="Yes" {{
+                     checked("travelling-to-and-from-work-locations-not-sure", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure-2" name="travelling-to-and-from-work-locations-not-sure" type="radio" value="No" {{ checked("travelling-to-and-from-work-locations-not-sure", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="travelling-to-and-from-work-locations-not-sure-3"
+                     name="travelling-to-and-from-work-locations-not-sure" type="radio" value="I am not sure" {{
+                     checked("travelling-to-and-from-work-locations-not-sure", "I am not sure") }}>
+              <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-locations-not-sure-3">
+                I'm not sure
+              </label>
+            </div>
+
+        </fieldset>
+      </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you need support to travel during work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/task-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/travelling-during-work/screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you need support to travel to other places during your working day?
+                  </h1>
+                </legend>
+
+                <div class="govuk-!-padding-bottom-1"></div>
+
+                <div id="changed-name-hint" class="govuk-hint">
+                  Access to Work can help pay for things like taxis and hire cars if you cannot drive or get public transport to other places during your working day.
+                </div>
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <h2 class="govuk-heading-s">For example:</h2>
+
+                <div class="govuk-inset-text">
+                  You are a social worker and you have to visit different homes during the working day.
+                </div>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travel-during-work-screener" name="travel-during-work-screener"
+                           type="radio" value="Yes" {{ checked("travel-during-work-screener", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="travel-during-work-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="travel-during-work-screener-2"
+                           name="travel-during-work-screener"
+                           type="radio" value="No" {{ checked("travel-during-work-screener", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="travel-during-work-screener-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="travel-during-work" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

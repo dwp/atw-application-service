@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How many hours per week do you need this support? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/support-workers/temporary-basis-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1h/support-workers/providing-quotes-for-this-support" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l"
+                                                 for="support-worker-hour-per-week">
+            How many hours per week do you need this support at work?
+          </label>
+          </h2>
+          <div id="hour-per-week-hint" class="govuk-hint">
+            If you're not sure, give the maximum number of hours per week you will need this support.
+          </div>
+          <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="support-worker-hour-per-week"
+                                                   name="support-worker-hour-per-week" type="text" spellcheck="false"
+                                                   value="{{ data['support-worker-hour-per-week'] }}">
+            <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
+          </div>
+
+        <div class="govuk-!-padding-bottom-5"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="support-worker-hour-per-week-task-list" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1h/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

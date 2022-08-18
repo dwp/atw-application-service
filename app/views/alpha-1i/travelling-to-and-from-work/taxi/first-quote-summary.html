@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You have provided 1 quote – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1h/travelling-to-and-from-work/taxi/first-quote">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+<h1 class="govuk-heading-l">You have provided 1 quote for your taxi</h1>
+
+<h1 class="govuk-heading-m">First quote for taxi</h1>
+
+<div class="govuk-form-group">
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Taxi company name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['taxi-company-name-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-1h/travelling-to-and-from-work/taxi/first-quote">
+          Change<span class="govuk-visually-hidden"> Taxi company name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Cost per journey
+      </dt>
+      <dd class="govuk-summary-list__value">
+        £ {{ data['taxi-cost-1'] }} per journey
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/alpha-1h/travelling-to-and-from-work/taxi/first-quote">
+          Change<span class="govuk-visually-hidden"> Cost per hour</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+
+<form method="post" action="/alpha-1h/travelling-to-and-from-work/taxi/first-quote-summary">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="travelling-to-and-from-work-quote-1-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you have a second quote?
+      </legend>
+      <div id="travelling-to-and-from-work-hmrc-table-1-quote-1-hint" class="govuk-hint">
+        If you provide 3 quotes, this will speed up the processing of your application. If you cannot provide quotes now, we will ask you for them at a later date.
+      </div>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="travelling-to-and-from-work-hmrc-table-1-quote-1"
+                 name="travelling-to-and-from-work-hmrc-table-1-quote-1" type="radio" value="Yes" {{
+                 checked("travelling-to-and-from-work-hmrc-table-1-quote-1", "Yes") }}>
+          <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-hmrc-table-1-quote-1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="travelling-to-and-from-work-hmrc-table-1-quote-1-2" name="travelling-to-and-from-work-hmrc-table-1-quote-1" type="radio" value="No" {{ checked("travelling-to-and-from-work-hmrc-table-1-quote-1", "No") }}>
+          <label class="govuk-label govuk-radios__label" for="travelling-to-and-from-work-hmrc-table-1-quote-1-2">
+            No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div class="govuk-!-padding-bottom-1s"></div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
+</form>
+
+</div>
+  </div>
+
+{% endblock %}
