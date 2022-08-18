@@ -16,14 +16,33 @@ What is your full name? – Access to Work – GOV.UK
 
       <form class="form" action="/alpha-1h/your-details/what-is-your-date-of-birth" method="post">
           <input type="hidden" name="what-is-your-name" value="true">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your full name?</h1></legend>
+
+
+
 
       <div class="govuk-form-group">
-          <h1 class="govuk-heading-l">What is your full name?</h1>
-          <input class="govuk-input" id="what-is-your-full-name" name="what-is-your-full-name" type="text" spellcheck="false"
-                 autocomplete="name" value="{{ data['what-is-your-full-name'] }}"></div>
 
-            <div class="govuk-!-padding-bottom-1"></div>
 
+
+
+                 <div class="govuk-form-group">
+                   <label class="govuk-label" for="what-is-your-first-name">
+                     First name
+                   </label>
+                   <input class="govuk-input govuk-input--width-20" id="what-is-your-first-name" name="first-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['first-name'] }}">
+                 </div>
+                 <div class="govuk-form-group">
+  <label class="govuk-label" for="what-is-your-last-name">
+    Last name
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="what-is-your-last-name" name="last-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['last-name'] }}">
+</div>
+
+</fieldset>
             <button class="govuk-button" data-module="govuk-button">Save and continue</button>
         </form>
 
