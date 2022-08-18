@@ -3,9 +3,9 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-module.exports = router;
 
-router.route('/alpha-1i/your-job-and-employer/employment-status')
+
+router.route('/your-job-and-employer/employment-status')
   .post((req, res, next) => {
     let redirectUrl
     switch (req.body['1i-employment-status']) {
@@ -29,7 +29,7 @@ router.route('/alpha-1i/your-job-and-employer/employment-status')
     res.redirect(redirectUrl)
   })
 
-router.route('/alpha-1i/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr')
+router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
@@ -47,7 +47,7 @@ router.route('/alpha-1i/your-job-and-employer/about-to-start-self-employment/do-
  res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/how-we-contact-you/contacting-you-about-your-application')
+router.route('/how-we-contact-you/contacting-you-about-your-application')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['contacting-you-about-your-application']) {
@@ -65,7 +65,7 @@ router.route('/alpha-1i/how-we-contact-you/contacting-you-about-your-application
  res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/mental-health-support/screener')
+router.route('/mental-health-support/screener')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['mental-health-support-screener']) {
@@ -83,7 +83,7 @@ break
 res.redirect(redirectUrl)
 })
 
-    router.route('/alpha-1i/changes-to-your-vehicle/screener')
+    router.route('/changes-to-your-vehicle/screener')
       .post((req, res, next) => {
         let redirectUrl
         switch (req.body['changes-to-your-vehicle-screener']) {
@@ -101,7 +101,7 @@ res.redirect(redirectUrl)
         res.redirect(redirectUrl)
       })
 
-router.route('/alpha-1i/changes-to-your-vehicle/vehicle-type')
+router.route('/changes-to-your-vehicle/vehicle-type')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['changes-to-your-vehicle-ownership']) {
@@ -122,7 +122,7 @@ default:
 res.redirect(redirectUrl)
 })
 
-      router.route('/alpha-1i/changes-to-your-workplace/screener')
+      router.route('/changes-to-your-workplace/screener')
         .post((req, res, next) => {
           let redirectUrl
           switch (req.body['workplace-adaptations-screener']) {
@@ -140,7 +140,7 @@ res.redirect(redirectUrl)
           res.redirect(redirectUrl)
         })
 
-        router.route('/alpha-1i/changes-to-your-workplace/do-you-know-what-you-need')
+        router.route('/changes-to-your-workplace/do-you-know-what-you-need')
           .post((req, res, next) => {
             let redirectUrl
             switch (req.body['workplace-adaptations-do-you-know-what-you-need']) {
@@ -158,7 +158,7 @@ res.redirect(redirectUrl)
             res.redirect(redirectUrl)
           })
 
-  router.route('/alpha-1i/anything-else-you-would-like-to-tell-us/screener')
+  router.route('/anything-else-you-would-like-to-tell-us/screener')
     .post((req, res, next) => {
       let redirectUrl
       switch (req.body['extra-information-screener']) {
@@ -176,7 +176,7 @@ res.redirect(redirectUrl)
       res.redirect(redirectUrl)
     })
 
-router.route('/alpha-1i/equality-information/ethnic-group')
+router.route('/equality-information/ethnic-group')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['ethnicity']) {
@@ -206,7 +206,7 @@ switch (req.body['ethnicity']) {
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/equality-information/do-you-want-to-answer')
+router.route('/equality-information/do-you-want-to-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['equalities-info']) {
@@ -224,7 +224,7 @@ switch (req.body['equalities-info']) {
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/do-you-need-support')
+router.route('/do-you-need-support')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['do-you-need-support']) {
@@ -242,7 +242,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/eligibility/are-you-a-civil-servant')
+router.route('/eligibility/are-you-a-civil-servant')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['civil-servant']) {
@@ -263,7 +263,7 @@ switch (req.body['civil-servant']) {
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/eligibility/what-benefits-are-you-receiving')
+router.route('/eligibility/what-benefits-are-you-receiving')
  .post((req, res, next) => {
      const selections = req.body.benefits;
       // Stay on same page if not any option selected
@@ -284,7 +284,7 @@ router.route('/alpha-1i/eligibility/what-benefits-are-you-receiving')
                  res.redirect(redirectUrl)
                        })
 
-router.route('/alpha-1i/eligibility/do-you-work-less-than-16-hours')
+router.route('/eligibility/do-you-work-less-than-16-hours')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['1i-less-than-16-hours']) {
@@ -302,7 +302,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/eligibility/paid-supported-permitted-work')
+router.route('/eligibility/paid-supported-permitted-work')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['paid-supported-permitted-work']) {
@@ -320,7 +320,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/your-conditions-and-disabilities/1')
+router.route('/your-conditions-and-disabilities/1')
  .post((req, res, next) => {
    let redirectUrl
    switch (req.body['add-another-1']) {
@@ -339,7 +339,7 @@ router.route('/alpha-1i/your-conditions-and-disabilities/1')
  })
 
 
- router.route('/alpha-1i/your-conditions-and-disabilities/summary-2')
+ router.route('/your-conditions-and-disabilities/summary-2')
    .post((req, res, next) => {
      let redirectUrl
      switch (req.body['add-another-2']) {
@@ -357,7 +357,7 @@ router.route('/alpha-1i/your-conditions-and-disabilities/1')
      res.redirect(redirectUrl)
    })
 
-router.route('/alpha-1i/equipment-adaptations-and-software/screener')
+router.route('/equipment-adaptations-and-software/screener')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['specialist-equipment-screener']) {
@@ -375,7 +375,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/equipment-adaptations-and-software/do-you-know-what-you-need')
+router.route('/equipment-adaptations-and-software/do-you-know-what-you-need')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['specialist-equipment-do-you-know-what-specialist-equipment-you-need']) {
@@ -393,7 +393,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/equipment-adaptations-and-software/summary-1')
+router.route('/equipment-adaptations-and-software/summary-1')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['add-special-equipment-1']) {
@@ -411,7 +411,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/equipment-adaptations-and-software/summary-2')
+router.route('/equipment-adaptations-and-software/summary-2')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['add-special-equipment-2']) {
@@ -429,7 +429,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/equipment-adaptations-and-software/summary-3')
+router.route('/equipment-adaptations-and-software/summary-3')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['add-special-equipment-3']) {
@@ -447,7 +447,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/screener')
+router.route('/support-workers/screener')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-screener']) {
@@ -465,7 +465,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/do-you-know-what-support-worker-you-need')
+router.route('/support-workers/do-you-know-what-support-worker-you-need')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-do-you-know-what-support-worker-you-need']) {
@@ -483,7 +483,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/temporary-basis-1')
+router.route('/support-workers/temporary-basis-1')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-short-or-long-term-two-options']) {
@@ -501,7 +501,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/providing-quotes-for-this-support')
+router.route('/support-workers/providing-quotes-for-this-support')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-providing-quotes-for-this-support']) {
@@ -519,7 +519,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/first-quote-summary')
+router.route('/support-workers/first-quote-summary')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-second-quote-1']) {
@@ -537,7 +537,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/support-workers/second-quote-summary')
+router.route('/support-workers/second-quote-summary')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-third-quote-3']) {
@@ -555,7 +555,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/travelling-to-and-from-work/screener')
+router.route('/travelling-to-and-from-work/screener')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-screener']) {
@@ -573,7 +573,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.post('/alpha-1i/travelling-to-and-from-work/how-do-you-get-to-work-at-the-moment', function(req, res, next){
+router.post('/travelling-to-and-from-work/how-do-you-get-to-work-at-the-moment', function(req, res, next){
 if (req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment']){
 for (i = 0; i<req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'].length; i++){
 switch (req.session.data['travelling-to-and-from-work-how-do-you-get-to-work-at-the-moment'][i]){
@@ -595,7 +595,7 @@ return res.redirect("/alpha-1i/travelling-to-and-from-work/how-do-you-get-to-wor
 })
 
 
-router.route('/alpha-1i/travelling-to-and-from-work/what-support-do-you-need')
+router.route('/travelling-to-and-from-work/what-support-do-you-need')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
@@ -619,7 +619,7 @@ redirectUrl = '/alpha-1i/travelling-to-and-from-work/not-sure/how-many-journeys'
  res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/travelling-to-and-from-work/taxi/providing-quotes')
+router.route('/travelling-to-and-from-work/taxi/providing-quotes')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-providing-quotes-taxi']) {
@@ -637,7 +637,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/travelling-to-and-from-work/taxi/first-quote-summary')
+router.route('/travelling-to-and-from-work/taxi/first-quote-summary')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-hmrc-table-1-quote-1']) {
@@ -655,7 +655,7 @@ default:
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/travelling-to-and-from-work/taxi/second-quote-summary')
+router.route('/travelling-to-and-from-work/taxi/second-quote-summary')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-hmrc-table-2-quote-1']) {
@@ -673,7 +673,7 @@ switch (req.body['travelling-to-and-from-work-hmrc-table-2-quote-1']) {
 res.redirect(redirectUrl)
 })
 
-router.route('/alpha-1i/travelling-during-work/screener')
+router.route('/travelling-during-work/screener')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travel-during-work-screener']) {
@@ -690,3 +690,4 @@ break
 }
 res.redirect(redirectUrl)
 })
+module.exports = router;
