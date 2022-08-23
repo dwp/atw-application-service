@@ -5,10 +5,27 @@
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
 
-{% if data['changes-to-your-vehicle-screener'] =="Yes" %}
+
 
 <h2 class="govuk-heading-m">Changes to your vehicle</h2>
-
+{% if data['changes-to-your-vehicle-screener'] =="I do not know" %}
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Does your condition mean that you need changes to the vehicle you use to travel to work?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['changes-to-your-vehicle-screener'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="/alpha-1i/changes-to-your-vehicle/screener">
+        Change
+        <span class="govuk-visually-hidden"> Does your condition mean that you need changes to the vehicle you use to travel to work?</span>
+      </a>
+    </dd>
+  </div>
+{% endif %}
+{% if data['changes-to-your-vehicle-screener'] =="Yes" %}
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">

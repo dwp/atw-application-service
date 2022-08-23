@@ -4,10 +4,28 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h2 class="govuk-heading-m">Specialist equipment</h2>
+  {% if data['specialist-equipment-screener'] =="I do not know" %}
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you need equipment, adaptations or software to support you with your condition at work?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['specialist-equipment-screener'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/equipment-adaptations-and-software/screener">
+          Change
+          <span class="govuk-visually-hidden"> Do you need equipment, adaptations or software to support you with your condition at work?</span>
+        </a>
+      </dd>
+    </div>
 
+  {% endif %}
   {% if data['specialist-equipment-screener'] =="Yes" %}
 
-    <h2 class="govuk-heading-m">Specialist equipment</h2>
+
 
     {% if (data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] =="No, I do not know what I need") %}
 
