@@ -75,6 +75,9 @@ break
 case 'No':
 redirectUrl = '/alpha-1i/task-list'
 break
+case 'I do not know':
+redirectUrl = '/alpha-1i/task-list'
+break
 
 default:
 redirectUrl = req.path
@@ -91,6 +94,9 @@ res.redirect(redirectUrl)
             redirectUrl = '/alpha-1i/changes-to-your-vehicle/vehicle-type'
             break
           case 'No':
+            redirectUrl = '/alpha-1i/task-list'
+            break
+            case 'I do not know':
             redirectUrl = '/alpha-1i/task-list'
             break
 
@@ -132,6 +138,9 @@ res.redirect(redirectUrl)
             case 'No':
               redirectUrl = '/alpha-1i/task-list'
               break
+              case 'I do not know':
+              redirectUrl = '/alpha-1i/task-list'
+              break
 
             default:
               redirectUrl = req.path
@@ -166,6 +175,9 @@ res.redirect(redirectUrl)
           redirectUrl = '/alpha-1i/anything-else-you-would-like-to-tell-us/additional-information'
           break
         case 'No':
+          redirectUrl = '/alpha-1i/task-list'
+          break
+          case 'I do not know':
           redirectUrl = '/alpha-1i/task-list'
           break
 
@@ -367,6 +379,9 @@ break
 case 'No':
 redirectUrl = '/alpha-1i/task-list'
 break
+case 'I do not know':
+redirectUrl = '/alpha-1i/task-list'
+break
 
 default:
 redirectUrl = req.path
@@ -455,6 +470,9 @@ case 'Yes':
 redirectUrl = '/alpha-1i/support-workers/do-you-know-what-support-worker-you-need'
 break
 case 'No':
+redirectUrl = '/alpha-1i/task-list'
+break
+case 'I do not know':
 redirectUrl = '/alpha-1i/task-list'
 break
 
@@ -681,6 +699,9 @@ case 'Yes':
 redirectUrl = '/alpha-1i/travelling-during-work/support-you-may-need'
 break
 case 'No':
+redirectUrl = '/alpha-1i/task-list'
+break
+case 'I do not know':
 redirectUrl = '/alpha-1i/task-list'
 break
 
