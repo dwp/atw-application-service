@@ -4,10 +4,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
-{% if data['workplace-adaptations-screener'] =="Yes" %}
 
     <h2 class="govuk-heading-m">Changes to workplace</h2>
-
+    {% if data['workplace-adaptations-screener'] =="I do not know" %}
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Does your condition mean that you would benefit from physical changes at your workplace?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['workplace-adaptations-screener'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-1i/changes-to-your-workplace/screener">
+            Change
+            <span class="govuk-visually-hidden"> Does your condition mean that you would benefit from physical changes at your workplace?</span>
+          </a>
+        </dd>
+      </div>
+    {% endif %}
+{% if data['workplace-adaptations-screener'] =="Yes" %}
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">

@@ -3,10 +3,29 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h2 class="govuk-heading-m">Travelling during work</h2>
 
+{% if data['travel-during-work-screener'] =="I do not know" %}
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Do you need support to travel to other locations during your working day?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['travel-during-work-screener'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="/alpha-1i/travelling-during-work/screener">
+        Change
+        <span class="govuk-visually-hidden"> Do you need support to travel to other locations during your working day?</span>
+      </a>
+    </dd>
+  </div>
+
+{% endif %}
 {% if data['travel-during-work-screener'] =="Yes" %}
 
-<h2 class="govuk-heading-m">Travelling during work</h2>
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">

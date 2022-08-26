@@ -4,10 +4,30 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
+      <h2 class="govuk-heading-m">Support worker</h2>
+
+    {% if data['support-worker-screener'] =="I do not know" %}
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Does your condition mean that you need a support worker at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['support-worker-screener'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/support-workers/screener">
+              Change
+              <span class="govuk-visually-hidden"> Does your condition mean that you need a support worker at work?</span>
+            </a>
+          </dd>
+        </div>
+    {% endif %}
 
       {% if (data['support-worker-do-you-know-what-support-worker-you-need'] =="No, I do not know what I need") %}
 
-      <h2 class="govuk-heading-m">Support worker</h2>
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
