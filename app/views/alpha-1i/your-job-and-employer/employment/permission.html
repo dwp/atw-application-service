@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your workplace contact – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/employment/do-you-have-another-job" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+        Do you give your permission for us to contact {{data['workplace-name']}}?
+            </h1>
+          </legend>
+
+
+<p>We will ask them to confirm employment details. If you do not give permission, we might ask for it later in the process.</p>
+
+          <div class="govuk-radios radio">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="permission-contact" name="permission-contact"
+                     type="radio" value="Yes" {{ checked("permission-contact", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="permission-contact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="permission-contact-2"
+                     name="permission-contact"
+                     type="radio" value="No" {{ checked("permission-contact", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="permission-contact-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to menu</a></p>
+
+      </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

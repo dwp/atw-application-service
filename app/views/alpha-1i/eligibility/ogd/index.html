@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Are you a civil servant? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/eligibility/ogd/index-answer" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                  Are you a civil servant?
+                  </h1>
+                </legend>
+
+                <div id="countries-hint" class="govuk-hint">
+          If you are not sure whether you are classed as a civil servant, your employer will be able to tell you.
+        </div>
+
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="civil-servant" name="civil-servant" type="radio" value="yes" {{ checked("civil-servant", "yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="civil-servant">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="civil-servant-2" name="civil-servant" type="radio" value="no" {{ checked("civil-servant", "no") }}>
+                    <label class="govuk-label govuk-radios__label" for="civil-servant-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
