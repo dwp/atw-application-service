@@ -4,6 +4,18 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
+router.all('/equipment-adaptations-and-software/quote/another-quote-answer', function(req, res, next){
+const itemTotal = req.session.data['cost-per-item'];
+if (itemTotal < 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-1');
+} else if (itemTotal >= 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote');
+}
+
+next();
+
+});
+
 
 router.route('/your-job-and-employer/employment-status')
   .post((req, res, next) => {
@@ -408,7 +420,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/equipment-adaptations-and-software/summary-1')
+router.route('/equipment-adaptations-and-software/summary')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['add-special-equipment-1']) {
@@ -461,6 +473,26 @@ break
 }
 res.redirect(redirectUrl)
 })
+
+router.route('/equipment-adaptations-and-software/quote-answer')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['sea-quote-1']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+break
+
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
+
+
 
 router.route('/support-workers/screener')
 .post((req, res, next) => {
