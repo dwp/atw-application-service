@@ -5,7 +5,10 @@ Do you know what physical changes should be made at your workplace? – Access t
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/changes-to-your-workplace/contacting-your-employer">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
