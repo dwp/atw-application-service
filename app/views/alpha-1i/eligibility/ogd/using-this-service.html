@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Are you applying for support for any other jobs? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/alpha-1i/eligibility/you-may-be-eligible" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-heading-xl">Using this service to apply for Access to Work</h1>
+               <h2 class="govuk-heading-m">
+                 Civil service employment
+               </h2>
+               <p class="govuk-body">Your employer will provide support instead of Access to Work.</p>
+               <div class="govuk-inset-text">
+                 You will need to contact your employer so they can assess and arrange the support you need.
+               </div>
+               <h2 class="govuk-heading-m">
+                 If you need mental health support
+               </h2>
+               <p class="govuk-body">You can get mental health support through Access to Work for all types of jobs, including your civil service employment.</p>
+               <p class="govuk-body">You can apply for mental health support directly from <a class="govuk-link" href="https://able-futures.co.uk/individuals">Able Futures</a> or <a class="govuk-link" href="https://www.remploy.co.uk/employers/mental-health-and-wellbeing/workplace-mental-health-support-service-employers">Remploy</a>.</p>
+               <p class="govuk-body">These providers will contact Access to Work on your behalf. You will not need to tell your employer.</p>
+               <h2 class="govuk-heading-m">
+                 Other employment or self-employment
+               </h2>
+               <p class="govuk-body">You can still use this service to apply for Access to Work for:</p>
+               <ul class="govuk-list govuk-list--bullet">
+                 <li>self-employment</li>
+                 <li>non-civil service employment</li>
+               </ul>
+               <p>
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

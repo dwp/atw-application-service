@@ -5,7 +5,10 @@ Check you're eligible – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="//alpha-1i/do-you-need-support">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -107,7 +110,7 @@ Check you're eligible – Access to Work – GOV.UK
                         }
                       }
                       if (count == 4) {
-                        linkHref = "/alpha-1i/eligibility/are-you-a-civil-servant";
+                        linkHref = "/alpha-1i/eligibility/what-benefits-are-you-receiving";
                         }
                       document.location.href = linkHref;
                     }

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Are you applying for support for any other jobs? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+
+
+        <h1 class="govuk-heading-xl">How to get support for your civil service employment</h1>
+               <p class="govuk-body">As you are a civil servant, your employer will provide support instead of Access to Work</p>
+               <div class="govuk-inset-text">
+                 You will need to contact your employer so they can assess and arrange the support you need.
+               </div>
+               <h2 class="govuk-heading-m">
+                 If you need mental health support
+               </h2>
+               <p class="govuk-body">You can still get Access to Work for mental health services if you are a civil servant. You can apply for support from either:</p>
+               <ul class="govuk-list govuk-list--bullet">
+                 <li><a class="govuk-link" href="https://able-futures.co.uk/individuals">Able Futures</a></li>
+                 <li><a class="govuk-link" href="https://www.remploy.co.uk/employers/mental-health-and-wellbeing/workplace-mental-health-support-service-employers">Remploy</a></li>
+               </ul>
+               <p class="govuk-body">These providers will contact Access to Work on your behalf. You will not need to tell your employer.</p>
+
+      </form>
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

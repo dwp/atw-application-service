@@ -5,6 +5,44 @@ const router = express.Router()
 
 
 
+        router.route('/eligibility/ogd/index-answer')
+          .post((req, res, next) => {
+            let redirectUrl
+            switch (req.body['civil-servant']) {
+              case 'yes':
+                redirectUrl = '/alpha-1i/eligibility/ogd/support-other-jobs'
+                break
+              case 'no':
+                redirectUrl = '/alpha-1i/eligibility/you-may-be-eligible'
+                break
+
+              default:
+                redirectUrl = req.path
+                break
+            }
+            res.redirect(redirectUrl)
+          })
+
+
+          router.route('/eligibility/ogd/support-other-answer')
+            .post((req, res, next) => {
+              let redirectUrl
+              switch (req.body['civil-servant-other']) {
+                case 'yes':
+                  redirectUrl = '/alpha-1i/eligibility/ogd/using-this-service'
+                  break
+                case 'no':
+                  redirectUrl = '/alpha-1i/eligibility/ogd/get-support'
+                  break
+
+                default:
+                  redirectUrl = req.path
+                  break
+              }
+              res.redirect(redirectUrl)
+            })
+
+
 router.route('/your-job-and-employer/employment-status')
   .post((req, res, next) => {
     let redirectUrl
@@ -287,7 +325,7 @@ router.route('/eligibility/what-benefits-are-you-receiving')
            if(selections[0].trim() === "Employment Support Allowance") {
              redirectUrl = '/alpha-1i/eligibility/do-you-work-less-than-16-hours'
                 } else if(selections[0].trim() === 'None of these') {
-             redirectUrl = '/alpha-1i/eligibility/you-may-be-eligible'
+             redirectUrl = '/alpha-1i/eligibility/ogd'
                  }
                  } else {
               // Handle Multiple selections
