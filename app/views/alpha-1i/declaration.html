@@ -5,7 +5,10 @@ Declaration – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="/alpha-apply-1i/1h-final-check-your-answers">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
