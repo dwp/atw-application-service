@@ -5,7 +5,10 @@ You may not be eligible – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="/alpha-1i/eligibility/are-you-a-civil-servant">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -81,7 +84,7 @@ You may not be eligible – Access to Work – GOV.UK
 
   </div>
   <div class="govuk-grid-column-one-third">
-    
+
 
   </div>
 </div>

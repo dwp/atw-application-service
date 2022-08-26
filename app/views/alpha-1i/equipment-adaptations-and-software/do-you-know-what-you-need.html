@@ -5,7 +5,10 @@ Do you know what specialist equipment you need? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="/alpha-1i/equipment-adaptations-and-software/screener">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}

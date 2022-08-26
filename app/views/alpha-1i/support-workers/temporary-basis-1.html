@@ -5,7 +5,10 @@ Will you need a support worker on a temporary basis? – Access to Work – GOV.
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/support-workers/how-will-a-support-worker-help">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}

@@ -5,7 +5,10 @@ Does your condition mean it's difficult for you to drive and get public transpor
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/task-list">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -48,7 +51,7 @@ Does your condition mean it's difficult for you to drive and get public transpor
                     </label>
                   </div>
 
-                
+
                 </div>
 
               </fieldset>

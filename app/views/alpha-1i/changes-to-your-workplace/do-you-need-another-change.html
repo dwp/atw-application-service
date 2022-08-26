@@ -5,7 +5,10 @@ Do you need another physical change at your workplace? – Access to Work – GO
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/changes-to-your-workplace/details">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
