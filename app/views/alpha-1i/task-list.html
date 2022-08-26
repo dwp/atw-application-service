@@ -443,14 +443,20 @@ Complete your application – Access to Work – GOV.UK
       </div>
 
       <div class="govuk-!-padding-bottom-3"></div>
-
+      
+{% if data ['changes-to-your-vehicle-screener'] and
+data['specialist-equipment-screener'] and
+data['mental-health-support-screener'] and
+data['support-worker-screener'] and
+data['travelling-to-and-from-work-screener'] and
+data['workplace-adaptations-screener']  %}
       <form action="/alpha-1i/final-check-your-answers">
           <input type="hidden" name="task-list-completed" value="true">
           <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
             <b>Save and continue</b>
           </button>
         </form>
-
+{% endif %}
 
     </div>
 
