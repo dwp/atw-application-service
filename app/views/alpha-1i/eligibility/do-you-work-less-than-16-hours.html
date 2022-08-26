@@ -5,7 +5,10 @@ Do you work less than 16 hours a week? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/eligibility/what-benefits-are-you-receiving">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
