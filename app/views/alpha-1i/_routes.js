@@ -539,7 +539,23 @@ break
 }
 res.redirect(redirectUrl)
 })
+router.route('/equipment-adaptations-and-software/another-quote-answer')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['another-sea-quote-1']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+break
 
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
 router.route('/equipment-adaptations-and-software/quote-answer-2')
 .post((req, res, next) => {
 let redirectUrl

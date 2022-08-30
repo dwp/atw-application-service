@@ -167,9 +167,25 @@
       </div>
 
 
+{% if data['another-sea-quote-1']%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['another-sea-quote-1'] }}
 
+  </dd>
+  <dd class="govuk-summary-list__actions">
 
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
+      Change
+      <span class="govuk-visually-hidden"> Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+    </a>
 
+  </dd>
+</div>
+{% endif %}
 
 
 {% endif %}
