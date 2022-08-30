@@ -15,7 +15,17 @@ if (itemTotal < 500.0) {
 next();
 
 });
+router.all('/equipment-adaptations-and-software/quote/another-quote-answer-2', function(req, res, next){
+const itemTotal = req.session.data['cost-per-item-2'];
+if (itemTotal < 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-2');
+} else if (itemTotal >= 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote-2');
+}
 
+next();
+
+});
 
         router.route('/eligibility/ogd/index-answer')
           .post((req, res, next) => {
@@ -530,7 +540,23 @@ break
 res.redirect(redirectUrl)
 })
 
+router.route('/equipment-adaptations-and-software/quote-answer-2')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['sea-quote-2']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-2'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-2'
+break
 
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
 
 router.route('/support-workers/screener')
 .post((req, res, next) => {
