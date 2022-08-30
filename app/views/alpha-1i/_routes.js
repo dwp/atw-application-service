@@ -89,7 +89,7 @@ router.route('/your-job-and-employer/employment-status')
     res.redirect(redirectUrl)
   })
 
-router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr')
+router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
@@ -411,7 +411,7 @@ router.route('/your-conditions-and-disabilities/1')
  })
 
 
- router.route('/your-conditions-and-disabilities/summary-2')
+ router.route('/your-conditions-and-disabilities/summary-2-answer')
    .post((req, res, next) => {
      let redirectUrl
      switch (req.body['add-another-2']) {
