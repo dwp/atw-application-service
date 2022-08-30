@@ -18,9 +18,31 @@ next();
 router.all('/equipment-adaptations-and-software/quote/another-quote-answer-2', function(req, res, next){
 const itemTotal = req.session.data['cost-per-item-2'];
 if (itemTotal < 500.0) {
-   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-2');
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-1');
 } else if (itemTotal >= 500.0) {
    res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote-2');
+}
+
+next();
+
+});
+router.all('/equipment-adaptations-and-software/quote/another-quote-answer-2-1', function(req, res, next){
+const itemTotal = req.session.data['cost-per-item-2-2'];
+if (itemTotal < 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-2');
+} else if (itemTotal >= 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote-2-1');
+}
+
+next();
+
+});
+router.all('/equipment-adaptations-and-software/quote/another-quote-answer-3', function(req, res, next){
+const itemTotal = req.session.data['cost-per-item-3'];
+if (itemTotal < 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-1');
+} else if (itemTotal >= 500.0) {
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote-3');
 }
 
 next();
@@ -544,10 +566,62 @@ router.route('/equipment-adaptations-and-software/another-quote-answer')
 let redirectUrl
 switch (req.body['another-sea-quote-1']) {
 case 'Yes':
-redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1'
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-2'
 break
 case 'No':
 redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+break
+
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
+router.route('/equipment-adaptations-and-software/quote-answer-1-2')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['another-sea-quote-2']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-3'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+break
+
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
+
+router.route('/equipment-adaptations-and-software/quote-answer-2-2')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['another-sea-quote-2']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-2-3'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-2'
+break
+
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
+router.route('/equipment-adaptations-and-software/quote-answer-2')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['another-sea-quote-2']) {
+case 'Yes':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-2'
+break
+case 'No':
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-2'
 break
 
 default:
