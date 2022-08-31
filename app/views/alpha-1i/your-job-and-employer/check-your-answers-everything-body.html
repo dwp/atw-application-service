@@ -288,9 +288,9 @@
     </div>
 
   </dl>
+{% endif %}
 
-
-    {% elseif (data['1h-employment-status'] =="Self-employed") %}
+    {% if data['1i-employment-status'] =="Self-employed" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -485,8 +485,8 @@
         </dd>
       </div>
     </dl>
-
-    {% elseif (data['1i-employment-status'] =="About to start employment") %}
+{% endif %}
+    {% if data['1i-employment-status'] =="About to start employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -751,8 +751,8 @@
         </dd>
       </div>
     </dl>
-
-    {% elseif (data['1h-employment-status'] =="About to start self-employment") %}
+{% endif %}
+    {% if data['1i-employment-status'] =="About to start self-employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">

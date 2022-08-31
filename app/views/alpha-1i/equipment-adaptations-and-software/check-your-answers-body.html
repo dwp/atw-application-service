@@ -126,6 +126,140 @@
         </dd>
       </div>
 
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+  Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['sea-quote-1'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+          <a href="/alpha-1i/equipment-adaptations-and-software/quote">
+            Change
+            <span class="govuk-visually-hidden">  Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+          </a>
+
+        </dd>
+      </div>
+{% if data['sea-quote-1']=='Yes'%}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+    Providing quotes for {{ data['specialist-equipment-type-1'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['quote-one-1'] }}<br>
+{{ data['quote-one-2'] }}<br>
+£{{data['cost-per-item']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+          <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1">
+            Change
+            <span class="govuk-visually-hidden"> Providing quotes for {{ data['specialist-equipment-type-1'] }}</span>
+          </a>
+
+        </dd>
+      </div>
+
+
+{% if data['another-sea-quote-1']%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['another-sea-quote-1'] }}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
+      Change
+      <span class="govuk-visually-hidden"> Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+    </a>
+
+  </dd>
+</div>
+
+
+{% if data['another-sea-quote-1']=='Yes'%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Providing another quotes for {{ data['specialist-equipment-type-1'] }}
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['quote-one-1-2'] }}<br>
+  {{ data['quote-one-2-2'] }}<br>
+  £{{data['cost-per-item-2']}}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-2">
+      Change
+      <span class="govuk-visually-hidden"> Providing another quotes for {{ data['specialist-equipment-type-1'] }}</span>
+    </a>
+
+  </dd>
+</div>
+
+{% if data['another-sea-quote-1']%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['another-sea-quote-2'] }}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
+      Change
+      <span class="govuk-visually-hidden"> Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+    </a>
+
+  </dd>
+</div>
+
+
+{% if data['another-sea-quote-2']=='Yes'%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Providing another quotes for {{ data['specialist-equipment-type-1'] }}
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['quote-one-1-3'] }}<br>
+  {{ data['quote-one-2-3'] }}<br>
+  £{{data['cost-per-item-3']}}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-3">
+      Change
+      <span class="govuk-visually-hidden"> Providing another quotes for {{ data['specialist-equipment-type-1'] }}</span>
+    </a>
+
+  </dd>
+</div>
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           How will this equipment help you at work?
