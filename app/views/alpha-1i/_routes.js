@@ -378,7 +378,7 @@ router.route('/eligibility/what-benefits-are-you-receiving')
                  res.redirect(redirectUrl)
                        })
 
-router.route('/eligibility/do-you-work-less-than-16-hours')
+router.route('/eligibility/do-you-work-less-than-16-hours-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['1i-less-than-16-hours']) {
