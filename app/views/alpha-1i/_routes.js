@@ -383,7 +383,7 @@ router.route('/eligibility/do-you-work-less-than-16-hours-answer')
 let redirectUrl
 switch (req.body['1i-less-than-16-hours']) {
 case 'yes':
-redirectUrl = '/alpha-1i/eligibility/you-may-be-eligible'
+redirectUrl = '/alpha-1i/eligibility/ogd'
 break
 case 'no':
 redirectUrl = '/alpha-1i/eligibility/paid-supported-permitted-work'
@@ -401,7 +401,7 @@ router.route('/eligibility/paid-supported-permitted-work')
 let redirectUrl
 switch (req.body['paid-supported-permitted-work']) {
 case 'Yes':
-redirectUrl = '/alpha-1i/eligibility/you-may-be-eligible'
+redirectUrl = '/alpha-1i/eligibility/ogd'
 break
 case 'No':
 redirectUrl = '/alpha-1i/eligibility/ineligible-employment-support-allowance'
