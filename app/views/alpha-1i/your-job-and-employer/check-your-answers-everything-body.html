@@ -60,8 +60,20 @@
             When did you start this job?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['employment-start-day'] }} / {{ data['employment-start-month'] }} / {{
-            data['employment-start-year'] }}
+            {{ data['employment-start-day'] }}
+            {% if (data['employment-start-month'] =='01') or (data['employment-start-month'] =='1') %} January {% endif%}
+            {% if (data['employment-start-month'] =='02') or (data['employment-start-month'] =='2') %} February  {% endif%}
+            {% if (data['employment-start-month'] =='03') or (data['employment-start-month'] =='3') %} March {% endif%}
+            {% if (data['employment-start-month'] =='04') or (data['employment-start-month'] =='4') %} June {% endif%}
+            {% if (data['employment-start-month'] =='05') or (data['employment-start-month'] =='5') %} May {% endif%}
+            {% if (data['employment-start-month'] =='06') or (data['employment-start-month'] =='6') %} June {% endif%}
+            {% if (data['employment-start-month'] =='07') or (data['employment-start-month'] =='7') %} July {% endif%}
+            {% if (data['employment-start-month'] =='08') or (data['employment-start-month'] =='8') %} August {% endif%}
+            {% if (data['employment-start-month'] =='09') or (data['employment-start-month'] =='9') %} September {% endif%}
+            {% if data['employment-start-month'] =='10' %} October {% endif%}
+            {% if data['employment-start-month'] =='11'%} November {% endif%}
+            {% if data['employment-start-month'] =='12' %} December {% endif%}
+             {{ data['employment-start-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/alpha-1i/your-job-and-employer/employment/start-date">
@@ -361,8 +373,20 @@
           When did you start this job?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['self-employment-start-day'] }} / {{ data['self-employment-start-month'] }} / {{
-          data['self-employment-start-year'] }}
+          {{ data['self-employment-start-day'] }}
+          {% if (data['self-employment-start-month'] =='01') or (data['self-employment-start-month'] =='1') %} January {% endif%}
+       {% if (data['self-employment-start-month'] =='02') or (data['self-employment-start-month'] =='2') %} February  {% endif%}
+       {% if (data['self-employment-start-month'] =='03') or (data['self-employment-start-month'] =='3') %} March {% endif%}
+       {% if (data['self-employment-start-month'] =='04') or (data['self-employment-start-month'] =='4') %} June {% endif%}
+       {% if (data['self-employment-start-month'] =='05') or (data['self-employment-start-month'] =='5') %} May {% endif%}
+       {% if (data['self-employment-start-month'] =='06') or (data['self-employment-start-month'] =='6') %} June {% endif%}
+       {% if (data['self-employment-start-month'] =='07') or (data['self-employment-start-month'] =='7') %} July {% endif%}
+       {% if (data['self-employment-start-month'] =='08') or (data['self-employment-start-month'] =='8') %} August {% endif%}
+       {% if (data['self-employment-start-month'] =='09') or (data['self-employment-start-month'] =='9') %} September {% endif%}
+       {% if data['self-employment-start-month'] =='10' %} October {% endif%}
+       {% if data['self-employment-start-month'] =='11'%} November {% endif%}
+       {% if data['self-employment-start-month'] =='12' %} December {% endif%}
+           {{ data['self-employment-start-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/self-employed/start-date">
@@ -538,8 +562,19 @@
           When will you be starting your new job?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['about-to-start-employment-start-date-day'] }} /
-          {{ data['about-to-start-employment-start-date-month'] }} /
+          {{ data['about-to-start-employment-start-date-day'] }}
+          {% if (data['about-to-start-employment-start-date-month'] =='01') or (data['about-to-start-employment-start-date-month'] =='1') %} January {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='02') or (data['about-to-start-employment-start-date-month'] =='2') %} February  {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='03') or (data['about-to-start-employment-start-date-month'] =='3') %} March {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='04') or (data['about-to-start-employment-start-date-month'] =='4') %} June {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='05') or (data['about-to-start-employment-start-date-month'] =='5') %} May {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='06') or (data['about-to-start-employment-start-date-month'] =='6') %} June {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='07') or (data['about-to-start-employment-start-date-month'] =='7') %} July {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='08') or (data['about-to-start-employment-start-date-month'] =='8') %} August {% endif%}
+       {% if (data['about-to-start-employment-start-date-month'] =='09') or (data['about-to-start-employment-start-date-month'] =='9') %} September {% endif%}
+       {% if data['about-to-start-employment-start-date-month'] =='10' %} October {% endif%}
+       {% if data['about-to-start-employment-start-date-month'] =='11'%} November {% endif%}
+       {% if data['about-to-start-employment-start-date-month'] =='12' %} December {% endif%}
           {{ data['about-to-start-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -838,9 +873,20 @@
           When will you be starting your self-employment?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['about-to-start-self-employment-start-date-day'] }} / {{
-          data['about-to-start-self-employment-start-date-month'] }} / {{
-          data['about-to-start-self-employment-start-date-year'] }}
+          {{ data['about-to-start-self-employment-start-date-day'] }}
+          {% if (data['about-to-start-self-employment-start-date-month'] =='01') or (data['about-to-start-self-employment-start-date-month'] =='1') %} January {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='02') or (data['about-to-start-self-employment-start-date-month'] =='2') %} February  {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='03') or (data['about-to-start-self-employment-start-date-month'] =='3') %} March {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='04') or (data['about-to-start-self-employment-start-date-month'] =='4') %} June {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='05') or (data['about-to-start-self-employment-start-date-month'] =='5') %} May {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='06') or (data['about-to-start-self-employment-start-date-month'] =='6') %} June {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='07') or (data['about-to-start-self-employment-start-date-month'] =='7') %} July {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='08') or (data['about-to-start-self-employment-start-date-month'] =='8') %} August {% endif%}
+       {% if (data['about-to-start-self-employment-start-date-month'] =='09') or (data['about-to-start-self-employment-start-date-month'] =='9') %} September {% endif%}
+       {% if data['about-to-start-self-employment-start-date-month'] =='10' %} October {% endif%}
+       {% if data['about-to-start-self-employment-start-date-month'] =='11'%} November {% endif%}
+       {% if data['about-to-start-self-employment-start-date-month'] =='12' %} December {% endif%}
+          {{ data['about-to-start-self-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/start-date">

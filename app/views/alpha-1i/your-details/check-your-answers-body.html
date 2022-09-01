@@ -28,7 +28,21 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['date-of-birth-day'] }} {{ data['date-of-birth-month'] }} {{ data['date-of-birth-year'] }}
+        
+            {{ data['date-of-birth-day'] }}
+       {% if (data['date-of-birth-month'] =='01') or (data['date-of-birth-month'] =='1') %} January {% endif%}
+       {% if (data['date-of-birth-month'] =='02') or (data['date-of-birth-month'] =='2') %} February  {% endif%}
+       {% if (data['date-of-birth-month'] =='03') or (data['date-of-birth-month'] =='3') %} March {% endif%}
+       {% if (data['date-of-birth-month'] =='04') or (data['date-of-birth-month'] =='4') %} June {% endif%}
+       {% if (data['date-of-birth-month'] =='05') or (data['date-of-birth-month'] =='5') %} May {% endif%}
+       {% if (data['date-of-birth-month'] =='06') or (data['date-of-birth-month'] =='6') %} June {% endif%}
+       {% if (data['date-of-birth-month'] =='07') or (data['date-of-birth-month'] =='7') %} July {% endif%}
+       {% if (data['date-of-birth-month'] =='08') or (data['date-of-birth-month'] =='8') %} August {% endif%}
+       {% if (data['date-of-birth-month'] =='09') or (data['date-of-birth-month'] =='9') %} September {% endif%}
+       {% if data['date-of-birth-month'] =='10' %} October {% endif%}
+       {% if data['date-of-birth-month'] =='11'%} November {% endif%}
+       {% if data['date-of-birth-month'] =='12' %} December {% endif%}
+  {{ data['date-of-birth-year' ] }}
           </dd>
           {% if print != true %}
           <dd class="govuk-summary-list__actions govuk-!-display-none-print">
