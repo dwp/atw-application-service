@@ -687,7 +687,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/support-workers/temporary-basis-1')
+router.route('/support-workers/temporary-basis-1-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-short-or-long-term-two-options']) {
