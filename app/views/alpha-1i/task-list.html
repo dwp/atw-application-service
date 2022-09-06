@@ -175,6 +175,7 @@ Complete your application – Access to Work – GOV.UK
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                {% if not data['do-you-have-another-job']%}Equipment, adaptations and software{% else %}
                 {% if ((data ["specialist-equipment-screener"]) =="No")%}
                 <a href="/alpha-1i/equipment-adaptations-and-software/screener" aria-describedby="specialist-equipment-status">
                   Equipment, adaptations and software
@@ -188,15 +189,18 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/equipment-adaptations-and-software/screener" aria-describedby="specialist-equipment-status">
                   Equipment, adaptations and software
                 </a>
-                {% endif %}
+                {% endif %}  {% endif %}
               </span>
             <strong>
+              {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+              {% else %}
               {% if (data ["specialist-equipment-screener"] =="No") or (data ['specialist-equipment-check-your-answers-task-list'] =="true") or (data ["specialist-equipment-screener"] =="I do not know")%}
               <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
               {% elseif (data ["specialist-equipment-screener"] =="Yes")%}
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
               {% else %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+              {% endif %}
               {% endif %}
             </strong>
           </li>
@@ -227,6 +231,7 @@ Complete your application – Access to Work – GOV.UK
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                  {% if not data['do-you-have-another-job']%}Mental health support{% else %}
                 {% if ((data ["mental-health-support"]) =="No")%}
                 <a href="/alpha-1i/mental-health-support/screener" aria-describedby="mental-health-support-status">
                   Mental health support
@@ -240,16 +245,18 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/mental-health-support/screener" aria-describedby="mental-health-support-status">
                   Mental health support
                 </a>
-                {% endif %}
+                {% endif %}  {% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["mental-health-support-screener"] =="No") or (data ['mental-health-check-your-answers'] =="true") or (data ["mental-health-support-screener"] =="I do not know")%}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
                 {% elseif (data ["mental-health-support-screener"] =="Yes")%}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
 
@@ -257,6 +264,7 @@ Complete your application – Access to Work – GOV.UK
             <li class="app-task-list__item">
 
               <span class="app-task-list__task-name">
+                  {% if not data['do-you-have-another-job']%}Support workers{% else %}
                 {% if (data ["support-worker-screener"] =="No")%}
                 <a href="/alpha-1i/support-workers/screener" aria-describedby="support-worker-status">
                   Support workers
@@ -270,21 +278,24 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/support-workers/screener" aria-describedby="support-worker-status">
                   Support workers
                 </a>
-                {% endif %}
+                {% endif %}{% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["support-worker-screener"] =="No") or (data ['support-worker-check-your-answers-task-list'] =="true") or  (data ["support-worker-screener"] =="I do not know") %}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
                 {% elseif (data ["support-worker-screener"] =="Yes")%}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                  {% if not data['do-you-have-another-job']%}Travelling to and from work{% else %}
                 {% if ((data ["travelling-to-and-from-work-screener-task-list"]) =="No")%}
                 <a href="/alpha-1i/travelling-to-and-from-work/screener" aria-describedby="travelling-to-and-from-work-status">
                   Travelling to and from work
@@ -298,9 +309,11 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/travelling-to-and-from-work/screener" aria-describedby="travelling-to-and-from-work-status">
                   Travelling to and from work
                 </a>
-                {% endif %}
+                {% endif %}{% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["travelling-to-and-from-work-screener"] =="No") or
                 (data ['travelling-to-and-from-work-task-list'] =="true") %}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
@@ -308,13 +321,14 @@ Complete your application – Access to Work – GOV.UK
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
-            </li>
+
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+             {% if not data['do-you-have-another-job']%}Travelling during work{% else %}
                 {% if ((data ["travel-during-work"]) =="No")%}
                 <a href="/alpha-1i/travelling-during-work/screener" aria-describedby="travel-during-work-status">
                   Travelling during work
@@ -328,9 +342,12 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/travelling-during-work/screener" aria-describedby="travel-during-work-status">
                   Travelling during work
                 </a>
-                {% endif %}
+                {% endif %}{% endif %}
+
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["travel-during-work-screener"] =="No") or (data
                 ['travel-during-work-check-your-answers'] =="true") or (data ["travel-during-work-screener"] =="I do not know")%}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
@@ -338,12 +355,13 @@ Complete your application – Access to Work – GOV.UK
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                {% if not data['do-you-have-another-job']%}Changes to your workplace{% else %}
                 {% if ((data ["workplace-adaptations-screener"]) =="No") or (data ["workplace-adaptations-screener"] =="I do not know")%}
                 <a href="/alpha-1i/changes-to-your-workplace/screener" aria-describedby="workplace-adaptations-status">
                   Changes to your workplace
@@ -357,9 +375,11 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/changes-to-your-workplace/screener" aria-describedby="workplace-adaptations-status">
                   Changes to your workplace
                 </a>
-                {% endif %}
+                {% endif %}  {% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["workplace-adaptations-screener"] =="No") or (data
                 ["workplace-adaptations-check-your-answers"] =="true") or (data ["workplace-adaptations-screener"] =="I do not know")%}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
@@ -367,12 +387,13 @@ Complete your application – Access to Work – GOV.UK
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+            {% if not data['do-you-have-another-job']%}Changes to your vehicle{% else %}
                 {% if ((data ["changes-to-your-vehicle"]) =="No")%}
                 <a href="/alpha-1i/changes-to-your-vehicle/screener" aria-describedby="changes-to-your-vehicle-status">
                   Changes to your vehicle
@@ -386,9 +407,11 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/changes-to-your-vehicle/screener" aria-describedby="changes-to-your-vehicle-status">
                   Changes to your vehicle
                 </a>
-                {% endif %}
+                {% endif %}{% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["changes-to-your-vehicle-screener"] =="No") or (data
                 ["changes-to-your-vehicle-check-your-answers"] =="true") or (data ["changes-to-your-vehicle-screener"] =="I do not know")%}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
@@ -396,11 +419,10 @@ Complete your application – Access to Work – GOV.UK
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
-                {% endif %}
+                {% endif %}{% endif %}
               </strong>
             </li>
           </ul>
-        </li>
 
         <li>
           <h3 class="app-task-list__section">
@@ -409,7 +431,8 @@ Complete your application – Access to Work – GOV.UK
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-                {% if ((data ["extra-information-screener"]) =="No")%}
+                {% if not data['do-you-have-another-job']%}Anything else you would like to tell us{% else %}
+                {% if ((data ["extra-information-screener"]) =="No")%} 
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
                   Anything else you would like to tell us
                 </a>
@@ -422,16 +445,18 @@ Complete your application – Access to Work – GOV.UK
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
                   Anything else you would like to tell us
                 </a>
-                {% endif %}
+                {% endif %}{% endif %}
               </span>
               <strong>
+                {% if not data['do-you-have-another-job']%} <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="cannot start yet">Cannot start yet</strong>
+                {% else %}
                 {% if (data ["extra-information-screener"] =="No") or (data ['extra-information-check-your-answers-task-list'] =="true") %}
                 <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
                 {% elseif (data ["extra-information-screener"] =="Yes")%}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% else %}
                 <strong class="govuk-tag govuk-tag--purple app-task-list__tag" id="not started">Optional</strong>
-                {% endif %}
+                {% endif %}  {% endif %}
               </strong>
             </li>
           </ul>
