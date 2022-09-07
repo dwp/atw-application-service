@@ -691,13 +691,13 @@ router.route('/support-workers/type-support-worker')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['type-support-worker']) {
-case 'British sign language (BSL) interpreter':
+case 'British Sign Language (BSL) interpreter':
 redirectUrl = '/alpha-1i/support-workers/how-will-a-support-worker-help'
 break
 case 'Job coach':
 redirectUrl = '/alpha-1i/support-workers/how-will-a-support-worker-help'
 break
-case 'Other':
+case 'A different type of support worker':
 redirectUrl = '/alpha-1i/support-workers/type-of-support-worker-that-you-need'
 break
 

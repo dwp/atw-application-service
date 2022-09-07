@@ -26,7 +26,8 @@ href: "javascript:history.go(-1)"
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    How will a support worker help you at work?
+                    How will a {% if data['type-support-worker']=='Job coach'%}job coach{% endif %} {% if data['type-support-worker']=='British Sign Language (BSL) interpreter'%}{{data['type-support-worker']}}{% endif %}
+                    {% if data['type-support-worker']=='A different type of support worker' %}support worker{% endif %} help you at work?
                   </h1>
                 </legend>
 
