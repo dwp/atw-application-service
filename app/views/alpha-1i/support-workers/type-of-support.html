@@ -1,0 +1,76 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What type of support worker do you need? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/support-workers/type-support-worker" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+            Which type of support worker do you need?
+          </h1>
+     </legend>
+
+          <P>
+
+          <p>
+            <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-support-worker" name="type-support-worker" type="radio" value="British Sign Language (BSL) interpreter" {{ checked("type-support-worker", "British Sign Language (BSL) interpreter") }}>
+              <label class="govuk-label govuk-radios__label" for="type-support-worker">
+                British Sign Language (BSL) interpreter
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-support-worker-2" name="type-support-worker" type="radio" value="Job coach" {{ checked("type-support-worker", "Job coach") }}>
+              <label class="govuk-label govuk-radios__label" for="type-support-worker-2" >
+                Job coach
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-support-worker-3" name="type-support-worker" type="radio" value="A different type of support worker" {{ checked("type-support-worker", "A different type of support worker") }}>
+              <label class="govuk-label govuk-radios__label" for="type-support-worker-3" >
+                A different type of support worker
+              </label>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

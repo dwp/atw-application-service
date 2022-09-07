@@ -674,7 +674,7 @@ router.route('/support-workers/do-you-know-what-support-worker-you-need')
 let redirectUrl
 switch (req.body['support-worker-do-you-know-what-support-worker-you-need']) {
 case 'Yes, I know what I need':
-redirectUrl = '/alpha-1i/support-workers/type-of-support-worker-that-you-need'
+redirectUrl = '/alpha-1i/support-workers/type-of-support'
 break
 case 'No, I do not know what I need':
 redirectUrl = '/alpha-1i/support-workers/temporary-basis'
@@ -686,6 +686,28 @@ break
 }
 res.redirect(redirectUrl)
 })
+
+router.route('/support-workers/type-support-worker')
+.post((req, res, next) => {
+let redirectUrl
+switch (req.body['type-support-worker']) {
+case 'British Sign Language (BSL) interpreter':
+redirectUrl = '/alpha-1i/support-workers/how-will-a-support-worker-help'
+break
+case 'Job coach':
+redirectUrl = '/alpha-1i/support-workers/how-will-a-support-worker-help'
+break
+case 'A different type of support worker':
+redirectUrl = '/alpha-1i/support-workers/type-of-support-worker-that-you-need'
+break
+
+default:
+redirectUrl = req.path
+break
+}
+res.redirect(redirectUrl)
+})
+
 
 router.route('/support-workers/temporary-basis-1-answer')
 .post((req, res, next) => {
@@ -705,7 +727,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/support-workers/providing-quotes-for-this-support')
+router.route('/support-workers/providing-quotes-for-this-support-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-providing-quotes-for-this-support']) {

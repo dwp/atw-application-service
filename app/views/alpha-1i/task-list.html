@@ -29,22 +29,6 @@ Complete your application – Access to Work – GOV.UK
       <ol class="app-task-list">
 
         <li>
-          <!-- <h3 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> Before you start
-          </h3>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="eligibility-status">
-                  Check you're eligible
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
-            </li>
-          </ul>
-        </li> -->
-
-        <li>
           <h3 class="app-task-list__section">
             <span class="app-task-list__section-number">1. </span> About you
           </h3>
@@ -432,7 +416,7 @@ Complete your application – Access to Work – GOV.UK
             <li class="app-task-list__item">
             <span class="app-task-list__task-name">
                 {% if not data['do-you-have-another-job']%}Anything else you would like to tell us{% else %}
-                {% if ((data ["extra-information-screener"]) =="No")%} 
+                {% if ((data ["extra-information-screener"]) =="No")%}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
                   Anything else you would like to tell us
                 </a>

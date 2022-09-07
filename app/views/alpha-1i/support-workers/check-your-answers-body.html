@@ -81,7 +81,7 @@
 
           {% if (data['support-worker-do-you-know-what-support-worker-you-need'] =="Yes, I know what I need") %}
 
-          <h2 class="govuk-heading-m">Support worker</h2>
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -104,7 +104,7 @@
                   Do you know what type of support worker you need?
               </dt>
               <dd class="govuk-summary-list__value">
-                  {{ data['type-of-support-worker'] }}
+                  {{ data['support-worker-do-you-know-what-support-worker-you-need'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                   <a href="/alpha-1i/support-workers/do-you-know-what-support-worker-you-need">
@@ -116,7 +116,40 @@
 
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                  How will a support worker help you at work?
+  Which type of support worker do you need?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['type-support-worker'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-1i/support-workers/type-of-support">
+                      Change
+                      <span class="govuk-visually-hidden"> Which type of support worker do you need?</span>
+                  </a>
+              </dd>
+          </div>
+
+{% if data['type-support-worker']=="Other"%}
+
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+  What type of support worker do you need?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['type-of-support-worker-other'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a href="/alpha-1i/support-workers/type-of-support-worker-that-you-need">
+              Change
+              <span class="govuk-visually-hidden"> Do you know what type of support worker you need?</span>
+          </a>
+      </dd>
+  </div>
+{% endif %}
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How will a {% if data['type-support-worker']=='Job coach'%}job coach{% endif %} {% if data['type-support-worker']=='British Sign Language (BSL) interpreter'%}{{data['type-support-worker']}}{% endif %}
+                {% if data['type-support-worker']=='A different type of support worker' %}support worker{% endif %} help you at work?
               </dt>
               <dd class="govuk-summary-list__value">
                   {{ data['support-worker-might-help'] }}
@@ -124,7 +157,8 @@
               <dd class="govuk-summary-list__actions">
                   <a href="/alpha-1i/support-workers/how-will-a-support-worker-help">
                       Change
-                      <span class="govuk-visually-hidden"> How will a support worker help you at work?</span>
+                      <span class="govuk-visually-hidden">                     How will a {% if data['type-support-worker']=='Job coach'%}job coach{% endif %} {% if data['type-support-worker']=='British Sign Language (BSL) interpreter'%}british sign language (BSL) interpreter{% endif %}
+                                          {% if data['type-support-worker']=='A different type of support worker' %}support worker{% endif %} help you at work?</span>
                   </a>
               </dd>
           </div>
