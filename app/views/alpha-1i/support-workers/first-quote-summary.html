@@ -18,7 +18,7 @@ href: "javascript:history.go(-1)"
 
 <h1 class="govuk-heading-l">You have provided 1 quote for your support worker</h1>
 
-<h1 class="govuk-heading-m">First quote for {{ data['type-of-support-worker'] }}</h1>
+<h1 class="govuk-heading-m">First quote for {% if data['type-support-worker']=="A different type of support worker"%}{{ data['type-of-support-worker-other'] }}{% else %} {{ data['type-support-worker'] }}{% endif %}</h1>
 
 <div class="govuk-form-group">
   <dl class="govuk-summary-list govuk-!-margin-bottom-9">

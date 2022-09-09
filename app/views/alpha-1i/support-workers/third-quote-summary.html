@@ -20,7 +20,7 @@ href: "javascript:history.go(-1)"
 
 <div class="govuk-!-padding-bottom-3"></div>
 
-<h1 class="govuk-heading-m">First quote for {{ data['type-of-support-worker'] }}</h1>
+<h1 class="govuk-heading-m">First quote for {% if data['type-support-worker']=="A different type of support worker"%}{{ data['type-of-support-worker-other'] }}{% else %} {{ data['type-support-worker'] }}{% endif %}</h1>
 
 <div class="govuk-form-group">
   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -65,7 +65,7 @@ href: "javascript:history.go(-1)"
     </div>
   </dl>
 
-  <h1 class="govuk-heading-m">Second quote for {{ data['type-of-support-worker'] }}</h1>
+  <h1 class="govuk-heading-m">Second quote for {% if data['type-support-worker']=="A different type of support worker"%}{{ data['type-of-support-worker-other'] }}{% else %} {{ data['type-support-worker'] }}{% endif %}</h1>
 
   <div class="govuk-form-group">
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -110,7 +110,7 @@ href: "javascript:history.go(-1)"
       </div>
     </dl>
 
-    <h1 class="govuk-heading-m">Third quote for {{ data['type-of-support-worker'] }}</h1>
+    <h1 class="govuk-heading-m">Third quote for {% if data['type-support-worker']=="A different type of support worker"%}{{ data['type-of-support-worker-other'] }}{% else %} {{ data['type-support-worker'] }}{% endif %}</h1>
 
     <div class="govuk-form-group">
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
