@@ -21,7 +21,7 @@ href: "javascript:history.go(-1)"
 
       <div class="govuk-form-group">
 
-        <h1 class="govuk-heading-l">First quote for {{ data['type-of-support-worker'] }}</h1>
+        <h1 class="govuk-heading-l">First quote for {{ data['type-of-support-worker'] }}{{ data['type-of-support-worker-other'] }}</h1>
 
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="support-worker-provider-1">
@@ -86,14 +86,13 @@ href: "javascript:history.go(-1)"
 
       <div class="govuk-!-padding-bottom-1"></div>
 
-      <form class="form" action="/url/of/next/page" method="post">
+
         <input type="hidden" name="support-worker-quote-1-task-list" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
         <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
 
-    </form>
   </div>
 
   </div>

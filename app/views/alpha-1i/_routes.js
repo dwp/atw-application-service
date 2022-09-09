@@ -745,7 +745,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/support-workers/first-quote-summary')
+router.route('/support-workers/first-quote-summary-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-second-quote-1']) {
@@ -763,7 +763,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/support-workers/second-quote-summary')
+router.route('/support-workers/second-quote-summary-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['support-worker-third-quote-3']) {
@@ -821,7 +821,7 @@ return res.redirect("/alpha-1i/travelling-to-and-from-work/how-do-you-get-to-wor
 })
 
 
-router.route('/travelling-to-and-from-work/what-support-do-you-need')
+router.route('/travelling-to-and-from-work/what-support-do-you-need-answer')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
