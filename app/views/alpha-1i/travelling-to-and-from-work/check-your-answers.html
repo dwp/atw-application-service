@@ -6,9 +6,8 @@ Check your answers: travel to and from work – Access to Work – GOV.UK
 
 {% if not inEditMode and casa.journeyPreviousUrl %}
 {{ govukBackLink({
-classes: 'hide-print',
-text: t('common:back'),
-href: casa.journeyPreviousUrl
+text: "Back",
+href: "javascript:history.go(-1)"
 }) }}
 {% endif %}
 
