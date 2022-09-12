@@ -5,7 +5,11 @@ Providing quotes for this support – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="alpha-1i/travelling-to-and-from-work/taxi/will-your-journeys-be-between-home-and-work">Back</a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +18,7 @@ Providing quotes for this support – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/travelling-to-and-from-work/taxi/providing-quotes" method="post">
+    <form class="form" action="/alpha-1i/travelling-to-and-from-work/taxi/providing-quotes-answer" method="post">
 
       <div class="govuk-form-group">
 

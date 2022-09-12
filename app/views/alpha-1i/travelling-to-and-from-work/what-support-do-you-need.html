@@ -5,7 +5,11 @@ What type of support do you need to travel to and from work? – Access to Work 
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/travelling-to-and-from-work/how-do-you-get-to-work-at-the-moment">Back</a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}

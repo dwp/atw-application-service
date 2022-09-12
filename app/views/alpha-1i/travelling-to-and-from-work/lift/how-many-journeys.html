@@ -5,8 +5,11 @@ How many journeys will you need support for? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/travelling-to-and-from-work/lift/work-how-would-it-meet-your-needs">Back
-  </a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}

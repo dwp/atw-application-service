@@ -5,7 +5,11 @@ You have provided 3 quotes – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/travelling-to-and-from-work/taxi/third-quote">Back</a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}

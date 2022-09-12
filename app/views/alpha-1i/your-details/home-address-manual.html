@@ -5,7 +5,11 @@ What is your address? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-details/home-address-select">Back</a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}

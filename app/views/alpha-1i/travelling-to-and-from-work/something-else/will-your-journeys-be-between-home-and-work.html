@@ -5,7 +5,11 @@ Will your journeys be between your home and work addresses? â€“ Access to Work â
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/travelling-to-and-from-work/something-else/how-many-journeys">Back</a>
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
 {% endblock %}
 
 {% block content %}
