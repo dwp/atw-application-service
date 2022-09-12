@@ -863,7 +863,7 @@ break
 res.redirect(redirectUrl)
 })
 
-router.route('/travelling-to-and-from-work/taxi/first-quote-summary')
+router.route('/travelling-to-and-from-work/taxi/first-quote-summary-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-hmrc-table-1-quote-1']) {
@@ -881,7 +881,7 @@ default:
 res.redirect(redirectUrl)
 })
 
-router.route('/travelling-to-and-from-work/taxi/second-quote-summary')
+router.route('/travelling-to-and-from-work/taxi/second-quote-summary-answer')
 .post((req, res, next) => {
 let redirectUrl
 switch (req.body['travelling-to-and-from-work-hmrc-table-2-quote-1']) {
