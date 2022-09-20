@@ -6,9 +6,8 @@ What is your address? – Access to Work – GOV.UK
 
 {% block beforeContent %}
 {{ govukBackLink({
-classes: 'hide-print',
-text: t('common:back'),
-href: casa.journeyPreviousUrl
+text: "Back",
+href: "javascript:history.go(-1)"
 }) }}
 {% endblock %}
 
