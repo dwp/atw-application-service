@@ -5,7 +5,10 @@ What is the address of your company? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/employment/employer-name">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -25,11 +28,11 @@ What is the address of your company? – Access to Work – GOV.UK
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    What is the address of this company or organisation?
+                    What is the address of {{ data['employer-name'] | capitalize }}?
                   </h1>
                 </legend>
 
-                <p>This should be a registered office address.</p>
+                <p>This should be your local office or workplace address.</p>
 
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="workplace-postcode">

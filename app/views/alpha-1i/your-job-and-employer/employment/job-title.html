@@ -5,7 +5,10 @@ What is your job title? – Access to Work – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/employment-status">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -18,7 +21,7 @@ What is your job title? – Access to Work – GOV.UK
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="job-title">
-          What is your job title?
+          What is your job title at {{ data['employer-name'] | capitalize }}?
         </label>
         </h1>
         <input class="govuk-input" id="job-title" name="job-title" type="text" value="{{ data['job-title'] }}">

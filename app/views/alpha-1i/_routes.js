@@ -92,13 +92,13 @@ router.route('/your-job-and-employer/employment-status')
     let redirectUrl
     switch (req.body['1i-employment-status']) {
       case 'Employed':
-        redirectUrl = '/alpha-1i/your-job-and-employer/employment/job-title'
+        redirectUrl = '/alpha-1i/your-job-and-employer/employment/employer-name'
         break
       case 'Self-employed':
         redirectUrl = '/alpha-1i/your-job-and-employer/self-employed/job-title'
         break
           case 'About to start employment':
-            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-employment/job-title'
+            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-employment/employer-name'
             break
           case 'About to start self-employment':
             redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/job-title'
