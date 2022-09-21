@@ -146,7 +146,27 @@ router.route('/your-job-and-employer/employment-status')
       }
     })
 
+    router.post('/your-job-and-employer/2/do-you-have-another-job-answer', function (req, res) {
 
+      const anotherjob2 = req.session.data['do-you-have-another-job-2']
+
+      if (anotherjob2 === 'Yes') {
+        res.redirect('/alpha-1i/your-job-and-employer/3/employment-status')
+      } else {
+        res.redirect('/alpha-1i/task-list')
+      }
+    })
+
+        router.post('/your-job-and-employer/do-you-have-another-job-answer', function (req, res) {
+
+          const anotherjob = req.session.data['do-you-have-another-job-3']
+
+          if (anotherjob === 'Yes') {
+            res.redirect('/alpha-1i/your-job-and-employer/4/employment-status')
+          } else {
+            res.redirect('/alpha-1i/task-list')
+          }
+        })
 router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
