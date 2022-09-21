@@ -111,6 +111,42 @@ router.route('/your-job-and-employer/employment-status')
     res.redirect(redirectUrl)
   })
 
+  router.route('/your-job-and-employer/employment-status-2')
+    .post((req, res, next) => {
+      let redirectUrl
+      switch (req.body['1i-employment-status-2']) {
+        case 'Employed':
+          redirectUrl = '/alpha-1i/your-job-and-employer/2/employment/employer-name'
+          break
+        case 'Self-employed':
+          redirectUrl = '/alpha-1i/your-job-and-employer/2/self-employed/job-title'
+          break
+            case 'About to start employment':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
+              break
+            case 'About to start self-employment':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/job-title'
+              break
+
+        default:
+          redirectUrl = req.path
+          break
+      }
+      res.redirect(redirectUrl)
+    })
+
+    router.post('/your-job-and-employer/do-you-have-another-job-answer', function (req, res) {
+
+      const anotherjob = req.session.data['do-you-have-another-job']
+
+      if (anotherjob === 'Yes') {
+        res.redirect('/alpha-1i/your-job-and-employer/2/employment-status')
+      } else {
+        res.redirect('/alpha-1i/your-job-and-employer/2/check-your-answers-everything')
+      }
+    })
+
+
 router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
