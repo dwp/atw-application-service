@@ -5,12 +5,20 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 {% endblock %}
 
 {% if not inEditMode and casa.journeyPreviousUrl %}
-{{ govukBackLink({
-classes: 'hide-print',
-text: t('common:back'),
-href: casa.journeyPreviousUrl
-}) }}
+
 {% endif %}
+
+{% if not totalJobs %}
+{% set totalJobs = 0 %}
+{% endif %}
+
+{% for i in [1,2,3] -%}
+{% set indexJob = i %}
+{% if data['employer-name-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
 
 {% block beforeContent %}
 <a class="govuk-back-link" onclick="history.back()">Back</a>
@@ -22,17 +30,24 @@ href: casa.journeyPreviousUrl
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">You have added 3 jobs</h1>
+      <h1 class="govuk-heading-l">You have added {{totalJobs}} jobs</h1>
 
 <div class="govuk-form-group">
-  <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
 
+
+
+  <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
+{% for i in [1,2,3,4]-%}
+{% set index = i %}
+{% if data['employer-name-'+ index]%}
     <div class="hmrc-add-to-a-list__contents">
       <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-        {{ data['employer-name']}}
+        {% if data['1i-employment-status']=="Employed" or data['1i-employment-status']=="About to start employment"%}{{ data['employer-name-'+ index] }}{% endif %}
+        {% if data['1i-employment-status']=="Self-employed" or data['1i-employment-status']=="About to start self-employment"%}{{ data['job-title'] }}jl{% endif %}
+
       </dt>
       <dd class="hmrc-add-to-a-list__change">
-        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/check-your-answers-everything">
+        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
           <span aria-hidden="true">Change</span>
           <span class="govuk-visually-hidden"></span>
         </a>
@@ -42,42 +57,11 @@ href: casa.journeyPreviousUrl
           <span aria-hidden="true">Remove</span>
           <span class="govuk-visually-hidden"></span>
         </a>
-      </dd>
-    </div>
-    <div class="hmrc-add-to-a-list__contents">
-      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-        {{ data['employer-name-3'] }}
-      </dt>
-      <dd class="hmrc-add-to-a-list__change">
-        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/2/check-your-answers-everything">
-          <span aria-hidden="true">Change</span>
-          <span class="govuk-visually-hidden"> </span>
-        </a>
-      </dd>
-      <dd class="hmrc-add-to-a-list__remove">
-        <a class="govuk-link" href="#">
-          <span aria-hidden="true">Remove</span>
-          <span class="govuk-visually-hidden"></span>
-        </a>
-      </dd>
-    </div>
-    <div class="hmrc-add-to-a-list__contents">
-      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-        {{ data['employer-name-3'] }}
-      </dt>
-      <dd class="hmrc-add-to-a-list__change">
-        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/2/check-your-answers-everything">
-          <span aria-hidden="true">Change</span>
-          <span class="govuk-visually-hidden"> </span>
-        </a>
-      </dd>
-      <dd class="hmrc-add-to-a-list__remove">
-        <a class="govuk-link" href="#">
-          <span aria-hidden="true">Remove</span>
-          <span class="govuk-visually-hidden"></span>
-        </a>
-      </dd>
-    </div>
+      </dd></div>
+      {% endif %}
+      {%- endfor %}
+
+
 
   </dl>
 </div>
@@ -91,15 +75,15 @@ href: casa.journeyPreviousUrl
       </legend>
       <div class="govuk-radios govuk-radios--inline">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job-3" type="radio"
+          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
                  value="Yes" >
           <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2">
             Yes
           </label>
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job-3" type="radio"
-                 value="No" {{ checked("do-you-have-another-job-3", "No") }}>
+          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
+                 value="No" {{ checked("do-you-have-another-job", "No") }}>
           <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2-2">
             No
           </label>

@@ -117,9 +117,7 @@ Complete your application – Access to Work – GOV.UK
             <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                 {% if (data ['employment-check-your-answers-everything'] =="true")%}
-                <a href=
-                {% if data['employer-name'] and not data['employer-name-2']%}"/alpha-1i/your-job-and-employer/summary-1"{% endif %}
-                {% if data['employer-name'] and data['employer-name-2']%}"/alpha-1i/your-job-and-employer/2/summary-2"{% endif %}
+                <a href="/alpha-1i/your-job-and-employer/summary"
                    aria-describedby="your-employment-details-status">
                   Your job and employer
                 </a>
