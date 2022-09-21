@@ -142,7 +142,7 @@ router.route('/your-job-and-employer/employment-status')
       if (anotherjob === 'Yes') {
         res.redirect('/alpha-1i/your-job-and-employer/2/employment-status')
       } else {
-        res.redirect('/alpha-1i/your-job-and-employer/2/check-your-answers-everything')
+        res.redirect('/alpha-1i/task-list')
       }
     })
 
