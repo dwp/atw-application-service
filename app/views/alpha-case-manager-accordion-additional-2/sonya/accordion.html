@@ -1,0 +1,776 @@
+{% extends "../temp/_BASE.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+
+
+
+
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#past-day">
+            Case Management
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-week">
+            Application
+          </a>
+        </li>
+        <!-- <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-month">
+            Past month
+          </a>
+        </li> -->
+
+      </ul>
+      <div class="govuk-tabs__panel" id="past-day">
+
+
+     <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <strong class="govuk-tag govuk-tag--red">
+    Priority
+    </strong>
+
+
+
+      <p></p>
+
+        <h2 class="govuk-heading-s">Application Summary</h2>
+
+
+    <p> Application refrence: dsadsda
+    <br> Date Submitted: dsadsda</p>
+
+    <p><strong>Name:</strong> dsadsadsa</p>
+
+    <p><strong>Prioity type(s):</strong> <br>dsadsadsa</p>
+
+    <p><strong>Condition:</strong> dsadsadsa</p>
+
+
+    </div>
+
+
+
+
+     <div class="govuk-grid-column-one-third">
+       <div class="update-panel">
+           <h3 id="update-adviser-heading" class="govuk-heading-m">Update adviser</h3>
+           <form action="/cases/apply/RMPX30/update-adviser" method="post" class="form" id="form-update-adviser" data-submitonce="data-submitonce">
+             <div class="govuk-form-group form-group-compound">
+               <select class="govuk-select" id="handlerId" name="handlerId" aria-labelledby="update-adviser-heading">
+                 <option value="" data-name=""></option>
+
+
+
+
+
+
+
+                       <option value="4" data-name="Aaron">Aaron</option>
+
+
+
+
+
+                       <option value="36" data-name="Adviser">Adviser</option>
+
+
+
+
+
+                       <option value="37" data-name="Case Team Lead">Case Team Lead</option>
+
+
+
+
+
+                       <option value="35" data-name="FRM">FRM</option>
+
+
+
+
+
+                       <option value="38" data-name="Payment Officer">Payment Officer</option>
+
+
+
+
+
+                       <option value="39" data-name="Payment Team Lead" selected="selected">Payment Team Lead</option>
+
+
+
+
+
+                       <option value="40" data-name="Quality">Quality</option>
+
+
+
+
+
+                       <option value="42" data-name="Quality1">Quality1</option>
+
+
+
+
+
+                       <option value="5" data-name="Shannon White">Shannon White</option>
+
+
+
+
+
+                       <option value="34" data-name="Telephony Agent">Telephony Agent</option>
+
+
+
+               </select>
+             </div>
+             <div>
+               <input type="submit" class="govuk-button" id="submitButtonEditAdvisor" value="Save">
+             </div>
+           </form>
+         </div>
+         <div class="update-panel govuk-form-group">
+            <h3 id="update-specialism-heading" class="govuk-heading-m">Update specialism</h3>
+            <form action="/cases/apply/RMPX30/update-specialism" method="post" class="form" id="form-update-specialism" autocomplete="off" data-submitonce="">
+                <div class="govuk-form-group form-group-compound">
+                <select class="govuk-select" id="specialismId" name="specialism" aria-labelledby="update-specialism-heading">
+
+
+                        <option value="self_employed" data-name="Self-employed">
+                    Self-employed
+                    </option>
+
+                        <option value="director" data-name="Director">
+                    Director
+                    </option>
+
+                        <option value="hidden" data-name="Hidden impairments">
+                    Hidden impairments
+                    </option>
+
+                        <option value="large_employer" data-name="Large employer">
+                    Large employer
+                    </option>
+
+                        <option value="deaf" data-name="Deaf">
+                    Deaf
+                    </option>
+
+                        <option value="visual" data-name="Visually impaired">
+                    Visually impaired
+                    </option>
+
+                        <option value="unknown" data-name="Pan disability" selected="">
+                    Pan disability
+                    </option>
+
+                </select>
+                </div>
+                <div>
+                <input type="submit" class="govuk-button" id="submitButtonSpecialism" value="Save">
+                </div>
+            </form>
+        </div>
+       </div>
+    </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <div class="govuk-grid-row">
+
+
+       <div class="govuk-grid-column-two-thirds">
+
+             <h2 class="govuk-heading-l">Application</h2>
+             <p class="govuk-body">
+               <strong>Reference number:</strong> <span id="reference-number">RMPX30</span><br>
+               <strong>Date submitted:</strong> <span id="date-created">2 November 2021, 10:09am</span><br>
+               <strong>Version of questions:</strong>
+
+                   25.25.0-rc
+                 <br>
+             </p>
+
+             <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+               <div class="govuk-accordion__section ">
+                 <div class="govuk-accordion__section-header">
+                   <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                       Writing well for the web
+                     </span>
+                   </h2>
+                 </div>
+                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                   <p class='govuk-body'>This is the content for Writing well for the web.</p>
+                 </div>
+               </div>
+               <div class="govuk-accordion__section ">
+                 <div class="govuk-accordion__section-header">
+                   <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                       Writing well for specialists
+                     </span>
+                   </h2>
+                 </div>
+                 <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                   <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+                 </div>
+               </div>
+               <div class="govuk-accordion__section ">
+                 <div class="govuk-accordion__section-header">
+                   <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                       Know your audience
+                     </span>
+                   </h2>
+                 </div>
+                 <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                   <p class='govuk-body'>This is the content for Know your audience.</p>
+                 </div>
+               </div>
+               <div class="govuk-accordion__section ">
+                 <div class="govuk-accordion__section-header">
+                   <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                       How people read
+                     </span>
+                   </h2>
+                 </div>
+                 <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+                   <p class='govuk-body'>This is the content for How people read.</p>
+                 </div>
+               </div>
+             </div>
+                 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                       Customer update
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                             <h2 class="govuk-heading-m">Customer details</h2>
+
+                             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Last name
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Corkery
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                        First name
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Sonya
+                                     </dd>
+                                 </div>
+
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Date of birth
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         25  December 1978
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Gender
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Male
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Ethnicity
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         English, Welsh, Scottish, Northern Irish or British
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Address
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         10 Carey's Wood
+                                         <br>
+                                         Smallfield
+                                         <br>
+                                         West Sussex
+                                         <br>
+                                         Horley
+                                         <br>
+                                         Surrey
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Postcode
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         RH6 9PB
+                                     </dd>
+                                 </div>
+
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Telephone Number
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         07888 123098
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Email address
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         egboultly@messages.tk
+                                     </dd>
+                                 </div>
+                             </dl>
+
+                             <h2 class="govuk-heading-m">Preferred communication method</h2>
+
+                             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Who should we contact about your application?
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Me
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Method
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Phone
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         Telephone number
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         07888 123098
+                                     </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         When are the best times to contact?
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         12 - 1pm weekdays
+                                     </dd>
+                                 </div>
+                             </dl>
+
+                             <h2 class="govuk-heading-m">Disability description</h2>
+
+                             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                 <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                         First disability
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                         Degenerative back condition
+                                     </dd>
+                                 </div>
+                             </dl>
+                         </div>
+                     </div>
+
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                       Update employer and job
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+                                     <h2 class="govuk-heading-m">Employer and job</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Employer name
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Universe Insurance
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Job title
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Sales manager
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Job start date
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 30 / 11 / 2014
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Employment status
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Employed
+                                             </dd>
+                                         </div>
+                                     </dl>
+
+                                     <h2 class="govuk-heading-m">Workplace details</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Address
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Marks House
+                                                 <br>
+                                                 Caroline Street
+                                                 <br>
+                                                 Penderly
+                                                 <br>
+                                                 United Kingdom
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Workplace Postcode
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 DV56 0KL
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Workplace forename(s)
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Brian
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Workplace surname
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 White
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Contact job title
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 HR
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Workplace telephone
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 02012 121212 (ext 4)
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Workplace email
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 brwhite@messages.tk
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Employer size
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 250+ employees
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Hours worked per week
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 37.5
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Days in the week worked
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 I work flexibly or on a shift pattern
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Work pattern
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 xxxxxx
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Job description
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Sell car insurance to customers over the phone.
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 How customer feels disability affects job
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 <p>I hurt my back playing cricket when I was younger and now suffer with constant pain. It affects all
+                                                     aspects of my life.</p>
+
+                                                 <p>I find it difficult to sit in my chair all day at work.</p>
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Support customers feels may be needed
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 <p>Specialist aids, equipment and software</p>
+                                             </dd>
+                                         </div>
+                                     </dl>
+                                 </div>
+                             </div>
+
+
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                       Support requested
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                             <div class="govuk-grid-row">
+                                 <div class="govuk-grid-column-two-thirds">
+                                     <h2 class="govuk-heading-m">Create business case</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Employer size
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 250+ employees
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Job description
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Sell car insurance to customers over the phone.
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 How customer feels disability affects job
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 <p>I hurt my back playing cricket when I was younger and now suffer with constant pain. It affects all
+                                                     aspects of my life.</p>
+
+                                                 <p>I find it difficult to sit in my chair all day at work.</p>
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Support customers feels may be needed
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 <p>Specialist aids, equipment and software</p>
+                                             </dd>
+                                         </div>
+                                     </dl>
+
+                                     <h2 class="govuk-heading-m">Specialist aids, equipment and software</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need equipment, adaptations or software to support you with your condition at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Yes
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you know what specialist equipment you need from Access to Work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Yes, I know what I need
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 What type of specialist equipment do you need?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 Adjustable desk
+                                                 <br>
+                                                 Computer screens
+                                                 <br>
+                                                 Ergonomic keyboard and mouse
+                                             </dd>
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 How will this equipment help you at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 <p>I am in a wheelchair and the desks at my office are not suitable for me</p>
+                                                 <p>I need an extra screen to help me see more information</p>
+                                                 <p>Because of my condition I have been told I need ergonomic equipment at my desk</p>
+                                             </dd>
+                                         </div>
+                                     </dl>
+
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+
+
+             <div class="govuk-!-padding-bottom-4"></div>
+
+                 <form class="form" action="/alpha-case-manager-accordion-additional/your-cases" method="post">
+                     <div class="govuk-button-group">
+                         <button class="govuk-button" data-module="govuk-button">
+                             Copied to DiSC
+                         </button>
+
+
+                     </div>
+                 </form>
+
+               </div>
+
+      </div>    </div>    </div>
+
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+        <h2 class="govuk-heading-l">Past month</h2>
+
+
+      </div>
+
+
+
+
+
+
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+        <h2 class="govuk-heading-l">Past year</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case manager</th>
+              <th scope="col" class="govuk-table__header">Cases opened</th>
+              <th scope="col" class="govuk-table__header">Cases closed</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">David Francis</td>
+              <td class="govuk-table__cell">1380</td>
+              <td class="govuk-table__cell">1472</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Paul Farmer</td>
+              <td class="govuk-table__cell">1129</td>
+              <td class="govuk-table__cell">1083</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Rita Patel</td>
+              <td class="govuk-table__cell">1539</td>
+              <td class="govuk-table__cell">1265</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}
