@@ -3,9 +3,15 @@
 {% block pageTitle %}
 How many hours do you work per week? – Access to Work – GOV.UK
 {% endblock %}
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/employment/start-date">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,13 +20,13 @@ How many hours do you work per week? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/employment/days-of-week" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/employment/days-of-week" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="job-length-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              How many hours do you work per week at {{ data['employer-name-'] | capitalize }}?
+              How many hours do you work per week at {{ data['employer-name-'+ number] | capitalize }}?
             </h1>
           </legend>
 

@@ -3,7 +3,7 @@
 {% block pageTitle %}
 Check your answers: job and employer – Access to Work – GOV.UK
 {% endblock %}
-
+{% set number = '2'%}
 {% if not inEditMode and casa.journeyPreviousUrl %}
 {{ govukBackLink({
 classes: 'hide-print',

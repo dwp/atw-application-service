@@ -90,18 +90,18 @@ next();
 router.route('/your-job-and-employer/employment-status')
   .post((req, res, next) => {
     let redirectUrl
-    switch (req.body['1i-employment-status']) {
+    switch (req.body['1i-employment-status1']) {
       case 'Employed':
-        redirectUrl = '/alpha-1i/your-job-and-employer/employment/employer-name'
+        redirectUrl = '/alpha-1i/your-job-and-employer/1/employment/employer-name'
         break
       case 'Self-employed':
-        redirectUrl = '/alpha-1i/your-job-and-employer/self-employed/job-title'
+        redirectUrl = '/alpha-1i/your-job-and-employer/1/self-employed/job-title'
         break
           case 'About to start employment':
-            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-employment/employer-name'
+            redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/employer-name'
             break
           case 'About to start self-employment':
-            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/job-title'
+            redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/job-title'
             break
 
       default:
@@ -111,10 +111,10 @@ router.route('/your-job-and-employer/employment-status')
     res.redirect(redirectUrl)
   })
 
-  router.route('/your-job-and-employer/employment-status-2')
+  router.route('/your-job-and-employer/2/employment-status')
     .post((req, res, next) => {
       let redirectUrl
-      switch (req.body['1i-employment-status-2']) {
+      switch (req.body['1i-employment-status2']) {
         case 'Employed':
           redirectUrl = '/alpha-1i/your-job-and-employer/2/employment/employer-name'
           break
@@ -134,6 +134,30 @@ router.route('/your-job-and-employer/employment-status')
       }
       res.redirect(redirectUrl)
     })
+
+    router.route('/your-job-and-employer/3/employment-status')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['1i-employment-status3']) {
+          case 'Employed':
+            redirectUrl = '/alpha-1i/your-job-and-employer/3/employment/employer-name'
+            break
+          case 'Self-employed':
+            redirectUrl = '/alpha-1i/your-job-and-employer/3/self-employed/job-title'
+            break
+              case 'About to start employment':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
+                break
+              case 'About to start self-employment':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/job-title'
+                break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
 
     router.post('/your-job-and-employer/do-you-have-another-job-answer', function (req, res) {
 

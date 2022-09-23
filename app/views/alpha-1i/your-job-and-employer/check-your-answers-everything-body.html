@@ -1,4 +1,6 @@
-
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -8,7 +10,7 @@
 
       <h2 class="govuk-heading-m">Employment details</h2>
 
-    {% if data['1i-employment-status'] =="Employed" %}
+    {% if data['1i-employment-status'+ number] =="Employed" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -302,7 +304,7 @@
   </dl> -->
 {% endif %}
 
-    {% if data['1i-employment-status'] =="Self-employed" %}
+    {% if data['1i-employment-status'+ number] =="Self-employed" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -510,7 +512,7 @@
       </div>
     </dl> -->
 {% endif %}
-    {% if data['1i-employment-status'] =="About to start employment" %}
+    {% if data['1i-employment-status'+ number] =="About to start employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -787,7 +789,7 @@
       </div>
     </dl> -->
 {% endif %}
-    {% if data['1i-employment-status'] =="About to start self-employment" %}
+    {% if data['1i-employment-status'+ number] =="About to start self-employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">

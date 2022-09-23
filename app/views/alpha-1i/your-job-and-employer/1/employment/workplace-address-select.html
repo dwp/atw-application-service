@@ -4,6 +4,10 @@
 What is the address of your company? – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
 {% block beforeContent %}
 {{ govukBackLink({
 text: "Back",
@@ -17,7 +21,7 @@ href: "javascript:history.go(-1)"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/employment/workplace-contact" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -28,7 +32,7 @@ href: "javascript:history.go(-1)"
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                    What is the address of {{ data['employer-name-'] | capitalize }}?
+                    What is the address of {{ data['employer-name-'+ number] | capitalize }}?
                   </h1>
                 </legend>
 

@@ -42,8 +42,8 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 {% if data['employer-name-'+ index]%}
     <div class="hmrc-add-to-a-list__contents">
       <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-        {% if data['1i-employment-status']=="Employed" or data['1i-employment-status']=="About to start employment"%}{{ data['employer-name-'+ index] }}{% endif %}
-        {% if data['1i-employment-status']=="Self-employed" or data['1i-employment-status']=="About to start self-employment"%}{{ data['job-title'] }}jl{% endif %}
+        {% if data['1i-employment-status'+ index]=="Employed" or data['1i-employment-status'+ index]=="About to start employment"%}{{ data['employer-name-'+ index] }}{% endif %}
+        {% if data['1i-employment-status'+ index]=="Self-employed" or data['1i-employment-status'+ index]=="About to start self-employment"%}{{ data['job-title'] }}jl{% endif %}
 
       </dt>
       <dd class="hmrc-add-to-a-list__change">

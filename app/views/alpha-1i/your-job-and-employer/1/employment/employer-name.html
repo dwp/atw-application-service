@@ -1,8 +1,12 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-What is your job title? – Access to Work – GOV.UK
+What is the name of your company? – Access to Work – GOV.UK
 {% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
 
 {% block beforeContent %}
 {{ govukBackLink({
@@ -17,14 +21,16 @@ href: "javascript:history.go(-1)"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/employment/job-description" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/employment/job-title" method="post">
 
       <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="job-title">
-          What is your job title at {{ data['employer-name-'] | capitalize }}?
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-name">
+          What is the name of the company or organisation that you work for?
         </label>
         </h1>
-        <input class="govuk-input" id="job-title" name="job-title" type="text" value="{{ data['job-title'] }}">
+        <div class="govuk-!-padding-bottom-2"></div>
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="employer-name" name="employer-name-{{number}}" type="text" value="{{ data['employer-name-1'] }}"></div>
       </div>
 
       <div class="govuk-!-padding-bottom-0"></div>
@@ -34,6 +40,8 @@ href: "javascript:history.go(-1)"
       </form>
 
       <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  </div>
 
   <div class="govuk-grid-column-one-third">
 
