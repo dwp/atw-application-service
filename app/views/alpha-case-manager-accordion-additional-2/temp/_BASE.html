@@ -110,23 +110,7 @@
             <dt class="govuk-visually-hidden">Name:</dt>
             <dd class="dwp-key-details-bar__primary">
 
-  {% if case =='other-cases' %}
-  {% for case in data['other-cases'] %}
-  {{ case.name }}
-  {% endfor %}
-  {% endif %}
-
-  {% if case =='other-cases-2' %}
-  {% for case in data['other-cases-2'] %}
-  {{ case.name }}
-  {% endfor %}
-  {% endif %}
-
-  {% if not case %}
-  {% for case in data['priority-cases'] %}
-  {{ case.name }}
-  {% endfor %}
-  {% endif %}
+Sonya Corkery
           </dd>
 
 
@@ -159,30 +143,13 @@
       {% if (phase == "case-manger-view" or phase == "allocator") %}   <dt>Allocated to:</dt>
             <dd>John Goldsmith</dd> {% endif %}
 
-            {% if phase == "CSI" %}
-            <dt>Interview date:</dt>
-            <dd>9 March 2022</dd> {% endif %}
+
 
 
             <dt>Application reference:</dt>
             <dd>
-            {% if case =='other-cases' %}
-            {% for case in data['other-cases'] %}
-            {{ case.ref }}
-            {% endfor %}
-            {% endif %}
 
-            {% if case =='other-cases-2' %}
-            {% for case in data['other-cases-2'] %}
-            {{ case.ref }}
-            {% endfor %}
-            {% endif %}
-
-            {% if not case %}
-            {% for case in data['priority-cases'] %}
-            {{ case.ref }}
-            {% endfor %}
-            {% endif %}
+          RMPX30
           </dd>
 
   {% if data['appointee']=='Yes, I need to add an appointee' and data['appointee-name']%}

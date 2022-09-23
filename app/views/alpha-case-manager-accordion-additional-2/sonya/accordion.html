@@ -1,5 +1,5 @@
 {% extends "../temp/_BASE.html" %}
-
+{% set hideback = "true" %}
 {% block pageTitle %}
   Task list
 {% endblock %}
@@ -59,7 +59,7 @@
     <p> Application refrence: dsadsda
     <br> Date Submitted: dsadsda</p>
 
-    <p><strong>Name:</strong> dsadsadsa</p>
+    <p><strong>Name:</strong> Sonya Corkery</p>
 
     <p><strong>Prioity type(s):</strong> <br>dsadsadsa</p>
 
@@ -72,84 +72,9 @@
 
 
      <div class="govuk-grid-column-one-third">
-       <div class="update-panel">
-           <h3 id="update-adviser-heading" class="govuk-heading-m">Update adviser</h3>
-           <form action="/cases/apply/RMPX30/update-adviser" method="post" class="form" id="form-update-adviser" data-submitonce="data-submitonce">
-             <div class="govuk-form-group form-group-compound">
-               <select class="govuk-select" id="handlerId" name="handlerId" aria-labelledby="update-adviser-heading">
-                 <option value="" data-name=""></option>
 
 
-
-
-
-
-
-                       <option value="4" data-name="Aaron">Aaron</option>
-
-
-
-
-
-                       <option value="36" data-name="Adviser">Adviser</option>
-
-
-
-
-
-                       <option value="37" data-name="Case Team Lead">Case Team Lead</option>
-
-
-
-
-
-                       <option value="35" data-name="FRM">FRM</option>
-
-
-
-
-
-                       <option value="38" data-name="Payment Officer">Payment Officer</option>
-
-
-
-
-
-                       <option value="39" data-name="Payment Team Lead" selected="selected">Payment Team Lead</option>
-
-
-
-
-
-                       <option value="40" data-name="Quality">Quality</option>
-
-
-
-
-
-                       <option value="42" data-name="Quality1">Quality1</option>
-
-
-
-
-
-                       <option value="5" data-name="Shannon White">Shannon White</option>
-
-
-
-
-
-                       <option value="34" data-name="Telephony Agent">Telephony Agent</option>
-
-
-
-               </select>
-             </div>
-             <div>
-               <input type="submit" class="govuk-button" id="submitButtonEditAdvisor" value="Save">
-             </div>
-           </form>
-         </div>
+      
          <div class="update-panel govuk-form-group">
             <h3 id="update-specialism-heading" class="govuk-heading-m">Update specialism</h3>
             <form action="/cases/apply/RMPX30/update-specialism" method="post" class="form" id="form-update-specialism" autocomplete="off" data-submitonce="">
@@ -233,56 +158,7 @@
                  <br>
              </p>
 
-             <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-               <div class="govuk-accordion__section ">
-                 <div class="govuk-accordion__section-header">
-                   <h2 class="govuk-accordion__section-heading">
-                     <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                       Writing well for the web
-                     </span>
-                   </h2>
-                 </div>
-                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                   <p class='govuk-body'>This is the content for Writing well for the web.</p>
-                 </div>
-               </div>
-               <div class="govuk-accordion__section ">
-                 <div class="govuk-accordion__section-header">
-                   <h2 class="govuk-accordion__section-heading">
-                     <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                       Writing well for specialists
-                     </span>
-                   </h2>
-                 </div>
-                 <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                   <p class='govuk-body'>This is the content for Writing well for specialists.</p>
-                 </div>
-               </div>
-               <div class="govuk-accordion__section ">
-                 <div class="govuk-accordion__section-header">
-                   <h2 class="govuk-accordion__section-heading">
-                     <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                       Know your audience
-                     </span>
-                   </h2>
-                 </div>
-                 <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                   <p class='govuk-body'>This is the content for Know your audience.</p>
-                 </div>
-               </div>
-               <div class="govuk-accordion__section ">
-                 <div class="govuk-accordion__section-header">
-                   <h2 class="govuk-accordion__section-heading">
-                     <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                       How people read
-                     </span>
-                   </h2>
-                 </div>
-                 <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-                   <p class='govuk-body'>This is the content for How people read.</p>
-                 </div>
-               </div>
-             </div>
+
                  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
                      <div class="govuk-accordion__section ">
                          <div class="govuk-accordion__section-header">
@@ -466,7 +342,7 @@
                                                  Job start date
                                              </dt>
                                              <dd class="govuk-summary-list__value">
-                                                 30 / 11 / 2014
+                                                 30 November 2014
                                              </dd>
                                          </div>
                                          <div class="govuk-summary-list__row">
@@ -617,19 +493,12 @@
                              </h2>
                          </div>
                          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                             <div class="govuk-grid-row">
-                                 <div class="govuk-grid-column-two-thirds">
+
+
                                      <h2 class="govuk-heading-m">Create business case</h2>
 
                                      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                                         <div class="govuk-summary-list__row">
-                                             <dt class="govuk-summary-list__key">
-                                                 Employer size
-                                             </dt>
-                                             <dd class="govuk-summary-list__value">
-                                                 250+ employees
-                                             </dd>
-                                         </div>
+
                                          <div class="govuk-summary-list__row">
                                              <dt class="govuk-summary-list__key">
                                                  Job description
@@ -683,11 +552,11 @@
                                                  What type of specialist equipment do you need?
                                              </dt>
                                              <dd class="govuk-summary-list__value">
-                                                 Adjustable desk
-                                                 <br>
-                                                 Computer screens
-                                                 <br>
-                                                 Ergonomic keyboard and mouse
+                                              <ul><li>   Adjustable desk</li>
+
+                                                <li> Computer screens</li>
+
+                                                <li> Ergonomic keyboard and mouse</li>  </ul>
                                              </dd>
                                          </div>
                                          <div class="govuk-summary-list__row">
@@ -701,21 +570,118 @@
                                              </dd>
                                          </div>
                                      </dl>
+                                     <h2 class="govuk-heading-m"> Mental health support</h2>
 
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need mental health support at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 I don't know
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m"> Support worker</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                Does your condition mean that you need a support worker at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m">  Travelling to and from work</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need mental health support at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m">  Travelling during work</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need mental health support at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                              No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m">   Changes to your workplace</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need mental health support at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                 No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m">    Changes to your vehicle</h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                                 Do you need mental health support at work?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                                No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
+                                     <h2 class="govuk-heading-m">     Additional information </h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                         <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                              Is there anything else that you would like to tell us?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                              No
+                                             </dd>
+                                         </div>
+
+
+                                     </dl>
                                  </div>
                              </div>
                          </div>
-                     </div>
 
-                 </div>
+
+
 
 
              <div class="govuk-!-padding-bottom-4"></div>
 
-                 <form class="form" action="/alpha-case-manager-accordion-additional/your-cases" method="post">
+                 <form class="form" action="disc#past-week" method="post">
                      <div class="govuk-button-group">
                          <button class="govuk-button" data-module="govuk-button">
-                             Copied to DiSC
+                             Application copied
                          </button>
 
 
@@ -723,51 +689,10 @@
                  </form>
 
                </div>
-
+</div></div></div>
       </div>    </div>    </div>
 
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-        <h2 class="govuk-heading-l">Past month</h2>
 
-
-      </div>
-
-
-
-
-
-
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-        <h2 class="govuk-heading-l">Past year</h2>
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Case manager</th>
-              <th scope="col" class="govuk-table__header">Cases opened</th>
-              <th scope="col" class="govuk-table__header">Cases closed</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">David Francis</td>
-              <td class="govuk-table__cell">1380</td>
-              <td class="govuk-table__cell">1472</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Paul Farmer</td>
-              <td class="govuk-table__cell">1129</td>
-              <td class="govuk-table__cell">1083</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Rita Patel</td>
-              <td class="govuk-table__cell">1539</td>
-              <td class="govuk-table__cell">1265</td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
-    </div>
 
 
 
