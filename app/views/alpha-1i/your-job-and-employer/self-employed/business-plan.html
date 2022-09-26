@@ -1,0 +1,34 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+When did you start this job? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/self-employed/utr">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/self-employed/hours-per-week" method="post">
+
+<h1>You may need to provided a business plan {% if not data['self-employment-start-year']=='2022'%} and previuse earnings for 2020 to 2021{% endif %}</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
