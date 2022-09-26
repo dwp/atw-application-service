@@ -4,8 +4,15 @@
 What is your Unique Taxpayer Reference? – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/self-employed/job-description">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +21,7 @@ What is your Unique Taxpayer Reference? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/self-employed/start-date" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/self-employed/start-date" method="post">
 
 
 

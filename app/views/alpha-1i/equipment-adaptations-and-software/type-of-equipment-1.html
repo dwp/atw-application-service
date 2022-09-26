@@ -22,8 +22,10 @@ href: casa.journeyPreviousUrl
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+{% if data['1i-employment-status2']%}
+  <form class="form" action="/alpha-1i/equipment-adaptations-and-software/multiple-job-1" method="post">{% else %}
+  <form class="form" action="/alpha-1i/equipment-adaptations-and-software/quote" method="post">{% endif %}
 
-  <form class="form" action="/alpha-1i/equipment-adaptations-and-software/quote" method="post">
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="specialist-equipment-type-1">
           What type of specialist equipment do you need?
@@ -42,7 +44,7 @@ href: casa.journeyPreviousUrl
 
         <input type="hidden" name="specialist-equipment-type-of-equipment-1-true" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-      </form>
+
 
         <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
 

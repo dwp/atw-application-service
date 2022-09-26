@@ -4,8 +4,15 @@
 When did you start this job? – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/self-employed/utr">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,9 +21,9 @@ When did you start this job? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/self-employed/hours-per-week" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/self-employed/hours-per-week" method="post">
 
-<h1>You may need to provided a business plan {% if not data['self-employment-start-year']=='2022'%} and previuse earnings for 2020 to 2021{% endif %}</h1>
+<h1 class="govuk-heading-l">You may need to provided a business plan {% if data['self-employment-start-year']=="2022"%} {% else %} and previous earnings for 2020 to 2021{% endif %}</h1>
 
       <form class="form" action="/url/of/next/page" method="post">
         <button class="govuk-button" data-module="govuk-button">Continue</button>

@@ -4,8 +4,15 @@
 When did you start this job? – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/self-employed/utr">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +21,7 @@ When did you start this job? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/self-employed/business-plan" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/self-employed/business-plan" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="self-employment-start-hint">

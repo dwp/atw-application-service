@@ -87,7 +87,7 @@ next();
             })
 
 
-router.route('/your-job-and-employer/employment-status')
+router.route('/your-job-and-employer/1/employment-status')
   .post((req, res, next) => {
     let redirectUrl
     switch (req.body['1i-employment-status1']) {
@@ -134,7 +134,6 @@ router.route('/your-job-and-employer/employment-status')
       }
       res.redirect(redirectUrl)
     })
-
     router.route('/your-job-and-employer/3/employment-status')
       .post((req, res, next) => {
         let redirectUrl
@@ -311,7 +310,7 @@ res.redirect(redirectUrl)
           res.redirect(redirectUrl)
         })
 
-        router.route('/changes-to-your-workplace/do-you-know-what-you-need')
+        router.route('/changes-to-your-workplace/do-you-know-what-you-need-answer')
           .post((req, res, next) => {
             let redirectUrl
             switch (req.body['workplace-adaptations-do-you-know-what-you-need']) {

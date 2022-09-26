@@ -4,8 +4,15 @@
 What is your job description? – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/alpha-1i/your-job-and-employer/self-employed/job-title">Back</a>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +21,7 @@ What is your job description? – Access to Work – GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/self-employed/utr" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr" method="post">
 
 
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
