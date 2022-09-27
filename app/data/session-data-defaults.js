@@ -20,5 +20,13 @@ Example usage:
 module.exports = {
 
   // Insert values here
-
+  'claims' : "",
+'benefits' : "",
+'priority' : "",
+'other' : "",
+'remove' : "",
+'notification' : "",
+'notificationsonya' : "",
+'notificationthomas' : "",
+'wpa-report' : "",
 }
