@@ -21,7 +21,7 @@ href: casa.journeyPreviousUrl
 
 <h1 class="govuk-heading-l">Check your answers:
   {% if data['1i-employment-status'+ number]=="Employed" or data['1i-employment-status'+ number]=="About to start employment"%}job at {{ data['employer-name-1'] | capitalize }}{% endif %}
-  {% if data['1i-employment-status'+ number]=="Self-employed" or data['1i-employment-status'+ number]=="About to start self-employment"%}{{ data['job-title-'+ number] }}jl{% endif %}</h1>
+  {% if data['1i-employment-status'+ number]=="Self-employed" or data['1i-employment-status'+ number]=="About to start self-employment"%}{{ data['job-title-'+ number] }}{% endif %}</h1>
 
 
 {% include "alpha-1i/your-job-and-employer/check-your-answers-everything-body.html" %}

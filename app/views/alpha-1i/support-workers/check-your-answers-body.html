@@ -165,6 +165,25 @@
 
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+          Which job do you need this support worker for?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% for feature in data['multi-job-sw'] %}
+                  <li>{{ feature }}</li>
+                {% else %}
+                  <li>No features selected</li>
+                {% endfor %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                  <a href="/alpha-1i/support-workers/multiple-job">
+                      Change
+                      <span class="govuk-visually-hidden"> Which job do you need this support worker for?</span>
+                  </a>
+              </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                   Will you need a support worker on a temporary basis?
               </dt>
               <dd class="govuk-summary-list__value">
