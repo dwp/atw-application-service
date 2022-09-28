@@ -924,6 +924,30 @@ redirectUrl = '/alpha-1i/travelling-to-and-from-work/not-sure/how-many-journeys'
  res.redirect(redirectUrl)
 })
 
+router.route('/travelling-to-and-from-work/what-support-do-you-need-multiple-job-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
+   case 'Taxi':
+     redirectUrl = '/alpha-1i/travelling-to-and-from-work/taxi/multiple-job'
+     break
+   case 'Lift in a car from a friend, colleague or family member':
+     redirectUrl = '/alpha-1i/travelling-to-and-from-work/lift/multiple-job'
+     break
+   case 'Something else':
+redirectUrl = '/alpha-1i/travelling-to-and-from-work/something-else/multiple-job'
+     break
+   case 'I am not sure':
+redirectUrl = '/alpha-1i/travelling-to-and-from-work/not-sure/multiple-job'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+
 router.route('/travelling-to-and-from-work/taxi/providing-quotes-answer')
 .post((req, res, next) => {
 let redirectUrl

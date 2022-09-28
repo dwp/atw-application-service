@@ -1,7 +1,7 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-Which job do you need this specialist equipment for? – Access to Work – GOV.UK
+Which job do you need this travel to work support for? – Access to Work – GOV.UK
 {% endblock %}
 
 
@@ -17,30 +17,30 @@ Which job do you need this specialist equipment for? – Access to Work – GOV.
   <div class="govuk-grid-column-two-thirds">
 
 
-    <form class="form" action="/alpha-1i/travelling-to-and-from-work/check-your-answers" method="post">
+  <form class="form" action="/alpha-1i/travelling-to-and-from-work/something-else/work-how-would-it-meet-your-needs" method="post">
 
 
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <fieldset class="govuk-fieldset" aria-describedby="multi-job-ttw-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">
 Which job do you need this travel to work support for?
     </h1>
   </legend>
 
-  <div id="waste-hint" class="govuk-hint">
+  <div id="multi-job-ttw-hint" class="govuk-hint">
         Select all that apply.
       </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              <input class="govuk-checkboxes__input" id="multi-job-ttw" name="multi-job-ttw" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
+              <label class="govuk-label govuk-checkboxes__label" for="multi-job-ttw">
               {{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              <input class="govuk-checkboxes__input" id="multi-job-ttw-2" name="multi-job-ttw" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
+              <label class="govuk-label govuk-checkboxes__label" for="multi-job-ttw-2">
               {{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}
               </label>
             </div>

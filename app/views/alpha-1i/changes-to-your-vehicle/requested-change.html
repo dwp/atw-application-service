@@ -22,7 +22,10 @@ href: casa.journeyPreviousUrl
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/changes-to-your-vehicle/guidance" method="post">
+    {% if data['1i-employment-status2']%}
+    <form class="form" action="/alpha-1i/changes-to-your-vehicle/multiple-job" method="post">{% else %}
+        <form class="form" action="/alpha-1i/changes-to-your-vehicle/guidance" method="post">{% endif %}
+
 
       <h1 class="govuk-heading-l">Changes to your vehicle</h1>
 
