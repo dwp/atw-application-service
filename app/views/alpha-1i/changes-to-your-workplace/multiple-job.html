@@ -1,7 +1,7 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-Which job do you need this travel to work support for? – Access to Work – GOV.UK
+Which job do you need these workplace adaptations for? – Access to Work – GOV.UK
 {% endblock %}
 
 
@@ -17,7 +17,7 @@ Which job do you need this travel to work support for? – Access to Work – GO
   <div class="govuk-grid-column-two-thirds">
 
 
-    <form class="form" action="/alpha-1i/travelling-to-and-from-work/check-your-answers" method="post">
+    <form class="form" action="/alpha-1i/changes-to-your-workplace/do-you-know-what-you-need" method="post">
 
 
     <div class="govuk-form-group">
@@ -34,13 +34,13 @@ Which job do you need these workplace adaptations for?
       </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
               {{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="{{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
               {{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}
               </label>
