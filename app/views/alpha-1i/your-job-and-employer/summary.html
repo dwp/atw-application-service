@@ -55,13 +55,13 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
       <dd class="hmrc-add-to-a-list__change">
         <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
           <span aria-hidden="true">Change</span>
-          <span class="govuk-visually-hidden"></span>
+          <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }} details</span>
         </a>
       </dd>
       <dd class="hmrc-add-to-a-list__remove">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
           <span aria-hidden="true">Remove</span>
-          <span class="govuk-visually-hidden"></span>
+          <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }}</span>
         </a>
       </dd></div>
       {% endif %}
@@ -78,13 +78,13 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
             <dd class="hmrc-add-to-a-list__change">
               <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
                 <span aria-hidden="true">Change</span>
-                <span class="govuk-visually-hidden"></span>
+                <span class="govuk-visually-hidden"> {{ data['job-title-'+ index] }} details</span>
               </a>
             </dd>
             <dd class="hmrc-add-to-a-list__remove">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
                 <span aria-hidden="true">Remove</span>
-                <span class="govuk-visually-hidden"></span>
+                <span class="govuk-visually-hidden"> {{ data['job-title-'+ index] }}</span>
               </a>
             </dd></div>
             {% endif %}
