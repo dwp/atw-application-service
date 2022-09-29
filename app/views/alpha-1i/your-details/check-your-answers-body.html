@@ -28,7 +28,7 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-        
+
             {{ data['date-of-birth-day'] }}
        {% if (data['date-of-birth-month'] =='01') or (data['date-of-birth-month'] =='1') %} January {% endif%}
        {% if (data['date-of-birth-month'] =='02') or (data['date-of-birth-month'] =='2') %} February  {% endif%}
@@ -112,75 +112,11 @@
 
         {% endif %}
 
-        {% if data['no-email'] =="true" %}
+      
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            I don't have an email address
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-details/what-is-your-email">
-              Change
-              <span class="govuk-visually-hidden"> what is your email</span>
-            </a>
-          </dd>
-        </div>
 
-        {% endif %}
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Telephone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['telephone-number'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-details/what-is-your-telephone-number">
-              Change
-              <span class="govuk-visually-hidden"> what is your telephone number?</span>
-            </a>
-          </dd>
-        </div>
 
-        {% if data['your-email'] %}
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['your-email'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-details/what-is-your-email">
-              Change
-              <span class="govuk-visually-hidden"> what is your email</span>
-            </a>
-          </dd>
-        </div>
-
-        {% else %}
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            I don't have an email address
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-details/what-is-your-email">
-              Change
-              <span class="govuk-visually-hidden"> what is your email</span>
-            </a>
-          </dd>
-        </div>
-
-        {% endif %}
 
         <!-- {% if data['national-insurance-number-true'] =="true" %}
 
