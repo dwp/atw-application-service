@@ -1,7 +1,7 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-You may be eligible – Access to Work – GOV.UK
+You may be eligible for Access to Work – Access to Work – GOV.UK
 {% endblock %}
 
 {% if not inEditMode and casa.journeyPreviousUrl %}
@@ -17,71 +17,58 @@ href: casa.journeyPreviousUrl
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-    <div class="govuk-form-group">
 
         <div class="govuk-grid-row-2">
             <!DOCTYPE html>
-            <style>
-  .govuk-grid-row-2 {
-  background-color: #1f70b8;
-  color: #fff;
-  margin-top: 1.25em;
-  margin-bottom: 2.25em;
-  padding: 20px 40px 2px;
-  }
 
-  </style>
 
             <div class="govuk-!-padding-bottom-2"></div>
 
             <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading" style="color:white">
-                Based on your answers, you may be eligible for Access to Work
+              <h1 class="govuk-fieldset__heading" >
+              You may be eligible for Access to Work
               </h1>
             </legend>
 
             <div class="govuk-!-padding-bottom-3"></div>
 
 
-            <p style="color:white">To apply, you'll need to give:</p>
-            <ul class="govuk-list govuk-list--bullet" style="color:white">
-              <li>your contact details</li>
-                <li>information about your job and employer</li>
-                <li>your workplace address and postcode</li>
-                <li>the details of a workplace contact, such as a line manager or HR manager, if you're employed by a company or organisation (we will not contact them without your permission)</li>
-                <li>your
-                    <a href="https://draft-origin.publishing.service.gov.uk/find-lost-utr-number" class="govuk-link"
-                       rel="noreferrer noopener" target="_blank" style="color:white">unique tax
-                        reference number (opens in new tab)</a>, if you’re self-employed</li>
-                <li>information about how your condition affects your work and what help you think you need</li>
-            </ul>
+            <p >To apply, you will need to give:</p>
+            <ul class="govuk-list govuk-list--bullet" >
+              <li>your details</li>
+      <li>information about your job</li>
+      <li>information about how your condition affects your work and what help you think you need</li>
+      <li>if you are employed, the details of someone we can contact at your workplace (we will not contact them without your permission)</li>
+      <li>if you are self-employed, your
+      <a href="https://draft-origin.publishing.service.gov.uk/find-lost-utr-number" class="govuk-link"
+      rel="noreferrer noopener" target="_blank" >Unique Taxpayer Reference (opens in new tab)</a></li>
+      </ul>
 
-                <p style="color:white">You may be asked to provide quotes for costs, depending on the support you need.</p>
+      <p>It is optional to include quotes for some types of support to speed up the processing of your application. If you do give quotes, you only need to give total cost and supplier details.<p>
+
 
 
             <div class="govuk-!-padding-bottom-3"></div>
 
             <a href="/alpha-1i/task-list" role="button" draggable="false"
-               class="govuk-button govuk-button--secondary govuk-!-font-size-24"
+               class="govuk-button  govuk-!-font-size-24"
                data-module="govuk-button">
                 <b>Start application</b>
               <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
               </svg></a>
 
-                <p style="color:white">There is support available if you would like <a
-                        href="/alpha-1i/accessibility-information"
-                        class="govuk-link govuk-link--inverse">help
-                    with your
-                    application</a>.</p>
+
 
 
             <div class="govuk-!-padding-bottom-1"></div>
 
             </fieldset>
-        </html>
+
 
         </div>
 
