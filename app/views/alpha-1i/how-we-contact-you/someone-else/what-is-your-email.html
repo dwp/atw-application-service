@@ -18,37 +18,39 @@ href: "javascript:history.go(-1)"
   <div class="govuk-grid-column-two-thirds">
 
     <form class="form" action="/alpha-1i/how-we-contact-you/check-your-answers" method="post">
+      <input type="hidden" name="email-true" value="true">
 
       <div class="govuk-form-group">
         <div class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              What is your email address?
+            What email address should we use to contact you?
             </h1>
           </legend>
-          <p>We can contact you to check your identity by email as a reasonable adjustment.  </p>
 
+<p>We will use this to contact you to check your identity.</p>
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="email-reasonable-adjustment-hint">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="your-email-hint">
 
               <div class="govuk-!-padding-bottom-1"></div>
 
-              <div class="govuk-form-group">
-  <label class="govuk-label" for="email-reasonable-adjustment">
-    Email address
-  </label>
-                <input class="govuk-input" id="email-reasonable-adjustment" name="email-reasonable-adjustment" type="email"
-                       spellcheck="false" aria-describedby="email-reasonable-adjustment-hint" autocomplete="email"
-                       value="{{ data['email-reasonable-adjustment'] }}">
+              <label class="govuk-label" for="your-email">
+                Email address
+              </label>
+                <input class="govuk-input" id="your-email" name="your-email" type="your-email" spellcheck="false"
+                       aria-describedby="your-email-hint" autocomplete="your-email" value="{{ data['your-email'] }}">
               </div>
-              <div class="govuk-!-padding-bottom-2"></div>
-
             </fieldset>
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <!-- <p><a href="/alpha-1i/your-details/check-your-answers" input type="hidden"
+                  name="contacting-you-email" value="true">I don't have an email address</a></p> -->
+
+
+            <div class="govuk-!-padding-bottom-2"></div>
           </div>
 
-      <form class="form" action="/url/of/next/page" method="post">
-        <input type="hidden" name="email-reasonable-adjustment-true" value="true">
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
         <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
