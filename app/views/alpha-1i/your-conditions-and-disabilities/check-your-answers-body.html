@@ -6,11 +6,9 @@
 
     {% if data['your-health-condition-or-disability-1'] =="true" %}
 
-    <h2 class="govuk-heading-m">{% if data['your-health-condition-or-disability-3'] or data['your-health-condition-or-disability-2'] %}
+    <h2 class="govuk-heading-m">
       Your conditions or disabilities
-      {% elseif data['your-health-condition-or-disability-1'] %}
-      Your condition or disability
-      {% endif %}</h2>
+    </h2>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
@@ -37,62 +35,34 @@
           </dd>
 
           <dd class="govuk-summary-list__actions">
-            {% if data['1h-your-health-condition-or-disability-3'] %}
-            <a href="/alpha-1i/your-conditions-and-disabilities/summary-3">
-              Change
-              <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
-            </a>
-            {% elseif data['1h-your-health-condition-or-disability-2'] %}
-            <a href="/alpha-1i/your-conditions-and-disabilities/summary-2">
-              Change
-              <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
-            </a>
-            {% else %}
+
             <a href="/alpha-1i/your-conditions-and-disabilities/1">
               Change
               <span class="govuk-visually-hidden"> What condition or disability do you have?</span>
             </a>
-            {% endif %}
+
           </dd>
         </div>
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          {% if data['1h-your-health-condition-or-disability-affects-your-work-3'] or
-          data['1h-your-health-condition-or-disability-affects-your-work-2'] %}
-          How do your conditions or disabilities affect you at work?
-          {% elseif data['1h-your-health-condition-or-disability-affects-your-work-1'] %}
+
           How does your condition or disability affect you at work?
-          {% endif %}
+
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['1h-your-health-condition-or-disability-affects-your-work-1'] }}
-          {% if data['1h-your-health-condition-or-disability-affects-your-work-2'] %}
-          {{ data['1h-your-health-condition-or-disability-affects-your-work-2'] }}
-          {% endif %}
-          {% if data['1h-your-health-condition-or-disability-affects-your-work-3'] %}
-          {{ data['1h-your-health-condition-or-disability-affects-your-work-3'] }}
-          {% endif %}
+
           <br>
         </dd>
 
         <dd class="govuk-summary-list__actions">
-          {% if data['1h-your-health-condition-or-disability-affects-your-work-3'] %}
-          <a href="/alpha-1i/your-conditions-and-disabilities/how-does-it-affect-you-at-work-3">
-            Change
-            <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
-          </a>
-          {% elseif data['1h-your-health-condition-or-disability-affects-your-work-2'] %}
-          <a href="/alpha-1i/your-conditions-and-disabilities/how-does-it-affect-you-at-work-2">
-            Change
-            <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
-          </a>
-          {% else %}
+
           <a href="/alpha-1i/your-conditions-and-disabilities/how-does-it-affect-you-at-work-1">
             Change
             <span class="govuk-visually-hidden"> How do your conditions or disabilities affect you at work?</span>
           </a>
-          {% endif %}
+
         </dd>
       </div>
     </dl>
