@@ -29,21 +29,23 @@ How does your disability or health condition affect you at work? – Access to W
                 </legend>
 
                 <div class="govuk-!-padding-bottom-5"></div>
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Names of conditions or disabilities
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    {{ data['1h-your-health-condition-or-disability-1'] }}
+                    </dd>
+                    <!-- <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="1">
+                        Change<span class="govuk-visually-hidden">  Names of conditions or disabilities</span>
+                      </a>
+                    </dd> -->
+                  </div>
+                  </dl>
 
-                <table class="govuk-table">
-                  <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Number</th>
-                    <th scope="col" class="govuk-table__header">Health condition or disability</th>
-                  </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">1</th>
-                    <td class="govuk-table__cell">{{ data['1h-your-health-condition-or-disability-1'] }}</td>
-                  </tr>
-                  </tbody>
-                </table>
+
 
                 <p class="govuk-body">You can include things like:</p>
                 <ul class="govuk-list govuk-list--bullet">
