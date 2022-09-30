@@ -1,0 +1,88 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Education support
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+
+{% if not hideback %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="check-your-answers" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="education-support-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Have you had any of these types of education support?
+      </h1>
+    </legend>
+    <div id="education-support-hint" class="govuk-hint">
+      This can be now, or in the past.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="education-support" name="education-support" type="checkbox" value="Education, Health and Care (EHC) Plan – England">
+        <label class="govuk-label govuk-checkboxes__label" for="education-support">
+        Education, Health and Care (EHC) Plan – England
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="education-support-2" name="education-support" type="checkbox" value="Personalised Learning Support Plan (PLSP) – Scotland">
+        <label class="govuk-label govuk-checkboxes__label" for="education-support-2">
+        Personalised Learning Support Plan (PLSP) – Scotland
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="education-support-2" name="education-support" type="checkbox" value="Statement of Special Educational Need (SSEN) or Individual Development Plan – Wales">
+        <label class="govuk-label govuk-checkboxes__label" for="education-support-2">
+         Statement of Special Educational Need (SSEN) or Individual Development Plan   – Wales
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="education-support-5" name="education-support" type="checkbox" value="None of these types of education support" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="education-support-5">
+          None of these types of education support
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+          <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+          </button>
+        </form>
+      </div>
+
+
+
+
+  </div>
+
+  </div>
+
+{% endblock %}

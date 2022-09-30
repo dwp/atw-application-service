@@ -82,6 +82,35 @@ Complete your application – Access to Work – GOV.UK
             <li class="app-task-list__item">
 
               <span class="app-task-list__task-name">
+                {% if (data ['support-you-get-answers-task-list'] =="true")%}
+                <a href="/alpha-1i/support-you-get/check-your-answers" aria-describedby="your-disability-status">
+                Support you get
+                </a>
+                {% else %}
+                <a href="/alpha-1i/support-you-get/index"
+                   aria-describedby="your-disability-status">
+                    Support you get
+                </a>
+                {% endif %}
+              </span>
+
+              <strong>
+                {%if data['support-you-get-answers-task-list'] !=="true" %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not started</strong>
+                {% elseif (data ['support-you-get-answers-task-list'] =="true") and (data
+                ['support-you-get-answers-task-list'] =="true") %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Completed</strong>
+                {% elseif data ['support-you-get-answers-task-list'] =="true" %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+
+
+            <li class="app-task-list__item">
+
+              <span class="app-task-list__task-name">
                 {% if (data ['your-health-condition-or-disability-check-your-answers-everything'] =="true")%}
                 <a href="/alpha-1i/your-conditions-and-disabilities/check-your-answers" aria-describedby="your-disability-status">
                   Your conditions and disabilities
@@ -150,7 +179,7 @@ Complete your application – Access to Work – GOV.UK
 
         <li>
           <h3 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Support
+            <span class="app-task-list__section-number">3. </span> Support from Access to Work
           </h3>
 
           <ul class="app-task-list__items">
