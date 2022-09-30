@@ -1,0 +1,85 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Types of support
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+
+{% if not hideback %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="education-support" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="support-type-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you get any of these types of support?
+      </h1>
+    </legend>
+    <div id="support-hint" class="govuk-hint">
+      Select all types of support that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="support-type" name="support-type" type="checkbox" value="Adult Social Care advice or support from your local council">
+        <label class="govuk-label govuk-checkboxes__label" for="support-type">
+         Adult Social Care advice or support from your local council
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="support-type-2" name="support-type" type="checkbox" value="Employment and Support Allowance (ESA) support group">
+        <label class="govuk-label govuk-checkboxes__label" for="support-type-2">
+        Employment and Support Allowance (ESA) support group
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="support-type-3" name="support-type" type="checkbox" value="Assessed as having ‘limited capability for work and work-related activity’ by Universal Credit">
+        <label class="govuk-label govuk-checkboxes__label" for="support-type-3">
+         Assessed as having ‘limited capability for work and work-related activity’ by Universal Credit
+        </label>
+      </div>
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="support-type-5" name="support-type" type="checkbox" value="None of these types of support" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="support-type-5">
+          None of these types of support
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+        </form>
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+
+    <h2 class="govuk-heading-m"> Support you get</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you get any of these types of support?
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% for feature in data['support-type'] %}
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>{{ feature }}</li>
+</ul>
+            {% endfor %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/support-you-get/index">
+              Change
+              <span class="govuk-visually-hidden"> do you get any of these types of support?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Have you had any of these types of education support?
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {% for feature in data['education-support'] %}
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>{{ feature }}</li>
+</ul>
+            {% endfor %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/support-you-get/education-support">
+              Change
+              <span class="govuk-visually-hidden"> Have you had any of these types of education support?</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+
+
+  </div>
+</div>
+{% endblock %}
