@@ -14,8 +14,11 @@ Check your answers: job and employer – Access to Work – GOV.UK
 {% block content %}
 
 <h1 class="govuk-heading-l">Check your answers:
-  {% if data['1i-employment-status']=="Employed" or data['1i-employment-status']=="About to start employment"%}job at {{ data['employer-name-1'] }}{% endif %}
-  {% if data['1i-employment-status']=="Self-employed" or data['1i-employment-status']=="About to start self-employment"%} {{ data['job-title'] }}{% endif %}</h1>
+  {% if data['1i-employment-status']=="Employed" %}job at {{ data['employer-name-1'] }}{% endif %}
+    {% if data['1i-employment-status']=="About to start employment"%}job at {{ data['employer-name-about-1'] }}{% endif %}
+  {% if data['1i-employment-status']=="About to start self-employment"%} {{ data['job-title'] }}{% endif %}
+  {% if data['1i-employment-status']=="Self-employed" %} {{ data['job-title'] }}{% endif %}
+</h1>
 
 
 {% include "alpha-1i/your-job-and-employer/check-your-answers-everything-body.html" %}

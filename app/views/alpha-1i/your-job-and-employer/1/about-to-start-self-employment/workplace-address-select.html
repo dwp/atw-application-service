@@ -1,0 +1,87 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What will your workplace address be? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/check-your-answers-everything" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+      
+
+        <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What will your workplace address be?
+                  </h1>
+                </legend>
+
+                <h2 class="govuk-heading-s">8 addresses found for {{data["workplace-postcode"]}}</h2>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="workplace-postcode-select">
+                    Select an address
+                  </label>
+
+                    <select class="govuk-select govuk-select--width-10" id="workplace-postcode-select" name="workplace-postcode-select">
+                      <option value="selected" selected>8 addresses found</option>
+                      <option value="line">----</option>
+                      <option value="220">220, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="222">222, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="224">224, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="226">226, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="228">228, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="230">230, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="232">232, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+                      <option value="234">234, St Vincent Street, Glasgow, {{data["workplace-postcode"]}}</option>
+
+                    </select>
+                  </div>
+              </fieldset>
+          <div class="govuk-!-padding-bottom-5"></div>
+
+          <p><a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/address-manual">I can't find my workplace
+            address in the list</a></p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+          <input type="hidden" name="about-to-start-self-employment-workplace-address-select-true" value="true">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+      </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

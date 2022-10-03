@@ -1,0 +1,54 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What is your Unique Taxpayer Reference? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/start-date" method="post">
+
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="utr">
+          What is your Unique Taxpayer Reference (UTR)?
+        </label>
+        </h1>
+        <div class="govuk-!-padding-bottom-2"></div>
+        <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint"
+               value="{{ data['utr'] }}">
+      </div>
+
+
+      <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

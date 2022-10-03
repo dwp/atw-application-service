@@ -190,15 +190,15 @@ router.route('/your-job-and-employer/1/employment-status')
             res.redirect('/alpha-1i/task-list')
           }
         })
-router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr-answer')
+router.route('/your-job-and-employer/1/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
    case 'Yes':
-     redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/utr'
+     redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/utr'
      break
    case 'No':
-     redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/start-date'
+     redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/start-date'
      break
 
    default:
@@ -207,6 +207,41 @@ router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-
  }
  res.redirect(redirectUrl)
 })
+router.route('/your-job-and-employer/2/about-to-start-self-employment/do-you-have-a-utr-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+   case 'Yes':
+     redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/utr'
+     break
+   case 'No':
+     redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/start-date'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+router.route('/your-job-and-employer/3/about-to-start-self-employment/do-you-have-a-utr-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+   case 'Yes':
+     redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/utr'
+     break
+   case 'No':
+     redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/start-date'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+
 
 router.route('/how-we-contact-you/contacting-you-about-your-application')
 .post((req, res, next) => {

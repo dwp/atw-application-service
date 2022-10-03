@@ -12,20 +12,33 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 {% set totalJobs = 0 %}
 {% endif %}
 
-{% for i in [1,2,3] -%}
+{% for i in [1,2,3,4] -%}
 {% set indexJob = i %}
 {% if data['employer-name-'+ indexJob]%}
 {% set totalJobs = totalJobs + 1 %}
 {% endif %}
 {%- endfor %}
 
-{% for i in [1,2,3] -%}
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if data['employer-name-about-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
+{% for i in [1,2,3,4] -%}
 {% set indexJob = i %}
 {% if  data['job-title-'+ indexJob]%}
 {% set totalJobs = totalJobs + 1 %}
 {% endif %}
 {%- endfor %}
 
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if  data['job-title-about-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
 
 {% block beforeContent %}
 <a class="govuk-back-link" onclick="history.back()">Back</a>
@@ -49,7 +62,7 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 {% if data['employer-name-'+ index]%}
     <div class="hmrc-add-to-a-list__contents">
       <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-      {{ data['employer-name-'+ index] }}
+      {{ data['employer-name-'+ index]| capitalize }}
 
       </dt>
       <dd class="hmrc-add-to-a-list__change">
@@ -69,10 +82,33 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 
       {% for i in [1,2,3,4]-%}
       {% set index = i %}
+      {% if data['employer-name-about-'+ index]%}
+          <div class="hmrc-add-to-a-list__contents">
+            <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+            {{ data['employer-name-about-'+ index]| capitalize }}
+
+            </dt>
+            <dd class="hmrc-add-to-a-list__change">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+                <span aria-hidden="true">Change</span>
+                <span class="govuk-visually-hidden"> {{ data['employer-name-about-'+ index] }} details</span>
+              </a>
+            </dd>
+            <dd class="hmrc-add-to-a-list__remove">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+                <span aria-hidden="true">Remove</span>
+                <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }}</span>
+              </a>
+            </dd></div>
+            {% endif %}
+            {%- endfor %}
+
+      {% for i in [1,2,3,4]-%}
+      {% set index = i %}
       {% if data['job-title-'+ index]%}
           <div class="hmrc-add-to-a-list__contents">
             <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
-          {{ data['job-title-'+ index] }}
+          {{ data['job-title-'+ index] | capitalize}}
 
             </dt>
             <dd class="hmrc-add-to-a-list__change">
@@ -90,7 +126,28 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
             {% endif %}
             {%- endfor %}
 
+            {% for i in [1,2,3,4]-%}
+            {% set index = i %}
+            {% if data['job-title-about-'+ index]%}
+                <div class="hmrc-add-to-a-list__contents">
+                  <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+                {{ data['job-title-about-'+ index]| capitalize }}
 
+                  </dt>
+                  <dd class="hmrc-add-to-a-list__change">
+                    <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+                      <span aria-hidden="true">Change</span>
+                      <span class="govuk-visually-hidden"> {{ data['job-title-about-'+ index] }} details</span>
+                    </a>
+                  </dd>
+                  <dd class="hmrc-add-to-a-list__remove">
+                    <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+                      <span aria-hidden="true">Remove</span>
+                      <span class="govuk-visually-hidden"> {{ data['job-title-about-'+ index] }}</span>
+                    </a>
+                  </dd></div>
+                  {% endif %}
+                  {%- endfor %}
 
   </dl>
 </div>
