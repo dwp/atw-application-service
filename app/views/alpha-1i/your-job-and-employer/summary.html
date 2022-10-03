@@ -1,8 +1,5 @@
 {% extends "layout-contact.html" %}
 
-{% block pageTitle %}
-You have added an item of specialist equipment – Access to Work – GOV.UK
-{% endblock %}
 
 {% if not inEditMode and casa.journeyPreviousUrl %}
 
@@ -39,6 +36,10 @@ You have added an item of specialist equipment – Access to Work – GOV.UK
 {% set totalJobs = totalJobs + 1 %}
 {% endif %}
 {%- endfor %}
+
+{% block pageTitle %}
+You have added {{totalJobs}} jobs – Access to Work – GOV.UK
+{% endblock %}
 
 {% block beforeContent %}
 <a class="govuk-back-link" onclick="history.back()">Back</a>

@@ -1,7 +1,7 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-Your workplace contact – Access to Work – GOV.UK
+Details of the person we should contact at {{ data['employer-name-'+ number] | capitalize }} – Access to Work – GOV.UK
 {% endblock %}
 
 {% if not number %}
