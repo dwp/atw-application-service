@@ -1,0 +1,46 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+You may need to give a business plan – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/hours-per-week" method="post">
+
+
+<h1 class="govuk-heading-l"> You may need to give a business plan</h1>
+
+<p>We will tell you if we need this when we contact you about your application.</p>
+<p>This is so that we can understand more about your self-employment.</p>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

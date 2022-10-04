@@ -1,0 +1,196 @@
+{% extends "layout-contact.html" %}
+
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+
+{% endif %}
+
+{% if not totalJobs %}
+{% set totalJobs = 0 %}
+{% endif %}
+
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if data['employer-name-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if data['employer-name-about-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if  data['job-title-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if  data['job-title-about-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
+{% block pageTitle %}
+You have added {{totalJobs}} jobs – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">You have added {{totalJobs}} jobs</h1>
+
+<div class="govuk-form-group">
+
+
+
+  <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
+{% for i in [1,2,3,4]-%}
+{% set index = i %}
+{% if data['employer-name-'+ index]%}
+    <div class="hmrc-add-to-a-list__contents">
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+      {{ data['employer-name-'+ index]| capitalize }}
+
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }} details</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }}</span>
+        </a>
+      </dd></div>
+      {% endif %}
+      {%- endfor %}
+
+      {% for i in [1,2,3,4]-%}
+      {% set index = i %}
+      {% if data['employer-name-about-'+ index]%}
+          <div class="hmrc-add-to-a-list__contents">
+            <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+            {{ data['employer-name-about-'+ index]| capitalize }}
+
+            </dt>
+            <dd class="hmrc-add-to-a-list__change">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+                <span aria-hidden="true">Change</span>
+                <span class="govuk-visually-hidden"> {{ data['employer-name-about-'+ index] }} details</span>
+              </a>
+            </dd>
+            <dd class="hmrc-add-to-a-list__remove">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+                <span aria-hidden="true">Remove</span>
+                <span class="govuk-visually-hidden"> {{ data['employer-name-'+ index] }}</span>
+              </a>
+            </dd></div>
+            {% endif %}
+            {%- endfor %}
+
+      {% for i in [1,2,3,4]-%}
+      {% set index = i %}
+      {% if data['job-title-'+ index]%}
+          <div class="hmrc-add-to-a-list__contents">
+            <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+          {{ data['job-title-'+ index] | capitalize}}
+
+            </dt>
+            <dd class="hmrc-add-to-a-list__change">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+                <span aria-hidden="true">Change</span>
+                <span class="govuk-visually-hidden"> {{ data['job-title-'+ index] }} details</span>
+              </a>
+            </dd>
+            <dd class="hmrc-add-to-a-list__remove">
+              <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+                <span aria-hidden="true">Remove</span>
+                <span class="govuk-visually-hidden"> {{ data['job-title-'+ index] }}</span>
+              </a>
+            </dd></div>
+            {% endif %}
+            {%- endfor %}
+
+            {% for i in [1,2,3,4]-%}
+            {% set index = i %}
+            {% if data['job-title-about-'+ index]%}
+                <div class="hmrc-add-to-a-list__contents">
+                  <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+                {{ data['job-title-about-'+ index]| capitalize }}
+
+                  </dt>
+                  <dd class="hmrc-add-to-a-list__change">
+                    <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/check-your-answers-everything">
+                      <span aria-hidden="true">Change</span>
+                      <span class="govuk-visually-hidden"> {{ data['job-title-about-'+ index] }} details</span>
+                    </a>
+                  </dd>
+                  <dd class="hmrc-add-to-a-list__remove">
+                    <a class="govuk-link" href="/alpha-1i/your-job-and-employer/{{index}}/remove">
+                      <span aria-hidden="true">Remove</span>
+                      <span class="govuk-visually-hidden"> {{ data['job-title-about-'+ index] }}</span>
+                    </a>
+                  </dd></div>
+                  {% endif %}
+                  {%- endfor %}
+
+  </dl>
+</div>
+
+    <form method="post" action="/alpha-1i/your-job-and-employer/do-you-have-another-job-answer">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="do-you-have-another-job-2-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you need to add another job?
+      </legend>
+      <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
+                 value="Yes" >
+          <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
+                 value="No" {{ checked("do-you-have-another-job", "No") }}>
+          <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2-2">
+            No
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+    <input type="hidden" name="employment-check-your-answers-everything" value="true">
+  <button class="govuk-button" data-module="govuk-button">
+    <input type="hidden" name="specialist-equipment-hmrc-true" value="true">
+    Save and continue
+  </button>
+   </form>
+
+    <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+</div>
+</div>
+
+
+
+{% endblock %}

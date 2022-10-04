@@ -87,21 +87,21 @@ next();
             })
 
 
-router.route('/your-job-and-employer/employment-status')
+router.route('/your-job-and-employer/1/employment-status')
   .post((req, res, next) => {
     let redirectUrl
-    switch (req.body['1i-employment-status']) {
+    switch (req.body['1i-employment-status1']) {
       case 'Employed':
-        redirectUrl = '/alpha-1i/your-job-and-employer/employment/job-title'
+        redirectUrl = '/alpha-1i/your-job-and-employer/1/employment/employer-name'
         break
       case 'Self-employed':
-        redirectUrl = '/alpha-1i/your-job-and-employer/self-employed/job-title'
+        redirectUrl = '/alpha-1i/your-job-and-employer/1/self-employed/job-title'
         break
           case 'About to start employment':
-            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-employment/job-title'
+            redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/employer-name'
             break
           case 'About to start self-employment':
-            redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/job-title'
+            redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/job-title'
             break
 
       default:
@@ -111,15 +111,94 @@ router.route('/your-job-and-employer/employment-status')
     res.redirect(redirectUrl)
   })
 
-router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr-answer')
+  router.route('/your-job-and-employer/2/employment-status')
+    .post((req, res, next) => {
+      let redirectUrl
+      switch (req.body['1i-employment-status2']) {
+        case 'Employed':
+          redirectUrl = '/alpha-1i/your-job-and-employer/2/employment/employer-name'
+          break
+        case 'Self-employed':
+          redirectUrl = '/alpha-1i/your-job-and-employer/2/self-employed/job-title'
+          break
+            case 'About to start employment':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
+              break
+            case 'About to start self-employment':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/job-title'
+              break
+
+        default:
+          redirectUrl = req.path
+          break
+      }
+      res.redirect(redirectUrl)
+    })
+    router.route('/your-job-and-employer/3/employment-status')
+      .post((req, res, next) => {
+        let redirectUrl
+        switch (req.body['1i-employment-status3']) {
+          case 'Employed':
+            redirectUrl = '/alpha-1i/your-job-and-employer/3/employment/employer-name'
+            break
+          case 'Self-employed':
+            redirectUrl = '/alpha-1i/your-job-and-employer/3/self-employed/job-title'
+            break
+              case 'About to start employment':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
+                break
+              case 'About to start self-employment':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/job-title'
+                break
+
+          default:
+            redirectUrl = req.path
+            break
+        }
+        res.redirect(redirectUrl)
+      })
+
+    router.post('/your-job-and-employer/do-you-have-another-job-answer', function (req, res) {
+
+      const anotherjob = req.session.data['do-you-have-another-job']
+
+      if (anotherjob === 'Yes') {
+        res.redirect('/alpha-1i/your-job-and-employer/2/employment-status')
+      } else {
+        res.redirect('/alpha-1i/task-list')
+      }
+    })
+
+    router.post('/your-job-and-employer/2/do-you-have-another-job-answer', function (req, res) {
+
+      const anotherjob2 = req.session.data['do-you-have-another-job-2']
+
+      if (anotherjob2 === 'Yes') {
+        res.redirect('/alpha-1i/your-job-and-employer/3/employment-status')
+      } else {
+        res.redirect('/alpha-1i/task-list')
+      }
+    })
+
+        router.post('/your-job-and-employer/do-you-have-another-job-answer', function (req, res) {
+
+          const anotherjob = req.session.data['do-you-have-another-job-3']
+
+          if (anotherjob === 'Yes') {
+            res.redirect('/alpha-1i/your-job-and-employer/4/employment-status')
+          } else {
+            res.redirect('/alpha-1i/task-list')
+          }
+        })
+router.route('/your-job-and-employer/1/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
  switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
    case 'Yes':
-     redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/utr'
+     redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/utr'
      break
    case 'No':
-     redirectUrl = '/alpha-1i/your-job-and-employer/about-to-start-self-employment/start-date'
+     redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/start-date'
      break
 
    default:
@@ -128,6 +207,41 @@ router.route('/your-job-and-employer/about-to-start-self-employment/do-you-have-
  }
  res.redirect(redirectUrl)
 })
+router.route('/your-job-and-employer/2/about-to-start-self-employment/do-you-have-a-utr-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+   case 'Yes':
+     redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/utr'
+     break
+   case 'No':
+     redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/start-date'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+router.route('/your-job-and-employer/3/about-to-start-self-employment/do-you-have-a-utr-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+   case 'Yes':
+     redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/utr'
+     break
+   case 'No':
+     redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/start-date'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+
 
 router.route('/how-we-contact-you/contacting-you-about-your-application')
 .post((req, res, next) => {
@@ -231,7 +345,7 @@ res.redirect(redirectUrl)
           res.redirect(redirectUrl)
         })
 
-        router.route('/changes-to-your-workplace/do-you-know-what-you-need')
+        router.route('/changes-to-your-workplace/do-you-know-what-you-need-answer')
           .post((req, res, next) => {
             let redirectUrl
             switch (req.body['workplace-adaptations-do-you-know-what-you-need']) {
@@ -836,6 +950,30 @@ redirectUrl = '/alpha-1i/travelling-to-and-from-work/something-else/work-how-wou
      break
    case 'I am not sure':
 redirectUrl = '/alpha-1i/travelling-to-and-from-work/not-sure/how-many-journeys'
+     break
+
+   default:
+     redirectUrl = req.path
+     break
+ }
+ res.redirect(redirectUrl)
+})
+
+router.route('/travelling-to-and-from-work/what-support-do-you-need-multiple-job-answer')
+.post((req, res, next) => {
+ let redirectUrl
+ switch (req.body['travelling-to-and-from-work-what-support-do-you-need']) {
+   case 'Taxi':
+     redirectUrl = '/alpha-1i/travelling-to-and-from-work/taxi/multiple-job'
+     break
+   case 'Lift in a car from a friend, colleague or family member':
+     redirectUrl = '/alpha-1i/travelling-to-and-from-work/lift/multiple-job'
+     break
+   case 'Something else':
+redirectUrl = '/alpha-1i/travelling-to-and-from-work/something-else/multiple-job'
+     break
+   case 'I am not sure':
+redirectUrl = '/alpha-1i/travelling-to-and-from-work/not-sure/multiple-job'
      break
 
    default:

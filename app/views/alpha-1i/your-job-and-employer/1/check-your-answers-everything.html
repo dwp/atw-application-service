@@ -1,0 +1,38 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Check your answers: job and employer – Access to Work – GOV.UK
+{% endblock %}
+
+{% set number = '1'%}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+{% block content %}
+
+<h1 class="govuk-heading-l">Check your answers:
+  {% if data['1i-employment-status1']=="Employed" %}job at {{ data['employer-name-1']| capitalize }}{% endif %}
+  {% if data['1i-employment-status1']=="About to start employment"%}job at {{ data['employer-name-about-1']| capitalize }}{% endif %}
+  {% if data['1i-employment-status1']=="About to start self-employment"%} {{ data['job-title-about-'+number ]| capitalize }}{% endif %}
+  {% if data['1i-employment-status1']=="Self-employed" %} {{ data['job-title']| capitalize }}{% endif %}</h1>
+
+{% include "alpha-1i/your-job-and-employer/check-your-answers-everything-body.html" %}
+
+  <form class="form" action="/alpha-1i/your-job-and-employer/summary" method="post">
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+{% endblock %}

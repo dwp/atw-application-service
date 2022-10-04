@@ -1,4 +1,6 @@
-
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -8,7 +10,7 @@
 
       <h2 class="govuk-heading-m">Employment details</h2>
 
-    {% if data['1i-employment-status'] =="Employed" %}
+    {% if data['1i-employment-status'+ number] =="Employed" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -19,9 +21,23 @@
             Employed
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment-status">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
               Change
               <span class="govuk-visually-hidden"> what is your employment status</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company or organisation name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['employer-name-'+ number] | capitalize }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/employer-name">
+              Change
+              <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
             </a>
           </dd>
         </div>
@@ -33,7 +49,7 @@
             {{ data['job-title'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/job-title">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/job-title">
               Change
               <span class="govuk-visually-hidden"> what is your job title</span>
             </a>
@@ -48,7 +64,7 @@
             {{ data['employment-job-description'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/job-description">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/job-description">
               Change
               <span class="govuk-visually-hidden"> what is your job title</span>
             </a>
@@ -57,7 +73,7 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            When did you start this job?
+            When did you start working at   {{ data['employer-name-'+ number] | capitalize }}?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['employment-start-day'] }}
@@ -76,7 +92,7 @@
              {{ data['employment-start-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/start-date">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/start-date">
               Change
               <span class="govuk-visually-hidden"> When did you start this job?</span>
             </a>
@@ -91,7 +107,7 @@
             {{ data['hours per week'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/hours-per-week">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/hours-per-week">
               Change
               <span class="govuk-visually-hidden"> how many hours do you work per week</span>
               </a>
@@ -105,26 +121,13 @@
           {{ data['day-of-week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/days-of-week">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/days-of-week">
               Change
               <span class="govuk-visually-hidden"> Which days of the week do you work?</span>
             </a>
         </dd>
       </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Company or organisation name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['employer-name'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/employer-name">
-              Change
-              <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
-            </a>
-          </dd>
-        </div>
+
 
       {% if data['workplace-address-select-true'] =="true" %}
 
@@ -150,7 +153,7 @@
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/employment/workplace-address">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -181,7 +184,7 @@
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/employment/address-manual">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -198,7 +201,7 @@
             {{ data['1h-employment-employer-size'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/employment/employer-size">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/employer-size">
               Change
               <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
             </a>
@@ -217,7 +220,7 @@
         {{ data['workplace-name'] }}
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a href="/alpha-1i/your-job-and-employer/employment/workplace-contact">
+        <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> what is your workplace contacts name</span>
         </a>
@@ -231,7 +234,7 @@
         {{ data['role-name'] }}
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a href="/alpha-1i/your-job-and-employer/employment/workplace-contact">
+        <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> what is your workplace contacts role</span>
         </a>
@@ -245,7 +248,7 @@
         {{ data['workplace-email'] }}
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a href="/alpha-1i/your-job-and-employer/employment/workplace-contact">
+        <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> what is your workplace contacts email address</span>
         </a>
@@ -259,7 +262,7 @@
         {{ data['workplace-phone'] }}
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a href="/alpha-1i/your-job-and-employer/employment/workplace-contact">
+        <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> what is your workplace contacts phone number</span>
         </a>
@@ -273,7 +276,7 @@
         {{ data['permission-contact'] }}
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a href="/alpha-1i/your-job-and-employer/employment/permission">
+        <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/permission">
           Change
           <span class="govuk-visually-hidden"> Do you give your permission for us to contact {{data['workplace-name']}}?</span>
         </a>
@@ -281,7 +284,7 @@
     </div>
   </dl>
 
-  <h2 class="govuk-heading-m">Additional employment</h2>
+  <!-- <h2 class="govuk-heading-m">Additional employment</h2>
 
   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
     <div class="govuk-summary-list__row">
@@ -299,10 +302,10 @@
       </dd>
     </div>
 
-  </dl>
+  </dl> -->
 {% endif %}
 
-    {% if data['1i-employment-status'] =="Self-employed" %}
+    {% if data['1i-employment-status'+ number] =="Self-employed" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -313,7 +316,7 @@
           Self-employed
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/employment-status">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> what is your employment status</span>
           </a>
@@ -324,7 +327,7 @@
           Job title
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['job-title'] }}
+        {{ data['job-title-'+ number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1i/1h-self-employment-job-title">
@@ -342,7 +345,7 @@
           {{ data['self-employment-job-description'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/job-description">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/job-description">
             Change
             <span class="govuk-visually-hidden"> what is your job title</span>
           </a>
@@ -361,7 +364,7 @@
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/utr">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr">
             Change
             <span class="govuk-visually-hidden"> What is your Unique Taxpayer Reference (UTR)?</span>
           </a>
@@ -389,7 +392,7 @@
            {{ data['self-employment-start-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/start-date">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/start-date">
             Change
             <span class="govuk-visually-hidden"> When did you start this job?</span>
           </a>
@@ -403,7 +406,7 @@
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/hours-per-week">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> how many hours do you work per week</span>
           </a>
@@ -418,7 +421,7 @@
           {{ data['day-of-week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a href="/alpha-1i/your-job-and-employer/self-employed/days-of-week">
+            <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/days-of-week">
               Change
               <span class="govuk-visually-hidden"> Which days of the week do you work?</span>
               </a>
@@ -449,7 +452,7 @@
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/workplace-address">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/workplace-address">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -479,7 +482,7 @@
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/self-employed/address-manual">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/address-manual">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -491,7 +494,7 @@
     </dl>
 
 
-    <h2 class="govuk-heading-m">Additional employment</h2>
+    <!-- <h2 class="govuk-heading-m">Additional employment</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -508,9 +511,9 @@
           </a>
         </dd>
       </div>
-    </dl>
+    </dl> -->
 {% endif %}
-    {% if data['1i-employment-status'] =="About to start employment" %}
+    {% if data['1i-employment-status'+ number] =="About to start employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -521,7 +524,7 @@
           About to start employment
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/employment-status">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> what is your employment status</span>
           </a>
@@ -529,13 +532,27 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          What will your job title be?
+          Company or organisation name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['job-title'] }}
+          {{ data['employer-name-about-'+number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/job-title">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/employer-name">
+            Change
+            <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What will your job title be at {{ data['employer-name-about-'+number] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['job-title-about-'+number] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/job-title">
             Change
             <span class="govuk-visually-hidden"> What will your job title be?</span>
           </a>
@@ -544,13 +561,13 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          What will your job description be?
+          What will your job description be at {{ data['employer-name-about-'+number] }}?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['employment-job-description'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/job-description">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/job-description">
             Change
             <span class="govuk-visually-hidden"> What will your job description be?</span>
           </a>
@@ -559,7 +576,7 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          When will you be starting your new job?
+          When will you be starting your new job at {{ data['employer-name-about-'+number] }}?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['about-to-start-employment-start-date-day'] }}
@@ -578,23 +595,23 @@
           {{ data['about-to-start-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/start-date">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/start-date">
             Change
-            <span class="govuk-visually-hidden"> When will you be starting your new job?</span>
+            <span class="govuk-visually-hidden"> When will you be starting your new job  at {{ data['employer-name-about-'+number] }}?</span>
           </a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          How many hours will you work per week?
+          How many hours will you work per week at {{ data['employer-name-about-'+number] }}?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/hours-per-week">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/hours-per-week">
             Change
-            <span class="govuk-visually-hidden"> How many hours will you work per week?</span>
+            <span class="govuk-visually-hidden"> How many hours will you work per week  at {{ data['employer-name-about-'+number] }}?</span>
           </a>
         </dd>
       </div>
@@ -606,26 +623,13 @@
           {{ data['day-of-week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/days-of-week">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/days-of-week">
             Change
             <span class="govuk-visually-hidden"> What days of the week will you work?</span>
           </a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Company or organisation name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['employer-name'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/employer-name">
-            Change
-            <span class="govuk-visually-hidden"> what is your companies or organisations name</span>
-          </a>
-        </dd>
-      </div>
+
 
       {% if data['about-to-start-employment-workplace-address-select-true'] =="true" %}
 
@@ -651,7 +655,7 @@
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/workplace-address">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -681,7 +685,7 @@
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/address-manual">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -698,7 +702,7 @@
           {{ data['1h-employment-employer-size'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/employer-size">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/employer-size">
             Change
             <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
           </a>
@@ -718,7 +722,7 @@
           {{ data['workplace-name'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/workplace-contact">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> what is your workplace contacts name</span>
           </a>
@@ -732,7 +736,7 @@
           {{ data['role-name'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/workplace-contact">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> what is your workplace contacts role</span>
           </a>
@@ -746,7 +750,7 @@
           {{ data['workplace-email'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/workplace-contact">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> what is your workplace contacts email address</span>
           </a>
@@ -760,7 +764,7 @@
           {{ data['workplace-phone'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/workplace-contact">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> what is your workplace contacts phone number</span>
           </a>
@@ -768,7 +772,7 @@
       </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Additional employment</h2>
+    <!-- <h2 class="govuk-heading-m">Additional employment</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -779,15 +783,15 @@
           {{ data['do-you-have-another-job'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-employment/do-you-have-another-job">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/do-you-have-another-job">
             Change
             <span class="govuk-visually-hidden"> Do you have another job?</span>
           </a>
         </dd>
       </div>
-    </dl>
+    </dl> -->
 {% endif %}
-    {% if data['1i-employment-status'] =="About to start self-employment" %}
+    {% if data['1i-employment-status'+ number] =="About to start self-employment" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -798,7 +802,7 @@
           About to start self-employment
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/employment-status">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> what is your employment status</span>
           </a>
@@ -809,10 +813,10 @@
           What will your job title be?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['job-title'] }}
+          {{ data['job-title-about-'+number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/job-title">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/job-title">
             Change
             <span class="govuk-visually-hidden"> What will your job title be?</span>
           </a>
@@ -827,7 +831,7 @@
           {{ data['about-to-start-self-employment-job-description'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/job-description">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/job-description">
             Change
             <span class="govuk-visually-hidden"> what is your job title</span>
           </a>
@@ -842,7 +846,7 @@
           {{ data['about-to-start-self-employment-do-you-have-a-utr'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/do-you-have-a-utr">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/do-you-have-a-utr">
             Change
             <span class="govuk-visually-hidden"> Do you have a Unique Taxpayer Reference (UTR) number?</span>
           </a>
@@ -859,7 +863,7 @@
           {{ data['utr'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/utr">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/utr">
             Change
             <span class="govuk-visually-hidden"> What is your Unique Taxpayer Reference (UTR)?</span>
           </a>
@@ -889,7 +893,7 @@
           {{ data['about-to-start-self-employment-start-date-year'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/start-date">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/start-date">
             Change
             <span class="govuk-visually-hidden"> When will you be starting your self-employment?</span>
           </a>
@@ -903,7 +907,7 @@
           {{ data['hours per week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/hours-per-week">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> How many hours do you think you'll work per week?</span>
           </a>
@@ -918,7 +922,7 @@
           {{ data['day-of-week'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/days-of-week">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/days-of-week">
             Change
             <span class="govuk-visually-hidden"> What days of the week will you work?</span>
           </a>
@@ -949,7 +953,7 @@
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/workplace-address">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -979,7 +983,7 @@
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/address-manual">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
@@ -991,7 +995,7 @@
     </dl>
 
 
-    <h2 class="govuk-heading-m">Additional employment</h2>
+    <!-- <h2 class="govuk-heading-m">Additional employment</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -1002,13 +1006,13 @@
           {{ data['do-you-have-another-job'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/about-to-start-self-employment/do-you-have-another-job">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-self-employment/do-you-have-another-job">
             Change
             <span class="govuk-visually-hidden"> Do you have another job?</span>
           </a>
         </dd>
       </div>
-    </dl>
+    </dl> -->
     {% endif %}
     {% endif %}
 

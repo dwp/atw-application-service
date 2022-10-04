@@ -1,0 +1,70 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Which job do you need this travel to work support for? – Access to Work – GOV.UK
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" action="/alpha-1i/travelling-to-and-from-work/not-sure/how-many-journeys" method="post">
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="multi-job-ttw-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+Which job do you need this travel to work support for?
+    </h1>
+  </legend>
+
+  <div id="multi-job-ttw-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="multi-job-ttw" name="multi-job-ttw" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
+              <label class="govuk-label govuk-checkboxes__label" for="multi-job-ttw">
+              {{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="multi-job-ttw-2" name="multi-job-ttw" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
+              <label class="govuk-label govuk-checkboxes__label" for="multi-job-ttw-2">
+              {{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}
+              </label>
+            </div>
+
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-!-padding-bottom-6"></div>
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

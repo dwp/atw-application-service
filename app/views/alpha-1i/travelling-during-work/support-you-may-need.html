@@ -17,7 +17,10 @@ href: "javascript:history.go(-1)"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/travelling-during-work/check-your-answers" method="post">
+    {% if data['1i-employment-status2']%}
+        <form class="form" action="/alpha-1i/travelling-during-work/multiple-job" method="post">{% else %}
+          <form class="form" action="/alpha-1i/travelling-during-work/check-your-answers" method="post">{% endif %}
+
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
