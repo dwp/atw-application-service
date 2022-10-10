@@ -1,0 +1,83 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Do you need specialist equipment at work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/equipment-adaptations-and-software/summary-1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                  Do you want to remove details for {{ data['specialist-equipment-type-2'] }}?
+                  </h1>
+                </legend>
+
+
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="specialist-equipment-remove" name="specialist-equipment-remove"
+                           type="radio" value="Yes" >
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-remove">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="specialist-equipment-remove-2"
+                           name="specialist-equipment-remove"
+                           type="radio" value="No" >
+                    <label class="govuk-label govuk-radios__label" for="specialist-equipment-remove-2">
+                      No
+                    </label>
+                  </div>
+
+
+
+              </fieldset>
+            </div>
+
+          </div>          </div>
+        <input type="hidden" name="specialist-equipment-remove-task-list" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}
