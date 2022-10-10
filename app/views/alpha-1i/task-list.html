@@ -184,23 +184,21 @@ Complete your application – Access to Work – GOV.UK
 
           <ul class="app-task-list__items">
 
-            <p>Complete these sections to tell us about the types of support you need from Access to Work.</p>
-
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                {% if not data['employment-check-your-answers-everything']%}Equipment, adaptations and software{% else %}
+                {% if not data['employment-check-your-answers-everything']%}Specialist equipment{% else %}
                 {% if ((data ["specialist-equipment-screener"]) =="No")%}
                 <a href="/alpha-1i/equipment-adaptations-and-software/screener" aria-describedby="specialist-equipment-status">
-                  Equipment, adaptations and software
+                  Specialist equipment
                 </a>
                 {% elseif (data ["specialist-equipment-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-1i/equipment-adaptations-and-software/check-your-answers"
                    aria-describedby="specialist-equipment-status">
-                  Equipment, adaptations and software
+                  Specialist equipment
                 </a>
                 {% else %}
                 <a href="/alpha-1i/equipment-adaptations-and-software/screener" aria-describedby="specialist-equipment-status">
-                  Equipment, adaptations and software
+                  Specialist equipment
                 </a>
                 {% endif %}  {% endif %}
               </span>
@@ -406,19 +404,19 @@ Complete your application – Access to Work – GOV.UK
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-            {% if not data['employment-check-your-answers-everything']%}Changes to your vehicle{% else %}
+            {% if not data['employment-check-your-answers-everything']%}Adaptations to your vehicle{% else %}
                 {% if ((data ["changes-to-your-vehicle"]) =="No")%}
                 <a href="/alpha-1i/changes-to-your-vehicle/screener" aria-describedby="changes-to-your-vehicle-status">
-                  Changes to your vehicle
+                  Adaptations to your vehicle
                 </a>
                 {% elseif (data ["changes-to-your-vehicle-check-your-answers"] =="true")%}
                 <a href="/alpha-1i/changes-to-your-vehicle/check-your-answers"
                    aria-describedby="changes-to-your-vehicle-status">
-                  Changes to your vehicle
+                  Adaptations to your vehicle
                 </a>
                 {% else %}
                 <a href="/alpha-1i/changes-to-your-vehicle/screener" aria-describedby="changes-to-your-vehicle-status">
-                  Changes to your vehicle
+                  Adaptations to your vehicle
                 </a>
                 {% endif %}{% endif %}
               </span>
@@ -444,19 +442,19 @@ Complete your application – Access to Work – GOV.UK
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-                {% if not data['employment-check-your-answers-everything']%}Anything else you would like to tell us{% else %}
+                {% if not data['employment-check-your-answers-everything']%}Anything else you want to add {% else %}
                 {% if ((data ["extra-information-screener"]) =="No")%}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
-                  Anything else you would like to tell us
+                  Anything else you want to add 
                 </a>
                 {% elseif (data ["extra-information-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/check-your-answers"
                    aria-describedby="extra-information-status">
-                  Anything else you would like to tell us
+                  Anything else you want to add 
                 </a>
                 {% else %}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
-                  Anything else you would like to tell us
+                  Anything else you want to add 
                 </a>
                 {% endif %}{% endif %}
               </span>
