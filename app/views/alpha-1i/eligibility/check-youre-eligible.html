@@ -30,10 +30,12 @@ href: "javascript:history.go(-1)"
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                       <h1 class="govuk-fieldset__heading">
-                        Before you start, check you’re eligible
+                        Check whether you are eligible
                       </h1>
                     </legend>
-                    <p>Select all that apply to you:</p>
+                      <div id="eligibility-hint" class="govuk-hint">
+                      Select all that apply to you.
+                       </div>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="disability" name="disability" type="checkbox"
@@ -46,7 +48,7 @@ href: "javascript:history.go(-1)"
                         <input class="govuk-checkboxes__input" id="age-2" name="age" type="checkbox" value="age-2"
                                data-behaviour="exclusive" {{ checked("I’m aged 16 or over", "age-2") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="age-2">
-                          I’m aged 16 or over
+                          I am aged 16 or over
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
@@ -54,7 +56,7 @@ href: "javascript:history.go(-1)"
                                value="paid-work-3" data-behaviour="exclusive" {{ checked("I'm in paid work (or about
                         to start or return to work) in England, Scotland or Wales", "paid-work-3") }}>
                         <label class="govuk-label govuk-checkboxes__label" for="paid-work-3">
-                          I'm in paid work (or about to start or return to work) in England, Scotland or Wales
+                          I am in paid work (or about to start or return to work) in England, Scotland or Wales
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
