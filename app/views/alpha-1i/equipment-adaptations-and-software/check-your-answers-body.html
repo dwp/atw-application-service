@@ -74,7 +74,7 @@
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/equipment-adaptations-and-software/screener">
             Change
-            <span class="govuk-visually-hidden"> Do you need equipment, adaptations or software to support you with your condition at work?</span>
+            <span class="govuk-visually-hidden"> whether you need specialist equipment at work</span>
           </a>
         </dd>
       </div>
@@ -88,7 +88,7 @@
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/equipment-adaptations-and-software/do-you-know-what-you-need">
             Change
-            <span class="govuk-visually-hidden"> Do you know what specialist equipment you need?</span>
+            <span class="govuk-visually-hidden"> whether you know what specialist equipment you need</span>
           </a>
         </dd>
       </div>
@@ -110,17 +110,17 @@
           {% if data['specialist-equipment-type-3'] %}
           <a href="/alpha-1i/equipment-adaptations-and-software/summary-3">
             Change
-            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
           </a>
           {% elseif data['specialist-equipment-type-2'] %}
           <a href="/alpha-1i/equipment-adaptations-and-software/summary-2">
             Change
-            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
           </a>
           {% else %}
           <a href="/alpha-1i/equipment-adaptations-and-software/summary-1">
             Change
-            <span class="govuk-visually-hidden"> What type of specialist equipment do you need?</span>
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
           </a>
           {% endif %}
         </dd>
@@ -141,7 +141,7 @@
                     <dd class="govuk-summary-list__actions">
                         <a href="/alpha-1i/support-workers/multiple-job">
                             Change
-                            <span class="govuk-visually-hidden"> Which job do you need this support worker for?</span>
+                            <span class="govuk-visually-hidden"> which job do you need this specialist equipment for</span>
                         </a>
                     </dd>
                 </div>
@@ -159,7 +159,7 @@
 
           <a href="/alpha-1i/equipment-adaptations-and-software/quote">
             Change
-            <span class="govuk-visually-hidden">  Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+            <span class="govuk-visually-hidden"> whether you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}</span>
           </a>
 
         </dd>
@@ -167,7 +167,7 @@
 {% if data['sea-quote-1']=='Yes'%}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-    Providing quotes for {{ data['specialist-equipment-type-1'] }}
+   Giving quotes for {{ data['specialist-equipment-type-1'] }}
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['quote-one-1'] }}<br>
@@ -178,7 +178,7 @@
 
           <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1">
             Change
-            <span class="govuk-visually-hidden"> Providing quotes for {{ data['specialist-equipment-type-1'] }}</span>
+            <span class="govuk-visually-hidden"> this quote information</span>
           </a>
 
         </dd>
@@ -198,7 +198,7 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
 
     <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
       Change
-      <span class="govuk-visually-hidden"> Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+      <span class="govuk-visually-hidden"> whether you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}</span>
     </a>
 
   </dd>
@@ -208,7 +208,7 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
 {% if data['another-sea-quote-1']=='Yes'%}
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
-Providing another quotes for {{ data['specialist-equipment-type-1'] }}
+Giving another quote for {{ data['specialist-equipment-type-1'] }}
   </dt>
   <dd class="govuk-summary-list__value">
     {{ data['quote-one-1-2'] }}<br>
@@ -220,7 +220,7 @@ Providing another quotes for {{ data['specialist-equipment-type-1'] }}
 
     <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-2">
       Change
-      <span class="govuk-visually-hidden"> Providing another quotes for {{ data['specialist-equipment-type-1'] }}</span>
+      <span class="govuk-visually-hidden"> this quote information</span>
     </a>
 
   </dd>
@@ -239,7 +239,7 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
 
     <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
       Change
-      <span class="govuk-visually-hidden"> Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+      <span class="govuk-visually-hidden"> whether you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
     </a>
 
   </dd>
@@ -249,7 +249,7 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
 {% if data['another-sea-quote-2']=='Yes'%}
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
-Providing another quotes for {{ data['specialist-equipment-type-1'] }}
+Giving another quote for {{ data['specialist-equipment-type-1'] }}
   </dt>
   <dd class="govuk-summary-list__value">
     {{ data['quote-one-1-3'] }}<br>
@@ -261,7 +261,7 @@ Providing another quotes for {{ data['specialist-equipment-type-1'] }}
 
     <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-3">
       Change
-      <span class="govuk-visually-hidden"> Providing another quotes for {{ data['specialist-equipment-type-1'] }}</span>
+      <span class="govuk-visually-hidden"> this quote information</span>
     </a>
 
   </dd>
@@ -297,17 +297,17 @@ Providing another quotes for {{ data['specialist-equipment-type-1'] }}
           {% if data['specialist-equipment-textbox-3'] %}
           <a href="/alpha-1i/equipment-adaptations-and-software/impact-of-not-having-it-3">
             Change
-            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+            <span class="govuk-visually-hidden"> how this equipment will help you at work</span>
           </a>
           {% elseif data['specialist-equipment-textbox-2'] %}
           <a href="/alpha-1i/equipment-adaptations-and-software/impact-of-not-having-it-2">
             Change
-            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+            <span class="govuk-visually-hidden"> how this equipment will help you at work</span>
           </a>
           {% else %}
           <a href="/alpha-1i/equipment-adaptations-and-software/impact-of-not-having-it-1">
             Change
-            <span class="govuk-visually-hidden"> How will this equipment help you at work?</span>
+            <span class="govuk-visually-hidden"> how this equipment will help you at work</span>
           </a>
           {% endif %}
         </dd>
