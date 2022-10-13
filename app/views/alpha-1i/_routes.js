@@ -849,7 +849,7 @@ case 'Yes, I have quotes':
 redirectUrl = '/alpha-1i/support-workers/first-quote'
 break
 case 'No, I do not have quotes':
-redirectUrl = '/alpha-1i/support-workers/do-you-need-another-support-worker'
+redirectUrl = '/alpha-1i/support-workers/check-your-answers'
 break
 
 default:
