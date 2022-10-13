@@ -4,7 +4,35 @@
 Complete your application – Access to Work – GOV.UK
 {% endblock %}
 
+{% if not totalTasks %}
+{% set totalTasks = 0 %}
+{% endif %}
 
+{% if data['check-your-answers'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['contacting-you-about-your-application-task-list'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['support-you-get-answers-task-list'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['your-health-condition-or-disability-check-your-answers-everything'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['employment-check-your-answers-everything'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['specialist-equipment-screener'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['mental-health-support-screener'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['support-worker-screener'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['travelling-to-and-from-work-screener'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if data['travel-during-work-screener'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if (data ["workplace-adaptations-screener"] =="No") or (data["workplace-adaptations-check-your-answers"] =="true") or (data ["workplace-adaptations-screener"] =="I do not know") %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if (data ["changes-to-your-vehicle-screener"] =="No") or (data["changes-to-your-vehicle-check-your-answers"] =="true") or (data ["changes-to-your-vehicle-screener"] =="I do not know") %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
+{% if (data ["extra-information-screener"] =="No") or (data ['extra-information-check-your-answers-task-list'] =="true") %}{% set totalTasks = totalTasks + 1 %}{% endif %}
 
 {% block content %}
 
@@ -16,15 +44,19 @@ Complete your application – Access to Work – GOV.UK
         Access to Work application
       </h1>
 
-      <!-- <h2 class="govuk-heading-m">
-        Application incomplete
-      </h2>
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application {% if data ['changes-to-your-vehicle-screener'] and
+    data['specialist-equipment-screener'] and
+    data['mental-health-support-screener'] and
+    data['support-worker-screener'] and
+    data['travelling-to-and-from-work-screener'] and
+    data['workplace-adaptations-screener'] and
+    data['extra-information-screener'] %}complete
+    {% else %}incomplete{% endif %}</h2>
+<p class="govuk-body govuk-!-margin-bottom-7">You have completed {% if totalTasks =='13'%}all{% else %}{{totalTasks}} of{% endif %} 13 tasks.</p>
 
-      <!-- <p>There are 4 sections and you can complete the sections in any order.</p>
 
-      <p>You'll have 24 hours to complete this application – after this, the screen will refresh and you'll have to enter your information again.</p> -->
-  <!-- <p>You have completed 0 of 12 tasks.</p> -->
-      <div class="govuk-!-padding-bottom-2"></div>
+
+
 
       <ol class="app-task-list">
 
@@ -445,16 +477,16 @@ Complete your application – Access to Work – GOV.UK
                 {% if not data['employment-check-your-answers-everything']%}Anything else you want to add {% else %}
                 {% if ((data ["extra-information-screener"]) =="No")%}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
-                  Anything else you want to add 
+                  Anything else you want to add
                 </a>
                 {% elseif (data ["extra-information-check-your-answers-task-list"] =="true")%}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/check-your-answers"
                    aria-describedby="extra-information-status">
-                  Anything else you want to add 
+                  Anything else you want to add
                 </a>
                 {% else %}
                 <a href="/alpha-1i/anything-else-you-would-like-to-tell-us/screener" aria-describedby="extra-information-status">
-                  Anything else you want to add 
+                  Anything else you want to add
                 </a>
                 {% endif %}{% endif %}
               </span>
@@ -480,13 +512,7 @@ Complete your application – Access to Work – GOV.UK
 
       <div class="govuk-!-padding-bottom-3"></div>
 
-{% if data ['changes-to-your-vehicle-screener'] and
-data['specialist-equipment-screener'] and
-data['mental-health-support-screener'] and
-data['support-worker-screener'] and
-data['travelling-to-and-from-work-screener'] and
-data['workplace-adaptations-screener'] and
-data['extra-information-screener'] %}
+{% if totalTasks == '13' %}
       <form action="/alpha-1i/final-check-your-answers">
           <input type="hidden" name="task-list-completed" value="true">
           <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
