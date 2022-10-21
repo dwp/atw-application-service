@@ -1,0 +1,209 @@
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h2 class="govuk-heading-m">Specialist equipment</h2>
+
+
+    {% if (data['specialist-equipment-do-you-know-what-specialist-equipment-you-need'] =="Yes, I know what I need") %}
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What type of specialist equipment do you need?
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+
+          {{ data['specialist-equipment-type-2'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          {% if data['specialist-equipment-type-3'] %}
+          <a href="/alpha-1i/equipment-adaptations-and-software/summary-3">
+            Change
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
+          </a>
+          {% elseif data['specialist-equipment-type-2'] %}
+          <a href="/alpha-1i/equipment-adaptations-and-software/summary-2">
+            Change
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
+          </a>
+          {% else %}
+          <a href="/alpha-1i/equipment-adaptations-and-software/summary-1">
+            Change
+            <span class="govuk-visually-hidden"> what type of specialist equipment you need</span>
+          </a>
+          {% endif %}
+        </dd>
+      </div>
+
+{% if data['multi-job-sae']%}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                Which job do you need {{ data['specialist-equipment-type-1'] }} for?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% for feature in data['multi-job-sae'] %}
+                        <li>{{ feature }}</li>
+                      {% else %}
+                        <li>No features selected</li>
+                      {% endfor %}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a href="/alpha-1i/support-workers/multiple-job">
+                            Change
+                            <span class="govuk-visually-hidden"> which job do you need this specialist equipment for</span>
+                        </a>
+                    </dd>
+                </div>
+{% endif %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+  Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['sea-quote-1'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+          <a href="/alpha-1i/equipment-adaptations-and-software/quote">
+            Change
+            <span class="govuk-visually-hidden"> whether you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}</span>
+          </a>
+
+        </dd>
+      </div>
+{% if data['sea-quote-1']=='Yes'%}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+   Giving quotes for {{ data['specialist-equipment-type-1'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['quote-one-1'] }}<br>
+{{ data['quote-one-2'] }}<br>
+£{{data['cost-per-item']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+          <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1">
+            Change
+            <span class="govuk-visually-hidden"> this quote information</span>
+          </a>
+
+        </dd>
+      </div>
+
+
+{% if data['another-sea-quote-1']%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['another-sea-quote-1'] }}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
+      Change
+      <span class="govuk-visually-hidden"> whether you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}</span>
+    </a>
+
+  </dd>
+</div>
+
+
+{% if data['another-sea-quote-1']=='Yes'%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Giving another quote for {{ data['specialist-equipment-type-1'] }}
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['quote-one-1-2'] }}<br>
+  {{ data['quote-one-2-2'] }}<br>
+  £{{data['cost-per-item-2']}}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-2">
+      Change
+      <span class="govuk-visually-hidden"> this quote information</span>
+    </a>
+
+  </dd>
+</div>
+
+{% if data['another-sea-quote-1']%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['another-sea-quote-2'] }}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/another-quote">
+      Change
+      <span class="govuk-visually-hidden"> whether you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?</span>
+    </a>
+
+  </dd>
+</div>
+
+
+{% if data['another-sea-quote-2']=='Yes'%}
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Giving another quote for {{ data['specialist-equipment-type-1'] }}
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['quote-one-1-3'] }}<br>
+  {{ data['quote-one-2-3'] }}<br>
+  £{{data['cost-per-item-3']}}
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+    <a href="/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-3">
+      Change
+      <span class="govuk-visually-hidden"> this quote information</span>
+    </a>
+
+  </dd>
+</div>
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+
+
+
+
+    </dl>
+    {% endif %}
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

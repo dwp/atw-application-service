@@ -7,7 +7,7 @@ const router = express.Router()
 router.all('/equipment-adaptations-and-software/quote/another-quote-answer', function(req, res, next){
 const itemTotal = req.session.data['cost-per-item'];
 if (itemTotal < 500.0) {
-   res.redirect('/alpha-1i/equipment-adaptations-and-software/summary-1');
+   res.redirect('/alpha-1i/equipment-adaptations-and-software/check-your-answers-item1');
 } else if (itemTotal >= 500.0) {
    res.redirect('/alpha-1i/equipment-adaptations-and-software/quote/another-quote');
 }
@@ -666,7 +666,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1'
 break
 case 'No':
-redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/check-your-answers-item1'
 break
 
 default:
@@ -683,7 +683,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-2'
 break
 case 'No':
-redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/check-your-answers-item1'
 break
 
 default:
@@ -700,7 +700,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/equipment-adaptations-and-software/quote/add-quote-1-3'
 break
 case 'No':
-redirectUrl = '/alpha-1i/equipment-adaptations-and-software/summary-1'
+redirectUrl = '/alpha-1i/equipment-adaptations-and-software/check-your-answers-item1'
 break
 
 default:
