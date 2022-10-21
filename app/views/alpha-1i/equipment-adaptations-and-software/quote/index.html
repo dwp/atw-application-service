@@ -18,25 +18,39 @@ Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}? �
 
 
   <form class="form" action="/alpha-1i/equipment-adaptations-and-software/quote-answer" method="post">
+    <h1 class="govuk-heading-l">Giving quotes for the cost of {{ data['specialist-equipment-type-1'] }}</h1>
+
+    <p>We ask for quotes so that we can work out the value of your grant. You should give 3 quotes if the cost is £500 or more, if you can.</p>
+
+    <p class="govuk-body">You will need to give:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the brand name of the item</li>
+      <li>the supplier of the item</li>
+        <li>total cost</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      It will speed up the application process if you can give them now, but giving quotes is optional at this stage. We will ask for them at a later date if you cannot give them now.
+    </div>
+
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="sea-quote-1-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--l">
-         Do you have quotes for the cost of {{ data['specialist-equipment-type-1'] }}?
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+         Do you have quotes for {{ data['specialist-equipment-type-1'] }}?
         </legend>
-        <p>We ask for quotes so that we can work out the value of the grant. If you can, you should give 3 quotes if the cost is £500 or more.</p>
-        <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios ">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="sea-quote-1" name="sea-quote-1" type="radio"
                    value="Yes" {{ checked("sea-quote-1", "Yes") }}>
             <label class="govuk-label govuk-radios__label" for="sea-quote-1">
-              Yes
+              Yes, I have quotes
             </label>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="sea-quote-1-2" name="sea-quote-1" type="radio"
                    value="No" {{ checked("sea-quote-1", "No") }}>
             <label class="govuk-label govuk-radios__label" for="sea-quote-1-2">
-              No
+              No, I do not have quotes
             </label>
           </div>
         </div>

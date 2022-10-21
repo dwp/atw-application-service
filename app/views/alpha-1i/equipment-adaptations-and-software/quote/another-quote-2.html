@@ -18,9 +18,100 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
 
 
   <form class="form" action="/alpha-1i/equipment-adaptations-and-software/quote-answer-1-2" method="post">
+    <h1 class="govuk-heading-l">You have provided 2 quote for {{ data['specialist-equipment-type-1'] }}</h1>
+
+    <h2 class="govuk-heading-m">First quote for {{ data['specialist-equipment-type-1'] }}</h2>
+
+    <div class="govuk-form-group">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Brand
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['quote-one-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-quote-1">
+              Change<span class="govuk-visually-hidden"> Brand</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supplier
+          </dt>
+          <dd class="govuk-summary-list__value">
+{{ data['quote-one-2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-quote-1">
+              Change<span class="govuk-visually-hidden"> Supplier</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Total cost
+          </dt>
+          <dd class="govuk-summary-list__value">
+                £{{ data['cost-per-item'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-quote-1">
+              Change<span class="govuk-visually-hidden"> Total cost</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Second quote for {{ data['specialist-equipment-type-1'] }}</h2>
+
+      <div class="govuk-form-group">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Brand
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['quote-one-1'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-quote-1">
+                Change<span class="govuk-visually-hidden"> Brand</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Supplier
+            </dt>
+            <dd class="govuk-summary-list__value">
+      {{ data['quote-one-2'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-quote-1">
+                Change<span class="govuk-visually-hidden"> Supplier</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Total cost
+            </dt>
+            <dd class="govuk-summary-list__value">
+                  £{{ data['cost-per-item-2'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="add-quote-1">
+                Change<span class="govuk-visually-hidden"> Total cost</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="another-sea-quote-2-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--l">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
          Do you have another quote for the cost of {{ data['specialist-equipment-type-1'] }}?
         </legend>
         <p> If you can, you should give 3 quotes as the cost is more than £500.
@@ -43,13 +134,12 @@ Do you have another quote for the cost of {{ data['specialist-equipment-type-1']
         </div>
 
       </fieldset>
-    </div>
+    </div>      </div>      </div>
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
         <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
 
-    </form>
   </div>
 
   </div>
