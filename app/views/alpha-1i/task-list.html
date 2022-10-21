@@ -12,7 +12,7 @@ Complete your application – Access to Work – GOV.UK
 
 {% if data['contacting-you-about-your-application-task-list'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
 
-{% if data['support-you-get-answers-task-list'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
+
 
 {% if data['your-health-condition-or-disability-check-your-answers-everything'] %}{% set totalTasks = totalTasks + 1 %}{% endif %}
 
@@ -52,7 +52,7 @@ Complete your application – Access to Work – GOV.UK
     data['workplace-adaptations-screener'] and
     data['extra-information-screener'] %}complete
     {% else %}incomplete{% endif %}</h2>
-<p class="govuk-body govuk-!-margin-bottom-7">You have completed {% if totalTasks =='13'%}all{% else %}{{totalTasks}} of{% endif %} 13 tasks.</p>
+<p class="govuk-body govuk-!-margin-bottom-7">You have completed {% if totalTasks =='12'%}all{% else %}{{totalTasks}} of{% endif %} 12 tasks.</p>
 
 
 
@@ -111,7 +111,7 @@ Complete your application – Access to Work – GOV.UK
               </strong>
             </li>
 
-            <li class="app-task-list__item">
+            <!-- <li class="app-task-list__item">
 
               <span class="app-task-list__task-name">
                 {% if (data ['support-you-get-answers-task-list'] =="true")%}
@@ -136,7 +136,7 @@ Complete your application – Access to Work – GOV.UK
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="in progress">In progress</strong>
                 {% endif %}
               </strong>
-            </li>
+            </li> -->
 
 
 
@@ -512,7 +512,7 @@ Complete your application – Access to Work – GOV.UK
 
       <div class="govuk-!-padding-bottom-3"></div>
 
-{% if totalTasks == '13' %}
+{% if totalTasks == '12' %}
       <form action="/alpha-1i/final-check-your-answers">
           <input type="hidden" name="task-list-completed" value="true">
           <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
