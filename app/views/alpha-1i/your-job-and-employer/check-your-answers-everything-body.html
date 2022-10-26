@@ -305,7 +305,7 @@
   </dl> -->
 {% endif %}
 
-    {% if data['1i-employment-status'+ number] =="Self-employed" %}
+    {% if data['1i-employment-status'+ number] =="Self-employed" or data['1i-employment-status'+ number]=="Registered director of a limited company" %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -313,7 +313,7 @@
           Employment status
         </dt>
         <dd class="govuk-summary-list__value">
-          Self-employed
+        {{data['1i-employment-status'+ number]}}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
@@ -352,24 +352,7 @@
         </dd>
       </div>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          What is your Unique Taxpayer Reference (UTR)?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {% if data['self-employment-utr-true'] =="true" %}
-          {{ data['utr'] }}
-          {% else %}
-          <p>I do not have a UTR</p>
-          {% endif %}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr">
-            Change
-            <span class="govuk-visually-hidden"> your Unique Taxpayer Reference (UTR)</span>
-          </a>
-        </dd>
-      </div>
+
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -413,6 +396,26 @@
         </dd>
       </div>
 
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What is your Unique Taxpayer Reference (UTR)?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['self-employment-utr-true'] =="true" %}
+          {{ data['utr'] }}
+          {% else %}
+          <p>I do not have a UTR</p>
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr">
+            Change
+            <span class="govuk-visually-hidden"> your Unique Taxpayer Reference (UTR)</span>
+          </a>
+        </dd>
+      </div>
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Which days of the week do you work?

@@ -31,10 +31,10 @@ href: "javascript:history.go(-1)"
                     What is your employment status?
                   </h1>
                 </legend>
-                <div id="1i-employment-status-hint" class="govuk-hint">
+                <!-- <div id="1i-employment-status-hint" class="govuk-hint">
                   If you have more than one job, you will have to option to add another later on.
-                </div>
-
+                </div> -->
+<p>If you do not know, you can <a href="https://www.gov.uk/employment-status">find out more about different types of employment (opens in a new tab)</a>.</p>
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="1i-employment-status" name="1i-employment-status{{number}}"
@@ -47,25 +47,18 @@ href: "javascript:history.go(-1)"
                     <input class="govuk-radios__input" id="1i-employment-status-2" name="1i-employment-status{{number}}"
                            type="radio" value="Self-employed" {{ checked("1i-employment-status"+ number, "Self-employed") }}>
                     <label class="govuk-label govuk-radios__label" for="1i-employment-status-2">
-                      Self-employed
+                      Self-employed such as a sole trader
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="1i-employment-status-3"
                            name="1i-employment-status{{number}}"
-                           type="radio" value="About to start employment" {{ checked("1i-employment-status"+ number, "About to start employment") }}>
+                           type="radio" value="Registered director of a limited company" {{ checked("1i-employment-status"+ number, "Registered director of a limited companyt") }}>
                     <label class="govuk-label govuk-radios__label" for="1i-employment-status-3">
-                      About to start employment
+                  Registered director of a limited company
                     </label>
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="1i-employment-status-4"
-                           name="1i-employment-status{{number}}"
-                           type="radio" value="About to start self-employment" {{ checked("1i-employment-status"+ number, "About to start self-employment") }}>
-                    <label class="govuk-label govuk-radios__label" for="1i-employment-status-4">
-                      About to start self-employment
-                    </label>
-                  </div>
+
                 </div>
 
               </fieldset>

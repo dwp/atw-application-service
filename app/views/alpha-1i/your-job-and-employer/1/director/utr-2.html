@@ -21,27 +21,24 @@ href: "javascript:history.go(-1)"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/self-employed/hours-per-week" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/director/hours-per-week" method="post">
 
 
 
-      <h1 class="govuk-heading-l">What is your Unique Taxpayer Reference (UTR)?</h1>
+      <h1 class="govuk-heading-l">What is the Unique Taxpayer Reference (UTR)?</h1>
 
-  <p class="govuk-body">You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR (opens in a new tab)</a>.</p>
+
 
   <div class="govuk-form-group">
     <label class="govuk-label govuk-visually-hidden" for="utr">
-      What is your Unique Taxpayer Reference?
+      What is the Unique Taxpayer Reference?
     </label>
-        <div id="utr-hint" class="govuk-hint">
-      This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about tax. It may be called ‘reference’, ‘UTR’ or ‘official use’.
-    </div>
-
+    
         <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint"
                value="{{ data['utr'] }}">
       </div>
 
-      <!-- <p><a href="/alpha-1i/your-job-and-employer/self-employed/start-date">I do not have a
+      <!-- <p><a href="/alpha-1i/your-job-and-employer/director/start-date">I do not have a
         UTR</a></p> -->
 
       <div class="govuk-!-padding-bottom-0"></div>

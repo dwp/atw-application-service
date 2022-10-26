@@ -160,14 +160,22 @@ You have added {{totalJobs}} jobs – Access to Work – GOV.UK
       <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
         Do you need to add another job?
       </legend>
-      <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios ">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
                  value="Yes" >
           <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2">
-            Yes
+            Yes, a job I have started
           </label>
         </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
+                 value="Yes" >
+          <label class="govuk-label govuk-radios__label" for="do-you-have-another-job-2">
+            Yes but I have not started yet
+          </label>
+        </div>
+         <div class="govuk-radios__divider">or</div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="do-you-have-another-job" name="do-you-have-another-job" type="radio"
                  value="No" {{ checked("do-you-have-another-job", "No") }}>
