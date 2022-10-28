@@ -37,6 +37,13 @@
 {% endif %}
 {%- endfor %}
 
+{% for i in [1,2,3,4] -%}
+{% set indexJob = i %}
+{% if  data['job-title-about-director-'+ indexJob]%}
+{% set totalJobs = totalJobs + 1 %}
+{% endif %}
+{%- endfor %}
+
 {% block pageTitle %}
 You have added {{totalJobs}} jobs – Access to Work – GOV.UK
 {% endblock %}

@@ -7,7 +7,8 @@
 
            {% if data['1i-employment-status1']=="About to start employment"%}Do you want to remove details for your job at {{ data['employer-name-about-1'] }}?{% endif %}
            {% if data['1i-employment-status1']=="About to start self-employment"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
- – Access to Work – GOV.UK
+           {% if data['1i-employment-status1']=="About to register as a director of a limited company"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
+– Access to Work – GOV.UK
 {% endblock %}
 
 {% set number = '1'%}
@@ -37,7 +38,7 @@ href: casa.journeyPreviousUrl
 
                     {% if data['1i-employment-status1']=="About to start employment"%}Do you want to remove details for your job at {{ data['employer-name-about-1'] }}?{% endif %}
                     {% if data['1i-employment-status1']=="About to start self-employment"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
-
+ {% if data['1i-employment-status1']=="About to register as a director of a limited company"%}Do you want to remove details for your register as a director of a limited company as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
                     </h1>
               </legend>
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">

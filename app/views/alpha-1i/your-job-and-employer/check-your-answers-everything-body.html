@@ -305,7 +305,7 @@
   </dl> -->
 {% endif %}
 
-    {% if data['1i-employment-status'+ number] =="Self-employed" or data['1i-employment-status'+ number]=="Registered director of a limited company" %}
+    {% if data['1i-employment-status'+ number] =="Self-employed" or data['1i-employment-status'+ number]=="Registered director of a limited company" or  data['1i-employment-status1']=="About to register as a director of a limited company"%}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -415,7 +415,7 @@
           </a>
         </dd>
       </div>
-      
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Which days of the week do you work?
@@ -552,7 +552,7 @@
           What will your job title be at {{ data['employer-name-about-'+number] }}?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['job-title-about-'+number] }}
+          {{ data['job-title-about-director-'+number] }}{{ data['job-title-about-employment-'+number] }}{{ data['job-title-'+ number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/job-title">
