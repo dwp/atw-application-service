@@ -34,15 +34,15 @@ Which job do you need {{ data['specialist-equipment-type-1'] }} for?
       </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="multi-job-sae" name="multi-job-sae" type="checkbox" value="{{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}">
+              <input class="govuk-checkboxes__input" id="multi-job-sae" name="multi-job-sae" type="checkbox" value="{{data['job-title-1']}} {% if data['1i-employment-status1']=='Employed'%}{{data['job-title-employed-1']}} at {{data['employer-name-1']}}{% endif %}">
               <label class="govuk-label govuk-checkboxes__label" for="multi-job-sae">
-              {{data['job-title']}} {% if data['1i-employment-status1']=='Employed'%}at {{data['employer-name-1']}}{% endif %}
+              {{data['job-title-1']}} {% if data['1i-employment-status1']=='Employed'%}{{data['job-title-employed-1']}} at {{data['employer-name-1']}}{% endif %}
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="multi-job-sae-2" name="multi-job-sae" type="checkbox" value="{{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}">
+              <input class="govuk-checkboxes__input" id="multi-job-sae-2" name="multi-job-sae" type="checkbox" value="{{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%}{{data['job-title-employed-2']}} at {{data['employer-name-2']}}{% endif %}">
               <label class="govuk-label govuk-checkboxes__label" for="multi-job-sae-2">
-              {{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%} at {{data['employer-name-2']}}{% endif %}
+              {{data['job-title-2']}}{% if data['1i-employment-status2']=='Employed'%}{{data['job-title-employed-2']}} at {{data['employer-name-2']}}{% endif %}
               </label>
             </div>
 

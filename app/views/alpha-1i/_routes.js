@@ -1183,7 +1183,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/support-workers/second-quote'
 break
 case 'No':
-redirectUrl = '/alpha-1i/support-workers/do-you-need-another-support-worker'
+redirectUrl = '/alpha-1i/support-workers/check-your-answers'
 break
 
 default:
@@ -1201,7 +1201,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/support-workers/third-quote'
 break
 case 'No':
-redirectUrl = '/alpha-1i/support-workers/do-you-need-another-support-worker'
+redirectUrl = '/alpha-1i/support-workers/check-your-answers'
 break
 
 default:
