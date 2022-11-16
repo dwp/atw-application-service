@@ -1,0 +1,60 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What is your Unique Taxpayer Reference? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/director/hours-per-week" method="post">
+
+
+
+      <h1 class="govuk-heading-l">What is the Unique Taxpayer Reference (UTR)?</h1>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-visually-hidden" for="utr">
+      What is the Unique Taxpayer Reference?
+    </label>
+    
+        <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint"
+               value="{{ data['utr'] }}">
+      </div>
+
+      <!-- <p><a href="/alpha-1i/your-job-and-employer/director/start-date">I do not have a
+        UTR</a></p> -->
+
+      <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="self-employment-utr-true" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

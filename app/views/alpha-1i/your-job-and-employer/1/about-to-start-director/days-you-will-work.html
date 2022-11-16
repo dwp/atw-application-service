@@ -1,0 +1,78 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Do you know what days you will be working? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-director/days-you-will-work-answer" method="post">
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="days-you-will-work-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you know what days you will be working?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="days-you-will-work"
+                     name="days-you-will-work" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="days-you-will-work">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="days-you-will-work-2" name="days-you-will-work" type="radio" value="I will be working flexiable or shift pattern">
+              <label class="govuk-label govuk-radios__label" for="days-you-will-work-2">
+            I will be working flexiable or shift pattern
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="days-you-will-work-2" name="days-you-will-work" type="radio" value="I do not know">
+              <label class="govuk-label govuk-radios__label" for="days-you-will-work-2">
+            I do not know
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+
+
+      <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

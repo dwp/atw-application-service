@@ -1,7 +1,14 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-Check your answers: job and employer – Access to Work – GOV.UK
+{% if data['1i-employment-status'+ number]=="Employed" %}Do you want to remove details for your job at {{ data['employer-name-1'] | capitalize }}?{% endif %}
+           {% if data['1i-employment-status'+ number]=="Self-employed" %}Do you want to remove details for your self-employment as {{ data['job-title-'+ number] }}?{% endif %}
+
+
+           {% if data['1i-employment-status1']=="About to start employment"%}Do you want to remove details for your job at {{ data['employer-name-about-1'] }}?{% endif %}
+           {% if data['1i-employment-status1']=="About to start self-employment"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
+           {% if data['1i-employment-status1']=="About to register as a director of a limited company"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
+– Access to Work – GOV.UK
 {% endblock %}
 
 {% set number = '1'%}
@@ -31,10 +38,10 @@ href: casa.journeyPreviousUrl
 
                     {% if data['1i-employment-status1']=="About to start employment"%}Do you want to remove details for your job at {{ data['employer-name-about-1'] }}?{% endif %}
                     {% if data['1i-employment-status1']=="About to start self-employment"%}Do you want to remove details for your self-employment as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
-
+ {% if data['1i-employment-status1']=="About to register as a director of a limited company"%}Do you want to remove details for your register as a director of a limited company as {{ data['job-title-about-1'] | capitalize}}?{% endif %}
                     </h1>
               </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="remove-job" name="remove-job" type="radio" value="Yes">
                   <label class="govuk-label govuk-radios__label" for="remove-job">

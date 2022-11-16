@@ -24,7 +24,7 @@ href: casa.journeyPreviousUrl
   {% if data['1i-employment-status1']=="About to start employment"%}job at {{ data['employer-name-about-1']| capitalize }}{% endif %}
   {% if data['1i-employment-status1']=="About to start self-employment"%} {{ data['job-title-about-'+number ]| capitalize }}{% endif %}
   {% if data['1i-employment-status1']=="Self-employed" %} {{ data['job-title']| capitalize }}{% endif %}</h1>
-
+  {% if data['1i-employment-status1']=="Registered director of a limited company" %} {{ data['job-title']| capitalize }}{% endif %}
 {% include "alpha-1i/your-job-and-employer/check-your-answers-everything-body.html" %}
 
   <form class="form" action="/alpha-1i/your-job-and-employer/summary" method="post">

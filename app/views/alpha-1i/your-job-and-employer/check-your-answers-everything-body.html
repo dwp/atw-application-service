@@ -46,7 +46,7 @@
             Job title
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['job-title'] }}
+            {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/job-title">
@@ -305,7 +305,7 @@
   </dl> -->
 {% endif %}
 
-    {% if data['1i-employment-status'+ number] =="Self-employed" %}
+    {% if data['1i-employment-status'+ number] =="Self-employed" or data['1i-employment-status'+ number]=="Registered director of a limited company" or  data['1i-employment-status1']=="About to register as a director of a limited company"%}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -313,7 +313,7 @@
           Employment status
         </dt>
         <dd class="govuk-summary-list__value">
-          Self-employed
+        {{data['1i-employment-status'+ number]}}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/{{number}}/employment-status">
@@ -327,7 +327,7 @@
           Job title
         </dt>
         <dd class="govuk-summary-list__value">
-        {{ data['job-title-'+ number] }}
+        {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1i/1h-self-employment-job-title">
@@ -352,24 +352,7 @@
         </dd>
       </div>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          What is your Unique Taxpayer Reference (UTR)?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {% if data['self-employment-utr-true'] =="true" %}
-          {{ data['utr'] }}
-          {% else %}
-          <p>I do not have a UTR</p>
-          {% endif %}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr">
-            Change
-            <span class="govuk-visually-hidden"> your Unique Taxpayer Reference (UTR)</span>
-          </a>
-        </dd>
-      </div>
+
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -409,6 +392,26 @@
           <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> how many hours you work per week</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What is your Unique Taxpayer Reference (UTR)?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['self-employment-utr-true'] =="true" %}
+          {{ data['utr'] }}
+          {% else %}
+          <p>I do not have a UTR</p>
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/alpha-1i/your-job-and-employer/{{number}}/self-employed/utr">
+            Change
+            <span class="govuk-visually-hidden"> your Unique Taxpayer Reference (UTR)</span>
           </a>
         </dd>
       </div>
@@ -549,7 +552,7 @@
           What will your job title be at {{ data['employer-name-about-'+number] }}?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['job-title-about-'+number] }}
+          {{ data['job-title-about-director-'+number] }}{{ data['job-title-about-employment-'+number] }}{{ data['job-title-'+ number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/job-title">

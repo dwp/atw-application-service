@@ -1,0 +1,76 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What is your workplace address? – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/director/workplace-address-select" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <form class="form" action="/alpha-1i/your-job-and-employer/director/workplace-address-select" method="post">
+
+        <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your workplace address?
+                  </h1>
+                </legend>
+
+                <p>If you work in different locations, provide the address where you work most often.</p>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="workplace-postcode">
+                    Postcode
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="workplace-postcode" name="workplace-postcode"
+                         type="text" autocomplete="postcodes"></div>
+                         <div class="govuk-!-padding-bottom-0"></div>
+
+                                              <p><a href="/alpha-1i/your-job-and-employer/{{number}}/check-your-answers-everything">
+                                                I do not know my workplace address
+                                              </a></p>
+              </fieldset>
+            </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Find address</button>
+      </form>
+
+
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+      </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

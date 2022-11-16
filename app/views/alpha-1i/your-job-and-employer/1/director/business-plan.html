@@ -1,0 +1,51 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+{% if data['self-employment-start-year']=="2022"%} You may need to give a business plan{% else %} You may need to give earnings for the last tax year and a business plan{% endif %} – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not number %}
+{% set number = '1'%}
+{% endif %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/director/{% if data['self-employment-start-year']=="2022"%}do-you-have-a-utr{% else %}utr{% endif %}" method="post">
+
+
+<h1 class="govuk-heading-l">{% if data['self-employment-start-year']=="2022"%} You may need to give a business plan{% else %} You may need to give earnings for the last tax year {% endif %}</h1>
+
+{% if data['self-employment-start-year']=="2022"%}
+<p>We will tell you if we need this when we contact you about your application.</p>
+<p>This is so that we can understand more about your self-employment.</p>
+<p>You can find out <a href="https://www.gov.uk/write-business-plan" target="_blank"> how to write a business plan (opens in a new tab)</a>, if you do not have one already.</p>
+{% else %}
+<p>We will tell you if we need this information when we contact you about your application.</p>
+<p>This is so that we can understand more about your self-employment.</p>{% endif %}
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+      <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

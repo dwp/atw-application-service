@@ -87,6 +87,10 @@ next();
             })
 
 
+
+
+
+
 router.route('/your-job-and-employer/1/employment-status')
   .post((req, res, next) => {
     let redirectUrl
@@ -97,12 +101,24 @@ router.route('/your-job-and-employer/1/employment-status')
       case 'Self-employed':
         redirectUrl = '/alpha-1i/your-job-and-employer/1/self-employed/job-title'
         break
+        case 'Registered director of a limited company':
+          redirectUrl = '/alpha-1i/your-job-and-employer/1/director/job-title'
+          break
+          case 'About to register as a director of a limited company':
+            redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/job-title'
+            break
           case 'About to start employment':
             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/employer-name'
             break
           case 'About to start self-employment':
             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/job-title'
             break
+            case 'Yes':
+              redirectUrl = '/alpha-1i/your-job-and-employer/employment-status-start'
+              break
+              case 'No but I am about to start':
+                redirectUrl = '/alpha-1i/your-job-and-employer/employment-status-about'
+                break
 
       default:
         redirectUrl = req.path
@@ -121,6 +137,15 @@ router.route('/your-job-and-employer/1/employment-status')
         case 'Self-employed':
           redirectUrl = '/alpha-1i/your-job-and-employer/2/self-employed/job-title'
           break
+          case 'Registered director of a limited company':
+            redirectUrl = '/alpha-1i/your-job-and-employer/2/director/job-title'
+            break
+            case 'About to register as a director of a limited company':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/job-title'
+              break
+            case 'About to start employment':
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
+              break
             case 'About to start employment':
               redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
               break
@@ -144,6 +169,15 @@ router.route('/your-job-and-employer/1/employment-status')
           case 'Self-employed':
             redirectUrl = '/alpha-1i/your-job-and-employer/3/self-employed/job-title'
             break
+            case 'Registered director of a limited company':
+              redirectUrl = '/alpha-1i/your-job-and-employer/3/director/job-title'
+              break
+              case 'About to register as a director of a limited company':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/job-title'
+                break
+              case 'About to start employment':
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
+                break
               case 'About to start employment':
                 redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
                 break
@@ -163,7 +197,7 @@ router.route('/your-job-and-employer/1/employment-status')
       const anotherjob = req.session.data['do-you-have-another-job']
 
       if (anotherjob === 'Yes') {
-        res.redirect('/alpha-1i/your-job-and-employer/2/employment-status')
+        res.redirect('/alpha-1i/your-job-and-employer/2/employment-status-start')
       } else {
         res.redirect('/alpha-1i/task-list')
       }
@@ -190,6 +224,306 @@ router.route('/your-job-and-employer/1/employment-status')
             res.redirect('/alpha-1i/task-list')
           }
         })
+
+        router.route('/your-job-and-employer/1/self-employed/do-you-have-a-utr-director-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/self-employed/utr-2'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/self-employed/hours-per-week'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/1/about-to-start-self-employment/do-you-have-a-utr-director-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/director/utr-2'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/director/hours-per-week'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/2/about-to-start-self-employment/do-you-have-a-utr-director-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/director/utr-2'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/director/hours-per-week'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/3/about-to-start-self-employment/do-you-have-a-utr-director-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/director/utr-2'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/director/hours-per-week'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/1/about-to-start-director/do-you-have-a-utr-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/utr'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/start-date'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/2/about-to-start-director/do-you-have-a-utr-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/utr'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/start-date'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/3/about-to-start-director/do-you-have-a-utr-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['about-to-start-self-employment-do-you-have-a-utr']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/utr'
+             break
+           case 'No':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/start-date'
+             break
+
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/1/about-to-start-director/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/2/about-to-start-director/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/3/about-to-start-director/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/1/about-to-start-self-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/2/about-to-start-self-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/3/about-to-start-self-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+        router.route('/your-job-and-employer/1/about-to-start-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/2/about-to-start-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
+        router.route('/your-job-and-employer/3/about-to-start-employment/days-you-will-work-answer')
+        .post((req, res, next) => {
+         let redirectUrl
+         switch (req.body['days-you-will-work']) {
+           case 'Yes':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/days-of-week'
+             break
+           case 'I work flexiable or shift':
+             redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/workplace-address'
+             break
+             case 'I do not know':
+               redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/workplace-address'
+               break
+           default:
+             redirectUrl = req.path
+             break
+         }
+         res.redirect(redirectUrl)
+        })
+
 router.route('/your-job-and-employer/1/about-to-start-self-employment/do-you-have-a-utr-answer')
 .post((req, res, next) => {
  let redirectUrl
@@ -867,7 +1201,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/support-workers/second-quote'
 break
 case 'No':
-redirectUrl = '/alpha-1i/support-workers/do-you-need-another-support-worker'
+redirectUrl = '/alpha-1i/support-workers/check-your-answers'
 break
 
 default:
@@ -885,7 +1219,7 @@ case 'Yes':
 redirectUrl = '/alpha-1i/support-workers/third-quote'
 break
 case 'No':
-redirectUrl = '/alpha-1i/support-workers/do-you-need-another-support-worker'
+redirectUrl = '/alpha-1i/support-workers/check-your-answers'
 break
 
 default:

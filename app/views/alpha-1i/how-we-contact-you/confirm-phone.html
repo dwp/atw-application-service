@@ -22,7 +22,9 @@ href: "javascript:history.go(-1)"
       <h1 class="govuk-heading-l"> What telephone number should we use to contact you? </h1>
 
       <p>We will contact you about your application by telephone calls and text messages.</p>
-
+      <p><a href="/alpha-1i/how-we-contact-you/reasonable-adjustment" input type="hidden"
+            name="contacting-you-email" value="true">I find it difficult to hear or speak
+        on the telephone</a></p>
       <div class="govuk-form-group">
     <label class="govuk-label" for="telephone-number">UK telephone number</label>
 
@@ -31,10 +33,7 @@ href: "javascript:history.go(-1)"
                autocomplete="tel" value="{{ data['telephone-number'] }}"></div>
 
 
-      <p><a href="/alpha-1i/how-we-contact-you/reasonable-adjustment" input type="hidden"
-            name="contacting-you-email" value="true">I find it difficult to hear or speak
-        on the telephone</a></p>
-
+    
         <div class="govuk-!-padding-bottom-3"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
