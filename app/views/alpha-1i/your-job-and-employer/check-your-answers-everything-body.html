@@ -46,7 +46,7 @@
             Job title
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['job-title'] }}
+            {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/job-title">
@@ -327,7 +327,7 @@
           Job title
         </dt>
         <dd class="govuk-summary-list__value">
-        {{ data['job-title-'+ number] }}
+        {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1i/1h-self-employment-job-title">

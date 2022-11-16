@@ -138,13 +138,13 @@ router.route('/your-job-and-employer/1/employment-status')
           redirectUrl = '/alpha-1i/your-job-and-employer/2/self-employed/job-title'
           break
           case 'Registered director of a limited company':
-            redirectUrl = '/alpha-1i/your-job-and-employer/1/director/job-title'
+            redirectUrl = '/alpha-1i/your-job-and-employer/2/director/job-title'
             break
             case 'About to register as a director of a limited company':
-              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/job-title'
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/job-title'
               break
             case 'About to start employment':
-              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/employer-name'
+              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
               break
             case 'About to start employment':
               redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/employer-name'
@@ -170,13 +170,13 @@ router.route('/your-job-and-employer/1/employment-status')
             redirectUrl = '/alpha-1i/your-job-and-employer/3/self-employed/job-title'
             break
             case 'Registered director of a limited company':
-              redirectUrl = '/alpha-1i/your-job-and-employer/1/director/job-title'
+              redirectUrl = '/alpha-1i/your-job-and-employer/3/director/job-title'
               break
               case 'About to register as a director of a limited company':
-                redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/job-title'
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/job-title'
                 break
               case 'About to start employment':
-                redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/employer-name'
+                redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
                 break
               case 'About to start employment':
                 redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/employer-name'
