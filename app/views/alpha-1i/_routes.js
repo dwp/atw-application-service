@@ -354,7 +354,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-director/workplace-address'
              break
              case 'I do not know':
@@ -374,7 +374,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-director/workplace-address'
              break
              case 'I do not know':
@@ -394,7 +394,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-director/workplace-address'
              break
              case 'I do not know':
@@ -414,7 +414,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-self-employment/workplace-address'
              break
              case 'I do not know':
@@ -433,7 +433,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-self-employment/workplace-address'
              break
              case 'I do not know':
@@ -452,7 +452,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-self-employment/workplace-address'
              break
              case 'I do not know':
@@ -471,7 +471,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/1/about-to-start-employment/workplace-address'
              break
              case 'I do not know':
@@ -491,7 +491,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/2/about-to-start-employment/workplace-address'
              break
              case 'I do not know':
@@ -511,7 +511,7 @@ router.route('/your-job-and-employer/1/employment-status')
            case 'Yes':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/days-of-week'
              break
-           case 'I work flexiable or shift':
+           case 'I will be working flexiable or shift pattern':
              redirectUrl = '/alpha-1i/your-job-and-employer/3/about-to-start-employment/workplace-address'
              break
              case 'I do not know':
