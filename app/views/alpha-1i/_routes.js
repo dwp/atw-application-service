@@ -87,9 +87,49 @@ next();
             })
 
 
+            router.post('/your-job-and-employer/start-job-answer', function (req, res) {
 
+              const anotherjob = req.session.data['1i-employment-start1']
 
+              if (anotherjob === 'Yes') {
+                res.redirect('/alpha-1i/your-job-and-employer/employment-status-start')
+              } else {
+                res.redirect('/alpha-1i/your-job-and-employer/employment-status-about')
+              }
+            })
 
+            router.post('/your-job-and-employer/1/start-job-answer', function (req, res) {
+
+              const anotherjob = req.session.data['1i-employment-start1']
+
+              if (anotherjob === 'Yes') {
+                res.redirect('/alpha-1i/your-job-and-employer/employment-status-start')
+              } else {
+                res.redirect('/alpha-1i/your-job-and-employer/employment-status-about')
+              }
+            })
+
+            router.post('/your-job-and-employer/2/start-job-answer', function (req, res) {
+
+              const anotherjob = req.session.data['1i-employment-start2']
+
+              if (anotherjob === 'Yes') {
+                res.redirect('/alpha-1i/your-job-and-employer/2/employment-status-start')
+              } else {
+                res.redirect('/alpha-1i/your-job-and-employer/2/employment-status-about')
+              }
+            })
+
+            router.post('/your-job-and-employer/3/start-job-answer', function (req, res) {
+
+              const anotherjob = req.session.data['1i-employment-start3']
+
+              if (anotherjob === 'Yes') {
+                res.redirect('/alpha-1i/your-job-and-employer/3/employment-status-start')
+              } else {
+                res.redirect('/alpha-1i/your-job-and-employer/3/employment-status-about')
+              }
+            })
 
 router.route('/your-job-and-employer/1/employment-status')
   .post((req, res, next) => {
@@ -197,7 +237,7 @@ router.route('/your-job-and-employer/1/employment-status')
       const anotherjob = req.session.data['do-you-have-another-job']
 
       if (anotherjob === 'Yes') {
-        res.redirect('/alpha-1i/your-job-and-employer/2/employment-status-start')
+        res.redirect('/alpha-1i/your-job-and-employer/2/started-job')
       } else {
         res.redirect('/alpha-1i/task-list')
       }
@@ -208,7 +248,7 @@ router.route('/your-job-and-employer/1/employment-status')
       const anotherjob2 = req.session.data['do-you-have-another-job-2']
 
       if (anotherjob2 === 'Yes') {
-        res.redirect('/alpha-1i/your-job-and-employer/3/employment-status')
+        res.redirect('/alpha-1i/your-job-and-employer/3/started-job')
       } else {
         res.redirect('/alpha-1i/task-list')
       }
@@ -219,7 +259,7 @@ router.route('/your-job-and-employer/1/employment-status')
           const anotherjob = req.session.data['do-you-have-another-job-3']
 
           if (anotherjob === 'Yes') {
-            res.redirect('/alpha-1i/your-job-and-employer/4/employment-status')
+            res.redirect('/alpha-1i/your-job-and-employer/4/started-job')
           } else {
             res.redirect('/alpha-1i/task-list')
           }

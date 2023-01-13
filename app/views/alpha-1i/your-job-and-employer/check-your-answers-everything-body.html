@@ -193,12 +193,12 @@
 
       {% endif %}
 
-        <!-- <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            How many people work at your company or organisation?
+            Are you a hybrid worker?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['1h-employment-employer-size'] }}
+            {{ data['1i-hybrid'+ number] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/alpha-1i/your-job-and-employer/{{number}}/employment/employer-size">
@@ -206,7 +206,7 @@
               <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
             </a>
           </dd>
-        </div> -->
+        </div>
       </dl>
 
   <h2 class="govuk-heading-m">Workplace contact</h2>
@@ -697,12 +697,12 @@
 
       {% endif %}
 
-      <!-- <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          How many people work at your company or organisation?
+          Are you a hybrid worker?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['1h-employment-employer-size'] }}
+          {{ data['1i-hybrid'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/alpha-1i/your-job-and-employer/{{number}}/about-to-start-employment/employer-size">
@@ -710,7 +710,7 @@
             <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
           </a>
         </dd>
-      </div> -->
+      </div>
     </dl>
 
 

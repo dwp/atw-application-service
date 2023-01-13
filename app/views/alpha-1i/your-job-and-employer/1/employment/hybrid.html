@@ -1,7 +1,7 @@
 {% extends "layout-contact.html" %}
 
 {% block pageTitle %}
-Have you started your job? – Access to Work – GOV.UK
+    Are you a hybrid worker? – Access to Work – GOV.UK
 {% endblock %}
 {% if not number %}
 {% set number = '1'%}
@@ -19,7 +19,7 @@ href: "javascript:history.go(-1)"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/start-job-answer" method="post">
+    <form class="form" action="/alpha-1i/your-job-and-employer/{{number}}/employment/workplace-contact" method="post">
 
     <div class="govuk-form-group">
       <div class="govuk-form-group">
@@ -28,26 +28,26 @@ href: "javascript:history.go(-1)"
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                  Have you started your job?
+                Are you a hybrid worker?
                   </h1>
                 </legend>
-                <p>
-              If you have more than one job, you can add another later on.
-                </p>
+              <div id="changed-name-hint" class="govuk-hint">
+            By hybrid we mean that you work partly from home and partly from work premises, such as an office.
+              </div>
 
-                <div class="govuk-radios">
+                <div class="govuk-radios govuk-radios--inline">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="1i-employment-start" name="1i-employment-start{{number}}"
-                           type="radio" value="Yes" {{ checked("1i-employment-start"+ number, "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="1i-employment-start">
+                    <input class="govuk-radios__input" id="1i-hybrid" name="1i-hybrid{{number}}"
+                           type="radio" value="Yes" {{ checked("1i-hybrid"+ number, "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="1i-hybrid">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="1i-employment-start-2" name="1i-employment-start{{number}}"
-                           type="radio" value="No but I am about to start" {{ checked("1i-employment-start"+ number, "No but I am about to start") }}>
-                    <label class="govuk-label govuk-radios__label" for="1i-employment-start-2">
-                    No, but I am about to start
+                    <input class="govuk-radios__input" id="1i-hybrid-2" name="1i-hybrid{{number}}"
+                           type="radio" value="No but I am about to start" {{ checked("1i-hybrid"+ number, "No but I am about to start") }}>
+                    <label class="govuk-label govuk-radios__label" for="1i-hybrid-2">
+                    No
                     </label>
                   </div>
 
@@ -59,7 +59,7 @@ href: "javascript:history.go(-1)"
         <div class="govuk-!-padding-bottom-0"></div>
 
       <form class="form" action="/url/of/next/page" method="post">
-        <input type="hidden" name="employment-start" value="true">
+        <input type="hidden" name="hybrid" value="true">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
 
